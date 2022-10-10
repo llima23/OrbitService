@@ -1,0 +1,442 @@
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.188, 6576704942104, datacollector.dll, Version: 16.11.0
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.194, 6576704995121, datacollector.dll, DataCollectorMain.Run: Starting data collector run with args: --port,50679,--parentprocessid,251312,--diag,D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary_Test\bin\Release\netcoreapp3.1\fine-code-coverage\coverage-tool-output\diagnostics.datacollector.22-09-22_08-56-53_03017_5.log,--tracelevel,4
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.194, 6576704998649, datacollector.dll, DataCollector: Monitoring parent process with id: '251312'
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.207, 6576705122915, datacollector.dll, Trying to connect to server on socket : 127.0.0.1:50679 
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.214, 6576705198370, datacollector.dll, SocketCommunicationManager : SetupClientAsync : Attempting to connect to the server.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:53.229, 6576705339963, datacollector.dll, Connected to the server successfully 
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:53.229, 6576705343018, datacollector.dll, Using the buffer size of 16384 bytes
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.307, 6576706120890, datacollector.dll, DataCollector: Start Request Processing.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.311, 6576706165669, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : Datacollector received message: (DataCollection.BeforeTestRunStart) -> {
+  "SettingsXml": "<RunSettings><RunConfiguration><ResultsDirectory>D:\\Desenvolvimento\\Gabriel\\OrbitLibrary\\OrbitLibrary\\OrbitLibrary_Test\\bin\\Release\\netcoreapp3.1\\fine-code-coverage\\coverage-tool-output</ResultsDirectory><TargetPlatform>X64</TargetPlatform><TargetFrameworkVersion>.NETCoreApp,Version=v3.1</TargetFrameworkVersion><DesignMode>False</DesignMode><CollectSourceInformation>False</CollectSourceInformation><TestAdaptersPaths>C:\\Program Files\\dotnet\\sdk\\5.0.411\\Extensions</TestAdaptersPaths></RunConfiguration><LoggerRunSettings><Loggers><Logger friendlyName=\"blame\" enabled=\"True\" /><Logger friendlyName=\"Console\" uri=\"logger://microsoft/TestPlatform/ConsoleLogger/v1\" assemblyQualifiedName=\"Microsoft.VisualStudio.TestPlatform.CommandLine.Internal.ConsoleLogger, vstest.console, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\" codeBase=\"C:\\Program Files\\dotnet\\sdk\\5.0.411\\vstest.console.dll\" enabled=\"True\" /></Loggers></LoggerRunSettings><DataCollectionRunSettings><DataCollectors><DataCollector friendlyName=\"blame\" enabled=\"True\"><Configuration><ResultsDirectory>D:\\Desenvolvimento\\Gabriel\\OrbitLibrary\\OrbitLibrary\\OrbitLibrary_Test\\bin\\Release\\netcoreapp3.1\\fine-code-coverage\\coverage-tool-output</ResultsDirectory></Configuration></DataCollector></DataCollectors></DataCollectionRunSettings></RunSettings>",
+  "Sources": [
+    "D:\\Desenvolvimento\\Gabriel\\OrbitLibrary\\OrbitLibrary\\OrbitLibrary_Test\\bin\\Release\\netcoreapp3.1\\fine-code-coverage\\build-output\\OrbitLibrary_Test.dll"
+  ],
+  "IsTelemetryOptedIn": false
+}
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.338, 6576706435740, datacollector.dll, TestPluginCache: Update extensions started. Skip filter = False
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.339, 6576706445281, datacollector.dll, TestPluginCache: Using directories for assembly resolution 'C:\Program Files\dotnet\sdk\5.0.411\Extensions'.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.339, 6576706447244, datacollector.dll, TestPluginCache: Updated the available extensions to 'C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll,C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll'.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.347, 6576706522970, datacollector.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: Collector.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.DataCollector.DataCollectorConfig TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.DataCollection.DataCollector
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.347, 6576706527002, datacollector.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.347, 6576706528581, datacollector.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: 
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.348, 6576706529732, datacollector.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.348, 6576706537855, datacollector.dll, AssemblyResolver.ctor: Creating AssemblyResolver with searchDirectories C:\Program Files\dotnet\sdk\5.0.411\Extensions,C:\Program Files\dotnet\sdk\5.0.411
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.350, 6576706553352, datacollector.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.350, 6576706556121, datacollector.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.350, 6576706557464, datacollector.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: 
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.350, 6576706558595, datacollector.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.351, 6576706560059, datacollector.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.351, 6576706561958, datacollector.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.411\Extensions,C:\Program Files\dotnet\sdk\5.0.411
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.351, 6576706563794, datacollector.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.411\Extensions,C:\Program Files\dotnet\sdk\5.0.411
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.352, 6576706569119, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolving assembly.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.352, 6576706570896, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Searching in: 'C:\Program Files\dotnet\sdk\5.0.411\Extensions'.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.352, 6576706577149, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll'.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.353, 6576706584825, datacollector.dll, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.TestPlatform.Extensions.BlameDataCollector, from path: C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+TpTrace Error: 0 : 234208, 1, 2022/09/22, 08:56:53.355, 6576706599361, datacollector.dll, The type "Microsoft.TestPlatform.Extensions.BlameDataCollector.BlameCollector" defined in "Microsoft.TestPlatform.Extensions.BlameDataCollector.dll" does not have ExtensionUri attribute.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.356, 6576706615237, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolving assembly.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.356, 6576706617017, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Searching in: 'C:\Program Files\dotnet\sdk\5.0.411\Extensions'.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.357, 6576706620856, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll'.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.357, 6576706626669, datacollector.dll, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.TestPlatform.Extensions.EventLogCollector, from path: C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Error: 0 : 234208, 1, 2022/09/22, 08:56:53.359, 6576706645434, datacollector.dll, The type "Microsoft.TestPlatform.Extensions.EventLogCollector.EventLogDataCollector" defined in "Microsoft.TestPlatform.Extensions.EventLogCollector.dll" does not have ExtensionUri attribute.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.360, 6576706650097, datacollector.dll, TestPluginCache: Discovered the extensions using extension path 'C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll,C:\Program Files\dotnet\sdk\5.0.411\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll'.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.360, 6576706651689, datacollector.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.360, 6576706653362, datacollector.dll, TestPluginCache: Executors are ''.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.360, 6576706654482, datacollector.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.360, 6576706655571, datacollector.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:53.360, 6576706656654, datacollector.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.362, 6576706669523, datacollector.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Microsoft.TestPlatform.Extensions.BlameDataCollector.BlameCollector
+TpTrace Error: 0 : 234208, 1, 2022/09/22, 08:56:53.362, 6576706674351, datacollector.dll, The type "Microsoft.TestPlatform.Extensions.BlameDataCollector.BlameCollector" defined in "Microsoft.TestPlatform.Extensions.BlameDataCollector.dll" does not have ExtensionUri attribute.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.368, 6576706737614, datacollector.dll, Listening on Endpoint : 127.0.0.1:50681
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.379, 6576706840184, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : DataCollection started.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:53.420, 6576707249445, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : Datacollector received message: (DataCollection.TestHostLaunched) -> {
+  "ProcessId": 245368
+}
+TpTrace Information: 0 : 234208, 5, 2022/09/22, 08:56:53.683, 6576709881495, datacollector.dll, Using the buffer size of 16384 bytes
+TpTrace Information: 0 : 234208, 5, 2022/09/22, 08:56:53.683, 6576709883733, datacollector.dll, Accepted Client request and set the flag
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.831, 6576721358839, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.841, 6576721460607, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.841, 6576721466393, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Utils.DefaultsTest.ShouldReturnsDefaultCredentialProvider - fa17a344-2176-5af0-9f73-59e35c7a3cd0' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.843, 6576721479451, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.843, 6576721483582, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.843, 6576721486283, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldCallCommunicationClientAndReturnValidSessionCredential - f954e3fa-170c-5875-faaa-d53e62d141e4' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.844, 6576721493559, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.844, 6576721496591, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.845, 6576721498646, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Data.ODBCDbFactoryTest.ShouldCreateAODBCDataAdapterObject - 8637221b-4fe6-adbf-c486-23d0206a38bf' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.846, 6576721512470, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.846, 6576721515591, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.847, 6576721517791, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldReturnsAValidOperationRequestBuilder - f8ff3c56-fe8a-eac5-f205-19d5d548a335' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.847, 6576721525751, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.848, 6576721530666, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.848, 6576721533996, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Test.UnitTest1.Test1 - 2aff3748-6248-15ee-c5f3-1079dbff3120' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.849, 6576721541740, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.849, 6576721546380, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.850, 6576721549223, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.ServiceConfigurationTest.ShouldSetCredentialsProvider - 647c9830-eb76-83ea-58ff-afab8506db06' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.851, 6576721557722, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.851, 6576721563531, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.851, 6576721566890, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Crypto.CryptoBase64Test.ShouldDecryptValue - 9466b837-e550-5b4a-ff6a-7a43d2f9d777' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.859, 6576721638018, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.865, 6576721697494, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.869, 6576721745536, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Data.ODBCDbFactoryTest.ShouldCreateAODBCDataAdapterObject - 8637221b-4fe6-adbf-c486-23d0206a38bf' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.878, 6576721833075, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.879, 6576721839067, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.879, 6576721843634, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Test.UnitTest1.Test1 - 2aff3748-6248-15ee-c5f3-1079dbff3120' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.882, 6576721875363, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.883, 6576721879198, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.883, 6576721881687, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Data.ODBCDbFactoryTest.ShouldCreateAODBCConnectionObject - 74149966-2a18-ed72-01f3-b607d9d561d7' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.884, 6576721891195, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.884, 6576721894374, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.884, 6576721896643, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Crypto.CryptoBase64Test.ShouldDecryptValue - 9466b837-e550-5b4a-ff6a-7a43d2f9d777' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.886, 6576721908084, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.886, 6576721911693, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.886, 6576721914233, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Crypto.CryptoBase64Test.ShouldEncryptAStringBasedOnKeys - fe2e8742-a604-424b-d730-f66322a5b6ae' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.932, 6576722370450, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.932, 6576722374808, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.933, 6576722377473, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Handlers.JsonResponseBodyDeserializerTest.ShouldDeserializeJsonToObject - 10f240fb-d0ef-48b9-9b35-4bb09998b354' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.933, 6576722385080, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.934, 6576722388913, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.934, 6576722391477, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Crypto.CryptoBase64Test.ShouldEncryptAStringBasedOnKeys - fe2e8742-a604-424b-d730-f66322a5b6ae' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.937, 6576722425871, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.938, 6576722431407, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.938, 6576722435370, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.SessionCredentialsTest.shouldCreateAValidInstance - 335683f4-eaeb-1dc9-c9e3-e5c8e0a33c4d' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.940, 6576722448614, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.940, 6576722453784, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.940, 6576722457069, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.SessionCredentialsTest.shouldCreateAValidInstance - 335683f4-eaeb-1dc9-c9e3-e5c8e0a33c4d' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.942, 6576722469353, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.942, 6576722474428, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.942, 6576722477270, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.SessionCredentialsTest.shouldCreateAInvalidInstance - 0197ee3e-3ae6-8060-3599-dae6f9249946' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.944, 6576722487590, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.944, 6576722492414, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.944, 6576722496270, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.SessionCredentialsTest.shouldCreateAInvalidInstance - 0197ee3e-3ae6-8060-3599-dae6f9249946' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.946, 6576722514167, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.947, 6576722519283, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.947, 6576722522502, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Handlers.JsonResponseBodyDeserializerTest.ShouldDeserializeJsonToObject - 10f240fb-d0ef-48b9-9b35-4bb09998b354' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.949, 6576722538020, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.949, 6576722543369, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.949, 6576722546166, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Handlers.JsonRequestBodySerializerTest.ShouldSerializeObjectWithNullFields - e3496dfa-0357-6585-f7f0-bacfaeefc621' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.951, 6576722558981, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.951, 6576722564423, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.951, 6576722567301, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Data.ODBCDbFactoryTest.ShouldCreateAODBCConnectionObject - 74149966-2a18-ed72-01f3-b607d9d561d7' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.953, 6576722584461, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.956, 6576722607517, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.956, 6576722610734, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Data.ODBCDbFactoryTest.ShouldCreateAODBCCommandObject - 47a38862-2231-16d6-ef41-7013cdfcbe24' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.957, 6576722623715, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.958, 6576722628314, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.958, 6576722631307, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Data.ODBCDbFactoryTest.ShouldCreateAODBCCommandObject - 47a38862-2231-16d6-ef41-7013cdfcbe24' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.961, 6576722664184, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.962, 6576722668271, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.962, 6576722670638, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ExecuteNonQueryCommand_ShouldThrowExceptionWhenTheCommandObjectIsNull - ba5f212d-7d9f-fbd4-c642-ab7bd6030abe' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.963, 6576722681393, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.963, 6576722686447, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.964, 6576722689486, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Handlers.JsonRequestBodySerializerTest.ShouldSerializeObjectWithNullFields - e3496dfa-0357-6585-f7f0-bacfaeefc621' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.966, 6576722709606, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.966, 6576722714320, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.966, 6576722717007, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Handlers.JsonRequestBodySerializerTest.ShouldSerializeTheObjectToJson - e379a3e7-57cf-f8d5-3518-98709cdc2bb2' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.968, 6576722729288, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.968, 6576722734161, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.968, 6576722737270, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Handlers.JsonRequestBodySerializerTest.ShouldSerializeTheObjectToJson - e379a3e7-57cf-f8d5-3518-98709cdc2bb2' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.972, 6576722773087, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.974, 6576722792022, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.974, 6576722795098, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Handlers.JsonRequestBodySerializerTest.ShouldSerializeObjectWithoutNullFields - b0a0e7e1-3191-b7dc-fab0-ea3d7c2c2207' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.975, 6576722805217, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.976, 6576722809075, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.976, 6576722811641, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Handlers.JsonRequestBodySerializerTest.ShouldSerializeObjectWithoutNullFields - b0a0e7e1-3191-b7dc-fab0-ea3d7c2c2207' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.978, 6576722828062, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.978, 6576722831881, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.978, 6576722835076, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldAddParameters - efdb45a9-44b4-d950-c8cb-e2dcd5ea55fd' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.979, 6576722842675, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.979, 6576722846474, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.980, 6576722848917, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.HttpClientCommunicationProviderTest.ShouldCall - ddd1949a-b156-c987-3c46-b57f7c4d711d' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.980, 6576722856581, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.981, 6576722861460, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.981, 6576722865492, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldReturnsAValidOperationRequestBuilder - f8ff3c56-fe8a-eac5-f205-19d5d548a335' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.983, 6576722880826, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.983, 6576722884656, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.983, 6576722886878, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldRetryRequestIfAuthenticationIsRequiredAndResponseIsUnauthorized - f39c3feb-8e93-0c4d-7008-8b5a70ee0d28' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.984, 6576722897147, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.985, 6576722900577, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.985, 6576722902993, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.ServiceConfigurationTest.ShouldSetCredentialsProvider - 647c9830-eb76-83ea-58ff-afab8506db06' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.986, 6576722913289, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.986, 6576722916323, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.987, 6576722918476, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.ServiceConfigurationTest.GetBaseURIWithoutLatestSlash - 4f1d6694-5f84-c7aa-819c-3fc1adec18a6' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.987, 6576722925544, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.988, 6576722928652, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.988, 6576722930823, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.ServiceConfigurationTest.GetBaseURIWithoutLatestSlash - 4f1d6694-5f84-c7aa-819c-3fc1adec18a6' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.989, 6576722942367, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.989, 6576722945410, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.990, 6576722947419, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationRequestTest.AddingHeaders - 6bf6fece-ca3a-3db5-4b36-499faf3ad736' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.990, 6576722954217, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.990, 6576722957217, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.991, 6576722959392, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Services.Authentication.Session.LoginTest.LoginWithouParameters - a72168ed-6c76-b009-3fd5-0cd26e668553' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.992, 6576722968060, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.992, 6576722972699, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.992, 6576722975513, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationRequestTest.AddingHeaders - 6bf6fece-ca3a-3db5-4b36-499faf3ad736' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.994, 6576722996088, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.995, 6576722999749, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.995, 6576723004055, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationRequestTest.InstanceCreation - 58d12395-ec26-3899-0f46-c52c23c53b62' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.996, 6576723012258, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.996, 6576723015585, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.997, 6576723019184, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldAddParameters - efdb45a9-44b4-d950-c8cb-e2dcd5ea55fd' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.998, 6576723033752, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.999, 6576723037412, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:54.999, 6576723039699, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldCallBodySerializer - 3efbe6b5-0101-eff8-48cb-56225aa94267' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.000, 6576723049819, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.000, 6576723055498, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.001, 6576723058767, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationRequestTest.InstanceCreation - 58d12395-ec26-3899-0f46-c52c23c53b62' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.002, 6576723070226, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.002, 6576723075646, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.003, 6576723078242, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationRequestTest.PutBody - ecba2f07-7186-4edc-deea-c544ee442743' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.004, 6576723087704, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.004, 6576723093317, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.004, 6576723096678, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationRequestTest.PutBody - ecba2f07-7186-4edc-deea-c544ee442743' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.005, 6576723105193, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.006, 6576723108517, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.006, 6576723110602, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Repositories.DBServiceConfigurationRepositoryTest.ShouldReturnsAServiceConfigurationObject - aed01e5f-0efc-e159-6534-11eb0ed34b1f' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.007, 6576723117517, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.007, 6576723120554, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.007, 6576723122872, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Utils.DefaultsTest.ShouldReturnsDefaultCredentialProvider - fa17a344-2176-5af0-9f73-59e35c7a3cd0' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.008, 6576723133817, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.009, 6576723139261, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.009, 6576723142221, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldCallDeserializer - 452e419c-1f1c-d734-cca4-11b337675075' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.019, 6576723238075, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.019, 6576723243515, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.019, 6576723246705, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Services.Authentication.Session.LoginTest.LoginWithouParameters - a72168ed-6c76-b009-3fd5-0cd26e668553' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.021, 6576723259633, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.021, 6576723263886, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.021, 6576723266729, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ExecuteNonQueryCommand_ShouldThrowExceptionWhenTheCommandObjectIsNull - ba5f212d-7d9f-fbd4-c642-ab7bd6030abe' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.024, 6576723289246, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.024, 6576723292849, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.024, 6576723295655, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ExecuteQueryCommand_ShouldThrowExceptionWhenTheCommandObjectIsNull - b530f659-57bd-9d22-a672-9c622dbd85fb' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.025, 6576723301999, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.025, 6576723305313, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.026, 6576723307815, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ExecuteQueryCommand_ShouldThrowExceptionWhenTheCommandObjectIsNull - b530f659-57bd-9d22-a672-9c622dbd85fb' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.027, 6576723318653, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.027, 6576723321706, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.027, 6576723323910, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldExecuteQueryCommand - a7c292f6-5883-4e72-b77d-139fc78db730' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.028, 6576723330174, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.028, 6576723333315, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.028, 6576723335506, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldCallDeserializer - 452e419c-1f1c-d734-cca4-11b337675075' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.030, 6576723347868, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.030, 6576723351429, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.030, 6576723353830, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnContentTypeLowerCase - 22168525-2823-f8c7-4e00-76fd0b2bb612' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.031, 6576723361827, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.031, 6576723365229, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.032, 6576723367566, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldRetryRequestIfAuthenticationIsRequiredAndResponseIsUnauthorized - f39c3feb-8e93-0c4d-7008-8b5a70ee0d28' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.033, 6576723379943, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.034, 6576723394510, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.035, 6576723399106, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldNotRetryRequestIfAuthenticationIsNotRequired - cf510e89-22d9-a951-f4ea-39801e190c21' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.036, 6576723408890, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.036, 6576723413660, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.036, 6576723416770, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnContentTypeLowerCase - 22168525-2823-f8c7-4e00-76fd0b2bb612' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.037, 6576723426193, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.038, 6576723429762, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.038, 6576723432449, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnsSuccessResponse - b9ed725a-a0b5-bd32-28b3-d890c6811f43' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.039, 6576723440197, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.039, 6576723445139, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.040, 6576723448692, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldNotRetryRequestIfAuthenticationIsNotRequired - cf510e89-22d9-a951-f4ea-39801e190c21' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.041, 6576723460132, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.041, 6576723464374, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.042, 6576723467396, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldBuildOperationRequestWithDeserializeHandle - 7d823de3-c8a0-3e00-f696-d2cae721169e' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.042, 6576723475583, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.043, 6576723479158, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.043, 6576723481735, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnsSuccessResponse - b9ed725a-a0b5-bd32-28b3-d890c6811f43' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.044, 6576723492521, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.044, 6576723496975, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.045, 6576723499392, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnsErrorResponse - b8ff8e0d-6bac-f747-2494-25695db272b0' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.046, 6576723508451, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.046, 6576723513394, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.046, 6576723516610, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.HttpClientCommunicationProviderTest.ShouldCall - ddd1949a-b156-c987-3c46-b57f7c4d711d' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.049, 6576723546531, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.050, 6576723550376, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.050, 6576723553350, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldExecuteQueryCommand - a7c292f6-5883-4e72-b77d-139fc78db730' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.052, 6576723569055, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.052, 6576723573091, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.052, 6576723575603, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldReturnsCanConnectDB - 131647a9-77db-ffa8-213d-0e5964c5ce4d' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.053, 6576723584098, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.054, 6576723588038, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.054, 6576723591246, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldBuildOperationRequestWithDeserializeHandle - 7d823de3-c8a0-3e00-f696-d2cae721169e' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.055, 6576723604634, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.056, 6576723608269, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.056, 6576723610585, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldBuildOperationRequestWithoutDeserializeHandleAndInvokeCommunicationClient - ada35f35-a32e-1218-c2c7-8037b413bf9c' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.057, 6576723624377, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.058, 6576723628945, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.058, 6576723632457, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldReturnsCanConnectDB - 131647a9-77db-ffa8-213d-0e5964c5ce4d' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.059, 6576723643671, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.060, 6576723648244, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.060, 6576723651969, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldReturnsCannotConnectDB - 3046a925-dbf7-4b14-e776-f2fff8de8763' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.061, 6576723660787, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.061, 6576723665515, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.062, 6576723668587, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnsErrorResponse - b8ff8e0d-6bac-f747-2494-25695db272b0' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.063, 6576723680945, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.063, 6576723684309, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.063, 6576723686758, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldCreateResponseInstance - a197524c-699c-742c-c702-36fa5de5e816' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.064, 6576723694689, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.065, 6576723697934, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.065, 6576723700270, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.BaseServiceTest.ShouldBuildOperationRequestWithoutDeserializeHandleAndInvokeCommunicationClient - ada35f35-a32e-1218-c2c7-8037b413bf9c' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.066, 6576723708730, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.066, 6576723711875, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.066, 6576723714436, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldCallBodySerializer - 3efbe6b5-0101-eff8-48cb-56225aa94267' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.067, 6576723726258, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.072, 6576723770241, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.072, 6576723773740, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldCreateSimpleGETRequest - 5306c37a-7479-9d44-6e3f-fa5a9ef10530' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.073, 6576723783353, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.074, 6576723787640, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.074, 6576723790626, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldCreateSimpleGETRequest - 5306c37a-7479-9d44-6e3f-fa5a9ef10530' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.076, 6576723812676, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.076, 6576723816386, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.077, 6576723818593, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldNotPutBodyWithSomeMethods - 430a604f-b23a-078f-ab43-47538636d7ff' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.078, 6576723832195, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.078, 6576723836317, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.079, 6576723839066, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldNotPutBodyWithSomeMethods - 430a604f-b23a-078f-ab43-47538636d7ff' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.080, 6576723850931, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.080, 6576723854912, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.081, 6576723857490, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldOneAddQueryParamToUrl - 4bb18a7c-5e9d-a7fa-9f26-7649a64a4173' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.081, 6576723864653, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.082, 6576723867624, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.082, 6576723869929, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldOneAddQueryParamToUrl - 4bb18a7c-5e9d-a7fa-9f26-7649a64a4173' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.083, 6576723878524, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.083, 6576723881106, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.083, 6576723883168, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldNotHaveBody - 02bb6558-eba9-f516-8ffb-79057b163a65' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.084, 6576723889146, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.084, 6576723891589, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.084, 6576723893769, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldReturnsCannotConnectDB - 3046a925-dbf7-4b14-e776-f2fff8de8763' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.085, 6576723904486, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.085, 6576723907098, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.086, 6576723909281, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldExecuteNonQueryCommand - d2af665e-e4f7-f568-c93d-48a4d18fe0d9' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.086, 6576723917233, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.087, 6576723920076, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.087, 6576723922466, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldNotHaveBody - 02bb6558-eba9-f516-8ffb-79057b163a65' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.088, 6576723933808, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.088, 6576723936301, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.089, 6576723938235, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldAddCredentialsHeaders - 46e06c6d-27b6-4929-d8fd-3417a484a04c' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.089, 6576723944924, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.090, 6576723947536, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.090, 6576723949578, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldCreateResponseInstance - a197524c-699c-742c-c702-36fa5de5e816' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.091, 6576723959908, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.091, 6576723963007, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.091, 6576723965071, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnContentTypeCamelCase - fd45f6ff-f517-6015-da0e-83498f12d2e5' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.092, 6576723972983, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.092, 6576723975448, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.093, 6576723977529, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnContentTypeCamelCase - fd45f6ff-f517-6015-da0e-83498f12d2e5' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.093, 6576723985268, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.094, 6576723987929, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.094, 6576723989978, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnsIsSuccessful - 6cf0d2fb-adc2-ece6-0d52-d60e49dabe34' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.094, 6576723996287, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.095, 6576723999016, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.095, 6576724001084, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Common.Domain.OperationResponseTest.ShouldReturnsIsSuccessful - 6cf0d2fb-adc2-ece6-0d52-d60e49dabe34' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.096, 6576724009703, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.096, 6576724012800, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.096, 6576724014978, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldAddCredentialsHeaders - 46e06c6d-27b6-4929-d8fd-3417a484a04c' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.100, 6576724051040, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.100, 6576724054524, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.100, 6576724056812, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldPutBody - 2481688a-ea12-37f0-b722-dc72822a2e9e' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.101, 6576724063123, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.101, 6576724065677, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.102, 6576724067798, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldExecuteNonQueryCommand - d2af665e-e4f7-f568-c93d-48a4d18fe0d9' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.103, 6576724078790, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.103, 6576724081294, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.103, 6576724083252, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldExecuteAQueryByString - 0acd8daf-3a54-a939-91be-f01dff3311b5' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.104, 6576724089134, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.104, 6576724091993, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.104, 6576724094348, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldPutBody - 2481688a-ea12-37f0-b722-dc72822a2e9e' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.105, 6576724102805, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.105, 6576724105355, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.106, 6576724107421, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldSetPathParamsToURL - a1856d7c-6559-c12c-eada-b9fb255d5c94' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.106, 6576724113174, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.106, 6576724115699, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.107, 6576724117720, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldExecuteAQueryByString - 0acd8daf-3a54-a939-91be-f01dff3311b5' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.107, 6576724125132, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.108, 6576724127992, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.108, 6576724130190, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldExecuteNonQueryByString - e0cad7a7-b959-c55a-1429-3e42f2438409' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.108, 6576724136048, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.109, 6576724138665, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.109, 6576724140702, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldCallCommunicationClientAndReturnValidSessionCredential - f954e3fa-170c-5875-faaa-d53e62d141e4' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.110, 6576724151500, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.110, 6576724154461, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.110, 6576724156552, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnInvalidSessionWhenUserDoNotHasTheSelectedTenant - 350bdfec-86c4-575e-ac33-b8906c3b1bf2' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.111, 6576724162502, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.111, 6576724165065, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.111, 6576724167122, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Data.DbWrapperTest.ShouldExecuteNonQueryByString - e0cad7a7-b959-c55a-1429-3e42f2438409' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.112, 6576724176526, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.113, 6576724179097, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.113, 6576724181095, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnInvalidSessionWhenUserDoNotHasTheSelectedTenant - 350bdfec-86c4-575e-ac33-b8906c3b1bf2' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.114, 6576724189153, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.114, 6576724191912, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.114, 6576724194195, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnTheLastValidInstanceOfCredentialsWithoutCallCommunicationClientIfInstanceExists - b0bbe758-91e6-484b-f5bd-a2afeaac9fa6' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.115, 6576724199917, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.115, 6576724202842, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.115, 6576724204962, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldSetPathParamsToURL - a1856d7c-6559-c12c-eada-b9fb255d5c94' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.116, 6576724215150, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.117, 6576724217951, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.117, 6576724219887, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldNotAddCredentialsHeadersIfCredentialsIsNull - 2e35cb7a-f8b0-7b61-a186-233d6bf10754' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.117, 6576724227093, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.118, 6576724230146, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.118, 6576724233016, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnTheLastValidInstanceOfCredentialsWithoutCallCommunicationClientIfInstanceExists - b0bbe758-91e6-484b-f5bd-a2afeaac9fa6' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.120, 6576724254962, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.121, 6576724258448, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.121, 6576724260563, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnAnInvalidSessionIfTheResponseBodyHasAnUnknownStructure - a6d94f5b-7ccf-3658-c846-e6e3149845e5' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.122, 6576724269330, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.122, 6576724272210, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.122, 6576724274495, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldNotAddCredentialsHeadersIfCredentialsIsNull - 2e35cb7a-f8b0-7b61-a186-233d6bf10754' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.124, 6576724291089, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.124, 6576724294059, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.124, 6576724296259, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldReturnsIfShouldPutgAuthentication - 58666c0b-f9fd-7943-5ed8-2fb84918ffc3' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.125, 6576724302983, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.125, 6576724305612, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.126, 6576724307826, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldReturnsIfShouldPutgAuthentication - 58666c0b-f9fd-7943-5ed8-2fb84918ffc3' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.126, 6576724316017, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.127, 6576724318522, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.127, 6576724320440, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldAddQueryParamsToUrl - 32bcb646-6f00-2af5-4ceb-22820ebb48ef' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.127, 6576724326960, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.128, 6576724329973, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.128, 6576724332231, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldAddQueryParamsToUrl - 32bcb646-6f00-2af5-4ceb-22820ebb48ef' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.129, 6576724340837, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.129, 6576724343430, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.129, 6576724345416, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldCallCredentialsProviderWithForceNewAuthentication - 12bd2eda-a5f2-8736-6406-afe019d6f603' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.130, 6576724351439, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.130, 6576724353987, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.130, 6576724356038, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnAnInvalidSessionIfTheResponseBodyHasAnUnknownStructure - a6d94f5b-7ccf-3658-c846-e6e3149845e5' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.131, 6576724365725, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.132, 6576724368379, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.132, 6576724370333, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnUnauthorizedError - 2c35a601-59f1-bd9b-7d60-ad1537393571' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.132, 6576724377015, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.133, 6576724379869, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.133, 6576724382495, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldCallCredentialsProviderWithForceNewAuthentication - 12bd2eda-a5f2-8736-6406-afe019d6f603' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.134, 6576724389894, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.134, 6576724392510, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.134, 6576724394577, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldSetOnePathParamToURL - 4bb76a10-0440-b02b-c7ba-d0a331c6f167' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.135, 6576724400942, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.135, 6576724403811, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.135, 6576724405919, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnUnauthorizedError - 2c35a601-59f1-bd9b-7d60-ad1537393571' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.136, 6576724416130, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.137, 6576724418875, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.137, 6576724420979, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnInvalidSessionWhenUserDoNotHaveTenants - 0bf37c72-ac66-fe10-686b-5434d07651a4' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.138, 6576724427871, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.138, 6576724430627, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.138, 6576724432778, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldReturnInvalidSessionWhenUserDoNotHaveTenants - 0bf37c72-ac66-fe10-686b-5434d07651a4' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.139, 6576724441474, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.139, 6576724444553, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.139, 6576724446675, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldCallAuthenticationServiceWhenForceNewAuthenticationParameterIsTrue - 0badfc5f-7dbb-bf6f-bbad-70eed4a5584c' started.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.140, 6576724452936, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.140, 6576724456045, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.141, 6576724458219, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Application.Builders.OperationRequestBuilderTest.ShouldSetOnePathParamToURL - 4bb76a10-0440-b02b-c7ba-d0a331c6f167' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.141, 6576724465966, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.142, 6576724468987, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.142, 6576724471282, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Providers.OrbitCredentialProviderTest.ShouldCallAuthenticationServiceWhenForceNewAuthenticationParameterIsTrue - 0badfc5f-7dbb-bf6f-bbad-70eed4a5584c' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.157, 6576724618571, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.157, 6576724622131, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.157, 6576724624572, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'OrbitLibrary_Tests.Infrastructure.Repositories.DBServiceConfigurationRepositoryTest.ShouldReturnsAServiceConfigurationObject - aed01e5f-0efc-e159-6534-11eb0ed34b1f' completed
+TpTrace Information: 0 : 234208, 8, 2022/09/22, 08:56:55.169, 6576724742835, datacollector.dll, DataCollectionTestCaseEventHandler: Test session ended
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.228, 6576725327434, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : Datacollector received message: (DataCollection.AfterTestRunEnd) -> false
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.229, 6576725338136, datacollector.dll, Blame Collector : Session End
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.229, 6576725340344, datacollector.dll, BlameCollector.CollectDumpAndAbortTesthost: Custom path to dump directory was provided via VSTEST_DUMP_PATH. Skipping attachment upload, the caller is responsible for collecting and uploading the dumps themselves.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.229, 6576725343823, datacollector.dll, DataCollectionManager.CleanupPlugins: CleanupPlugins called
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:55.229, 6576725345627, datacollector.dll, DataCollectionManager.CleanupPlugins: Cleaning up 1 plugins
+TpTrace Verbose: 0 : 234208, 1, 2022/09/22, 08:56:55.230, 6576725348613, datacollector.dll, dataCollectorInfo.DisposeDataCollector: calling Dispose() on Microsoft.TestPlatform.Extensions.BlameDataCollector.BlameCollector
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.230, 6576725350819, datacollector.dll, DataCollectionManager.CleanupPlugins: CleanupPlugins finished
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.234, 6576725392285, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : Session End message received from server. Closing the connection.
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.234, 6576725396942, datacollector.dll, Closing the connection !
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.235, 6576725399696, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : DataCollection completed
+TpTrace Information: 0 : 234208, 1, 2022/09/22, 08:56:55.235, 6576725400962, datacollector.dll, Program.Main: exiting datacollector process.

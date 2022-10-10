@@ -7475,18 +7475,18 @@
     },
     "OrbitService/1.0.0": {
       "type": "project",
-      "path": "../src/OrbitService.csproj",
-      "msbuildProject": "../src/OrbitService.csproj"
+      "path": "../../src/Envia-NFe/OrbitService.csproj",
+      "msbuildProject": "../../src/Envia-NFe/OrbitService.csproj"
     },
     "OrbitService_Cancel_NFSe/1.0.0": {
       "type": "project",
-      "path": "../OrbitService_Cancel_NFSe/OrbitService_Cancel_NFSe.csproj",
-      "msbuildProject": "../OrbitService_Cancel_NFSe/OrbitService_Cancel_NFSe.csproj"
+      "path": "../../src/Cancel-NFSe/OrbitService_Cancel_NFSe.csproj",
+      "msbuildProject": "../../src/Cancel-NFSe/OrbitService_Cancel_NFSe.csproj"
     },
     "OrbitService_Test/1.0.0": {
       "type": "project",
-      "path": "../test/OrbitService_Test.csproj",
-      "msbuildProject": "../test/OrbitService_Test.csproj"
+      "path": "../Envia-NFe-Test/OrbitService_Test.csproj",
+      "msbuildProject": "../Envia-NFe-Test/OrbitService_Test.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7506,11 +7506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Test_Cancel_NFSe\\OrbitService_Test_Cancel_NFSe.csproj",
+      "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Cancel-NFSe-Test\\OrbitService_Test_Cancel_NFSe.csproj",
       "projectName": "OrbitService_Test_Cancel_NFSe",
-      "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Test_Cancel_NFSe\\OrbitService_Test_Cancel_NFSe.csproj",
+      "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Cancel-NFSe-Test\\OrbitService_Test_Cancel_NFSe.csproj",
       "packagesPath": "C:\\Users\\luisf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Test_Cancel_NFSe\\obj\\",
+      "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Cancel-NFSe-Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\luisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7527,11 +7527,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Cancel_NFSe\\OrbitService_Cancel_NFSe.csproj": {
-              "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Cancel_NFSe\\OrbitService_Cancel_NFSe.csproj"
+            "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Cancel-NFSe\\OrbitService_Cancel_NFSe.csproj": {
+              "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Cancel-NFSe\\OrbitService_Cancel_NFSe.csproj"
             },
-            "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\test\\OrbitService_Test.csproj": {
-              "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\test\\OrbitService_Test.csproj"
+            "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Envia-NFe-Test\\OrbitService_Test.csproj": {
+              "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Envia-NFe-Test\\OrbitService_Test.csproj"
             }
           }
         }

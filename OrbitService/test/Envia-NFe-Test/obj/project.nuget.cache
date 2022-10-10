@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Te/K1/wRdZ0DVh1wiooSufK/tFKyU/7xagZmQ1nO5f/fXHg3WyoGDKkDsnaJS91ChmFVBZhsr/lq0wE1Zqxlow==",
+  "dgSpecHash": "uf9kjXqr2+Xtd6Lt2j4QejlyBhTjHxKz+WwRQULvM0+i6vOgpMQPGbYE/ZlmpH+9LYoXlgpFcpjU2AP2/H0ziw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\test\\OrbitService_Test.csproj",
+  "projectFilePath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Envia-NFe-Test\\OrbitService_Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luisf\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\luisf\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",

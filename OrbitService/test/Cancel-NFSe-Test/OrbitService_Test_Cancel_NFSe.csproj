@@ -21,19 +21,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrbitService_Cancel_NFSe\OrbitService_Cancel_NFSe.csproj" />
-    <ProjectReference Include="..\test\OrbitService_Test.csproj" />
+    <ProjectReference Include="..\..\src\Cancel-NFSe\OrbitService_Cancel_NFSe.csproj" />
+    <ProjectReference Include="..\Envia-NFe-Test\OrbitService_Test.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="B1Library">
-      <HintPath>..\OrbitService_Cancel_NFSe\bin\Debug\netcoreapp3.1\B1Library.dll</HintPath>
+      <HintPath>..\..\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.dll</HintPath>
     </Reference>
     <Reference Include="OrbitLibrary">
-      <HintPath>..\src\bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
+      <HintPath>..\..\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
     </Reference>
     <Reference Include="OrbitLibrary_Test">
-      <HintPath>..\test\bin\Debug\netcoreapp3.1\OrbitLibrary_Test.dll</HintPath>
+      <HintPath>..\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\OrbitLibrary_Test.dll</HintPath>
     </Reference>
   </ItemGroup>
 

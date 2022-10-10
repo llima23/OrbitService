@@ -1,0 +1,1 @@
+Responsavel por gerar a ConnectionString para se comunicar com o Conector.

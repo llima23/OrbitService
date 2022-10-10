@@ -60,7 +60,7 @@ namespace OrbitService_Test_Cancel_NFSe.OutboundDFe.mappers
             Assert.Equal(output.message,documentStatus.Descricao);
             Assert.Equal(invoice.ObjetoB1,documentStatus.ObjetoB1);
             Assert.Equal(invoice.DocEntry,documentStatus.DocEntry);
-            Assert.Equal(StatusCode.Sucess,documentStatus.Status);
+            Assert.Equal(StatusCode.CanceladaSucess,documentStatus.Status);
         }
 
         [Fact]

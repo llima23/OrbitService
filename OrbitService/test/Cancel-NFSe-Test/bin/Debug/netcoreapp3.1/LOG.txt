@@ -10,3 +10,15 @@
 10/8/2022 12:34:39 PM - 1
 10/8/2022 12:34:39 PM - Listou uma nota
 10/8/2022 12:34:39 PM - Response Erro
+10/10/2022 8:46:37 AM - 1
+10/10/2022 8:46:37 AM - Listou uma nota
+10/10/2022 8:46:38 AM - Response OK
+10/10/2022 8:46:38 AM - 1
+10/10/2022 8:46:38 AM - Listou uma nota
+10/10/2022 8:46:38 AM - Response Erro
+10/10/2022 8:47:18 AM - 1
+10/10/2022 8:47:18 AM - Listou uma nota
+10/10/2022 8:47:18 AM - Response OK
+10/10/2022 8:47:18 AM - 1
+10/10/2022 8:47:18 AM - Listou uma nota
+10/10/2022 8:47:18 AM - Response Erro

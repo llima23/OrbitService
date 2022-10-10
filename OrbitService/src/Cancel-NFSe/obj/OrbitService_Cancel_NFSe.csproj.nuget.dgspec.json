@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Cancel_NFSe\\OrbitService_Cancel_NFSe.csproj": {}
+    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Cancel-NFSe\\OrbitService_Cancel_NFSe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Cancel_NFSe\\OrbitService_Cancel_NFSe.csproj": {
+    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Cancel-NFSe\\OrbitService_Cancel_NFSe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Cancel_NFSe\\OrbitService_Cancel_NFSe.csproj",
+        "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Cancel-NFSe\\OrbitService_Cancel_NFSe.csproj",
         "projectName": "OrbitService_Cancel_NFSe",
-        "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Cancel_NFSe\\OrbitService_Cancel_NFSe.csproj",
+        "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Cancel-NFSe\\OrbitService_Cancel_NFSe.csproj",
         "packagesPath": "C:\\Users\\luisf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Cancel_NFSe\\obj\\",
+        "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Cancel-NFSe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luisf\\AppData\\Roaming\\NuGet\\NuGet.Config",

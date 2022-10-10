@@ -1,0 +1,80 @@
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Rafael\LIB\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Valdir\4TAX_Service\4TAX_Service\4TAX_Service\Orbit_Library\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitLibrary\OrbitLibrary\src\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb

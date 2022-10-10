@@ -12,15 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="B1Library">
-      <HintPath>..\..\..\B1Library\B1Library\src\bin\Debug\netcoreapp3.1\B1Library.dll</HintPath>
-    </Reference>
-    <Reference Include="OrbitLibrary">
-      <HintPath>..\src\bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
-    </Reference>
+    <Folder Include="OutboundDFe\usecases\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="OutboundDFe\usecases\" />
+    <Reference Include="B1Library">
+      <HintPath>..\B1Library\bin\Debug\netcoreapp3.1\B1Library.dll</HintPath>
+    </Reference>
+    <Reference Include="OrbitLibrary">
+      <HintPath>..\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

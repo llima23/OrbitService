@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9uRUPOC+KQHElPzEOup/iEhQWB13eQZdHX4d4s6X/hGekfudlOrgj1qLpPDRG2fuERkjcQaOeDX+Zdgbi7HjuQ==",
+  "dgSpecHash": "K/EtqQzomzLDAuf96KwT16N7WdVbF2xJWciox2cea/Y363TZ1d+d0HafnXaUNrOZxA88Xbuk7GMDOECSWdFSSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\Outbound-NFSe-Cancel\\OrbitService\\OrbitService_Cancel_NFSe\\OrbitService_Cancel_NFSe.csproj",
+  "projectFilePath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Cancel-NFSe\\OrbitService_Cancel_NFSe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luisf\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\luisf\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

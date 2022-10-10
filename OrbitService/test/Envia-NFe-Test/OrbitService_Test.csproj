@@ -22,15 +22,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\OrbitService.csproj" />
+    <ProjectReference Include="..\..\src\Envia-NFe\OrbitService.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="B1Library">
-      <HintPath>..\OrbitService_Cancel_NFSe\bin\Debug\netcoreapp3.1\B1Library.dll</HintPath>
+      <HintPath>..\..\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.dll</HintPath>
     </Reference>
     <Reference Include="OrbitLibrary">
-      <HintPath>..\src\bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
+      <HintPath>..\..\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
     </Reference>
     <Reference Include="OrbitLibrary_Test">
       <HintPath>bin\Debug\netcoreapp3.1\OrbitLibrary_Test.dll</HintPath>
