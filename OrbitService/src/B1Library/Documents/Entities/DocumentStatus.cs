@@ -28,7 +28,7 @@
         public int ObjetoB1 { get; set; }
         public int DocEntry { get; set; }
         public int CodigoStatusOrbitB1 { get; set; }
-        public StatusCode Status { get; }
+        public StatusCode Status { get; set; }
 
         public DocumentStatus(string OutputIdOrbit, string OutputStatusOrbit, string OutputDescricao, int InvoiceObjetoB1, int InvoiceDocEntry, StatusCode status)
         {
