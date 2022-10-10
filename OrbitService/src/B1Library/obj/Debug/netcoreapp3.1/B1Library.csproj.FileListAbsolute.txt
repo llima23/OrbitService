@@ -1,0 +1,116 @@
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/B1Library.deps.json
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/OrbitLibrary.pdb
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.GeneratedMSBuildEditorConfig.editorconfig
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfoInputs.cache
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfo.cs
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.csproj.CoreCompileInputs.cache
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.csproj.CopyComplete
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.GeneratedMSBuildEditorConfig.editorconfig
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfoInputs.cache
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfo.cs
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.csproj.CoreCompileInputs.cache
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/B1Library.deps.json
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/OrbitLibrary.dll
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/OrbitLibrary.pdb
+D:/Desenvolvimento/Luis/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.csproj.CopyComplete
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/bin/Debug/netcoreapp3.1/OrbitLibrary.dll
+D:/Desenvolvimento/Gabriel/B1Library/B1Library/B1Library/obj/Debug/netcoreapp3.1/B1Library.csproj.AssemblyReference.cache
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.deps.json
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/OrbitLibrary.dll
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/OrbitLibrary.pdb
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.AssemblyReference.cache
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.GeneratedMSBuildEditorConfig.editorconfig
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfoInputs.cache
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfo.cs
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CoreCompileInputs.cache
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CopyComplete
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/RepositoryOrbitB1/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.GeneratedMSBuildEditorConfig.editorconfig
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfoInputs.cache
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfo.cs
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CoreCompileInputs.cache
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.deps.json
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/OrbitLibrary.dll
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/OrbitLibrary.pdb
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CopyComplete
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.AssemblyReference.cache
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.AssemblyReference.cache
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfoInputs.cache
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfo.cs
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CoreCompileInputs.cache
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.dll
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.pdb
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.deps.json
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.dll
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.pdb
+C:/Users/rafae/OneDrive/Área de Trabalho/DEV/OrbitService/OrbitService/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CopyComplete
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.deps.json
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.dll
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.pdb
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.AssemblyReference.cache
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfoInputs.cache
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfo.cs
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CoreCompileInputs.cache
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CopyComplete
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.dll
+C:/Users/luisf/Desktop/Repositori B1 Dev/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.deps.json
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.pdb
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.GeneratedMSBuildEditorConfig.editorconfig
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfoInputs.cache
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfo.cs
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CoreCompileInputs.cache
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CopyComplete
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.dll
+D:/Desenvolvimento/Luis/RepositoryB1Orbit - DEV/B1Library/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.pdb
+/Users/LuisLima/Projects/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.deps.json
+/Users/LuisLima/Projects/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.dll
+/Users/LuisLima/Projects/B1Library/B1Library/src/bin/Debug/netcoreapp3.1/B1Library.pdb
+/Users/LuisLima/Projects/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.AssemblyReference.cache
+/Users/LuisLima/Projects/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.GeneratedMSBuildEditorConfig.editorconfig
+/Users/LuisLima/Projects/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfoInputs.cache
+/Users/LuisLima/Projects/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.AssemblyInfo.cs
+/Users/LuisLima/Projects/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CoreCompileInputs.cache
+/Users/LuisLima/Projects/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.csproj.CopyComplete
+/Users/LuisLima/Projects/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.dll
+/Users/LuisLima/Projects/B1Library/B1Library/src/obj/Debug/netcoreapp3.1/B1Library.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\bin\Debug\netcoreapp3.1\B1Library.deps.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\bin\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\bin\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\obj\Debug\netcoreapp3.1\B1Library.csproj.AssemblyReference.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\obj\Debug\netcoreapp3.1\B1Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\obj\Debug\netcoreapp3.1\B1Library.AssemblyInfoInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\obj\Debug\netcoreapp3.1\B1Library.AssemblyInfo.cs
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\obj\Debug\netcoreapp3.1\B1Library.csproj.CoreCompileInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\obj\Debug\netcoreapp3.1\B1Library.csproj.CopyComplete
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\obj\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\B1Library\B1Library\src\obj\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.deps.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.AssemblyReference.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.AssemblyInfoInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.AssemblyInfo.cs
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.CoreCompileInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.CopyComplete
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.pdb

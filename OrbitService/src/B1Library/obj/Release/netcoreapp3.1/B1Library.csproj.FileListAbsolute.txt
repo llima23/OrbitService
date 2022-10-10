@@ -1,0 +1,14 @@
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\bin\Release\netcoreapp3.1\B1Library.deps.json
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\bin\Release\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\bin\Release\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\bin\Release\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\bin\Release\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.AssemblyInfo.cs
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.csproj.CopyComplete
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\bin\Release\netcoreapp3.1\RestSharp.dll

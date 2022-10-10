@@ -1,0 +1,801 @@
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\4TAX_Service_NFSe_Lib.deps.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\4TAX_Service_NFSe_Lib.runtimeconfig.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\4TAX_Service_NFSe_Lib.runtimeconfig.dev.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\connector.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\4TAX_Service_NFSe_Lib.exe
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.exe
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.WindowsServices.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.ServiceProcess.ServiceController.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.ServiceProcess.ServiceController.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\4TAX_Service_NFSe_Lib.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\ServiceB1Library.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\4TAX_Service_NFSe_Lib.pdb
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\ServiceB1Library.pdb
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Gabriel\4Tax_Service_NFseWithLib\src\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Gabriel\aaaa\4Tax_Service_NFseWithLib\4Tax_Service_NFseWithLib\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Gabriel\aaaa\4Tax_Service_NFseWithLib\4Tax_Service_NFseWithLib\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Gabriel\aaaa\4Tax_Service_NFseWithLib\4Tax_Service_NFseWithLib\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Gabriel\aaaa\4Tax_Service_NFseWithLib\4Tax_Service_NFseWithLib\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\Gabriel\aaaa\4Tax_Service_NFseWithLib\4Tax_Service_NFseWithLib\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Gabriel\aaaa\4Tax_Service_NFseWithLib\4Tax_Service_NFseWithLib\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Gabriel\aaaa\4Tax_Service_NFseWithLib\4Tax_Service_NFseWithLib\4TAX_Service_NFSe_Lib\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.exe
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.exe
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\RestSharp.dll
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+D:\Desenvolvimento\Luis\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Gabriel\OrbitService\OrbitService\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.exe
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.exe
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\Rafael\Inbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.exe
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\connector.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\RestSharp.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\connector.json
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.exe
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\RestSharp.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\Rafael\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.pdb
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\connector.json
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.exe
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.pdb
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+C:\Users\rafae\OneDrive\Área de Trabalho\DEV\OrbitService\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\connector.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.exe
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\connector.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.exe
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\RestSharp.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Data.Odbc.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.dll
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.pdb
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\Luis\RepositoryB1Orbit - DEV\Outbound-NFe\OrbitService\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\connector.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.exe
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\OrbitService.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\bin\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\connector.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\OrbitService.exe
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\OrbitService.deps.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\OrbitService.runtimeconfig.dev.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\OrbitService.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\OrbitService.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\freebsd\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Data.Odbc.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.csproj.CoreCompileInputs.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\Outbound-NFSe-Cancel\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
