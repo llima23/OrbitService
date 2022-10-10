@@ -36,7 +36,6 @@ namespace OrbitService
                     DBServiceConfigurationRepository repo = new DBServiceConfigurationRepository(dbWrapper);
                     ServiceConfiguration sConfig = repo.GetConfiguration();
                     OutboundNFSeDocumentInutilUseCase use = new OutboundNFSeDocumentInutilUseCase(new DBDocumentsRepository(dbWrapper, "SBO_GRINGO_PRD"), sConfig, Defaults.GetCommunicationProvider());
-                    Logs.InsertLog($"Execute USE");
                     use.Execute();
                 }
                 catch (Exception ex)

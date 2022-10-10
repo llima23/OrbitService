@@ -65,11 +65,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService_Test", "test\I
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inutil-NFSe", "Inutil-NFSe", "{56B423A7-CCDC-4719-8542-FA32B7929065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitService", "src\Inutil-NFSe\OrbitService\OrbitService.csproj", "{38E91387-A0BF-4CC6-976B-90654EA3DFC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService", "src\Inutil-NFSe\OrbitService\OrbitService.csproj", "{38E91387-A0BF-4CC6-976B-90654EA3DFC5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inutil-NFSe-Test", "Inutil-NFSe-Test", "{A1E7E6B6-4122-4C20-BF0A-7C79BB968BB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitService-InutilNFSe-Test", "test\Inutil-NFSe-Test\OrbitService-InutilNFSe-Test\OrbitService-InutilNFSe-Test.csproj", "{6B5D3D11-4401-4A92-B945-982B0927DABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService-InutilNFSe-Test", "test\Inutil-NFSe-Test\OrbitService-InutilNFSe-Test\OrbitService-InutilNFSe-Test.csproj", "{6B5D3D11-4401-4A92-B945-982B0927DABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

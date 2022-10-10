@@ -68,3 +68,5 @@ C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NF
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.pdb
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\RestSharp.dll

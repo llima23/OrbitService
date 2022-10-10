@@ -17,7 +17,7 @@ namespace OrbitService.OutboundDFe.services
         {
             return InvokeOperation(
                  GetBuilder()
-                     .EndpointPath(Method.POST, ENDPOINT)
+                     .EndpointPath(Method.PUT, ENDPOINT)
                      .CredentialsProvider(sConfig.CredentialsProvider)
                      .Body(input)
                      .Serializer(new JsonRequestBodySerializer(removeNullFields: true)),

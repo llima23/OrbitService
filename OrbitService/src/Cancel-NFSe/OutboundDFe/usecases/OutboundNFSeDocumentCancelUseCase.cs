@@ -32,13 +32,13 @@ namespace OrbitService_Cancel_NFSe.OutboundDFe.usecases
             Logs.InsertLog($"{OutBoundNFeDocumentsCancel.Count}");
             foreach (Invoice invoice in OutBoundNFeDocumentsCancel)
             {
-                Logs.InsertLog($"Listou uma nota");
+               
                 OutboundDFeDocumentCancelInputNFSe input = mapper.MapperInvoiceB1ToOutboundDFeDocumentCancelInputNFSe(invoice);
                 OperationResponse<OutboundDFeDocumentCancelOutputNFSe, OutboundDFeDocumentCancelOutputNFSe> response = outboundNFeRegister.Execute(input);
 
                 if (response.isSuccessful)
                 {
-                    Logs.InsertLog($"Response OK");
+                 
                     OutboundDFeDocumentCancelOutputNFSe output = response.GetSuccessResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
                     documentsRepository.UpdateDocumentStatus(documentStatus);
@@ -46,7 +46,7 @@ namespace OrbitService_Cancel_NFSe.OutboundDFe.usecases
 
                 else
                 {
-                    Logs.InsertLog($"Response Erro");
+                 
                     OutboundDFeDocumentCancelOutputNFSe output = response.GetErrorResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseError(invoice, output);
                     documentsRepository.UpdateDocumentStatus(documentStatus);

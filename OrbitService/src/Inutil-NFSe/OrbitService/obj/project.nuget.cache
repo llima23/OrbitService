@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zBO9WOWnpIrJ5dlWQC7LsDDzHTb6ANLVhetZacPukAU8cpNdqBxjcIpdYqHlgpz5e8DAJ9unAIuztoWqAvZVOQ==",
+  "dgSpecHash": "D9xXYsfrpbxsKssVQKPGvjRKWLlRL9D0xhBrMlBwXZ+++IXg5493WOUKUrMXVonvqhYuOM81poZmcbVGe4liDg==",
   "success": true,
   "projectFilePath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Inutil-NFSe\\OrbitService\\OrbitService.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,8 @@
     "C:\\Users\\luisf\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\luisf\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\luisf\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\luisf\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\luisf\\.nuget\\packages\\restsharp\\106.15.0\\restsharp.106.15.0.nupkg.sha512",
     "C:\\Users\\luisf\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\luisf\\.nuget\\packages\\system.data.odbc\\6.0.1\\system.data.odbc.6.0.1.nupkg.sha512",
     "C:\\Users\\luisf\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

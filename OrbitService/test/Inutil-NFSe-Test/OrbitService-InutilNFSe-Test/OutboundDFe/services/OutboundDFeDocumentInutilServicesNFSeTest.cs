@@ -38,7 +38,7 @@ namespace OrbitService_InutilNFSe_Test.OutboundDFe.services
             OperationResponse<OutboundDFeDocumentInutilOutputNFSe, OutboundDFeDocumentInutilOutputNFSe> response = cut.Execute(input);
 
             Assert.NotNull(response);
-            Assert.Equal(Method.POST, t.request.Method);
+            Assert.Equal(Method.PUT, t.request.Method);
             Assert.EndsWith(OutboundDFeDocumentInutilServicesNFSe.ENDPOINT, t.request.Uri.AbsoluteUri);
             Assert.True(t.request.Headers.ContainsKey(HTTPHeaders.XAPIKey));
             Assert.True(t.request.Headers.ContainsKey(HTTPHeaders.Token));

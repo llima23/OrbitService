@@ -159,7 +159,29 @@ namespace B1Library.Documents.Repositories
                             ""ORBIT_INVOICE_OUT_VW"" 
                             WHERE  ""ModeloDocumento"" 
                             IN ('NFS-e') and ""CargaFiscal"" <> 0 ");
-                    sb.AppendLine(@$"and ""CodInt"" = '{codigoIntegracaoOrbit}' ");
+                    sb.AppendLine(@$"and ""CodInt"" = '{codigoIntegracaoOrbit}'");
+                    sb.AppendLine(@$"and ""CANCELED"" = '{invoiceCANCELED}' ");
+                    sb.AppendLine(@$"FOR JSON");
+                    Query = sb.ToString();
+                    break;
+                default:
+                    break;
+            }
+            return Query;
+        }
+
+        public string ReturnQueryB1OutboundNFSeToInutil(string DocumentB1)
+        {
+            string Query = string.Empty;
+            switch (DocumentB1)
+            {
+                case "ORBIT_INVOICE_OUT_VW":
+                    StringBuilder sb = new StringBuilder();
+                    //TODO: update command to dynamic generate table name
+                    sb.Append(@$"SELECT * FROM 
+                            ""ORBIT_INVOICE_OUT_VW"" 
+                            WHERE  ""ModeloDocumento"" 
+                            IN ('NFS-e') and ""CargaFiscal"" <> 0 ");
                     sb.AppendLine(@$"and ""CANCELED"" = '{invoiceCANCELED}' ");
                     sb.AppendLine(@$"FOR JSON");
                     Query = sb.ToString();

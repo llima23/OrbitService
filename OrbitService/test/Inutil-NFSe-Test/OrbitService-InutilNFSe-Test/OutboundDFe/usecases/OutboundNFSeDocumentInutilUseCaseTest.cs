@@ -60,7 +60,7 @@ namespace OrbitService_InutilNFSe_Test.OutboundDFe.usecases
         [Fact]
         public void ShouldExecuteUseCaseOutboundNFSeDocumentInutilError()
         {
-            response = TestsBuilder.CreateOperationResponse<OutboundDFeDocumentInutilOutputNFSe, OutboundDFeDocumentInutilOutputNFSe>(TestsBuilder.CreateOperationRequest(), "{\"sucess\":false,\"message\":\"ERRO\"}", HttpStatusCode.BadRequest);
+            response = TestsBuilder.CreateOperationResponse<OutboundDFeDocumentInutilOutputNFSe, OutboundDFeDocumentInutilOutputNFSe>(TestsBuilder.CreateOperationRequest(), "{\"message\":\"Userisnotauthorizedtoaccessthisresourcewithanexplicitdeny\",\"customErrorMessage\":\"Requestedpath'POST-/documentservice/nfse/inutilizacao'notfound\",\"path\":{\"resource_name\":\"\",\"entity_name\":\"\",\"action_name\":\"\"}}", HttpStatusCode.Forbidden);
 
             List<Invoice> listInvoiceB1 = new List<Invoice>();
             Invoice invoice = new Invoice();

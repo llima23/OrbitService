@@ -138,7 +138,6 @@ namespace B1Library.Implementations.Repositories
             if (VerifyIfViewsExistHANA(oinv_viewname))
             {
                 util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(queryViewsB1.ReturnQueryB1OutboundNFSeToCancel(oinv_viewname)));
-                Logs.InsertLog($"Query Return {queryViewsB1.ReturnQueryB1OutboundNFSeToCancel(oinv_viewname)}");
                 return invoices;
             }
             else
@@ -154,8 +153,7 @@ namespace B1Library.Implementations.Repositories
             if (VerifyIfViewsExistHANA(oinv_viewname))
             {
                 queryViewsB1.invoiceCANCELED = "Y";
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(queryViewsB1.ReturnQueryB1OutboundNFSe(oinv_viewname)));
-                Logs.InsertLog($"Query Return {queryViewsB1.ReturnQueryB1OutboundNFSe(oinv_viewname)}");
+                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(queryViewsB1.ReturnQueryB1OutboundNFSeToInutil(oinv_viewname)));
                 return invoices;
             }
             else
@@ -179,8 +177,6 @@ namespace B1Library.Implementations.Repositories
 
         public bool VerifyIfViewsExistHANA(string ViewName)
         {
-            Logs.InsertLog($"Verifiy Entrando {ViewName}");
-            Logs.InsertLog(@$"select * from ""SYS"".""VIEWS"" where ""SCHEMA_NAME"" = '{DataBaseName}' and ""VIEW_NAME"" = '{ViewName}'");
             DataSet queryResult = wrapper.ExecuteQuery(@$"select * from ""SYS"".""VIEWS"" where ""SCHEMA_NAME"" = '{DataBaseName}' and ""VIEW_NAME"" = '{ViewName}'");
             if (queryResult.Tables[0].Rows.Count == 0)
             {

@@ -57,5 +57,4 @@ C:\Users\luisf\Desktop\Repositori B1 Dev\Publish\runtimes\win\lib\netcoreapp3.1\
 C:\Users\luisf\Desktop\Repositori B1 Dev\Publish\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\Publish\B1Library.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\Publish\OrbitLibrary.dll
-C:\Users\luisf\Desktop\Repositori B1 Dev\Publish\RestSharp.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\Publish\B1Library.pdb

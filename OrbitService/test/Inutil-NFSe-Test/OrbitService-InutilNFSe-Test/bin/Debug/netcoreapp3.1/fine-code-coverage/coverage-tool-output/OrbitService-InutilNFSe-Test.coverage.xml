@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.1923" branch-rate="0.0974" version="1.9" timestamp="1665409881" lines-covered="402" lines-valid="2090" branches-covered="23" branches-valid="236">
+<coverage line-rate="0.1959" branch-rate="0.0966" version="1.9" timestamp="1665413462" lines-covered="418" lines-valid="2133" branches-covered="23" branches-valid="238">
   <sources>
     <source>C:\Users\luisf\</source>
   </sources>
   <packages>
-    <package name="B1Library" line-rate="0.0582" branch-rate="0" complexity="290">
+    <package name="B1Library" line-rate="0.0818" branch-rate="0" complexity="292">
       <classes>
         <class name="B1Library.Utilities.Util" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\Utilities\Util.cs" line-rate="0" branch-rate="0" complexity="46">
           <methods>
@@ -1037,7 +1037,7 @@
             </method>
             <method name="get_Identificacao" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="29" branch="False" />
+                <line number="26" hits="33" branch="False" />
               </lines>
             </method>
             <method name="get_ModeloDocumento" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1114,7 +1114,7 @@
             <line number="23" hits="5" branch="False" />
             <line number="24" hits="8" branch="False" />
             <line number="25" hits="5" branch="False" />
-            <line number="26" hits="29" branch="False" />
+            <line number="26" hits="33" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
@@ -1662,7 +1662,7 @@
             <line number="157" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="B1Library.Documents.Identificacao" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\Documents\Entities\Invoice.cs" line-rate="0.0666" branch-rate="1" complexity="30">
+        <class name="B1Library.Documents.Identificacao" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\Documents\Entities\Invoice.cs" line-rate="0.1" branch-rate="1" complexity="30">
           <methods>
             <method name="get_BranchId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1704,9 +1704,9 @@
                 <line number="169" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_DocNum" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_DocNum" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="170" hits="0" branch="False" />
+                <line number="170" hits="2" branch="False" />
               </lines>
             </method>
             <method name="get_DocumentoCancelado" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1726,7 +1726,7 @@
             </method>
             <method name="get_IdRetornoOrbit" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="174" hits="15" branch="False" />
+                <line number="174" hits="17" branch="False" />
               </lines>
             </method>
             <method name="get_IndicadorIntermediario" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1824,11 +1824,11 @@
             <line number="167" hits="0" branch="False" />
             <line number="168" hits="0" branch="False" />
             <line number="169" hits="0" branch="False" />
-            <line number="170" hits="0" branch="False" />
+            <line number="170" hits="2" branch="False" />
             <line number="171" hits="0" branch="False" />
             <line number="172" hits="0" branch="False" />
             <line number="173" hits="0" branch="False" />
-            <line number="174" hits="15" branch="False" />
+            <line number="174" hits="17" branch="False" />
             <line number="175" hits="0" branch="False" />
             <line number="176" hits="0" branch="False" />
             <line number="177" hits="0" branch="False" />
@@ -1932,7 +1932,7 @@
             <line number="211" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="B1Library.Documents.Repositories.QueryViewsB1" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\Documents\Repositories\QueryViewsB1.cs" line-rate="0" branch-rate="0" complexity="59">
+        <class name="B1Library.Documents.Repositories.QueryViewsB1" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\Documents\Repositories\QueryViewsB1.cs" line-rate="0" branch-rate="0" complexity="61">
           <methods>
             <method name="get_codigoIntegracaoOrbit" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2127,7 +2127,7 @@
                 <line number="171" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="ReturnQueryB1OutboundNFSeToCancel" signature="(System.String)" line-rate="0" branch-rate="0" complexity="2">
+            <method name="ReturnQueryB1OutboundNFSeToInutil" signature="(System.String)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
                 <line number="174" hits="0" branch="False" />
                 <line number="175" hits="0" branch="False" />
@@ -2138,8 +2138,31 @@
                 </line>
                 <line number="179" hits="0" branch="False" />
                 <line number="181" hits="0" branch="False" />
+                <line number="182" hits="0" branch="False" />
                 <line number="183" hits="0" branch="False" />
                 <line number="184" hits="0" branch="False" />
+                <line number="185" hits="0" branch="False" />
+                <line number="186" hits="0" branch="False" />
+                <line number="187" hits="0" branch="False" />
+                <line number="188" hits="0" branch="False" />
+                <line number="190" hits="0" branch="False" />
+                <line number="192" hits="0" branch="False" />
+                <line number="193" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ReturnQueryB1OutboundNFSeToCancel" signature="(System.String)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="196" hits="0" branch="False" />
+                <line number="197" hits="0" branch="False" />
+                <line number="198" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="22" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="201" hits="0" branch="False" />
+                <line number="203" hits="0" branch="False" />
+                <line number="205" hits="0" branch="False" />
+                <line number="206" hits="0" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -2322,54 +2345,73 @@
             </line>
             <line number="179" hits="0" branch="False" />
             <line number="181" hits="0" branch="False" />
+            <line number="182" hits="0" branch="False" />
             <line number="183" hits="0" branch="False" />
             <line number="184" hits="0" branch="False" />
+            <line number="185" hits="0" branch="False" />
+            <line number="186" hits="0" branch="False" />
+            <line number="187" hits="0" branch="False" />
+            <line number="188" hits="0" branch="False" />
+            <line number="190" hits="0" branch="False" />
+            <line number="192" hits="0" branch="False" />
+            <line number="193" hits="0" branch="False" />
+            <line number="196" hits="0" branch="False" />
+            <line number="197" hits="0" branch="False" />
+            <line number="198" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="22" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="201" hits="0" branch="False" />
+            <line number="203" hits="0" branch="False" />
+            <line number="205" hits="0" branch="False" />
+            <line number="206" hits="0" branch="False" />
             <line number="12" hits="0" branch="False" />
             <line number="13" hits="0" branch="False" />
             <line number="14" hits="0" branch="False" />
             <line number="15" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="B1Library.Applications.Logs" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\Applications\Logs.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="B1Library.Applications.Logs" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\Applications\Logs.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="InsertLog" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="InsertLog" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="0" branch="False" />
-                <line number="18" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
+                <line number="17" hits="2" branch="False" />
+                <line number="18" hits="2" branch="False" />
+                <line number="19" hits="2" branch="False" />
+                <line number="21" hits="2" branch="False" />
+                <line number="22" hits="2" branch="False" />
+                <line number="23" hits="2" branch="False" />
+                <line number="24" hits="2" branch="False" />
+                <line number="25" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="2" branch="False" />
+                <line number="30" hits="2" branch="False" />
+                <line number="31" hits="2" branch="False" />
               </lines>
             </method>
-            <method name=".cctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="0" branch="False" />
+                <line number="10" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="10" hits="0" branch="False" />
+            <line number="17" hits="2" branch="False" />
+            <line number="18" hits="2" branch="False" />
+            <line number="19" hits="2" branch="False" />
+            <line number="21" hits="2" branch="False" />
+            <line number="22" hits="2" branch="False" />
+            <line number="23" hits="2" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="25" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="2" branch="False" />
+            <line number="30" hits="2" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="10" hits="1" branch="False" />
           </lines>
         </class>
       </classes>
@@ -6852,7 +6894,7 @@
         </class>
       </classes>
     </package>
-    <package name="OrbitService" line-rate="0.7465999999999999" branch-rate="0.6666" complexity="20">
+    <package name="OrbitService" line-rate="0.5533" branch-rate="0.6666" complexity="22">
       <classes>
         <class name="OrbitService.Program" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\Program.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
@@ -6870,6 +6912,7 @@
                 <line number="20" hits="0" branch="False" />
                 <line number="21" hits="0" branch="False" />
                 <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
@@ -6882,140 +6925,167 @@
             <line number="20" hits="0" branch="False" />
             <line number="21" hits="0" branch="False" />
             <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
           </lines>
         </class>
         <class name="OrbitService.Worker" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\Worker.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;OrbitService.Worker&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="0" branch="False" />
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-                <line number="18" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
           </lines>
         </class>
         <class name="OrbitService.Worker/&lt;ExecuteAsync&gt;d__2" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\Worker.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="182" type="jump" coverage="0%" />
+                    <condition number="359" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
-                <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="182" type="jump" coverage="0%" />
+                <condition number="359" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
           </lines>
         </class>
         <class name="OrbitService.OutboundDFe.usecases.OutboundNFSeDocumentInutilUseCase" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\OutboundDFe\usecases\OutboundNFSeDocumentInutilUseCase.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name="Execute" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="23" hits="2" branch="False" />
                 <line number="24" hits="2" branch="False" />
                 <line number="25" hits="2" branch="False" />
                 <line number="26" hits="2" branch="False" />
-                <line number="27" hits="10" branch="True" condition-coverage="100% (2/2)">
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="10" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="174" type="jump" coverage="100%" />
+                    <condition number="222" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="28" hits="2" branch="False" />
                 <line number="29" hits="2" branch="False" />
                 <line number="30" hits="2" branch="False" />
-                <line number="31" hits="2" branch="True" condition-coverage="100% (2/2)">
+                <line number="31" hits="2" branch="False" />
+                <line number="32" hits="2" branch="False" />
+                <line number="33" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="88" type="jump" coverage="100%" />
+                    <condition number="136" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="32" hits="1" branch="False" />
-                <line number="33" hits="1" branch="False" />
                 <line number="34" hits="1" branch="False" />
                 <line number="35" hits="1" branch="False" />
                 <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
                 <line number="38" hits="1" branch="False" />
-                <line number="39" hits="1" branch="False" />
                 <line number="40" hits="1" branch="False" />
                 <line number="41" hits="1" branch="False" />
                 <line number="42" hits="1" branch="False" />
-                <line number="43" hits="2" branch="False" />
-                <line number="44" hits="2" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="2" branch="False" />
+                <line number="46" hits="2" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(B1Library.Documents.IDocumentsRepository,OrbitLibrary.Common.ServiceConfiguration,OrbitLibrary.Common.CommunicationProvider)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="2" branch="False" />
                 <line number="17" hits="2" branch="False" />
                 <line number="18" hits="2" branch="False" />
                 <line number="19" hits="2" branch="False" />
                 <line number="20" hits="2" branch="False" />
                 <line number="21" hits="2" branch="False" />
+                <line number="22" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="23" hits="2" branch="False" />
             <line number="24" hits="2" branch="False" />
             <line number="25" hits="2" branch="False" />
             <line number="26" hits="2" branch="False" />
-            <line number="27" hits="10" branch="True" condition-coverage="100% (2/2)">
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="10" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="174" type="jump" coverage="100%" />
+                <condition number="222" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="28" hits="2" branch="False" />
             <line number="29" hits="2" branch="False" />
             <line number="30" hits="2" branch="False" />
-            <line number="31" hits="2" branch="True" condition-coverage="100% (2/2)">
+            <line number="31" hits="2" branch="False" />
+            <line number="32" hits="2" branch="False" />
+            <line number="33" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="88" type="jump" coverage="100%" />
+                <condition number="136" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="32" hits="1" branch="False" />
-            <line number="33" hits="1" branch="False" />
             <line number="34" hits="1" branch="False" />
             <line number="35" hits="1" branch="False" />
             <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
             <line number="38" hits="1" branch="False" />
-            <line number="39" hits="1" branch="False" />
             <line number="40" hits="1" branch="False" />
             <line number="41" hits="1" branch="False" />
             <line number="42" hits="1" branch="False" />
-            <line number="43" hits="2" branch="False" />
-            <line number="44" hits="2" branch="False" />
-            <line number="16" hits="2" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="2" branch="False" />
+            <line number="46" hits="2" branch="False" />
             <line number="17" hits="2" branch="False" />
             <line number="18" hits="2" branch="False" />
             <line number="19" hits="2" branch="False" />
             <line number="20" hits="2" branch="False" />
             <line number="21" hits="2" branch="False" />
+            <line number="22" hits="2" branch="False" />
           </lines>
         </class>
         <class name="OrbitService.OutboundDFe.services.OutboundDFeDocumentInutilInputNFSe" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\OutboundDFe\services\OutboundDFeDocumentInutilInputNFSe.cs" line-rate="1" branch-rate="1" complexity="2">
@@ -7138,6 +7208,48 @@
             <line number="26" hits="2" branch="False" />
             <line number="27" hits="2" branch="False" />
             <line number="28" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="OrbitService.Application.Logs" filename="Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\Application\Logs.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="InsertLog" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
           </lines>
         </class>
       </classes>

@@ -39,7 +39,6 @@ namespace OrbitService_Cancel_NFSe
                     DBServiceConfigurationRepository repo = new DBServiceConfigurationRepository(dbWrapper);
                     ServiceConfiguration sConfig = repo.GetConfiguration();
                     OutboundNFSeDocumentCancelUseCase use = new OutboundNFSeDocumentCancelUseCase(new DBDocumentsRepository(dbWrapper, "SBO_GRINGO_PRD"), sConfig, Defaults.GetCommunicationProvider());
-                    Logs.InsertLog($"Execute USE");
                     use.Execute();
                 }
                 catch(Exception ex) 
