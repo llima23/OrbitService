@@ -137,10 +137,24 @@ namespace B1Library.Implementations.Repositories
             //SELECT OINV DOCUMENTS
             if (VerifyIfViewsExistHANA(oinv_viewname))
             {
-                queryViewsB1.invoiceCANCELED = "Y";
-                queryViewsB1.codigoIntegracaoOrbit = (int)StatusCode.Sucess;
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(queryViewsB1.ReturnQueryB1OutboundNFSe(oinv_viewname)));
+                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(queryViewsB1.ReturnQueryB1OutboundNFSeToCancel(oinv_viewname)));
+                Logs.InsertLog($"Query Return {queryViewsB1.ReturnQueryB1OutboundNFSeToCancel(oinv_viewname)}");
+                return invoices;
+            }
+            else
+            {
+                return invoices;
+            }
+        }
 
+        public List<Invoice> GetInutilOutboundNFSe()
+        {
+            List<Invoice> invoices = new List<Invoice>();
+            //SELECT OINV DOCUMENTS
+            if (VerifyIfViewsExistHANA(oinv_viewname))
+            {
+                queryViewsB1.invoiceCANCELED = "Y";
+                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(queryViewsB1.ReturnQueryB1OutboundNFSe(oinv_viewname)));
                 Logs.InsertLog($"Query Return {queryViewsB1.ReturnQueryB1OutboundNFSe(oinv_viewname)}");
                 return invoices;
             }
@@ -153,6 +167,7 @@ namespace B1Library.Implementations.Repositories
         public List<Invoice> GetOutboundNFSe()
         {
             List<Invoice> invoices = new List<Invoice>();
+            //SELECT OINV DOCUMENTS
             return invoices;
         }
 
@@ -176,5 +191,7 @@ namespace B1Library.Implementations.Repositories
                 return true;
             }
         }
+
+    
     }
 }

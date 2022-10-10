@@ -169,5 +169,18 @@ namespace B1Library.Documents.Repositories
             }
             return Query;
         }
+
+        public string ReturnQueryB1OutboundNFSeToCancel(string DocumentB1)
+        {
+            string Query = string.Empty;
+            switch (DocumentB1)
+            {
+                case "ORBIT_INVOICE_OUT_VW":
+                    break;
+                default:
+                    break;
+            }
+            return Query;
+        }
     }
 }

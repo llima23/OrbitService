@@ -12,8 +12,9 @@ namespace B1Library.Documents
         List<Invoice> GetOutboundNFe();
         List<Invoice> GetOutboundNFSe();
         List<Invoice> GetCancelOutboundNFe();
-
         List<Invoice> GetCancelOutboundNFSe();
+
+        List<Invoice> GetInutilOutboundNFSe();
         int UpdateDocumentStatus(DocumentStatus documentData);
        
     }
