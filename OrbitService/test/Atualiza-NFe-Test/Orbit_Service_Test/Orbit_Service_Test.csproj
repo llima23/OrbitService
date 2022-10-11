@@ -22,18 +22,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Atualiza-NFe\OrbitService\OrbitService.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="B1Library">
-      <HintPath>..\..\..\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.dll</HintPath>
-    </Reference>
-    <Reference Include="OrbitLibrary">
-      <HintPath>..\..\..\src\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="OrbitLibrary_Test">
-      <HintPath>..\..\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\OrbitLibrary_Test.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\..\src\B1Library\B1Library.csproj" />
+    <ProjectReference Include="..\..\..\src\OrbitLibrary\OrbitLibrary.csproj" />
+    <ProjectReference Include="..\..\OrbitLibrary-Test\OrbitLibrary_Test.csproj" />
   </ItemGroup>
 
 </Project>

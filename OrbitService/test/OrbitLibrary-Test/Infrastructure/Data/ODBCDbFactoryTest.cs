@@ -9,10 +9,23 @@ namespace OrbitLibrary_Test.Infrastructure.Data
     {
         public ODBCDbFactory cut;
         const string validConnectionString = "DRIVER={HDBODBC};UID=user;PWD=password;SERVERNODE=server:3000;CS=db_name;";
+        const string validDatabaseName = "db_name";
+        const string validDatabaseType = "HANA";
 
         public ODBCDbFactoryTest()
         {
-            cut = new ODBCDbFactory(validConnectionString);
+            cut = new ODBCDbFactory(validConnectionString)
+            {
+                DataBaseType = validDatabaseType,
+                DataBaseName = validDatabaseName
+            };
+        }
+
+        [Fact]
+        public void ShouldReceiverDataBaseNameAndDataBaseType()
+        {
+            Assert.Equal(validDatabaseName, cut.DataBaseName);
+            Assert.Equal(validDatabaseType, cut.DataBaseType);
         }
 
         [Fact]

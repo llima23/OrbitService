@@ -18,20 +18,21 @@ namespace B1Library.Implementations.Repositories
         private const string opch_viewname = "ORBIT_PURCHASEINVOICE_OUT_VW";
         private const string opdn_viewname = "ORBIT_PURCHASEDELIVERYNOTES_OUT_VW";
 
-        private const string verifiyViewExist_query = "";
 
         public string DataBaseName { get; set; }
+        public string DataBaseType { get; set; }
 
         private IWrapper wrapper;
         private Util util;
         private QueryViewsB1 queryViewsB1;
 
-        public DBDocumentsRepository(IWrapper wrapper, string DatabaseName)
+        public DBDocumentsRepository(IWrapper wrapper)
         {
             this.wrapper = wrapper;
             util = new Util();
             queryViewsB1 = new QueryViewsB1();
-            this.DataBaseName = DatabaseName;
+            this.DataBaseName = wrapper.DataBaseName;
+            this.DataBaseType = wrapper.DataBaseType;
         }
 
         public List<Invoice> GetInboundOtherDocuments()

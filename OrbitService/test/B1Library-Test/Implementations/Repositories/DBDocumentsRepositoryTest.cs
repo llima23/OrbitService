@@ -35,7 +35,7 @@ namespace B1Library_Tests.Repository
         public DBDocumentsRepositoryTest()
         {
             mockWrapper = new Mock<IWrapper>();
-            cut = new DBDocumentsRepository(mockWrapper.Object,"");
+            cut = new DBDocumentsRepository(mockWrapper.Object);
             queryViewsB1 = new QueryViewsB1();
             oinvInvoices = createFakeInvoicesDataSet(oinv_viewname);
             odlnInvoices = createFakeInvoicesDataSet(odln_viewname);

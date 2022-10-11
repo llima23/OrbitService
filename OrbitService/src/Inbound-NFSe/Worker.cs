@@ -33,7 +33,7 @@ namespace OrbitService
                 {
                     try
                     {
-                        NFSeDocumentsRegisterUseCase useCase = new NFSeDocumentsRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper, serviceDependencies.DatabaseName));
+                        NFSeDocumentsRegisterUseCase useCase = new NFSeDocumentsRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
                         useCase.Execute();
                     }
                     catch (Exception ex)

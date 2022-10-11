@@ -114,3 +114,5 @@ C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.CopyComplete
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb

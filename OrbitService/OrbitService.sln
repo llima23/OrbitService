@@ -73,11 +73,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService-InutilNFSe-Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Atualiza-NFe", "Atualiza-NFe", "{928756D9-0903-4703-BBB1-F66413547EEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitService", "src\Atualiza-NFe\OrbitService\OrbitService.csproj", "{92084B6F-BACC-48FF-A7EA-212503A98B84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService", "src\Atualiza-NFe\OrbitService\OrbitService.csproj", "{92084B6F-BACC-48FF-A7EA-212503A98B84}"
+	ProjectSection(ProjectDependencies) = postProject
+		{81ADD9F7-1CAF-45E3-8CAD-F3B36B9C984B} = {81ADD9F7-1CAF-45E3-8CAD-F3B36B9C984B}
+		{F7A01BD2-2B14-40A7-9C64-329A25DA3781} = {F7A01BD2-2B14-40A7-9C64-329A25DA3781}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Atualiza-NFe-Test", "Atualiza-NFe-Test", "{DF1B9727-A988-455A-8D93-8894FC8A9D4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbit_Service_Test", "test\Atualiza-NFe-Test\Orbit_Service_Test\Orbit_Service_Test.csproj", "{C93E93B6-5BF0-43A0-8864-507EFD23DFCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orbit_Service_Test", "test\Atualiza-NFe-Test\Orbit_Service_Test\Orbit_Service_Test.csproj", "{C93E93B6-5BF0-43A0-8864-507EFD23DFCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

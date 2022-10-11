@@ -8,6 +8,8 @@ namespace OrbitLibrary.Infrastructure.Data
     public class ODBCDbFactory: DBFactory
     {
         private string connectionString;
+        public string DataBaseType { get; set; }
+        public string DataBaseName { get; set; }
         public ODBCDbFactory(string connectionString)
         {
             this.connectionString = connectionString;

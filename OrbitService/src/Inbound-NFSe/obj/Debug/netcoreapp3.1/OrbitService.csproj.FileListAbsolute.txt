@@ -545,3 +545,12 @@ C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-N
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\obj\Debug\netcoreapp3.1\OrbitService.csproj.CopyComplete
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\ServiceStack.Common.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\ServiceStack.Interfaces.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\ServiceStack.Text.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inbound-NFSe\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

@@ -24,10 +24,4 @@
     <ProjectReference Include="..\..\src\B1Library\B1Library.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="OrbitLibrary">
-      <HintPath>..\..\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

@@ -32,7 +32,7 @@ namespace OrbitService
                 {
                     try
                     {
-                        OutboundNFeRegisterUseCase useCase = new OutboundNFeRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper, serviceDependencies.DatabaseName));
+                        OutboundNFeRegisterUseCase useCase = new OutboundNFeRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
                         useCase.Execute();
                     }
                     catch (Exception ex)

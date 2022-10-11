@@ -16,6 +16,9 @@ namespace OrbitLibrary_Test.Data
         public Mock<IDbDataAdapter> mDataAdapter;
         public DbWrapper cut;
 
+        const string validDataBaseName = "db_name";
+        const string validDatabaseType = "HANA";
+
         public DbWrapperTest()
         {
             mFactory = new Mock<DBFactory>();
@@ -26,13 +29,24 @@ namespace OrbitLibrary_Test.Data
             mFactory.Setup(m => m.CreateConnection()).Returns(mConnection.Object);
             mFactory.Setup(m => m.CreateCommand()).Returns(mCommand.Object);
             mFactory.Setup(m => m.CreateDataAdapter()).Returns(mDataAdapter.Object);
+            mFactory.Setup(m => m.DataBaseName).Returns(validDataBaseName);
+            mFactory.Setup(m => m.DataBaseType).Returns(validDatabaseType);
             mConnection.SetupAllProperties();
             mCommand.SetupAllProperties();
             mDataAdapter.SetupAllProperties();
 
-            cut = new DbWrapper(mFactory.Object);
+            cut = new DbWrapper(mFactory.Object)
+            {
+                DataBaseName = mFactory.Object.DataBaseName,
+                DataBaseType = mFactory.Object.DataBaseType
+            };
         }
-
+        [Fact]
+        public void ShouldReceiverDatabaseNameAndDataBaseType()
+        {
+            Assert.Equal(mFactory.Object.DataBaseName, cut.DataBaseName);
+            Assert.Equal(mFactory.Object.DataBaseType, cut.DataBaseType);  
+        }
         [Fact]
         public void ShouldExecuteQueryCommand()
         {

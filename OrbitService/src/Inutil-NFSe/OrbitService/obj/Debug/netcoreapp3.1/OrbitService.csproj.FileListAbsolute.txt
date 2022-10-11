@@ -70,3 +70,12 @@ C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NF
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\ServiceStack.Common.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\ServiceStack.Interfaces.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\ServiceStack.Text.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\Inutil-NFSe\OrbitService\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

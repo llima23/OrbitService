@@ -32,7 +32,7 @@ namespace OrbitLibrary.Utils
             ServiceConfiguration sConfig = serviceRepo.GetConfiguration();
             CommunicationProvider communicationProvider = GetCommunicationProvider();
             sConfig.CredentialsProvider = GetCredentialsProvider(sConfig, communicationProvider);
-            return new ServiceDependencies(sConfig, communicationProvider, wrapper, "") ;
+            return new ServiceDependencies(sConfig, communicationProvider, wrapper) ;
         }
 
         public static List<ServiceDependencies> GetListServiceDependencies()
@@ -41,14 +41,18 @@ namespace OrbitLibrary.Utils
             List<ServiceDependencies> listServiceDependencies = new List<ServiceDependencies>();
             foreach (AppSettings item in ListappSettings)
             {
-                ODBCDbFactory factory = new ODBCDbFactory(item.ConnectionString);
+                ODBCDbFactory factory = new ODBCDbFactory(item.ConnectionString)
+                {
+                    DataBaseName = item.DataBaseName,
+                    DataBaseType = item.DbServerType
+                };
                 IWrapper wrapper = new DbWrapper(factory);
                 DBServiceConfigurationRepository serviceRepo = new DBServiceConfigurationRepository(wrapper);
                 ServiceConfiguration sConfig = serviceRepo.GetConfiguration();
 
                 CommunicationProvider communicationProvider = GetCommunicationProvider();
                 sConfig.CredentialsProvider = GetCredentialsProvider(sConfig, communicationProvider);
-                listServiceDependencies.Add(new ServiceDependencies(sConfig, communicationProvider, wrapper,item.DataBaseName));
+                listServiceDependencies.Add(new ServiceDependencies(sConfig, communicationProvider, wrapper));
             }
             return listServiceDependencies;
         }

@@ -5,6 +5,8 @@ namespace OrbitLibrary.Data
 {
     public interface IWrapper
     {
+        public string DataBaseType { get; set; }
+        public string DataBaseName { get; set; }
         public bool CanDbConnect();
 
         public int ExecuteNonQuery(string commandString);

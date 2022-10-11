@@ -12,13 +12,10 @@ namespace OrbitLibrary.Utils
         public CommunicationProvider communicationProvider { get; }
         public IWrapper DbWrapper { get; }
 
-        public string DatabaseName { get; }
-
-        public ServiceDependencies(ServiceConfiguration sConfig, CommunicationProvider communicationProvider, IWrapper wrapper, string DatabaseName)
+        public ServiceDependencies(ServiceConfiguration sConfig, CommunicationProvider communicationProvider, IWrapper wrapper)
         {
             this.sConfig = sConfig;
             this.communicationProvider = communicationProvider;
-            this.DatabaseName = DatabaseName;
             DbWrapper = wrapper;
         }
     }

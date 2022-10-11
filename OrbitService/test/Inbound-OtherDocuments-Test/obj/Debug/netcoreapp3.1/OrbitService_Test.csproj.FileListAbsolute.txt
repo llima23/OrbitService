@@ -780,3 +780,15 @@ C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\obj\Debug\netcoreapp3.1\OrbitService_Test.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\obj\Debug\netcoreapp3.1\OrbitService_Test.pdb
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\obj\Debug\netcoreapp3.1\OrbitService_Test.genruntimeconfig.cache
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\OrbitLibrary_Test.deps.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\OrbitLibrary_Test.runtimeconfig.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\OrbitLibrary_Test.runtimeconfig.dev.json
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\ServiceStack.Common.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\ServiceStack.Interfaces.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\ServiceStack.Text.dll
+C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\test\Inbound-OtherDocuments-Test\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

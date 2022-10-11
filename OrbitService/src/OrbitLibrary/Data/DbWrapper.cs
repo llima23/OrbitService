@@ -6,12 +6,18 @@ namespace OrbitLibrary.Data
     public class DbWrapper : IWrapper
     {
         public const int COMMAND_TIMEOUT = 600;
+  
         private DBFactory factory;
+        public string DataBaseType { get; set; }
+        public string DataBaseName { get; set; }
 
         public DbWrapper(DBFactory factory)
         {
             this.factory = factory;
+            this.DataBaseName = factory.DataBaseName;
+            this.DataBaseType = factory.DataBaseType;
         }
+  
 
         public bool CanDbConnect()
         {

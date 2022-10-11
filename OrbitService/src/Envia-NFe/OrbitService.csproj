@@ -14,11 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="B1Library">
-      <HintPath>..\..\..\..\B1Library\B1Library\src\bin\Debug\netcoreapp3.1\B1Library.dll</HintPath>
-    </Reference>
-    <Reference Include="OrbitLibrary">
-      <HintPath>bin\Debug\netcoreapp3.1\OrbitLibrary.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\B1Library\B1Library.csproj" />
+    <ProjectReference Include="..\OrbitLibrary\OrbitLibrary.csproj" />
   </ItemGroup>
 </Project>
