@@ -1,27 +1,72 @@
 ﻿using B1Library.Documents.Entities;
+using B1Library.Implementations.Repositories;
+using B1Library.usecase;
+using Moq;
+using OrbitLibrary.Data;
 using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using Xunit;
+using static B1Library.Implementations.Repositories.DBTableNameRepository;
 
 namespace B1Library_Tests.Documents.Entities
 {
     public class SetupQueryB1Test
     {
-        private SetupQueryB1 cut;
-
-		public static string MVast = string.Empty;
-		public static string AliquotaIntDestino = string.Empty;
-		public static string PartilhaInterestadual = string.Empty;
+		private Mock<IWrapper> mockWrapper;
+		private SetupQueryB1 cut;
+		private TableName tableName;
+		private UseCasesB1Library useCasesB1;
 		public SetupQueryB1Test()
         {
-            cut = new SetupQueryB1(); 
-        }
-
-        [Fact]
-        public void ShouldSetupQueryB1()
+			mockWrapper = new Mock<IWrapper>();
+			tableName = new TableName();
+			tableName.TableHeader = "OINV";
+			tableName.TableChild = tableName.TableHeader.Remove(0, 1);
+			tableName.Type = DBTableNameRepository.Type.Saida;
+			useCasesB1 = new UseCasesB1Library();
+			useCasesB1.EnumUseCase = UseCase.OtherDocuments;
+			cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), tableName, useCasesB1);
+		}
+		public DataSet ReturnDataSetWithRowForFields(string Fields)
         {
-            StringBuilder sb = new StringBuilder();
+			DataSet dataSet = new DataSet();
+			DataTable table = new DataTable("CUFD");
+			DataColumn column = new DataColumn();
+			column.ColumnName = "AliasId";
+			table.Columns.Add(column);
+			dataSet.Tables.Add(table);
+			DataRow config = dataSet.Tables[0].NewRow();
+			config["AliasId"] = Fields;
+			dataSet.Tables[0].Rows.Add(config);
+
+			return dataSet;
+		}
+
+		public DataSet ReturnDataSetWithoutRowForFields(string Fields)
+		{
+			DataSet dataSet = new DataSet();
+			DataTable table = new DataTable("CUFD");
+			DataColumn column = new DataColumn();
+			column.ColumnName = "AliasId";
+			table.Columns.Add(column);
+			dataSet.Tables.Add(table);
+			return dataSet;
+		}
+		[Fact]
+        public void ShouldSetupQueryB1SendDocumentToOrbitOutbound()
+        {
+			string query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.MVast}'";
+			mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithRowForFields(cut.MVast));
+
+			query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.AliquotaIntDestino}'";
+			mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithRowForFields(cut.AliquotaIntDestino));
+
+			query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.PartilhaInterestadual}'";
+			mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithoutRowForFields(cut.PartilhaInterestadual));
+
+
+			StringBuilder sb = new StringBuilder();
             #region HEADER QUERY
             sb.Append(@$"SELECT
 	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
@@ -47,7 +92,7 @@ namespace B1Library_Tests.Documents.Entities
 	                         ,REPLACE(REPLACE(( ");
             #endregion HEADER QUERY
             #region IDENTIFICACAO
-            sb.AppendLine(@"SELECT
+            sb.AppendLine($@"SELECT
 	 	  							 COALESCE(OI.""DocEntry"",0) 	  			AS ""DocEntry"",
 									 COALESCE(OI.""DocNum"", 0)                    AS ""DocNum"",
 									 COALESCE(OI.""DocTime"", 0)                   AS ""DocTime"",
@@ -76,7 +121,8 @@ namespace B1Library_Tests.Documents.Entities
 									 COALESCE(OI.""U_TAX4_Prot"", '')              AS ""NumeroProtocolo"",
 									 COALESCE(C2.""U_TAX4_itCultural"", '')        AS ""IncentivadorCultural""
 
-									 FROM OINV OI JOIN INV12 PT ON PT.""DocEntry"" = OI.""DocEntry""
+									 FROM {cut.B1TableName} OI 
+								     JOIN {cut.B1TableNameChild}12 PT ON PT.""DocEntry"" = OI.""DocEntry""
 									 LEFT JOIN OUSG OU ON PT.""MainUsage"" = OU.""ID""
 									 LEFT JOIN OCTG OC ON OI.""GroupNum"" = OC.""GroupNum""
 									 LEFT JOIN OPYM OP ON OI.""PeyMethod"" = OP.""PayMethCod""
@@ -87,44 +133,7 @@ namespace B1Library_Tests.Documents.Entities
 									 AS ""Identificacao""");
 			#endregion IDENTIFICACAO
 			#region PARCEIRO
-			sb.AppendLine($@",REPLACE(REPLACE((
- 							SELECT
-								COALESCE(T0.""CardCode"",'') 						AS ""CodigoParceiro"",
-	 							COALESCE(T0.""CardName"", '')                      AS ""RazaoSocialParceiro"",
-	 							COALESCE(T0.""Address"", '')                       AS ""EnderecoParceiro"",
-	 							COALESCE(PT.""TaxId0"", '')                        AS ""CnpjParceiro"",
-	 							CASE PT.""TaxId1""
-	 							WHEN 'Isento' THEN('')
-	 							ELSE COALESCE(PT.""TaxId1"", '')
-	 							END AS ""InscIeParceiro"",
-	 							COALESCE(PT.""TaxId3"", '')                        AS ""InscMunParceiro"",
-	 							COALESCE(PT.""TaxId4"", '')                        AS ""CpfParceiro"",
-	 							COALESCE(PT.""StreetB"", '')                       AS ""LogradouroParceiro"",
-	 							COALESCE(PT.""BuildingB"", '')                     AS ""ComplementoParceiro"",
-	 							COALESCE(PT.""BlockB"", '')                        AS ""BairroParceiro"",
-	 							COALESCE(PT.""ZipCodeB"", '')                      AS ""CEPParceiro"",
-	 							COALESCE(PT.""CountyB"", '')                       AS ""MunicipioParceiro"",
-								COALESCE(PT.""StateB"", '')                        AS ""UFParceiro"",
-	 							COALESCE(PT.""CityB"", '')                         AS ""CidadeParceiro"",
-	 							COALESCE(PT.""AddrTypeB"", '')                     AS ""TipoLogradouroParceiro"",
-	 							COALESCE(PT.""StreetNoB"", '')                     AS ""NumeroLogradouroParceiro"",
-	 							COALESCE(OY.""CntCodNum"", '')                     AS ""CodigoPaisParceiro"",
-		 						COALESCE(OT.""IbgeCode"", '')                      AS ""CodigoIBGEMunicipioParceiro"",
-		 						COALESCE(CONCAT(OD.""Phone2"", OD.""Phone1""), '')    AS ""FoneParceiro"",
-		 						COALESCE(OD.""E_Mail"", '')                        AS ""EmailParceiro"",
-		 						COALESCE(OY.""Name"", '')                          AS ""NomePaisParceiro"",
-		 						COALESCE(UF.""U_TAX4_Cod"", '')                    AS ""CodigoUFParceiro"",
-		 						COALESCE(D1.""U_TAX4_indIEDest"", '')              AS ""IndicadorIEParceiro"",
-		 						COALESCE(PT.""Incoterms"", '')                     AS ""ModalidadeFrete""
-								FROM INV12 PT
-								LEFT JOIN OCRY OY ON PT.""CountryB"" = OY.""Code""
-								LEFT JOIN OCNT OT ON PT.""CountyB"" = OT.""AbsId""
-								LEFT JOIN OCRD OD ON T0.""CardCode"" = OD.""CardCode""
-								LEFT JOIN ""@TAX4_UF"" UF ON PT.""StateB"" = UF.""U_TAX4_Uf""
-								LEFT JOIN CRD1 D1 ON OD.""CardCode"" = D1.""CardCode"" and T0.""PayToCode"" = D1.""Address""
-								WHERE PT.""DocEntry"" = T0.""DocEntry"" and D1.""AdresType"" = 'S'
-								FOR JSON),'[',''),']','') 
-								AS ""Parceiro""");
+			sb.AppendLine(cut.RetunCommandParceiro());
 			#endregion PARCEIRO
 			#region FILIAL
 			sb.AppendLine(@$",REPLACE(REPLACE(( 
@@ -210,20 +219,20 @@ namespace B1Library_Tests.Documents.Entities
 								 COALESCE(TT.""U_TAX4_TpImp"", '')     AS ""TipoImpostoOrbit"",
 								 COALESCE(TT.""Name"", '')             AS ""NomeImposto"",
 								 COALESCE(TX.""BaseSum"", 0)           AS ""ValorBaseImposto"",
-								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"", ");
-            if (cut.VerifyIfFieldExists(MVast))
+								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"" ");
+            if (cut.VerifyIfFieldExists(cut.MVast))
             {
-			sb.AppendLine(@$"	 COALESCE(TX.""U_Lucro"",0)			   AS ""MVast"",");				
+			sb.AppendLine(@$"	 ,COALESCE(TX.""U_Lucro"",0)			   AS ""MVast""");				
 			}
-			if (cut.VerifyIfFieldExists(AliquotaIntDestino))
+			if (cut.VerifyIfFieldExists(cut.AliquotaIntDestino))
 			{
-			sb.AppendLine(@$"	 COALESCE(TX.""U_AliqDest"",0)		   AS ""AliquotaIntDestino"",");
+			sb.AppendLine(@$"	 ,COALESCE(TX.""U_AliqDest"",0)		   AS ""AliquotaIntDestino""");
 			}
-			if (cut.VerifyIfFieldExists(PartilhaInterestadual))
+			if (cut.VerifyIfFieldExists(cut.PartilhaInterestadual))
 			{
-			sb.AppendLine(@$"	 COALESCE(TX.""U_IntPart"",0)		   AS ""PartilhaInterestadual""");
+			sb.AppendLine(@$"	 ,COALESCE(TX.""U_IntPart"",0)		   AS ""PartilhaInterestadual""");
 			}
-			sb.AppendLine(@$"	FROM INV4 TX 
+			sb.AppendLine(@$"	FROM {cut.B1TableNameChild}4 TX 
 								JOIN OSTT TT ON TX.""staType"" = TT.""AbsId"" 
 								WHERE TL.""DocEntry"" = TX.""DocEntry""
 								AND TL.""LineNum"" = TX.""LineNum""
@@ -235,7 +244,7 @@ namespace B1Library_Tests.Documents.Entities
 									 COALESCE(WT.""Rate"",0) 				AS ""PorcentagemImpostoRetido"",
 									 COALESCE(WT.""WTAmnt"", 0)            AS ""ValorImpostoRetido"",
 									 COALESCE(OW.""U_TAX4_TpImp"", '')     AS ""TipoImpostoOrbit""
-									 FROM INV5 WT
+									 FROM {cut.B1TableNameChild}5 WT
 									 INNER JOIN OWHT OH on WT.""WTCode"" = OH.""WTCode""
 									 INNER JOIN OWTT OW on OH.""WTTypeId"" = OW.""WTTypeId""
 									 WHERE WT.""AbsEntry"" = T0.""DocEntry""
@@ -246,12 +255,12 @@ namespace B1Library_Tests.Documents.Entities
 								SELECT
 								COALESCE(OX.""ExpnsType"",'') 			AS ""TipoDespesa"",
 								COALESCE(TD.""LineTotal"", 0)			AS ""ValorUnitarioDespesa""
-								FROM INV13 TD
+								FROM {cut.B1TableNameChild}13 TD
 								JOIN OEXD OX ON TD.""ExpnsCode"" = OX.""ExpnsCode""
 								WHERE TD.""DocEntry"" = T0.""DocEntry"" AND TD.""LineNum"" = TL.""LineNum""
 								FOR JSON) AS ""DespesaAdicional"" ");
 			#endregion DespesaAdicional
-			sb.AppendLine(@$"FROM INV1 TL 
+			sb.AppendLine(@$"FROM {cut.B1TableNameChild}1 TL 
 							 JOIN OITM OT ON TL.""ItemCode"" = OT.""ItemCode""
 							 LEFT JOIN ONCM CM ON OT.""NCMCode"" = CM.""AbsEntry""
 							 LEFT JOIN ""OSCD"" OD ON OT.""OSvcCode"" = OD.""AbsEntry""
@@ -264,25 +273,28 @@ namespace B1Library_Tests.Documents.Entities
 							COALESCE(DP.""InstlmntID"",0) 		AS ""NumeroDuplicata"",
 							COALESCE(DP.""DueDate"", '')           AS ""DataVencimento"",
 							COALESCE(DP.""InsTotal"", 0)           AS ""ValorDuplicata""
-							FROM INV6 DP
+							FROM {cut.B1TableNameChild}6 DP
 							WHERE DP.""DocEntry"" = T0.""DocEntry""
 							FOR JSON) 
 							AS ""Duplicata"" ");
 			#endregion DUPLICATA
-			sb.AppendLine($@"FROM OINV T0  
+
+			sb.AppendLine($@"FROM {cut.B1TableName} T0  
 							JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
-							LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""
-							WHERE ""U_TAX4_CodInt"" = '0' FOR JSON");
-			string query = Convert.ToString(sb);
-			Assert.Contains("Identificacao", query);
-			Assert.Contains("Parceiro", query);
-			Assert.Contains("Filial", query);
-			Assert.Contains("ImpostoLinha", query);
-			Assert.Contains("ImpostoRetidoLinha", query);
-			Assert.Contains("DespesaAdicional", query);
-			Assert.Contains("CabecalhoLinha", query);
-			Assert.Contains("Duplicata", query);
-			Assert.Contains(@"""U_TAX4_CodInt"" = '0'", query);
+							LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
+			sb.AppendLine(useCasesB1.GetCommandUseCase());
+			sb.AppendLine("FOR JSON");
+			query = Convert.ToString(sb);
+			string queryProd = cut.SetupQueryB1SendDocumentToOrbitOutbound();
+			Assert.Equal(query, queryProd);
 		}
-    }
+        [Fact]
+		public void VerifyIfFieldExists()
+        {
+			string query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.MVast}'";
+			mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithRowForFields(cut.MVast));
+			Assert.True(cut.VerifyIfFieldExists(cut.MVast));
+
+		}
+	}
 }

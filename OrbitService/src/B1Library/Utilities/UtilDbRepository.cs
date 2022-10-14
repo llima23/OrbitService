@@ -1,0 +1,52 @@
+﻿using B1Library.Documents;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace B1Library.Utilities
+{
+    public class UtilDbRepository
+    {
+        public void addInvoiceEntriesToList(List<Invoice> invoices, DataSet dsResult)
+        {
+            if (dsResult != null)
+            {
+                string formattedJson = returnJsonB1Formated(dsResult);
+                if (formattedJson != null)
+                {
+                    invoices.AddRange(JsonConvert.DeserializeObject<List<Invoice>>(formattedJson));
+                }
+            }
+        }
+        public string returnJsonB1Formated(DataSet dataSet)
+        {
+            if (dataSet.Tables[0].Rows.Count == 0)
+            {
+                return null;
+            }
+
+            string result = dataSet.Tables[0].Rows[0].ItemArray[0].ToString();
+            result = Regex.Replace(result, @"(\\"")", @"""");
+            result = Regex.Replace(result, @"(""\[)", "[");
+            result = Regex.Replace(result, @"(\]"")", "]");
+            result = Regex.Replace(result, @"(""{)", "{");
+            result = Regex.Replace(result, @"(}"",)", "},");
+            return result;
+        }
+        public string generateUpdateDocumentCommand(DocumentStatus documentData)
+        {
+            StringBuilder sb = new StringBuilder();
+            //TODO: update command to dynamic generate table name
+            sb.Append(@$"UPDATE OINV SET ");
+            sb.AppendLine(@$"""U_TAX4_Stat"" = '{documentData.GetStatusMessage()}'");
+            sb.AppendLine(@$",""U_TAX4_CodInt"" = '{(int)documentData.Status}'");
+            sb.AppendLine(@$",""U_TAX4_IdRet"" = '{documentData.IdOrbit}' ");
+            sb.AppendLine(@$"WHERE ");
+            sb.AppendLine(@$"""DocEntry"" = {documentData.DocEntry}");
+            return sb.ToString();
+        }
+    }
+}

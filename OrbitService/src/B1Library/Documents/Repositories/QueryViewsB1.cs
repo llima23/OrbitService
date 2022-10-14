@@ -6,30 +6,18 @@ namespace B1Library.Documents.Repositories
     
     public class QueryViewsB1
     {
-        private Util util;
+        private UtilDbRepository util;
         public int codigoIntegracaoOrbit { get; set; }
         public string invoiceCANCELED { get; set; }
         public QueryViewsB1()
         {
-            util = new Util();
+            util = new UtilDbRepository();
         }
         public string ReturnQueryB1InboundOtherDocuments(string NameViewB1)
         {
             string Query = string.Empty;
             switch (NameViewB1)
             {
-                case "ORBIT_INVOICE_OUT_VW":
-                    Query = util.getTableQueryCommandOtherDocuments(NameViewB1);
-                    break;
-                case "ORBIT_DELIVERY_OUT_VW":
-                    Query = util.getTableQueryCommandOtherDocuments(NameViewB1);
-                    break;
-                case "ORBIT_PURCHASEINVOICE_OUT_VW":
-                    Query = util.getTableQueryCommandOtherDocuments(NameViewB1);
-                    break;
-                case "ORBIT_PURCHASEDELIVERYNOTES_OUT_VW":
-                    Query = util.getTableQueryCommandOtherDocuments(NameViewB1);
-                    break;
                 default:
                     break;
             }
