@@ -28,6 +28,8 @@ namespace B1Library.Documents
         public string TipoDocumento { get; set; }
         public string TipoNF { get; set; }
 
+        public string IdRetornoOrbit { get; set; }
+
         public string CANCELED { get; set; }//Criar Campo na View
         public int ObjetoB1 { get; set; }
 

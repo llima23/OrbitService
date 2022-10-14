@@ -31,7 +31,55 @@ namespace B1Library.Documents.Entities
             B1TableNameChild = tableName.TableChild;
         }
 
-        public string SetupQueryB1SendDocumentToOrbitOutbound()
+		public string SetupQueryB1ConsultDocumentInOrbit()
+        {
+			StringBuilder sb = new StringBuilder();
+			sb.AppendLine($@"SELECT
+	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
+							 COALESCE(T1.""BaseEntry"", 0)           AS ""BaseEntry"",
+							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
+							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
+							 COALESCE(OM.""NfmCode"", '')            AS ""ModeloDocumento"",
+							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1""
+							 FROM OINV T0
+							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
+							 JOIN INV1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
+			sb.AppendLine(useCasesB1.GetCommandUseCase());
+			sb.AppendLine("FOR JSON");
+			return Convert.ToString(sb);
+		}
+
+
+		public string SetupQueryB1CancelDocumentInOrbit()
+        {
+			StringBuilder sb = new StringBuilder();
+			sb.AppendLine($@"SELECT
+	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
+							 COALESCE(T1.""BaseEntry"", 0)           AS ""BaseEntry"",
+							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
+							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
+							 COALESCE(OM.""NfmCode"", '')            AS ""ModeloDocumento"",
+							 COALESCE(NF.""SeqCode"", 0)             AS ""CargaFiscal"",
+							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1"",
+							 COALESCE(T0.""U_TAX4_Justi"", '')       AS ""Justificativa"",
+							 COALESCE(T0.""CANCELED"", '')           AS ""CANCELED"",
+							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado""
+							 FROM OINV T0
+							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
+							 JOIN INV1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""
+							 WHERE
+							 ""U_TAX4_CodInt"" = '2'
+							 and NF.""SeqCode"" <> 0
+							 and T0.""U_TAX4_CARGAFISCAL"" = 'N'
+							 and T0.""CANCELED"" = 'C'
+							 and T0.""DocStatus"" = 'C'");
+			sb.AppendLine(useCasesB1.GetCommandUseCase());
+			sb.AppendLine("FOR JSON");
+			return Convert.ToString(sb);
+		}
+        public string SetupQueryB1SendDocumentToOrbit()
         {
 			StringBuilder sb = new StringBuilder();
 			#region HEADER QUERY
@@ -252,25 +300,11 @@ namespace B1Library.Documents.Entities
 			sb.AppendLine("FOR JSON");
 			return Convert.ToString(sb);
 		}
-
-		public bool VerifyIfFieldExists(string ValidFieldExist)
-		{
-			DataSet queryResult = dbRepo.wrapper.ExecuteQuery(@$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{ValidFieldExist}'");
-			if (queryResult.Tables[0].Rows.Count == 0)
-			{
-				return false;
-			}
-			else
-			{
-				return true;
-			}
-		}
-
 		public string RetunCommandParceiro()
-        {
+		{
 			string command;
 			if (B1TableType == DBTableNameRepository.Type.Saida)
-            {
+			{
 				command = $@",REPLACE(REPLACE((
  							SELECT
 								COALESCE(T0.""CardCode"",'') 					   AS ""CodigoParceiro"",
@@ -312,7 +346,7 @@ namespace B1Library.Documents.Entities
 				return command;
 			}
 			else
-            {
+			{
 				command = $@",REPLACE(REPLACE((
  							SELECT
 								COALESCE(T0.""CardCode"",'') 					   AS ""CodigoParceiro"",
@@ -353,9 +387,19 @@ namespace B1Library.Documents.Entities
 								AS ""Parceiro""";
 				return command;
 			}
-        }
-
-		
+		}
+		public bool VerifyIfFieldExists(string ValidFieldExist)
+		{
+			DataSet queryResult = dbRepo.wrapper.ExecuteQuery(@$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{ValidFieldExist}'");
+			if (queryResult.Tables[0].Rows.Count == 0)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
 
 	}
 }

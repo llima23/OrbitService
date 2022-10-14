@@ -15,18 +15,13 @@ namespace B1Library_Tests.Documents.Entities
     {
 		private Mock<IWrapper> mockWrapper;
 		private SetupQueryB1 cut;
-		private TableName tableName;
 		private UseCasesB1Library useCasesB1;
+		private UseCase useCase;
 		public SetupQueryB1Test()
         {
 			mockWrapper = new Mock<IWrapper>();
-			tableName = new TableName();
-			tableName.TableHeader = "OINV";
-			tableName.TableChild = tableName.TableHeader.Remove(0, 1);
-			tableName.Type = DBTableNameRepository.Type.Saida;
-			useCasesB1 = new UseCasesB1Library();
-			useCasesB1.EnumUseCase = UseCase.OtherDocuments;
-			cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), tableName, useCasesB1);
+			useCasesB1 = new UseCasesB1Library(useCase);
+			cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), new TableName(), useCasesB1);
 		}
 		public DataSet ReturnDataSetWithRowForFields(string Fields)
         {
@@ -52,6 +47,67 @@ namespace B1Library_Tests.Documents.Entities
 			table.Columns.Add(column);
 			dataSet.Tables.Add(table);
 			return dataSet;
+		}
+
+		[Fact]
+		public void ShouldSetupQueryB1ConsultDocumentInOrbit()
+		{
+			useCase = UseCase.ConsultaNFe;
+			useCasesB1 = new UseCasesB1Library(useCase);
+			cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), new TableName(), useCasesB1);
+			StringBuilder sb = new StringBuilder();
+			sb.AppendLine($@"SELECT
+	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
+							 COALESCE(T1.""BaseEntry"", 0)           AS ""BaseEntry"",
+							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
+							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
+							 COALESCE(OM.""NfmCode"", '')            AS ""ModeloDocumento"",
+							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1""
+							 FROM OINV T0
+							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
+							 JOIN INV1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
+			sb.AppendLine(useCasesB1.GetCommandUseCase());
+			sb.AppendLine("FOR JSON");
+
+			string query = Convert.ToString(sb);
+			string queryProd = cut.SetupQueryB1ConsultDocumentInOrbit();
+			Assert.Equal(query, queryProd);
+		}
+
+		[Fact]
+		public void ShouldSetupQueryB1CancelDocumentInOrbit()
+        {
+			useCase = UseCase.CancelOutboundNFe;
+			StringBuilder sb = new StringBuilder();
+			sb.AppendLine($@"SELECT
+	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
+							 COALESCE(T1.""BaseEntry"", 0)           AS ""BaseEntry"",
+							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
+							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
+							 COALESCE(OM.""NfmCode"", '')            AS ""ModeloDocumento"",
+							 COALESCE(NF.""SeqCode"", 0)             AS ""CargaFiscal"",
+							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1"",
+							 COALESCE(T0.""U_TAX4_Justi"", '')       AS ""Justificativa"",
+							 COALESCE(T0.""CANCELED"", '')           AS ""CANCELED"",
+							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado""
+							 FROM OINV T0
+							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
+							 JOIN INV1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""
+							 WHERE
+							 ""U_TAX4_CodInt"" = '2'
+							 and NF.""SeqCode"" <> 0
+							 and T0.""U_TAX4_CARGAFISCAL"" = 'N'
+							 and T0.""CANCELED"" = 'C'
+							 and T0.""DocStatus"" = 'C'");
+			sb.AppendLine(useCasesB1.GetCommandUseCase());
+			sb.AppendLine("FOR JSON");
+
+
+			string query = Convert.ToString(sb);
+			string queryProd = cut.SetupQueryB1CancelDocumentInOrbit();
+			Assert.Equal(query, queryProd);
 		}
 		[Fact]
         public void ShouldSetupQueryB1SendDocumentToOrbitOutbound()
@@ -285,7 +341,7 @@ namespace B1Library_Tests.Documents.Entities
 			sb.AppendLine(useCasesB1.GetCommandUseCase());
 			sb.AppendLine("FOR JSON");
 			query = Convert.ToString(sb);
-			string queryProd = cut.SetupQueryB1SendDocumentToOrbitOutbound();
+			string queryProd = cut.SetupQueryB1SendDocumentToOrbit();
 			Assert.Equal(query, queryProd);
 		}
         [Fact]
