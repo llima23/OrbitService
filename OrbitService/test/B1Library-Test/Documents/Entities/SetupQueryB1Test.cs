@@ -17,11 +17,15 @@ namespace B1Library_Tests.Documents.Entities
 		private SetupQueryB1 cut;
 		private UseCasesB1Library useCasesB1;
 		private UseCase useCase;
+		private TableName tableName;
+		private  DBTableNameRepository tableNameRepository;
 		public SetupQueryB1Test()
         {
 			mockWrapper = new Mock<IWrapper>();
 			useCasesB1 = new UseCasesB1Library(useCase);
-			cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), new TableName(), useCasesB1);
+			tableName = new TableName();
+			tableNameRepository = new DBTableNameRepository();
+			cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), tableName, useCasesB1);
 		}
 		public DataSet ReturnDataSetWithRowForFields(string Fields)
         {
@@ -54,33 +58,40 @@ namespace B1Library_Tests.Documents.Entities
 		{
 			useCase = UseCase.ConsultaNFe;
 			useCasesB1 = new UseCasesB1Library(useCase);
-			cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), new TableName(), useCasesB1);
-			StringBuilder sb = new StringBuilder();
-			sb.AppendLine($@"SELECT
-	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
+			foreach (TableName item in tableNameRepository.tableNamesOutboundNFe)
+			{
+                cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), item, useCasesB1);
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($@"SELECT
+	                         COALESCE(T0.""DocEntry"",0)             AS ""DocEntry"",
 							 COALESCE(T1.""BaseEntry"", 0)           AS ""BaseEntry"",
 							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
 							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
 							 COALESCE(OM.""NfmCode"", '')            AS ""ModeloDocumento"",
 							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1""
-							 FROM OINV T0
+							 FROM {cut.B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
-							 JOIN INV1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+							 JOIN {cut.B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
 							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
-			sb.AppendLine(useCasesB1.GetCommandUseCase());
-			sb.AppendLine("FOR JSON");
-
-			string query = Convert.ToString(sb);
-			string queryProd = cut.SetupQueryB1ConsultDocumentInOrbit();
-			Assert.Equal(query, queryProd);
+                sb.AppendLine(useCasesB1.GetCommandUseCase());
+                sb.AppendLine("FOR JSON");
+                string query = Convert.ToString(sb);
+                string queryProd = cut.SetupQueryB1ConsultDocumentInOrbit();
+                Assert.Equal(query, queryProd);
+            }
+			
 		}
 
 		[Fact]
 		public void ShouldSetupQueryB1CancelDocumentInOrbit()
         {
-			useCase = UseCase.CancelOutboundNFe;
-			StringBuilder sb = new StringBuilder();
-			sb.AppendLine($@"SELECT
+            useCase = UseCase.ConsultaNFe;
+            useCasesB1 = new UseCasesB1Library(useCase);
+			foreach (TableName item in tableNameRepository.tableNamesOutboundNFe)
+			{
+                cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), item, useCasesB1);
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($@"SELECT
 	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
 							 COALESCE(T1.""BaseEntry"", 0)           AS ""BaseEntry"",
 							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
@@ -91,9 +102,9 @@ namespace B1Library_Tests.Documents.Entities
 							 COALESCE(T0.""U_TAX4_Justi"", '')       AS ""Justificativa"",
 							 COALESCE(T0.""CANCELED"", '')           AS ""CANCELED"",
 							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado""
-							 FROM OINV T0
+							 FROM {cut.B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
-							 JOIN INV1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+							 JOIN {cut.B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
 							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""
 							 WHERE
 							 ""U_TAX4_CodInt"" = '2'
@@ -101,30 +112,37 @@ namespace B1Library_Tests.Documents.Entities
 							 and T0.""U_TAX4_CARGAFISCAL"" = 'N'
 							 and T0.""CANCELED"" = 'C'
 							 and T0.""DocStatus"" = 'C'");
-			sb.AppendLine(useCasesB1.GetCommandUseCase());
-			sb.AppendLine("FOR JSON");
+                sb.AppendLine(useCasesB1.GetCommandUseCase());
+                sb.AppendLine("FOR JSON");
 
 
-			string query = Convert.ToString(sb);
-			string queryProd = cut.SetupQueryB1CancelDocumentInOrbit();
-			Assert.Equal(query, queryProd);
+                string query = Convert.ToString(sb);
+                string queryProd = cut.SetupQueryB1CancelDocumentInOrbit();
+                Assert.Equal(query, queryProd);
+            }
+           
 		}
 		[Fact]
         public void ShouldSetupQueryB1SendDocumentToOrbitOutbound()
         {
-			string query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.MVast}'";
-			mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithRowForFields(cut.MVast));
+            useCase = UseCase.OutboundNFe;
+            useCasesB1 = new UseCasesB1Library(useCase);
+			DBTableNameRepository db = new DBTableNameRepository();
+			foreach (TableName item in db.tableNamesOutboundNFe)
+			{
+                cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), item , useCasesB1);
 
-			query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.AliquotaIntDestino}'";
-			mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithRowForFields(cut.AliquotaIntDestino));
+                string query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.MVast}'";
+                mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithRowForFields(cut.MVast));
 
-			query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.PartilhaInterestadual}'";
-			mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithoutRowForFields(cut.PartilhaInterestadual));
+                query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.AliquotaIntDestino}'";
+                mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithRowForFields(cut.AliquotaIntDestino));
 
-
-			StringBuilder sb = new StringBuilder();
-            #region HEADER QUERY
-            sb.Append(@$"SELECT
+                query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.PartilhaInterestadual}'";
+                mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithoutRowForFields(cut.PartilhaInterestadual));
+                StringBuilder sb = new StringBuilder();
+                #region HEADER QUERY
+                sb.Append(@$"SELECT
 	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
 	                         COALESCE(T0.""U_TAX4_CodInt"",'')      AS ""CodInt"",
 	                         COALESCE(OM.""NfmCode"",'')            AS ""ModeloDocumento"",
@@ -146,9 +164,9 @@ namespace B1Library_Tests.Documents.Entities
 	 		                        WHEN '20' THEN ('0')
 	 		                        END AS ""TipoNF""
 	                         ,REPLACE(REPLACE(( ");
-            #endregion HEADER QUERY
-            #region IDENTIFICACAO
-            sb.AppendLine($@"SELECT
+                #endregion HEADER QUERY
+                #region IDENTIFICACAO
+                sb.AppendLine($@"SELECT
 	 	  							 COALESCE(OI.""DocEntry"",0) 	  			AS ""DocEntry"",
 									 COALESCE(OI.""DocNum"", 0)                    AS ""DocNum"",
 									 COALESCE(OI.""DocTime"", 0)                   AS ""DocTime"",
@@ -187,12 +205,12 @@ namespace B1Library_Tests.Documents.Entities
 									 WHERE T0.""DocEntry"" = OI.""DocEntry"" FOR JSON),'[',''),']','') 
 	
 									 AS ""Identificacao""");
-			#endregion IDENTIFICACAO
-			#region PARCEIRO
-			sb.AppendLine(cut.RetunCommandParceiro());
-			#endregion PARCEIRO
-			#region FILIAL
-			sb.AppendLine(@$",REPLACE(REPLACE(( 
+                #endregion IDENTIFICACAO
+                #region PARCEIRO
+                sb.AppendLine(cut.RetunCommandParceiro());
+                #endregion PARCEIRO
+                #region FILIAL
+                sb.AppendLine(@$",REPLACE(REPLACE(( 
  							SELECT
 							 COALESCE(OB.""BPLName"",'') 				AS ""RazaoSocialFilial"",
 							 COALESCE(OB.""TaxIdNum"", '')             AS ""CNPJFilial"",
@@ -220,10 +238,10 @@ namespace B1Library_Tests.Documents.Entities
 							 WHERE OB.""BPLId"" = T0.""BPLId""
 							 FOR JSON),'[',''),']','') 
 							 AS ""Filial""");
-			#endregion FILIAL
-			#region LINHAS
-			#region HEADER LINHAS
-			sb.AppendLine(@$",( 
+                #endregion FILIAL
+                #region LINHAS
+                #region HEADER LINHAS
+                sb.AppendLine(@$",( 
  							SELECT
  								 COALESCE(CAST(TL.""VisOrder"" + 1 AS VARCHAR),'')									AS ""NItem"",
 								 COALESCE(TL.""LineNum"", 0)														AS ""ItemLinhaDocumento"",
@@ -265,10 +283,10 @@ namespace B1Library_Tests.Documents.Entities
 								 WHEN '55' THEN('102')
 								 ELSE '999'
 								 END AS ""cEnq""");
-			#endregion HEADER LINHAS
+                #endregion HEADER LINHAS
 
-			#region IMPOSTOS LINHA
-			sb.AppendLine(@$",(
+                #region IMPOSTOS LINHA
+                sb.AppendLine(@$",(
 							SELECT
 								 COALESCE(TX.""TaxSum"",0) 			   AS ""ValorImposto"",
 								 COALESCE(TX.""TaxRate"", 0)           AS ""PorcentagemImposto"",
@@ -276,26 +294,26 @@ namespace B1Library_Tests.Documents.Entities
 								 COALESCE(TT.""Name"", '')             AS ""NomeImposto"",
 								 COALESCE(TX.""BaseSum"", 0)           AS ""ValorBaseImposto"",
 								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"" ");
-            if (cut.VerifyIfFieldExists(cut.MVast))
-            {
-			sb.AppendLine(@$"	 ,COALESCE(TX.""U_Lucro"",0)			   AS ""MVast""");				
-			}
-			if (cut.VerifyIfFieldExists(cut.AliquotaIntDestino))
-			{
-			sb.AppendLine(@$"	 ,COALESCE(TX.""U_AliqDest"",0)		   AS ""AliquotaIntDestino""");
-			}
-			if (cut.VerifyIfFieldExists(cut.PartilhaInterestadual))
-			{
-			sb.AppendLine(@$"	 ,COALESCE(TX.""U_IntPart"",0)		   AS ""PartilhaInterestadual""");
-			}
-			sb.AppendLine(@$"	FROM {cut.B1TableNameChild}4 TX 
+                if (cut.VerifyIfFieldExists(cut.MVast))
+                {
+                    sb.AppendLine(@$"	 ,COALESCE(TX.""U_Lucro"",0)			   AS ""MVast""");
+                }
+                if (cut.VerifyIfFieldExists(cut.AliquotaIntDestino))
+                {
+                    sb.AppendLine(@$"	 ,COALESCE(TX.""U_AliqDest"",0)		   AS ""AliquotaIntDestino""");
+                }
+                if (cut.VerifyIfFieldExists(cut.PartilhaInterestadual))
+                {
+                    sb.AppendLine(@$"	 ,COALESCE(TX.""U_IntPart"",0)		   AS ""PartilhaInterestadual""");
+                }
+                sb.AppendLine(@$"	FROM {cut.B1TableNameChild}4 TX 
 								JOIN OSTT TT ON TX.""staType"" = TT.""AbsId"" 
 								WHERE TL.""DocEntry"" = TX.""DocEntry""
 								AND TL.""LineNum"" = TX.""LineNum""
 								FOR JSON)AS ""ImpostoLinha""");
-			#endregion IMPOSTOS LINHA
-			#region RETENCOES LINHA
-			sb.AppendLine(@$",(
+                #endregion IMPOSTOS LINHA
+                #region RETENCOES LINHA
+                sb.AppendLine(@$",(
 								SELECT
 									 COALESCE(WT.""Rate"",0) 				AS ""PorcentagemImpostoRetido"",
 									 COALESCE(WT.""WTAmnt"", 0)            AS ""ValorImpostoRetido"",
@@ -305,9 +323,9 @@ namespace B1Library_Tests.Documents.Entities
 									 INNER JOIN OWTT OW on OH.""WTTypeId"" = OW.""WTTypeId""
 									 WHERE WT.""AbsEntry"" = T0.""DocEntry""
 									 and WT.""Doc1LineNo"" = TL.""LineNum"" FOR JSON)AS ""ImpostoRetidoLinha""");
-			#endregion RETENCOES LINHA
-			#region DespesaAdicional
-			sb.AppendLine(@$",(
+                #endregion RETENCOES LINHA
+                #region DespesaAdicional
+                sb.AppendLine(@$",(
 								SELECT
 								COALESCE(OX.""ExpnsType"",'') 			AS ""TipoDespesa"",
 								COALESCE(TD.""LineTotal"", 0)			AS ""ValorUnitarioDespesa""
@@ -315,16 +333,16 @@ namespace B1Library_Tests.Documents.Entities
 								JOIN OEXD OX ON TD.""ExpnsCode"" = OX.""ExpnsCode""
 								WHERE TD.""DocEntry"" = T0.""DocEntry"" AND TD.""LineNum"" = TL.""LineNum""
 								FOR JSON) AS ""DespesaAdicional"" ");
-			#endregion DespesaAdicional
-			sb.AppendLine(@$"FROM {cut.B1TableNameChild}1 TL 
+                #endregion DespesaAdicional
+                sb.AppendLine(@$"FROM {cut.B1TableNameChild}1 TL 
 							 JOIN OITM OT ON TL.""ItemCode"" = OT.""ItemCode""
 							 LEFT JOIN ONCM CM ON OT.""NCMCode"" = CM.""AbsEntry""
 							 LEFT JOIN ""OSCD"" OD ON OT.""OSvcCode"" = OD.""AbsEntry""
 							 WHERE TL.""DocEntry"" = T0.""DocEntry""
 							 FOR JSON) AS ""CabecalhoLinha""");
-            #endregion LINHAS
-            #region DUPLICATA
-			sb.AppendLine($@",(
+                #endregion LINHAS
+                #region DUPLICATA
+                sb.AppendLine($@",(
 							SELECT
 							COALESCE(DP.""InstlmntID"",0) 		AS ""NumeroDuplicata"",
 							COALESCE(DP.""DueDate"", '')           AS ""DataVencimento"",
@@ -333,16 +351,20 @@ namespace B1Library_Tests.Documents.Entities
 							WHERE DP.""DocEntry"" = T0.""DocEntry""
 							FOR JSON) 
 							AS ""Duplicata"" ");
-			#endregion DUPLICATA
+                #endregion DUPLICATA
 
-			sb.AppendLine($@"FROM {cut.B1TableName} T0  
+                sb.AppendLine($@"FROM {cut.B1TableName} T0  
 							JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
 							LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
-			sb.AppendLine(useCasesB1.GetCommandUseCase());
-			sb.AppendLine("FOR JSON");
-			query = Convert.ToString(sb);
-			string queryProd = cut.SetupQueryB1SendDocumentToOrbit();
-			Assert.Equal(query, queryProd);
+                sb.AppendLine(useCasesB1.GetCommandUseCase());
+                sb.AppendLine("FOR JSON");
+                query = Convert.ToString(sb);
+                string queryProd = cut.SetupQueryB1SendDocumentToOrbit();
+                Assert.Equal(query, queryProd);
+            }
+           
+
+           
 		}
         [Fact]
 		public void VerifyIfFieldExists()

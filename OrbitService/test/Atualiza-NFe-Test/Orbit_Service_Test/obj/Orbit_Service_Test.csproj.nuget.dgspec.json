@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\Orbit_Service_Test.csproj": {}
+    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\Orbit_Service_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj": {
+    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj",
+        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj",
         "projectName": "OrbitService",
-        "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj",
-        "packagesPath": "C:\\Users\\luisf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\obj\\",
+        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj",
+        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,21 +61,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
+    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
+        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
         "projectName": "B1Library",
-        "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
-        "packagesPath": "C:\\Users\\luisf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\B1Library\\obj\\",
+        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
+        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,8 +89,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
-                "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
               }
             }
           }
@@ -115,7 +116,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -124,21 +126,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
         "projectName": "OrbitLibrary",
-        "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
-        "packagesPath": "C:\\Users\\luisf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\obj\\",
+        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
+        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -191,7 +193,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -200,21 +203,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\Orbit_Service_Test.csproj": {
+    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\Orbit_Service_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\Orbit_Service_Test.csproj",
+        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\Orbit_Service_Test.csproj",
         "projectName": "Orbit_Service_Test",
-        "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\Orbit_Service_Test.csproj",
-        "packagesPath": "C:\\Users\\luisf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\obj\\",
+        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\Orbit_Service_Test.csproj",
+        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Atualiza-NFe-Test\\Orbit_Service_Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -228,17 +231,17 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj": {
-                "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj"
+              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj": {
+                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj"
               },
-              "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
-                "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj"
+              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
+                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj"
               },
-              "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
-                "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
               },
-              "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
-                "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj"
+              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
+                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj"
               }
             }
           }
@@ -284,7 +287,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -293,21 +297,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
+    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
+        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
         "projectName": "OrbitLibrary_Test",
-        "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
-        "packagesPath": "C:\\Users\\luisf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\obj\\",
+        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
+        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luisf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -321,8 +325,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
-                "projectPath": "C:\\Users\\luisf\\Desktop\\Repositori B1 Dev\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
               }
             }
           }
@@ -368,7 +372,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -377,7 +382,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

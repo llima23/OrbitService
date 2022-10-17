@@ -116,3 +116,16 @@ C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.pdb
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.deps.json
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.pdb
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.AssemblyReference.cache
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.AssemblyInfoInputs.cache
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.AssemblyInfo.cs
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.CoreCompileInputs.cache
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.CopyComplete
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.dll
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.pdb

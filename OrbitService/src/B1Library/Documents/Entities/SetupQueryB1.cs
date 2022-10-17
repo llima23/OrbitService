@@ -41,9 +41,9 @@ namespace B1Library.Documents.Entities
 							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
 							 COALESCE(OM.""NfmCode"", '')            AS ""ModeloDocumento"",
 							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1""
-							 FROM OINV T0
+							 FROM {B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
-							 JOIN INV1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+							 JOIN {B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
 							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
 			sb.AppendLine(useCasesB1.GetCommandUseCase());
 			sb.AppendLine("FOR JSON");
@@ -65,9 +65,9 @@ namespace B1Library.Documents.Entities
 							 COALESCE(T0.""U_TAX4_Justi"", '')       AS ""Justificativa"",
 							 COALESCE(T0.""CANCELED"", '')           AS ""CANCELED"",
 							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado""
-							 FROM OINV T0
+							 FROM {B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
-							 JOIN INV1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+							 JOIN {B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
 							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""
 							 WHERE
 							 ""U_TAX4_CodInt"" = '2'

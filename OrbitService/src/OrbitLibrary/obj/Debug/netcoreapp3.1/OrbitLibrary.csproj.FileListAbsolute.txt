@@ -78,3 +78,13 @@ C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibr
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
 C:\Users\luisf\Desktop\Repositori B1 Dev\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.deps.json
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
+C:\Users\WIN10_WORK X64\source\repos\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb

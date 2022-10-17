@@ -52,6 +52,7 @@ namespace B1Library.usecase
         public const string commandOutboundNFe = @"WHERE ""U_TAX4_CodInt"" = '0' 
 													and NF.""SeqCode"" > 0 
 													and T0.""U_TAX4_CARGAFISCAL"" = 'N'
+                                                    and T0.""CANCELED"" = 'N'
 													and OM.""NfmCode"" IN ('55')";
 
         public const string commandOutboundNFSe = @"WHERE ""U_TAX4_CodInt"" = '0' 
