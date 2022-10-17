@@ -390,7 +390,7 @@ namespace B1Library.Documents.Entities
 		}
 		public bool VerifyIfFieldExists(string ValidFieldExist)
 		{
-			DataSet queryResult = dbRepo.wrapper.ExecuteQuery(@$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{ValidFieldExist}'");
+			DataSet queryResult = dbRepo.wrapper.ExecuteQuery(@$"SELECT ""AliasID"" FROM CUFD WHERE ""AliasID"" = '{ValidFieldExist}'");
 			if (queryResult.Tables[0].Rows.Count == 0)
 			{
 				return false;

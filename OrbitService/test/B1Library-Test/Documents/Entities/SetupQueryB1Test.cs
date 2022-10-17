@@ -369,7 +369,7 @@ namespace B1Library_Tests.Documents.Entities
         [Fact]
 		public void VerifyIfFieldExists()
         {
-			string query = @$"SELECT ""AliasId"" FROM CUFD WHERE ""AliasId"" = '{cut.MVast}'";
+			string query = @$"SELECT ""AliasID"" FROM CUFD WHERE ""AliasID"" = '{cut.MVast}'";
 			mockWrapper.Setup(m => m.ExecuteQuery(query)).Returns(ReturnDataSetWithRowForFields(cut.MVast));
 			Assert.True(cut.VerifyIfFieldExists(cut.MVast));
 

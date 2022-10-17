@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj": {}
+    "D:\\Desenvolvimento\\RepositoryOrbitB1\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj": {
+    "D:\\Desenvolvimento\\RepositoryOrbitB1\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\RepositoryOrbitB1\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj",
         "projectName": "OrbitService",
-        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj",
-        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\RepositoryOrbitB1\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\OrbitService.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\RepositoryOrbitB1\\OrbitService\\OrbitService\\src\\Atualiza-NFe\\OrbitService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,8 +54,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     }
