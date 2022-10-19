@@ -34,13 +34,13 @@ namespace OrbitService.OutboundDFe.usecases
                 {
                     OutboundDFeDocumentInutilOutputNFSe output = response.GetSuccessResponse();
                     DocumentStatus documentStatus = mapper.MapperOrbitOutputToUpdateB1Sucess(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
                 else
                 {
                     OutboundDFeDocumentInutilOutputNFSe output = response.GetErrorResponse();
                     DocumentStatus documentStatus = mapper.MapperOrbitOutputToUpdateB1Error(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
             }
         }

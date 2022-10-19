@@ -24,7 +24,7 @@ namespace OrbitService.OutboundNFe.usecases
         {
             MapperNFeConsulta mapper = new MapperNFeConsulta();
             OutboundDFeDocumentConsulServicesNFe outboundNFeRegister = new OutboundDFeDocumentConsulServicesNFe(sConfig, communicationProvider);
-            List<Invoice> OutBoundNFeDocumentsCancel = documentsRepository.GetCancelOutboundNFSe();
+            List<Invoice> OutBoundNFeDocumentsCancel = documentsRepository.GetConsultOutboundNFe();
             foreach (Invoice invoice in OutBoundNFeDocumentsCancel)
             {
                 OperationResponse<OutboundDFeDocumentConsultaOutputNFe, OutboundDFeDocumentConsulErroNFe> response = outboundNFeRegister.Execute(invoice);
@@ -32,13 +32,13 @@ namespace OrbitService.OutboundNFe.usecases
                 {
                     OutboundDFeDocumentConsultaOutputNFe output = response.GetSuccessResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
                 else
                 {
                     OutboundDFeDocumentConsulErroNFe output = response.GetErrorResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseErro(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
             }
         }

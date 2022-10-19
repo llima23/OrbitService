@@ -1,5 +1,8 @@
+using B1Library.Implementations.Repositories;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using OrbitLibrary.Utils;
+using OrbitService.OutboundNFe.usecases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +26,30 @@ namespace OrbitService
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 await Task.Delay(1000, stoppingToken);
+                try
+                {
+                    List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
+                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
+                    {
+                        if (serviceDependencies.DbWrapper.DataBaseName == "SBO_OUTBOUNDDEV")
+                        {
+                            try
+                            {
+                                OutboundNFeDocumentConsultaUseCase useCase = new OutboundNFeDocumentConsultaUseCase(new DBDocumentsRepository(serviceDependencies.DbWrapper), serviceDependencies.sConfig, serviceDependencies.communicationProvider);
+                                useCase.Execute();
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new Exception(ex.Message);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
             }
         }
     }

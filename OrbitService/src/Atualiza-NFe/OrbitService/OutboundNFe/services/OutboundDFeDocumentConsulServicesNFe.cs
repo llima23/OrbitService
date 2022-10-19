@@ -18,7 +18,7 @@ namespace OrbitService.OutboundNFe.services
                  GetBuilder()
                      .EndpointPath(Method.GET, ENDPOINT)
                      .CredentialsProvider(sConfig.CredentialsProvider)
-                     .SetPathParam("{id}",invoice.Identificacao.IdRetornoOrbit)
+                     .SetPathParam("{id}",invoice.IdRetornoOrbit)
                      .Serializer(new JsonRequestBodySerializer(removeNullFields: true)),
                  new JsonResponseBodyDeserializer());
         }

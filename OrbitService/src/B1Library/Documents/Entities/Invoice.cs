@@ -15,7 +15,9 @@ namespace B1Library.Documents
             Filial = new Filial();
             Identificacao = new Identificacao();
             Duplicata = new List<Duplicata>();
+            DocRef = new List<DocRef>();
         }
+        public List<DocRef> DocRef { get; set; }
         public List<CabecalhoLinha> CabecalhoLinha { get; set; }
         public int CargaFiscal { get; set; }
         public string CodInt { get; set; }
@@ -52,6 +54,18 @@ namespace B1Library.Documents
 
 
     }
+
+    public class DocRef
+    {
+        public DateTime DataDocRef { get; set; }
+        public string CnpjDocRef { get; set; }
+        public string ChaveDocRef { get; set; }
+        public string SerieDocRef { get; set; }
+        public string NumNfDocRef { get; set; }
+        public string CUfDocRef { get; set; }
+        public string ModDocRef { get; set; }
+    }
+
     public class CabecalhoLinha
     {
         public CabecalhoLinha()
@@ -60,6 +74,8 @@ namespace B1Library.Documents
             ImpostoRetidoLinha = new List<ImpostoRetidoLinha>();
             DespesaAdicional = new List<DespesaAdicional>();
         }
+
+        public string SoImposto { get; set; }
         public string NItem { get; set; }
         public string CSTCofinsLinha { get; set; }
         public string CSTICMSLinha { get; set; }
@@ -71,6 +87,7 @@ namespace B1Library.Documents
         public string CodigoServicoLinha { get; set; }
         public string DescricaoItemLinhaDocumento { get; set; }
         public string IdLocalDestino { get; set; }
+        public string CodigoCEST { get; set; }
         public List<ImpostoLinha> ImpostoLinha { get; set; }
         public List<ImpostoRetidoLinha> ImpostoRetidoLinha { get; set; }
         public List<DespesaAdicional> DespesaAdicional { get; set; }
@@ -108,6 +125,7 @@ namespace B1Library.Documents
 
     public class Parceiro
     {
+        public string InscSuframa { get; set; }
         public string BairroParceiro { get; set; }
         public string CEPParceiro { get; set; }
         public string CidadeParceiro { get; set; }

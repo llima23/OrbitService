@@ -12,3 +12,16 @@ D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3
 D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.pdb
 D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\obj\Release\netcoreapp3.1\B1Library.csproj.AssemblyReference.cache
 D:\Desenvolvimento\Gabriel\B1Library\B1Library\B1Library\bin\Release\netcoreapp3.1\RestSharp.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\bin\Release\netcoreapp3.1\B1Library.deps.json
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\bin\Release\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\bin\Release\netcoreapp3.1\B1Library.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\bin\Release\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\bin\Release\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Release\netcoreapp3.1\B1Library.csproj.AssemblyReference.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Release\netcoreapp3.1\B1Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Release\netcoreapp3.1\B1Library.AssemblyInfoInputs.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Release\netcoreapp3.1\B1Library.AssemblyInfo.cs
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Release\netcoreapp3.1\B1Library.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Release\netcoreapp3.1\B1Library.csproj.CopyComplete
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Release\netcoreapp3.1\B1Library.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Release\netcoreapp3.1\B1Library.pdb

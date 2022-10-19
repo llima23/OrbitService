@@ -286,6 +286,20 @@
           "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.Hosting.WindowsServices/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "6.0.1",
+          "Microsoft.Extensions.Logging.EventLog": "6.0.0",
+          "System.ServiceProcess.ServiceController": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Extensions.Hosting.WindowsServices.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.Hosting.WindowsServices.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -2217,6 +2231,27 @@
           }
         }
       },
+      "System.ServiceProcess.ServiceController/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2576,6 +2611,7 @@
         "dependencies": {
           "B1Library": "1.0.0",
           "Microsoft.Extensions.Hosting": "6.0.1",
+          "Microsoft.Extensions.Hosting.WindowsServices": "6.0.1",
           "Microsoft.Extensions.Logging": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "OrbitLibrary": "1.0.0",
@@ -3144,6 +3180,27 @@
         "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.xml",
         "microsoft.extensions.hosting.abstractions.6.0.0.nupkg.sha512",
         "microsoft.extensions.hosting.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Hosting.WindowsServices/6.0.1": {
+      "sha512": "0vaOeMeDpVUqvOJ0pHugoOqTZULdq7c0kZLzzlrQwUZ7ScUat27d8hrK3IxJ7FWF3OBZXSjA2nWYRcdA5WG9wg==",
+      "type": "package",
+      "path": "microsoft.extensions.hosting.windowsservices/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Hosting.WindowsServices.dll",
+        "lib/net461/Microsoft.Extensions.Hosting.WindowsServices.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Hosting.WindowsServices.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Hosting.WindowsServices.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.Hosting.WindowsServices.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.Hosting.WindowsServices.xml",
+        "microsoft.extensions.hosting.windowsservices.6.0.1.nupkg.sha512",
+        "microsoft.extensions.hosting.windowsservices.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -7577,6 +7634,39 @@
         "system.security.principal.windows.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.ServiceProcess.ServiceController/6.0.0": {
+      "sha512": "qMBvG8ZFbkXoe0Z5/D7FAAadfPkH2v7vSuh2xsLf3U6jNoejpIdeV18A0htiASsLK1CCAc/p59kaLXlt2yB1gw==",
+      "type": "package",
+      "path": "system.serviceprocess.servicecontroller/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.ServiceProcess.ServiceController.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.ServiceProcess.ServiceController.dll",
+        "lib/net461/System.ServiceProcess.ServiceController.xml",
+        "lib/net6.0/System.ServiceProcess.ServiceController.dll",
+        "lib/net6.0/System.ServiceProcess.ServiceController.xml",
+        "lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll",
+        "lib/netcoreapp3.1/System.ServiceProcess.ServiceController.xml",
+        "lib/netstandard2.0/System.ServiceProcess.ServiceController.dll",
+        "lib/netstandard2.0/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/net461/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/net461/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/net6.0/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/net6.0/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.ServiceProcess.ServiceController.xml",
+        "runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.dll",
+        "runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.xml",
+        "system.serviceprocess.servicecontroller.6.0.0.nupkg.sha512",
+        "system.serviceprocess.servicecontroller.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Text.Encoding/4.3.0": {

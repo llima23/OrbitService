@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using static B1Library.Implementations.Repositories.DBTableNameRepository;
 
 namespace B1Library.Documents
 {
@@ -15,7 +16,11 @@ namespace B1Library.Documents
         List<Invoice> GetCancelOutboundNFSe();
 
         List<Invoice> GetInutilOutboundNFSe();
-        int UpdateDocumentStatus(DocumentStatus documentData);
+
+        List<Invoice> GetConsultOutboundNFe();
+        List<Invoice> GetConsultOutboundNFSe();
+
+        int UpdateDocumentStatus(DocumentStatus documentData, int objType);
        
     }
 }

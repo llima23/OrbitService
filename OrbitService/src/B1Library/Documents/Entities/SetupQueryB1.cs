@@ -199,6 +199,8 @@ namespace B1Library.Documents.Entities
 								 COALESCE(CAST(TL.""CSTfIPI"" AS VARCHAR), '')										AS ""CSTIPILinha"",
 								 COALESCE(CAST(TL.""CSTfPIS"" AS VARCHAR), '')										AS ""CSTPisLinha"",
 								 COALESCE(CAST(TL.""CSTfCOFINS"" AS VARCHAR), '')									AS ""CSTCofinsLinha"",
+								 COALESCE(TL.""TaxOnly"",'')                                                        AS ""SoImposto"",
+								 COALESCE(OT.""U_TAX4_cest"",'')                                                    AS ""CodigoCEST"",
 								 COALESCE(TL.""Dscription"", '')													AS ""DescricaoItemLinhaDocumento"",
 								 COALESCE(OT.""CodeBars"", '')														AS ""CodigoDeBarras"",
 								 COALESCE(OT.""SalUnitMsr"", '')													AS ""UnidadeComercial"",
@@ -293,7 +295,23 @@ namespace B1Library.Documents.Entities
 							FOR JSON) 
 							AS ""Duplicata"" ");
 			#endregion DUPLICATA
-			sb.AppendLine($@"FROM {B1TableName} T0  
+			#region DOCREF
+			sb.AppendLine($@",(
+							SELECT
+							COALESCE(DC.""U_TAX4_DtDoc"",'')				AS ""DataDocRef"",
+							COALESCE(DC.""U_TAX4_Cnpj"",'')					AS ""CnpjDocRef"",
+							COALESCE(DC.""U_TAX4_Chave"",'')				AS ""ChaveDocRef"",
+							COALESCE(DC.""U_TAX4_Serie"",'')				AS ""SerieDocRef"",
+							COALESCE(DC.""U_TAX4_NumNf"",'')				AS ""NumNfDocRef"",
+							COALESCE(DC.""U_TAX4_CUf"",'')					AS ""CUfDocRef"",
+							COALESCE(DC.""U_TAX4_Mod"",'')					AS ""ModDocRef""
+							FROM ""@TAX4_DOCREF"" DC
+							WHERE DC.""U_TAX4_DocEntry"" = T0.""DocEntry""
+							AND DC.""U_TAX4_FormType"" = T0.""ObjType""
+							FOR JSON)
+							AS ""DocRef"" ");
+            #endregion DOCREF
+            sb.AppendLine($@"FROM {B1TableName} T0  
 							JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
 							LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
 			sb.AppendLine(useCasesB1.GetCommandUseCase());
@@ -311,6 +329,7 @@ namespace B1Library.Documents.Entities
 	 							COALESCE(T0.""CardName"", '')                      AS ""RazaoSocialParceiro"",
 	 							COALESCE(T0.""Address"", '')                       AS ""EnderecoParceiro"",
 	 							COALESCE(PT.""TaxId0"", '')                        AS ""CnpjParceiro"",
+								COALESCE(PT.""TaxId8"",'')						   AS ""InscSuframa"",
 	 							CASE PT.""TaxId1""
 	 							WHEN 'Isento' THEN('')
 	 							ELSE COALESCE(PT.""TaxId1"", '')
@@ -339,7 +358,7 @@ namespace B1Library.Documents.Entities
 								LEFT JOIN OCNT OT ON PT.""CountyS"" = OT.""AbsId""
 								LEFT JOIN OCRD OD ON T0.""CardCode"" = OD.""CardCode""
 								LEFT JOIN ""@TAX4_UF"" UF ON PT.""StateS"" = UF.""U_TAX4_Uf""
-								LEFT JOIN CRD1 D1 ON OD.""CardCode"" = D1.""CardCode"" and T0.""PayToCode"" = D1.""Address""
+								LEFT JOIN CRD1 D1 ON OD.""CardCode"" = D1.""CardCode"" and T0.""ShipToCode"" = D1.""Address""
 								WHERE PT.""DocEntry"" = T0.""DocEntry"" and D1.""AdresType"" = 'S'
 								FOR JSON),'[',''),']','') 
 								AS ""Parceiro""";

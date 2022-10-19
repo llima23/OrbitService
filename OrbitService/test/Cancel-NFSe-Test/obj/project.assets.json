@@ -286,10 +286,10 @@
           "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Hosting.WindowsServices/6.0.0": {
+      "Microsoft.Extensions.Hosting.WindowsServices/6.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Hosting": "6.0.0",
+          "Microsoft.Extensions.Hosting": "6.0.1",
           "Microsoft.Extensions.Logging.EventLog": "6.0.0",
           "System.ServiceProcess.ServiceController": "6.0.0"
         },
@@ -2611,6 +2611,7 @@
         "dependencies": {
           "B1Library": "1.0.0",
           "Microsoft.Extensions.Hosting": "6.0.1",
+          "Microsoft.Extensions.Hosting.WindowsServices": "6.0.1",
           "Microsoft.Extensions.Logging": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "OrbitLibrary": "1.0.0",
@@ -3219,10 +3220,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Hosting.WindowsServices/6.0.0": {
-      "sha512": "qrYcNoYOI7AouQf0edY1NotePLNfz6wwLfjcEL5IQMXQm61k9glChzr7bt4I8uFelAHK8dYJPvCHEd6idxoXOw==",
+    "Microsoft.Extensions.Hosting.WindowsServices/6.0.1": {
+      "sha512": "0vaOeMeDpVUqvOJ0pHugoOqTZULdq7c0kZLzzlrQwUZ7ScUat27d8hrK3IxJ7FWF3OBZXSjA2nWYRcdA5WG9wg==",
       "type": "package",
-      "path": "microsoft.extensions.hosting.windowsservices/6.0.0",
+      "path": "microsoft.extensions.hosting.windowsservices/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3235,7 +3236,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.Hosting.WindowsServices.xml",
         "lib/netstandard2.1/Microsoft.Extensions.Hosting.WindowsServices.dll",
         "lib/netstandard2.1/Microsoft.Extensions.Hosting.WindowsServices.xml",
-        "microsoft.extensions.hosting.windowsservices.6.0.0.nupkg.sha512",
+        "microsoft.extensions.hosting.windowsservices.6.0.1.nupkg.sha512",
         "microsoft.extensions.hosting.windowsservices.nuspec",
         "useSharedDesignerContext.txt"
       ]

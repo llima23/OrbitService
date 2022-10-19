@@ -33,14 +33,14 @@ namespace OrbitService.FiscalBrazil.usecases
                 {
                     NFSeDocumentRegisterOutput output = response.GetSuccessResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
 
                 else
                 {
                     NFSeDocumentRegisterError output = response.GetErrorResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseError(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
             }
         }

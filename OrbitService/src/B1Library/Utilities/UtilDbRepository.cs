@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using System.Text.RegularExpressions;
+using static B1Library.Implementations.Repositories.DBTableNameRepository;
 
 namespace B1Library.Utilities
 {
@@ -36,11 +37,11 @@ namespace B1Library.Utilities
             result = Regex.Replace(result, @"(}"",)", "},");
             return result;
         }
-        public string generateUpdateDocumentCommand(DocumentStatus documentData)
+        public string generateUpdateDocumentCommand(DocumentStatus documentData, TableName tableName)
         {
             StringBuilder sb = new StringBuilder();
             //TODO: update command to dynamic generate table name
-            sb.Append(@$"UPDATE OINV SET ");
+            sb.Append(@$"UPDATE {tableName.TableHeader} SET ");
             sb.AppendLine(@$"""U_TAX4_Stat"" = '{documentData.GetStatusMessage()}'");
             sb.AppendLine(@$",""U_TAX4_CodInt"" = '{(int)documentData.Status}'");
             sb.AppendLine(@$",""U_TAX4_IdRet"" = '{documentData.IdOrbit}' ");

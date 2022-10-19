@@ -42,7 +42,7 @@ namespace OrbitService_Test.OutboundDFe.usecases
                 .Setup(m => m.GetOutboundNFe())
                 .Returns(listInvoiceB1);
             mockDocumentsRepo
-                 .Setup(m => m.UpdateDocumentStatus(It.IsAny<DocumentStatus>()))
+                 .Setup(m => m.UpdateDocumentStatus(It.IsAny<DocumentStatus>(), invoice.ObjetoB1))
                  .Callback<DocumentStatus>(ds => documentStatus = ds)
                  .Returns(1);
             t.mockClient
@@ -53,7 +53,7 @@ namespace OrbitService_Test.OutboundDFe.usecases
             cut.Execute();
 
             mockDocumentsRepo.Verify(m => m.GetOutboundNFe(), Times.Once());
-            mockDocumentsRepo.Verify(m => m.UpdateDocumentStatus(documentStatus), Times.Once());
+            mockDocumentsRepo.Verify(m => m.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1), Times.Once());
         }
 
         [Fact]
@@ -69,7 +69,7 @@ namespace OrbitService_Test.OutboundDFe.usecases
                 .Setup(m => m.GetOutboundNFe())
                 .Returns(listInvoiceB1);
             mockDocumentsRepo
-                 .Setup(m => m.UpdateDocumentStatus(It.IsAny<DocumentStatus>()))
+                 .Setup(m => m.UpdateDocumentStatus(It.IsAny<DocumentStatus>(), invoice.ObjetoB1))
                  .Callback<DocumentStatus>(ds => documentStatus = ds)
                  .Returns(1);
             t.mockClient
@@ -80,7 +80,7 @@ namespace OrbitService_Test.OutboundDFe.usecases
             cut.Execute();
 
             mockDocumentsRepo.Verify(m => m.GetOutboundNFe(), Times.Once());
-            mockDocumentsRepo.Verify(m => m.UpdateDocumentStatus(documentStatus), Times.Once());
+            mockDocumentsRepo.Verify(m => m.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1), Times.Once());
         }
 
         [Fact]
@@ -96,7 +96,7 @@ namespace OrbitService_Test.OutboundDFe.usecases
                 .Setup(m => m.GetOutboundNFe())
                 .Returns(listInvoiceB1);
             mockDocumentsRepo
-                 .Setup(m => m.UpdateDocumentStatus(It.IsAny<DocumentStatus>()))
+                 .Setup(m => m.UpdateDocumentStatus(It.IsAny<DocumentStatus>(), invoice.ObjetoB1))
                  .Callback<DocumentStatus>(ds => documentStatus = ds)
                  .Returns(1);
             t.mockClient
@@ -107,7 +107,7 @@ namespace OrbitService_Test.OutboundDFe.usecases
             cut.Execute();
 
             mockDocumentsRepo.Verify(m => m.GetOutboundNFe(), Times.Once());
-            mockDocumentsRepo.Verify(m => m.UpdateDocumentStatus(documentStatus), Times.Once());
+            mockDocumentsRepo.Verify(m => m.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1), Times.Once());
         }
 
     }

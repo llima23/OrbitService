@@ -17,3 +17,13 @@ D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Release\ne
 D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.dll
 D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.pdb
 D:\Desenvolvimento\Gabriel\OrbitLibrary\OrbitLibrary\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\bin\Release\netcoreapp3.1\OrbitLibrary.deps.json
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\bin\Release\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\bin\Release\netcoreapp3.1\OrbitLibrary.pdb
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.AssemblyInfoInputs.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.AssemblyInfo.cs
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\OrbitLibrary\obj\Release\netcoreapp3.1\OrbitLibrary.pdb

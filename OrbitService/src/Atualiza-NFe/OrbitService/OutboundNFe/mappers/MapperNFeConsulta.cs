@@ -12,11 +12,16 @@ namespace OrbitService.OutboundNFe.mappers
         {
             if(output.status.cStat == "100")
             {
-                return new DocumentStatus(invoice.Identificacao.IdRetornoOrbit, output.status.cStat, output.status.mStat, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Sucess);
+                return new DocumentStatus(invoice.IdRetornoOrbit, output.status.cStat, output.status.mStat, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Sucess);
+            }
+            else if (output.status.cStat == "0")
+            {
+                return new DocumentStatus(invoice.IdRetornoOrbit, output.status.cStat, output.status.mStat, invoice.ObjetoB1, invoice.DocEntry, StatusCode.FilaDeEmissao);
             }
             else
             {
-                return new DocumentStatus(invoice.Identificacao.IdRetornoOrbit, output.status.cStat, output.status.mStat, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Erro);
+                output.status.mStat = "[" + output.status.cStat + "] " + output.status.mStat;
+                return new DocumentStatus(invoice.IdRetornoOrbit, output.status.cStat, output.status.mStat, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Erro);
             }
         }
         public DocumentStatus ToDocumentStatusResponseErro(Invoice invoice, OutboundDFeDocumentConsulErroNFe output)

@@ -41,7 +41,7 @@ namespace OrbitService_Cancel_NFSe.OutboundDFe.usecases
                  
                     OutboundDFeDocumentCancelOutputNFSe output = response.GetSuccessResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
 
                 else
@@ -49,7 +49,7 @@ namespace OrbitService_Cancel_NFSe.OutboundDFe.usecases
                  
                     OutboundDFeDocumentCancelOutputNFSe output = response.GetErrorResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseError(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
             }
         }

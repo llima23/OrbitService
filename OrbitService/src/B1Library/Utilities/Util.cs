@@ -40,7 +40,7 @@ namespace B1Library.Utilities
             double sum = 0.00;
             foreach (CabecalhoLinha item in invoice.CabecalhoLinha)
             {
-                var taxes = item.ImpostoLinha.Where(tl => tl.TipoImpostoOrbit == TipoImpostoOrbit);
+                var taxes = item.ImpostoLinha.Where(tl => tl.TipoImpostoOrbit == TipoImpostoOrbit & tl.SimOuNaoDesoneracao == "N");
                 sum += taxes.Sum(i => i.ValorBaseImposto);
             }
             return sum;
@@ -103,7 +103,7 @@ namespace B1Library.Utilities
             }
             else
             {
-                DataOrbit = Data.ToString("yyyy-MM-dd") + "T" + DocTime.Substring(0, 2) + ":" + "00" + ":00" + "-03:00";
+                DataOrbit = Data.ToString("yyyy-MM-dd") + "T" + DateTime.Now.ToString("HH:mm:ss") + "-03:00";
             }
             return DataOrbit;
         }

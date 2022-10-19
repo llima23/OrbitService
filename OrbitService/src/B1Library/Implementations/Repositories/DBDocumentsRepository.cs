@@ -11,6 +11,7 @@ using B1Library.Applications;
 using B1Library.Documents.Entities;
 using static B1Library.Implementations.Repositories.DBTableNameRepository;
 using B1Library.usecase;
+using System.Linq;
 
 namespace B1Library.Implementations.Repositories
 {
@@ -137,7 +138,7 @@ namespace B1Library.Implementations.Repositories
             foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFe)
             {
                 SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.ConsultaNFe));
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1SendDocumentToOrbit()));
+                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1ConsultDocumentInOrbit()));
             }
             return invoices;
         }
@@ -155,9 +156,13 @@ namespace B1Library.Implementations.Repositories
 
 
 
-        public int UpdateDocumentStatus(DocumentStatus documentData)
+        public int UpdateDocumentStatus(DocumentStatus documentData, int objType)
         {
-            string updateCommandToDocument = util.generateUpdateDocumentCommand(documentData);
+            string updateCommandToDocument = string.Empty;
+            foreach (TableName item in dBTableNameRepository.tableNamesOutboundNFe.Where(t => t.ObjB1Type == objType))
+            {
+                updateCommandToDocument = util.generateUpdateDocumentCommand(documentData, item);
+            }
             return wrapper.ExecuteNonQuery(updateCommandToDocument);
         }
     }

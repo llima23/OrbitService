@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zzUeffRQpPi50fTtvxlCOs3BhGbsQyFppnaoQAuAB2RLeD84JgibFTaxkdq+54+vUrcC1nNIBWq1o1Sf0WxERw==",
+  "dgSpecHash": "9OXhBIaxdU44uBiPExx/pykPsxn+5hyCuCLV83dPrPH8nZPozyXxm/fnJlFBcjLDGxQZuFRY7+xsJr4aLjBFPg==",
   "success": true,
   "projectFilePath": "D:\\Desenvolvimento\\RepositoryOrbitB1\\OrbitService\\OrbitService\\src\\Envia-NFe\\OrbitService.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.hosting\\6.0.1\\microsoft.extensions.hosting.6.0.1.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\6.0.0\\microsoft.extensions.hosting.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.hosting.windowsservices\\6.0.1\\microsoft.extensions.hosting.windowsservices.6.0.1.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.logging.configuration\\6.0.0\\microsoft.extensions.logging.configuration.6.0.0.nupkg.sha512",
@@ -112,6 +113,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.cryptography.x509certificates\\4.3.0\\system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\B1USER2\\.nuget\\packages\\system.serviceprocess.servicecontroller\\6.0.0\\system.serviceprocess.servicecontroller.6.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",

@@ -37,7 +37,7 @@ namespace OrbitService.FiscalBrazil.usecases
                 {
                     OtherDocumentRegisterOutput output = response.GetSuccessResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
             }
         }

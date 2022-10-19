@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KqfFWIoaBqCioZeAInwI1iH6dEb5XC88jzLoURa5+tudGGWtVu6EeOEC73VtNLFhkAluLRMffasfTKfwD2944g==",
+  "dgSpecHash": "HXyyG/+88rvtNwo+wsE1TXkT1ibnWdscETHZaq7WgCied9mNFjeGovIcXE2/Ki24Zr492sb5VKzPXv/CQSyc0w==",
   "success": true,
   "projectFilePath": "D:\\Desenvolvimento\\RepositoryOrbitB1\\OrbitService\\OrbitService\\test\\Cancel-NFSe-Test\\OrbitService_Test_Cancel_NFSe.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,7 @@
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.hosting\\6.0.1\\microsoft.extensions.hosting.6.0.1.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\6.0.0\\microsoft.extensions.hosting.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.hosting.windowsservices\\6.0.0\\microsoft.extensions.hosting.windowsservices.6.0.0.nupkg.sha512",
+    "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.hosting.windowsservices\\6.0.1\\microsoft.extensions.hosting.windowsservices.6.0.1.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\B1USER2\\.nuget\\packages\\microsoft.extensions.logging.configuration\\6.0.0\\microsoft.extensions.logging.configuration.6.0.0.nupkg.sha512",

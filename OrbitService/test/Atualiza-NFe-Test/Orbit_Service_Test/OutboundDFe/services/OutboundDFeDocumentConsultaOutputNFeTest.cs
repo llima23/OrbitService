@@ -30,12 +30,12 @@ namespace Orbit_Service_Test.OutboundDFe.services
               .Callback<OperationRequest>(r => t.request = r)
               .Returns(TestsBuilder.CreateOperationResponse<OutboundDFeDocumentConsultaOutputNFe, OutboundDFeDocumentConsulErroNFe>(t.request));
             Invoice invoice = new Invoice();
-            invoice.Identificacao.IdRetornoOrbit = "2145";
+            invoice.IdRetornoOrbit = "2145";
             OperationResponse<OutboundDFeDocumentConsultaOutputNFe, OutboundDFeDocumentConsulErroNFe> response = cut.Execute(invoice);
 
             Assert.NotNull(response);
             Assert.Equal(Method.GET, t.request.Method);
-            Assert.Contains("/documentservice/api/nfe/consulta/" + invoice.Identificacao.IdRetornoOrbit, t.request.Uri.AbsoluteUri);
+            Assert.Contains("/documentservice/api/nfe/consulta/" + invoice.IdRetornoOrbit, t.request.Uri.AbsoluteUri);
             Assert.True(t.request.Headers.ContainsKey(HTTPHeaders.XAPIKey));
             Assert.True(t.request.Headers.ContainsKey(HTTPHeaders.Token));
         }

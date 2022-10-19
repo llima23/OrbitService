@@ -57,11 +57,29 @@ namespace OrbitService.OutboundDFe.mappers
             input.identificacao.IndIntermed = invoice.Identificacao.IndicadorIntermediario;
             input.identificacao.CodigoNf = Convert.ToString(invoice.DocEntry);
             input.identificacao.tpNf = invoice.TipoNF;
+            List<NFref> listNFref = new List<NFref>();
+            foreach (var item in invoice.DocRef)
+            {
+                NFref nFref = new NFref();
+                RefNF refNF = new RefNF();
+                nFref.RefNFe = item.ChaveDocRef;
+                refNF.Aamm = util.ConvertDateB1ToFormatOrbit(item.DataDocRef);
+                refNF.Cnpj = !String.IsNullOrEmpty(item.CnpjDocRef) ? Regex.Replace(item.CnpjDocRef, @"\.|\/|-", "") : null;
+                refNF.Cuf = item.CUfDocRef;
+                refNF.Mod = item.ModDocRef;
+                refNF.Nnf = item.NumNfDocRef;
+                refNF.Serie = item.SerieDocRef;
+                nFref.RefNF = refNF;
+                listNFref.Add(nFref);
+            }
+            input.identificacao.NFref = listNFref;
+
 
             #endregion #region IDENTIFICACAO
             #region DESTINATARIO
             input.Destinatario.Cnpj = !String.IsNullOrEmpty(invoice.Parceiro.CnpjParceiro) ? Regex.Replace(invoice.Parceiro.CnpjParceiro, @"\.|\/|-", "") : null;
             input.Destinatario.Cpf = !String.IsNullOrEmpty(invoice.Parceiro.CpfParceiro) ? Regex.Replace(invoice.Parceiro.CpfParceiro, @"\.|\/|-", "") : null;
+            input.Destinatario.Isuf = !String.IsNullOrEmpty(invoice.Parceiro.InscSuframa) ? Regex.Replace(invoice.Parceiro.InscSuframa, @"\.|\/|-", "") : null;
             input.Destinatario.Nome = invoice.Parceiro.RazaoSocialParceiro;
             input.Destinatario.Endereco.Logradouro = invoice.Parceiro.LogradouroParceiro;
             input.Destinatario.Endereco.Numero = invoice.Parceiro.NumeroLogradouroParceiro;
@@ -96,11 +114,14 @@ namespace OrbitService.OutboundDFe.mappers
             List <Duplicatum> lstDuplicata = new List<Duplicatum>();
             foreach (var item in invoice.Duplicata)
             {
-                Duplicatum duplicata = new Duplicatum();
-                duplicata.Numero = Convert.ToString(item.NumeroDuplicata).PadLeft(3,'0');
-                duplicata.DataVencimento = util.ConvertDateB1ToFormatOrbit(item.DataVencimento);
-                duplicata.Valor = util.ToOrbitString(item.ValorDuplicata);
-                lstDuplicata.Add(duplicata);
+                if(item.ValorDuplicata > 0)
+                {
+                    Duplicatum duplicata = new Duplicatum();
+                    duplicata.Numero = Convert.ToString(item.NumeroDuplicata).PadLeft(3, '0');
+                    duplicata.DataVencimento = util.ConvertDateB1ToFormatOrbit(item.DataVencimento);
+                    duplicata.Valor = util.ToOrbitString(item.ValorDuplicata);
+                    lstDuplicata.Add(duplicata);
+                }
             }
             input.cobr.Duplicata = lstDuplicata;
             #endregion DUPLICATA
@@ -114,7 +135,6 @@ namespace OrbitService.OutboundDFe.mappers
             lstDetPag.Add(detPag);
             input.pag.DetPag = lstDetPag;
             #endregion PAG           
-
             #region TOTAL
             input.total.IcmsTot.VBc = util.ToOrbitString(util.GetTaxTypeB1VBcSum("-6", invoice));
             input.total.IcmsTot.VIcms = util.ToOrbitString(util.GetTaxTypeB1Sum("-6", invoice));
@@ -124,7 +144,7 @@ namespace OrbitService.OutboundDFe.mappers
             input.total.IcmsTot.VSt = util.ToOrbitString(util.GetTaxTypeB1Sum("-5", invoice));
             input.total.IcmsTot.VFcpSt = util.ToOrbitString(util.GetTaxTypeB1Sum("-14", invoice));
             input.total.IcmsTot.VFcpStRet = "0.00"; //TODO
-            input.total.IcmsTot.VProd = util.ToOrbitString(util.GetVProdSum(invoice.CabecalhoLinha));
+            input.total.IcmsTot.VProd = invoice.CabecalhoLinha[0].SoImposto != "Y" ? util.ToOrbitString(util.GetVProdSum(invoice.CabecalhoLinha)) : "0.00";
             input.total.IcmsTot.VFrete = util.ToOrbitString(util.GetVSumDespAdic("1", invoice));
             input.total.IcmsTot.VSeg = util.ToOrbitString(util.GetVSumDespAdic("2", invoice));
             input.total.IcmsTot.VDesc = util.ToOrbitString(util.GetValorSomaDescontoItens(invoice.CabecalhoLinha));
@@ -201,10 +221,11 @@ namespace OrbitService.OutboundDFe.mappers
                 det.prod.Descricao = item.DescricaoItemLinhaDocumento;
                 det.prod.Ncm = Regex.Replace(item.CodigoNCM, @"(\.)", "");
                 det.prod.CodigoFiscalOperacoes = item.CodigoCFOP;
+                det.prod.Cest = !String.IsNullOrEmpty(item.CodigoCEST) ? item.CodigoCEST : null;
                 det.prod.UnidadeComercial = item.UnidadeComercial;
                 det.prod.QuantidadeComercial = util.ToOrbitString(item.QuantidadeLinha);
                 det.prod.ValorUnitarioComercializacao = util.ToOrbitString(item.ValorUnitarioLinha);
-                det.prod.ValorTotalBruto = util.ToOrbitString(item.ValorTotalLinnha);
+                det.prod.ValorTotalBruto = item.SoImposto != "Y" ? util.ToOrbitString(item.ValorTotalLinnha) : "0.00";
                 det.prod.UnidadeTributavel = item.UnidadeComercial.ToString();
                 det.prod.QuantidadeTributavel = util.ToOrbitString(item.QuantidadeLinha);
                 det.prod.ValorUnitarioTributacao = util.ToOrbitString(item.ValorUnitarioLinha);
@@ -231,6 +252,11 @@ namespace OrbitService.OutboundDFe.mappers
                 {
                     switch (item.TipoImpostoOrbit)
                     {
+                        case "-14":
+                            imposto.Icms.PFcpSt = util.ToOrbitString(item.PorcentagemImposto);
+                            imposto.Icms.VFcpSt = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+                            imposto.Icms.VBcFcpSt = util.ToOrbitString(util.GetTaxTypeB1VBcSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+                            break;
                         case "-10":
                             imposto.Cofins.PImp = util.ToOrbitString(item.PorcentagemImposto);
                             imposto.Cofins.VImp = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
@@ -252,7 +278,7 @@ namespace OrbitService.OutboundDFe.mappers
                             imposto.Icms.VImp = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
                             if (item.SimOuNaoDesoneracao == "Y")
                             {
-                                imposto.Icms.VDeson = util.ToOrbitString(item.ValorImposto);
+                                imposto.Icms.VDeson = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
                                 imposto.Icms.MotDeson = cabecalhoLinha.MotivoDesoneracao;
                                 imposto.Icms.VBc = null;
                                 imposto.Icms.PImp = null;

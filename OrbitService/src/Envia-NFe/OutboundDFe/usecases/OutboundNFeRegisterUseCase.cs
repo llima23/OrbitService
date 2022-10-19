@@ -37,7 +37,7 @@ namespace OrbitService.OutboundDFe.usecases
                 {
                     OutboundNFeDocumentRegisterOutput output = response.GetSuccessResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
 
                 else
@@ -45,7 +45,7 @@ namespace OrbitService.OutboundDFe.usecases
                     //É usuado como dynamic pois a variavel 'value' do Output, retorna hora como string e hora como objeto, inviabilizando a deserialização do objeto.
                     dynamic output = JsonConvert.DeserializeObject(response.Content);
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseError(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus);
+                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
                 }
             }
         }

@@ -248,7 +248,7 @@
           }
         }
       },
-      "Microsoft.Extensions.Hosting.WindowsServices/6.0.0": {
+      "Microsoft.Extensions.Hosting.WindowsServices/6.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Hosting": "6.0.1",
           "Microsoft.Extensions.Logging.EventLog": "6.0.0",
@@ -256,8 +256,8 @@
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.Extensions.Hosting.WindowsServices.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
+            "assemblyVersion": "6.0.0.1",
+            "fileVersion": "6.0.1022.47605"
           }
         }
       },
@@ -1840,6 +1840,7 @@
         "dependencies": {
           "B1Library": "1.0.0",
           "Microsoft.Extensions.Hosting": "6.0.1",
+          "Microsoft.Extensions.Hosting.WindowsServices": "6.0.1",
           "Microsoft.Extensions.Logging": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "OrbitLibrary": "1.0.0",
@@ -1853,7 +1854,7 @@
       "OrbitService_Cancel_NFSe/1.0.0": {
         "dependencies": {
           "B1Library": "1.0.0",
-          "Microsoft.Extensions.Hosting.WindowsServices": "6.0.0",
+          "Microsoft.Extensions.Hosting.WindowsServices": "6.0.1",
           "Newtonsoft.Json": "13.0.1",
           "OrbitLibrary": "1.0.0",
           "System.Data.Odbc": "6.0.1"
@@ -2024,12 +2025,12 @@
       "path": "microsoft.extensions.hosting.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.hosting.abstractions.6.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Hosting.WindowsServices/6.0.0": {
+    "Microsoft.Extensions.Hosting.WindowsServices/6.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qrYcNoYOI7AouQf0edY1NotePLNfz6wwLfjcEL5IQMXQm61k9glChzr7bt4I8uFelAHK8dYJPvCHEd6idxoXOw==",
-      "path": "microsoft.extensions.hosting.windowsservices/6.0.0",
-      "hashPath": "microsoft.extensions.hosting.windowsservices.6.0.0.nupkg.sha512"
+      "sha512": "sha512-0vaOeMeDpVUqvOJ0pHugoOqTZULdq7c0kZLzzlrQwUZ7ScUat27d8hrK3IxJ7FWF3OBZXSjA2nWYRcdA5WG9wg==",
+      "path": "microsoft.extensions.hosting.windowsservices/6.0.1",
+      "hashPath": "microsoft.extensions.hosting.windowsservices.6.0.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/6.0.0": {
       "type": "package",

@@ -1036,3 +1036,6 @@ D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\Envia-NFe\obj
 D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.dll
 D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.pdb
 D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\Envia-NFe\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.WindowsServices.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\System.ServiceProcess.ServiceController.dll
+D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\Envia-NFe\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.ServiceProcess.ServiceController.dll

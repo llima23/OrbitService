@@ -41,7 +41,7 @@ namespace OrbitService_Test.FiscalBrazil.usecases
                 .Setup(m => m.GetInboundOtherDocuments())
                 .Returns(listInvoiceB1);
             mockDocumentsRepo
-                .Setup(m => m.UpdateDocumentStatus(It.IsAny<DocumentStatus>()))
+                .Setup(m => m.UpdateDocumentStatus(It.IsAny<DocumentStatus>(), invoice.ObjetoB1))
                 .Callback<DocumentStatus>(ds => documentStatus = ds)
                 .Returns(1);
             t.mockClient
@@ -52,7 +52,7 @@ namespace OrbitService_Test.FiscalBrazil.usecases
             cut.Execute();
 
             mockDocumentsRepo.Verify(m => m.GetInboundOtherDocuments(), Times.Once());
-            mockDocumentsRepo.Verify(m => m.UpdateDocumentStatus(documentStatus), Times.Once());
+            mockDocumentsRepo.Verify(m => m.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1), Times.Once());
         }
     }
 }

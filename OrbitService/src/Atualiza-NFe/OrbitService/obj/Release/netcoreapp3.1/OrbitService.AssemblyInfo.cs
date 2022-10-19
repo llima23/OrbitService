@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("dotnet-OrbitService-7A8AEF21-E686-4754-9B8D-032EB2D76C1C")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrbitService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
