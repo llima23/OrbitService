@@ -131,7 +131,7 @@ namespace OrbitService.OutboundDFe.mappers
             DetPag detPag = new DetPag();
             detPag.IndPag = !string.IsNullOrEmpty(invoice.Identificacao.CondicaoDePagamentoDocumento) ? invoice.Identificacao.CondicaoDePagamentoDocumento : null;
             detPag.TPag = invoice.Identificacao.FormaDePagamentoDocumento;
-            detPag.VPag = util.ToOrbitString(invoice.Identificacao.ValorTotalNF);
+            detPag.VPag = invoice.Identificacao.FormaDePagamentoDocumento != "90" ? util.ToOrbitString(invoice.Identificacao.ValorTotalNF) : "0.00";
             lstDetPag.Add(detPag);
             input.pag.DetPag = lstDetPag;
             #endregion PAG           
@@ -172,11 +172,11 @@ namespace OrbitService.OutboundDFe.mappers
                 }
             }
 
-           
-            
+
+
             #endregion TOTAL                              
 
-
+            input.infAdic.InfAdFisco = !string.IsNullOrEmpty(invoice.Identificacao.InfAdFisco) ? invoice.Identificacao.InfAdFisco : null;
             input.identificacao.IdLocalDestino = invoice.CabecalhoLinha[0].IdLocalDestino;
             input.Emitente.InscricaoEstadual = invoice.Filial.InscIeFilial;
 
@@ -287,7 +287,7 @@ namespace OrbitService.OutboundDFe.mappers
                             if(item.VDif > 0)
                             {
                                 imposto.Icms.VIcmsDif = util.ToOrbitString(item.VDif);
-                                imposto.Icms.PDif = util.ToOrbitString(item.PorcentagemImposto);
+                                imposto.Icms.PDif = util.ToOrbitString(item.PDif);
                                 imposto.Icms.VIcmsOp = util.ToOrbitString(item.VICMSOp);
                             }
                             break;

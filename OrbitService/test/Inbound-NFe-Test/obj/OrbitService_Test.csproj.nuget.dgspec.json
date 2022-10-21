@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\OrbitService_Test.csproj": {}
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\OrbitService_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
         "projectName": "B1Library",
-        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
-        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\obj\\",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
-                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
               }
             }
           }
@@ -55,8 +58,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -65,21 +67,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj": {
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj",
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj",
         "projectName": "OrbitService",
-        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj",
-        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Inbound-NFe\\obj\\",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Inbound-NFe\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,11 +98,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
-                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj"
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj"
               },
-              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
-                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
               }
             }
           }
@@ -143,8 +148,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -153,21 +157,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
         "projectName": "OrbitLibrary",
-        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
-        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\obj\\",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -220,8 +227,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -230,21 +236,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\OrbitService_Test.csproj": {
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\OrbitService_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\OrbitService_Test.csproj",
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\OrbitService_Test.csproj",
         "projectName": "OrbitService_Test",
-        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\OrbitService_Test.csproj",
-        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\obj\\",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\OrbitService_Test.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\Inbound-NFe-Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -258,11 +267,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj": {
-                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj"
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Inbound-NFe\\OrbitService.csproj"
               },
-              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
-                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj"
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj"
               }
             }
           }
@@ -312,8 +321,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -322,21 +330,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
         "projectName": "OrbitLibrary_Test",
-        "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
-        "packagesPath": "C:\\Users\\WIN10_WORK X64\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\obj\\",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\WIN10_WORK X64\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -350,8 +361,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
-                "projectPath": "C:\\Users\\WIN10_WORK X64\\source\\repos\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
               }
             }
           }
@@ -397,8 +408,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -407,7 +417,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     }

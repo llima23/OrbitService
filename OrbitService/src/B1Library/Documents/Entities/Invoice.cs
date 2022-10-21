@@ -179,6 +179,7 @@ namespace B1Library.Documents
 
     public class Identificacao
     {
+        public string InfAdFisco { get; set; }
         public string RegEspTrib { get; set; }
         public string TipoRps { get; set; }
         public string BranchId { get; set; }
@@ -215,6 +216,7 @@ namespace B1Library.Documents
 
     public class ImpostoLinha
     {
+        public double PDif { get; set; }
         public double VDif { get; set; }
         public double VICMSOp { get; set; }
         public string NomeImposto { get; set; }

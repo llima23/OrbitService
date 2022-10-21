@@ -142,3 +142,16 @@ D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj
 D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.CopyComplete
 D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.dll
 D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.pdb
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.deps.json
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.dll
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\B1Library.pdb
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.AssemblyReference.cache
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.AssemblyInfoInputs.cache
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.AssemblyInfo.cs
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.CoreCompileInputs.cache
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.csproj.CopyComplete
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.dll
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\B1Library\obj\Debug\netcoreapp3.1\B1Library.pdb

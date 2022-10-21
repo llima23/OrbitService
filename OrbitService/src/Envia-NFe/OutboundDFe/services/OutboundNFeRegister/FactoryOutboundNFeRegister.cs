@@ -9,6 +9,7 @@ namespace OrbitService.OutboundDFe.services.OutboundDFeRegister
         public static OutboundNFeDocumentRegisterInput CreateOutboundNFeDocumentRegisterInputInstance()
         {
             OutboundNFeDocumentRegisterInput instance = new OutboundNFeDocumentRegisterInput();
+            instance.infAdic = new InfAdic();
             instance.det = new List<Det>();
             instance.identificacao = new Identificacao();
             instance.Destinatario = new Destinatario();
