@@ -134,7 +134,9 @@ namespace B1Library.Documents.Entities
 									 COALESCE(OI.""U_TAX4_IndPres"", '')           AS ""IndicadorPresenca"",
 									 COALESCE(CAST(OI.""U_TAX4_indInter"" AS INT), 0) AS ""IndicadorIntermediario"",
 									 COALESCE(OI.""U_TAX4_Prot"", '')              AS ""NumeroProtocolo"",
-									 COALESCE(C2.""U_TAX4_itCultural"", '')        AS ""IncentivadorCultural""
+									 COALESCE(C2.""U_TAX4_itCultural"", '')        AS ""IncentivadorCultural"",
+									 COALESCE(C2.""U_TAX4_tipoRPS"",'')			   AS ""TipoRps"",
+									 COALESCE(C2.""U_TAX4_RegEspTrib"",''_)		   AS ""RegEspTrib""
 
 									 FROM {B1TableName} OI 
 								     JOIN {B1TableNameChild}12 PT ON PT.""DocEntry"" = OI.""DocEntry""
@@ -236,6 +238,8 @@ namespace B1Library.Documents.Entities
 								 COALESCE(TT.""U_TAX4_TpImp"", '')     AS ""TipoImpostoOrbit"",
 								 COALESCE(TT.""Name"", '')             AS ""NomeImposto"",
 								 COALESCE(TX.""BaseSum"", 0)           AS ""ValorBaseImposto"",
+								 COALESCE(TX.""VICMSOp"", 0)           AS ""VICMSOp"",
+								 COALESCE(TX.""VDif"", 0)              AS ""VDif"",
 								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"" ");
 			if (VerifyIfFieldExists(MVast))
 			{

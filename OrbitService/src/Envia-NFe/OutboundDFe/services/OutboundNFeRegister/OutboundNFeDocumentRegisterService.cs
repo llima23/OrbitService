@@ -8,9 +8,7 @@ namespace OrbitService.OutboundDFe.services.OutboundDFeRegister
 {
     public class OutboundNFeDocumentRegisterService : BaseService<OutboundNFeDocumentRegisterOutput, OutboundNFeDocumentRegisterError>
     {
-        //TODO: Verificar ENDPOINT
         public const string ENDPOINT = "/documentservice/api/nfe/requestEmit";
-
         public OutboundNFeDocumentRegisterService(ServiceConfiguration sConfig, CommunicationProvider communicationClient) : base(sConfig, communicationClient)
         {
 

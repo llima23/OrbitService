@@ -24,25 +24,32 @@ namespace OrbitService
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(1000, stoppingToken);
-
-                List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
-                foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
+                try
                 {
-                    if(serviceDependencies.DbWrapper.DataBaseName == "SBO_OUTBOUNDDEV")
+                    _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                    await Task.Delay(1000, stoppingToken);
+                    List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
+                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        try
+                        if (serviceDependencies.sConfig.Ativo == "Y")
                         {
-                            OutboundNFeRegisterUseCase useCase = new OutboundNFeRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
-                            useCase.Execute();
-                        }
-                        catch (Exception ex)
-                        {
-                            throw new Exception(ex.Message);
+                            try
+                            {
+                                OutboundNFeRegisterUseCase useCase = new OutboundNFeRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
+                                useCase.Execute();
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new Exception(ex.Message);
+                            }
                         }
                     }
                 }
+                catch(Exception ex)
+                {
+
+                }
+           
             }
         }
     }

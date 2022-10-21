@@ -179,6 +179,8 @@ namespace B1Library.Documents
 
     public class Identificacao
     {
+        public string RegEspTrib { get; set; }
+        public string TipoRps { get; set; }
         public string BranchId { get; set; }
         public string CondicaoDePagamentoDocumento { get; set; }
         public string ConsumidorFinal { get; set; }
@@ -213,6 +215,8 @@ namespace B1Library.Documents
 
     public class ImpostoLinha
     {
+        public double VDif { get; set; }
+        public double VICMSOp { get; set; }
         public string NomeImposto { get; set; }
         public double PorcentagemImposto { get; set; }
         public string TipoImpostoOrbit { get; set; }

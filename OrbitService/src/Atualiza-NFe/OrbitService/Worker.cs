@@ -31,7 +31,7 @@ namespace OrbitService
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
                     foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        if (serviceDependencies.DbWrapper.DataBaseName == "SBO_OUTBOUNDDEV")
+                        if (serviceDependencies.sConfig.Ativo == "Y")
                         {
                             try
                             {

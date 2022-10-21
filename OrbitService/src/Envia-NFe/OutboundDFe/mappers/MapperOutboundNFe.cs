@@ -284,6 +284,12 @@ namespace OrbitService.OutboundDFe.mappers
                                 imposto.Icms.PImp = null;
                                 imposto.Icms.VImp = null;
                             }
+                            if(item.VDif > 0)
+                            {
+                                imposto.Icms.VIcmsDif = util.ToOrbitString(item.VDif);
+                                imposto.Icms.PDif = util.ToOrbitString(item.PorcentagemImposto);
+                                imposto.Icms.VIcmsOp = util.ToOrbitString(item.VICMSOp);
+                            }
                             break;
                         case "-4":
                             imposto.Ipi.CEnq = cabecalhoLinha.cEnq;

@@ -9,17 +9,19 @@ namespace OrbitLibrary.Common
         private Uri BaseURI;
         public string Username { get; private set; }
         public string Password { get; private set; }
+        public string Ativo { get; private set; }
         public Guid TenantID { get; private set; }
 
         public CredentialsProvider CredentialsProvider { get; set; }
 
-        public ServiceConfiguration(Uri baseURI, string username, string password, Guid tenantID)
+        public ServiceConfiguration(Uri baseURI, string username, string password, string ativo, Guid tenantID)
         {
             // TODO: Validate the parameters
             BaseURI = baseURI;
             Username = username;
             Password = password;
             TenantID = tenantID;
+            Ativo = ativo;
         }
 
         public string GetBaseURI()
