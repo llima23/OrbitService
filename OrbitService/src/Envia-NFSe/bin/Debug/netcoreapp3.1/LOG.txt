@@ -1,0 +1,516 @@
+11/07/2022 14:14:16 - Teste
+11/07/2022 16:27:41 - Teste
+11/07/2022 16:27:46 - Teste
+16/08/2022 11:11:44 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Newtonsoft.Json.Linq.JArray' to 'System.Data.DataSet'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at _4TAX_Service.Application.DataNFSeProvider.GetNFSeList() in C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\NewService\4TAX_Service\Application\DataFetch\DataNFSeProvider.cs:line 82
+23/08/2022 11:04:30 - Erro ao Processar NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in C:\Users\B1USER2\source\repos\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 87
+23/08/2022 11:05:22 - Erro ao Processar NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in C:\Users\B1USER2\source\repos\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 87
+23/08/2022 16:28:50 - Erro ao Processar NFSe: Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Double'. Path 'U_TAX4_IBPT', line 1, position 173.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 82
+23/08/2022 16:30:02 - Erro ao Processar NFSe: Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Double'. Path 'U_TAX4_IBPT', line 1, position 173.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 81
+23/08/2022 16:33:14 - Erro ao Processar NFSe: Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Double'. Path 'U_TAX4_IBPT', line 1, position 173.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in C:\Users\B1USER4\Desktop\ReposAWS\Conector\AWS\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 81
+24/08/2022 11:26:56 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Gabriel\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 94
+24/08/2022 11:40:09 - NFSe Integrada com sucesso: 817  nfsID: 62fbdd603b17846cc18a3121
+24/08/2022 11:40:10 - NFSe Integrada com sucesso: 720  nfsID: 62ebdb0eaa5a4481b655deb7
+24/08/2022 11:40:11 - NFSe Integrada com sucesso: 723  nfsID: 62ebf857aa5a4481b66f91bd
+24/08/2022 11:40:12 - NFSe Integrada com sucesso: 667  nfsID: 62c5b6fe09968edc0c6d755c
+24/08/2022 11:40:12 - NFSe Integrada com sucesso: 669  nfsID: 62c7345309968edc0cedc251
+24/08/2022 11:40:13 - NFSe Integrada com sucesso: 671  nfsID: 62c73a6a09968edc0cf13f73
+24/08/2022 11:40:14 - NFSe Integrada com sucesso: 683  nfsID: 62d7068f0532e0152207184a
+24/08/2022 11:40:15 - NFSe Integrada com sucesso: 712  nfsID: 62ea8ba7aa5a4481b66e2a01
+24/08/2022 11:40:16 - NFSe Integrada com sucesso: 725  nfsID: 62ec00c7aa5a4481b6765f53
+24/08/2022 11:40:17 - NFSe Integrada com sucesso: 828  nfsID: 62fd18cb3b17846cc16625b9
+24/08/2022 11:53:40 - NFSe Integrada com sucesso: 817  nfsID: 63063aa530c559845b8c011f
+24/08/2022 12:04:55 - NFSe Integrada com sucesso: 817  nfsID: 63063aa530c559845b8c011f
+25/08/2022 11:47:27 - NFSe Inserida na fila de emissão: 858 nfsID: 630644e030c559845b94e370
+25/08/2022 11:48:28 - NFSe Inserida na fila de emissão: 858 nfsID: 630644e030c559845b94e370
+25/08/2022 11:49:55 - NFSe Inserida na fila de emissão: 858 nfsID: 630644e030c559845b94e370
+29/08/2022 11:42:02 - DocEntry: 886
+29/08/2022 11:42:05 - Json NFSe: _4TAX_Service.Services.Document.Properties.Emit+EmitRequestInput
+29/08/2022 11:44:23 - DocEntry: 886
+29/08/2022 11:44:31 - NFSe Inserida na fila de emissão: 886 nfsID: 630cc4dc30c559845bc50e7c
+29/08/2022 11:44:32 - Json NFSe: {"rps":{"identificacao":{"serie":"1","numero":"1006018","tipoRps":"RPS","dataEmissao":"2022-08-29T00:00:00","competencia":"2022-08-29","naturezaOperacao":"1","regimeEspecialTributacao":"T","incentivadorCultural":"false","descricao":[],"evento":{},"nfseSubstituida":{"numero":0,"dataEmissao":"0001-01-01T00:00:00"},"cNf":"986","indPres":0,"rpsSubstituido":{"numero":0,"dataEmissao":"0001-01-01T00:00:00"},"optanteSimplesNacional":"false"},"tomador":{"cnpj/cpf":{"cnpj":"61585865000151"},"docEstrangeiro":"","razaoSocial":"RAIA DROGASIL S/A","extrangeiro":false,"nomeFantasia":"RAIA DROGASIL S/A","inscricaoEstadual":"100931575117","inscricaoMunicipal":"00000000","endereco":{"tipoLogradouro":"Ave","logradouro":"Avenida Corifeu de Azevedo Marques","numero":"3097","bairro":"VILA BUTANTA","codigoMunicipio":"3550308","nomeMunicipio":"SAO PAULO","codigoPais":"1058","nomePais":"Brasil","uf":"SP","cep":"05339000","tpBairro":"VILA BUTANTA","cUf":"35"},"contato":{"ddd":11,"telefone":"37695731","email":"rodrigo.marques@seidor.com.br","ramal":0}},"servico":{"itemListaServico":"2660","codigoAtividade":"2660","cnae":"2423702","codigoTributacaoMunicipio":"05762","discriminacao":["Código: 0002","Analise e desenvolvimento de sistemas","Quantidade: 1","Valor Unitário: R$ 50","Valor Total do Item: R$ 50","Valor Total dos Tributos: R$ 776,5",""],"codigoMunicipioIncidencia":"3550308","quantidade":1.0,"valorUnitario":50.0,"valores":{"valorTotalTributos":0.0,"totalServicos":50.0,"totalDeducoes":0.0,"descontoCondicionado":0.0,"descontoIncondicionado":0.0,"outrasRetencoes":0.0,"desconto":0.0,"valorRepasse":0.0,"iss":{"responsavel":0,"baseCalculo":50.0,"aliquota":5.0,"valor":2.5,"valorRetido":0.0,"retido":false,"exigibilidadeIss":"2","valorReducaoBC":0,"reducao":0},"pis":{"aliquota":0.65,"valor":0.33,"baseCalculo":50.0,"cst":"01","percentual":0.0},"cofins":{"aliquota":3.0,"valor":1.5,"baseCalculo":50.0,"cst":"01"},"inss":{"aliquota":0.0,"valor":0.0,"baseCalculo":"0.00"},"ir":{"aliquota":0.0,"valor":0.0,"baseCalculo":"0.00","percentual":"0.00"},"csll":{"aliquota":0.0,"valor":0.0,"baseCalculo":"0.00","percentual":"0.00"},"valorLiquido":0},"codigoServico":"05762","detDeducoes":{"percentual":0,"lista":[]},"contraApresentacao":false,"endereco":{},"fatura":{"valorfatura":0}},"pedagio":{},"pag":{},"construcaoCivil":{"matriculaCei":0,"numeroArt":0,"numeroCdc":0},"transporte":{}},"emails":[],"branchId":"d1540357-5a30-41dd-bb6a-be3f7a363660","isForceProductionEnv":false,"numeroLote":"100886"}
+29/08/2022 12:00:14 - DocEntry: 886
+29/08/2022 12:00:15 - Erro ao Processar NFSe: Newtonsoft.Json.JsonReaderException: Could not convert string to double: 630cc4dc30c559845bc50e7c. Path 'NfeValue', line 1, position 1691.
+   at Newtonsoft.Json.JsonReader.ReadDoubleString(String s)
+   at Newtonsoft.Json.JsonTextReader.FinishReadQuotedNumber(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsDouble()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ResolvePropertyAndCreatorValues(JsonObjectContract contract, JsonProperty containerProperty, JsonReader reader, Type objectType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObjectUsingCreatorWithParameters(JsonReader reader, JsonObjectContract contract, JsonProperty containerProperty, ObjectConstructor`1 creator, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Luis\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 75
+29/08/2022 12:00:40 - DocEntry: 886
+29/08/2022 12:01:56 - DocEntry: 886
+29/08/2022 12:05:43 - DocEntry: 886
+29/08/2022 12:50:35 - DocEntry: 882
+29/08/2022 12:50:36 - DocEntry: 886
+29/08/2022 12:53:03 - Erro ao enviar NFSe para Orbit: 882 Erro: Bad Request
+29/08/2022 12:53:09 - Erro so integrar NFSe: 882 ERRO: ERROR [42000] [SAP AG][LIBODBCHDB DLL][HDBODBC] Syntax error or access violation;257 sql syntax error: incorrect syntax near """: line 1 col 68 (at pos 68)
+29/08/2022 12:58:24 - DocEntry: 882
+29/08/2022 12:58:34 - DocEntry: 886
+29/08/2022 12:59:08 - NFSe Inserida na fila de emissão: 882 nfsID: 630ce23730c559845be433e6
+29/08/2022 14:10:07 - Count Notas: 0
+29/08/2022 14:10:12 - Count Notas: 0
+29/08/2022 14:10:13 - Count Notas: 0
+29/08/2022 14:10:14 - Count Notas: 0
+29/08/2022 14:10:16 - Count Notas: 0
+29/08/2022 14:10:17 - Count Notas: 0
+29/08/2022 14:10:18 - Count Notas: 0
+29/08/2022 14:10:19 - Count Notas: 0
+29/08/2022 14:10:20 - Count Notas: 0
+29/08/2022 14:10:21 - Count Notas: 0
+29/08/2022 14:10:22 - Count Notas: 0
+29/08/2022 14:10:24 - Count Notas: 0
+29/08/2022 14:10:25 - Count Notas: 0
+29/08/2022 14:10:26 - Count Notas: 0
+29/08/2022 14:10:27 - Count Notas: 0
+29/08/2022 14:10:28 - Count Notas: 0
+29/08/2022 14:10:29 - Count Notas: 0
+29/08/2022 14:10:30 - Count Notas: 0
+29/08/2022 14:10:31 - Count Notas: 0
+29/08/2022 14:10:33 - Count Notas: 0
+29/08/2022 14:10:34 - Count Notas: 0
+29/08/2022 14:10:35 - Count Notas: 0
+29/08/2022 14:10:36 - Count Notas: 0
+29/08/2022 14:10:37 - Count Notas: 0
+29/08/2022 14:10:38 - Count Notas: 0
+29/08/2022 14:10:39 - Count Notas: 0
+29/08/2022 14:10:40 - Count Notas: 0
+29/08/2022 14:10:42 - Count Notas: 0
+29/08/2022 14:10:43 - Count Notas: 0
+29/08/2022 14:10:44 - Count Notas: 0
+29/08/2022 14:10:45 - Count Notas: 0
+29/08/2022 14:10:46 - Count Notas: 0
+29/08/2022 14:10:47 - Count Notas: 0
+29/08/2022 14:10:48 - Count Notas: 0
+29/08/2022 14:10:49 - Count Notas: 0
+29/08/2022 14:10:51 - Count Notas: 0
+29/08/2022 14:10:52 - Count Notas: 0
+29/08/2022 14:10:53 - Count Notas: 0
+29/08/2022 14:10:54 - Count Notas: 0
+29/08/2022 14:10:55 - Count Notas: 0
+29/08/2022 14:10:56 - Count Notas: 0
+29/08/2022 14:10:57 - Count Notas: 0
+29/08/2022 14:10:58 - Count Notas: 0
+29/08/2022 14:11:00 - Count Notas: 0
+29/08/2022 14:11:01 - Count Notas: 0
+29/08/2022 14:11:02 - Count Notas: 0
+29/08/2022 14:11:03 - Count Notas: 0
+29/08/2022 14:11:04 - Count Notas: 0
+29/08/2022 14:11:05 - Count Notas: 0
+29/08/2022 14:11:06 - Count Notas: 0
+29/08/2022 14:11:07 - Count Notas: 0
+29/08/2022 14:11:09 - Count Notas: 0
+29/08/2022 14:11:10 - Count Notas: 0
+29/08/2022 14:11:11 - Count Notas: 0
+29/08/2022 14:11:12 - Count Notas: 0
+29/08/2022 14:11:13 - Count Notas: 0
+29/08/2022 14:11:14 - Count Notas: 0
+29/08/2022 14:11:15 - Count Notas: 0
+29/08/2022 14:11:16 - Count Notas: 0
+29/08/2022 14:11:18 - Count Notas: 0
+29/08/2022 14:11:19 - Count Notas: 0
+29/08/2022 14:11:20 - Count Notas: 0
+29/08/2022 14:11:21 - Count Notas: 0
+29/08/2022 14:11:22 - Count Notas: 0
+29/08/2022 14:11:23 - Count Notas: 0
+29/08/2022 14:11:24 - Count Notas: 0
+29/08/2022 14:11:25 - Count Notas: 0
+29/08/2022 14:11:27 - Count Notas: 0
+29/08/2022 14:11:28 - Count Notas: 0
+29/08/2022 14:11:29 - Count Notas: 0
+29/08/2022 14:11:30 - Count Notas: 0
+29/08/2022 14:11:31 - Count Notas: 0
+29/08/2022 14:11:32 - Count Notas: 0
+29/08/2022 14:11:33 - Count Notas: 0
+29/08/2022 14:11:34 - Count Notas: 0
+29/08/2022 14:11:42 - Count Notas: 0
+29/08/2022 14:11:44 - Count Notas: 0
+29/08/2022 14:11:45 - Count Notas: 0
+29/08/2022 14:11:46 - Count Notas: 0
+29/08/2022 14:11:47 - Count Notas: 0
+29/08/2022 14:11:48 - Count Notas: 0
+29/08/2022 14:11:49 - Count Notas: 0
+29/08/2022 14:11:51 - Count Notas: 0
+29/08/2022 14:11:52 - Count Notas: 0
+29/08/2022 14:11:53 - Count Notas: 0
+29/08/2022 14:11:54 - Count Notas: 0
+29/08/2022 14:11:55 - Count Notas: 0
+29/08/2022 14:11:56 - Count Notas: 0
+29/08/2022 14:11:57 - Count Notas: 0
+29/08/2022 14:11:58 - Count Notas: 0
+29/08/2022 14:12:00 - Count Notas: 0
+29/08/2022 14:12:01 - Count Notas: 0
+29/08/2022 14:12:02 - Count Notas: 0
+29/08/2022 14:12:03 - Count Notas: 0
+29/08/2022 14:12:04 - Count Notas: 0
+29/08/2022 14:12:05 - Count Notas: 0
+29/08/2022 14:12:06 - Count Notas: 0
+29/08/2022 14:12:07 - Count Notas: 0
+29/08/2022 14:12:09 - Count Notas: 0
+29/08/2022 14:12:10 - Count Notas: 0
+29/08/2022 14:12:11 - Count Notas: 0
+29/08/2022 14:12:12 - Count Notas: 0
+29/08/2022 14:12:13 - Count Notas: 0
+29/08/2022 14:12:14 - Count Notas: 0
+29/08/2022 14:12:15 - Count Notas: 0
+29/08/2022 14:12:16 - Count Notas: 0
+29/08/2022 14:12:18 - Count Notas: 0
+29/08/2022 14:12:19 - Count Notas: 0
+29/08/2022 14:12:20 - Count Notas: 0
+29/08/2022 14:12:21 - Count Notas: 0
+29/08/2022 14:12:22 - Count Notas: 0
+29/08/2022 14:12:23 - Count Notas: 0
+29/08/2022 14:12:24 - Count Notas: 0
+29/08/2022 14:12:25 - Count Notas: 0
+29/08/2022 14:12:27 - Count Notas: 0
+29/08/2022 14:12:28 - Count Notas: 0
+29/08/2022 14:12:29 - Count Notas: 0
+29/08/2022 14:12:30 - Count Notas: 0
+29/08/2022 14:12:31 - Count Notas: 0
+29/08/2022 14:12:32 - Count Notas: 0
+29/08/2022 14:12:33 - Count Notas: 0
+29/08/2022 14:12:34 - Count Notas: 0
+29/08/2022 14:12:36 - Count Notas: 0
+29/08/2022 14:12:37 - Count Notas: 0
+29/08/2022 14:12:38 - Count Notas: 0
+29/08/2022 14:12:39 - Count Notas: 0
+29/08/2022 14:12:40 - Count Notas: 0
+29/08/2022 14:12:41 - Count Notas: 0
+29/08/2022 14:12:42 - Count Notas: 0
+29/08/2022 14:12:43 - Count Notas: 0
+29/08/2022 14:12:45 - Count Notas: 0
+29/08/2022 14:12:46 - Count Notas: 0
+29/08/2022 14:12:47 - Count Notas: 0
+29/08/2022 14:12:48 - Count Notas: 0
+29/08/2022 14:12:49 - Count Notas: 0
+29/08/2022 14:12:50 - Count Notas: 0
+29/08/2022 14:12:51 - Count Notas: 0
+29/08/2022 14:12:52 - Count Notas: 0
+29/08/2022 14:12:54 - Count Notas: 0
+29/08/2022 14:12:55 - Count Notas: 0
+29/08/2022 14:12:56 - Count Notas: 0
+29/08/2022 14:12:57 - Count Notas: 0
+29/08/2022 14:12:58 - Count Notas: 0
+29/08/2022 14:12:59 - Count Notas: 0
+29/08/2022 14:13:00 - Count Notas: 0
+29/08/2022 14:13:01 - Count Notas: 0
+29/08/2022 14:13:03 - Count Notas: 0
+29/08/2022 14:13:04 - Count Notas: 0
+29/08/2022 14:13:05 - Count Notas: 0
+29/08/2022 14:13:06 - Count Notas: 0
+29/08/2022 14:13:07 - Count Notas: 0
+29/08/2022 14:13:08 - Count Notas: 0
+29/08/2022 14:13:09 - Count Notas: 0
+29/08/2022 14:13:10 - Count Notas: 0
+29/08/2022 14:13:12 - Count Notas: 0
+29/08/2022 14:13:13 - Count Notas: 0
+29/08/2022 14:13:14 - Count Notas: 0
+29/08/2022 14:13:15 - Count Notas: 0
+29/08/2022 14:13:16 - Count Notas: 0
+29/08/2022 14:13:17 - Count Notas: 0
+29/08/2022 14:13:18 - Count Notas: 0
+29/08/2022 14:13:19 - Count Notas: 0
+29/08/2022 14:13:21 - Count Notas: 0
+29/08/2022 14:13:22 - Count Notas: 0
+29/08/2022 14:13:23 - Count Notas: 0
+29/08/2022 14:13:24 - Count Notas: 0
+29/08/2022 14:13:25 - Count Notas: 0
+29/08/2022 14:13:26 - Count Notas: 0
+29/08/2022 14:13:27 - Count Notas: 0
+29/08/2022 14:13:28 - Count Notas: 0
+29/08/2022 14:13:30 - Count Notas: 0
+29/08/2022 14:13:31 - Count Notas: 0
+29/08/2022 14:13:32 - Count Notas: 0
+29/08/2022 14:13:33 - Count Notas: 0
+29/08/2022 14:13:34 - Count Notas: 0
+29/08/2022 14:13:35 - Count Notas: 0
+29/08/2022 14:15:34 - Count Notas: 0
+29/08/2022 14:15:36 - Count Notas: 0
+29/08/2022 14:15:37 - Count Notas: 0
+29/08/2022 14:15:38 - Count Notas: 0
+29/08/2022 14:15:39 - Count Notas: 0
+29/08/2022 14:15:40 - Count Notas: 0
+29/08/2022 14:15:41 - Count Notas: 0
+29/08/2022 14:15:42 - Count Notas: 0
+29/08/2022 14:15:43 - Count Notas: 0
+29/08/2022 14:15:45 - Count Notas: 0
+29/08/2022 14:15:46 - Count Notas: 0
+29/08/2022 14:15:47 - Count Notas: 0
+29/08/2022 14:15:48 - Count Notas: 0
+29/08/2022 14:15:49 - Count Notas: 0
+29/08/2022 14:15:50 - Count Notas: 0
+29/08/2022 14:15:51 - Count Notas: 0
+29/08/2022 14:15:52 - Count Notas: 0
+29/08/2022 14:15:54 - Count Notas: 0
+29/08/2022 16:35:40 - Count Notas: 1
+29/08/2022 16:36:19 - NFSe Inserida na fila de emissão: 886 nfsID: 630cc4dc30c559845bc50e7c
+29/08/2022 16:36:32 - Count Notas: 0
+29/08/2022 16:36:33 - Count Notas: 0
+29/08/2022 16:36:34 - Count Notas: 0
+29/08/2022 16:36:35 - Count Notas: 0
+29/08/2022 16:36:36 - Count Notas: 0
+29/08/2022 16:39:26 - Count Notas: 1
+29/08/2022 16:39:38 - NFSe Inserida na fila de emissão: 887 nfsID: 630d15f230c559845b1240c6
+29/08/2022 16:39:45 - Count Notas: 0
+29/08/2022 16:39:46 - Count Notas: 0
+29/08/2022 16:39:47 - Count Notas: 0
+29/08/2022 16:39:48 - Count Notas: 0
+29/08/2022 16:39:49 - Count Notas: 0
+29/08/2022 16:39:51 - Count Notas: 0
+29/08/2022 16:39:52 - Count Notas: 0
+29/08/2022 16:39:53 - Count Notas: 0
+30/08/2022 11:34:51 - Count Notas: 56
+30/08/2022 11:37:58 - Count Notas: 56
+30/08/2022 11:46:44 - Count Notas: 56
+30/08/2022 11:53:58 - Count Notas: 56
+30/08/2022 11:54:35 - Count Notas: 56
+30/08/2022 11:55:39 - Erro ao enviar NFSe para Orbit: 879 Erro: Invalid value - rps.servico.discriminacao
+30/08/2022 11:55:48 - Erro ao enviar NFSe para Orbit: 879 Erro: Invalid value - rps.servico.discriminacao
+30/08/2022 12:04:48 - Count Notas: 56
+30/08/2022 12:05:35 - Erro ao enviar NFSe para Orbit: 879 Erro: Invalid value - rps.servico.discriminacao
+30/08/2022 12:06:40 - Count Notas: 56
+30/08/2022 12:07:16 - Erro ao enviar NFSe para Orbit: 879 Erro: Invalid value - rps.servico.discriminacao
+30/08/2022 12:09:00 - Count Notas: 56
+30/08/2022 12:09:40 - Erro ao enviar NFSe para Orbit: 879 Erro: Invalid value - rps.servico.discriminacao
+30/08/2022 12:10:15 - Count Notas: 55
+30/08/2022 12:11:08 - Erro ao enviar NFSe para Orbit: 867 Erro: Invalid value - rps.servico.discriminacao
+15/09/2022 11:43:31 - Count Notas: 10
+15/09/2022 11:43:32 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:32 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:34 - Count Notas: 10
+15/09/2022 11:43:34 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:34 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:35 - Count Notas: 10
+15/09/2022 11:43:35 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:35 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:36 - Count Notas: 10
+15/09/2022 11:43:36 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:36 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:38 - Count Notas: 10
+15/09/2022 11:43:38 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:38 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:39 - Count Notas: 10
+15/09/2022 11:43:39 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:39 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:40 - Count Notas: 10
+15/09/2022 11:43:40 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:40 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:42 - Count Notas: 10
+15/09/2022 11:43:42 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:42 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:43 - Count Notas: 10
+15/09/2022 11:43:43 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:43 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:44 - Count Notas: 10
+15/09/2022 11:43:44 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:44 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:45 - Count Notas: 10
+15/09/2022 11:43:46 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:46 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:43:47 - Count Notas: 10
+15/09/2022 11:43:47 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:43:47 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 114
+15/09/2022 11:44:28 - Count Notas: 10
+15/09/2022 11:44:28 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'string.IsNullOrEmpty(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 96
+15/09/2022 11:49:51 - Count Notas: 10
+04/10/2022 13:31:57 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 70
+04/10/2022 13:31:57 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 64
+04/10/2022 13:32:03 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 70
+04/10/2022 13:32:07 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 64
+04/10/2022 13:32:19 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 70
+04/10/2022 13:32:22 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 64
+04/10/2022 13:32:34 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 70
+04/10/2022 13:32:36 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 64
+04/10/2022 13:33:15 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 70
+04/10/2022 13:33:19 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 64
+04/10/2022 13:34:04 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 70
+04/10/2022 13:34:07 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\Client\NFSeProcess.cs:line 28
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Worker.cs:line 64
+04/10/2022 13:36:04 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'int' does not contain a definition for 'Count'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 70
+04/10/2022 13:39:54 - Count Notas: 4
+04/10/2022 13:40:10 - Erro so integrar NFSe: 901 ERRO: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'OrbitLibrary.Utils.AppSettings' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+04/10/2022 13:40:11 - Erro so integrar NFSe: 920 ERRO: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'OrbitLibrary.Utils.AppSettings' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+04/10/2022 13:40:12 - Erro so integrar NFSe: 899 ERRO: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'OrbitLibrary.Utils.AppSettings' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+04/10/2022 13:40:13 - Erro so integrar NFSe: 915 ERRO: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'OrbitLibrary.Utils.AppSettings' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+05/10/2022 12:28:48 - Count Notas: 5
+05/10/2022 12:28:53 - Erro so integrar NFSe: 901 ERRO: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'OrbitLibrary.Utils.AppSettings' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+05/10/2022 12:28:54 - Erro so integrar NFSe: 920 ERRO: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'OrbitLibrary.Utils.AppSettings' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+05/10/2022 12:31:30 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'int' does not contain a definition for 'Count'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Desenvolvimento\Rafael\PROD\NewService\4TAX_Service\Application\DataFetch\NFSeFetch.cs:line 72
+05/10/2022 12:32:53 - Count Notas: 5
+05/10/2022 12:34:12 - Count Notas: 5
+05/10/2022 12:34:55 - Count Notas: 5
+05/10/2022 12:36:51 - Count Notas: 5
+05/10/2022 12:37:08 - Count Notas: 5
+05/10/2022 12:38:46 - Count Notas: 5
+05/10/2022 12:39:05 - Count Notas: 5
+05/10/2022 12:39:53 - Count Notas: 5
+05/10/2022 12:41:30 - Count Notas: 1
+05/10/2022 12:44:20 - Count Notas: 1
+05/10/2022 12:48:17 - Count Notas: 1
+05/10/2022 12:49:09 - Count Notas: 1

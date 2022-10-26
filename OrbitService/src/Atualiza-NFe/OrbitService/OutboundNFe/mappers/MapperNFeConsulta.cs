@@ -12,7 +12,7 @@ namespace OrbitService.OutboundNFe.mappers
         {
             if(output.status.cStat == "100")
             {
-                return new DocumentStatus(invoice.IdRetornoOrbit, output.status.cStat, output.status.mStat, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Sucess);
+                return new DocumentStatus(invoice.IdRetornoOrbit, output.status.cStat, output.status.mStat, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Sucess, output.key,output.eventos[0].protocolo);
             }
             else if (output.status.cStat == "0")
             {

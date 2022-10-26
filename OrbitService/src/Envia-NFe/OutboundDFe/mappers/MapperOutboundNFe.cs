@@ -49,8 +49,17 @@ namespace OrbitService.OutboundDFe.mappers
             input.identificacao.Serie = invoice.Identificacao.SerieDocumento;
             input.identificacao.NumeroDocFiscal = invoice.Identificacao.NumeroDocumento;
             input.identificacao.DataHoraEmissao = util.ConvertDateB1ToFormatOrbit(invoice.Identificacao.DataEmissao, invoice.Identificacao.DocTime);
+            if(invoice.Identificacao.EnviaDataHora == "1")
+            {
+                input.identificacao.DataHoraSaidaOuEntrada = !string.IsNullOrEmpty(invoice.Identificacao.HoraDeEnvio) ? invoice.Identificacao.DataDeEnvio.ToString("yyyy-MM-dd") + "T" + invoice.Identificacao.HoraDeEnvio + DateTime.Now.ToString(":ss") + "-03:00" : input.identificacao.DataHoraEmissao;
+            }
             input.identificacao.CodigoMunicipioFg = invoice.Filial.CodigoIBGEMunicipioFilial;
             input.identificacao.FormatoNfe = invoice.Identificacao.OperacaoNFe;
+            if(invoice.Identificacao.OperacaoNFe == "6")
+            {
+                input.identificacao.DhCont = input.identificacao.DataHoraEmissao;
+                input.identificacao.XJust = invoice.Identificacao.JustContigencia;
+            }
             input.identificacao.Finalidade = invoice.Identificacao.FinalideDocumento;
             input.identificacao.IndFinal = invoice.Identificacao.ConsumidorFinal;
             input.identificacao.IndPres = invoice.Identificacao.IndicadorPresenca;
@@ -60,16 +69,10 @@ namespace OrbitService.OutboundDFe.mappers
             List<NFref> listNFref = new List<NFref>();
             foreach (var item in invoice.DocRef)
             {
-                NFref nFref = new NFref();
-                RefNF refNF = new RefNF();
-                nFref.RefNFe = item.ChaveDocRef;
-                refNF.Aamm = util.ConvertDateB1ToFormatOrbit(item.DataDocRef);
-                refNF.Cnpj = !String.IsNullOrEmpty(item.CnpjDocRef) ? Regex.Replace(item.CnpjDocRef, @"\.|\/|-", "") : null;
-                refNF.Cuf = item.CUfDocRef;
-                refNF.Mod = item.ModDocRef;
-                refNF.Nnf = item.NumNfDocRef;
-                refNF.Serie = item.SerieDocRef;
-                nFref.RefNF = refNF;
+                NFref nFref = new NFref
+                {
+                    RefNFe = item.ChaveDocRef
+                };
                 listNFref.Add(nFref);
             }
             input.identificacao.NFref = listNFref;
@@ -80,6 +83,7 @@ namespace OrbitService.OutboundDFe.mappers
             input.Destinatario.Cnpj = !String.IsNullOrEmpty(invoice.Parceiro.CnpjParceiro) ? Regex.Replace(invoice.Parceiro.CnpjParceiro, @"\.|\/|-", "") : null;
             input.Destinatario.Cpf = !String.IsNullOrEmpty(invoice.Parceiro.CpfParceiro) ? Regex.Replace(invoice.Parceiro.CpfParceiro, @"\.|\/|-", "") : null;
             input.Destinatario.Isuf = !String.IsNullOrEmpty(invoice.Parceiro.InscSuframa) ? Regex.Replace(invoice.Parceiro.InscSuframa, @"\.|\/|-", "") : null;
+            input.Destinatario.IdEstrangeiro = !String.IsNullOrEmpty(invoice.Parceiro.IdEstrangeiro) ? Regex.Replace(invoice.Parceiro.IdEstrangeiro, @"\.|\/|-", "") : null;
             input.Destinatario.Nome = invoice.Parceiro.RazaoSocialParceiro;
             input.Destinatario.Endereco.Logradouro = invoice.Parceiro.LogradouroParceiro;
             input.Destinatario.Endereco.Numero = invoice.Parceiro.NumeroLogradouroParceiro;
@@ -139,7 +143,6 @@ namespace OrbitService.OutboundDFe.mappers
             input.total.IcmsTot.VBc = util.ToOrbitString(util.GetTaxTypeB1VBcSum("-6", invoice));
             input.total.IcmsTot.VIcms = util.ToOrbitString(util.GetTaxTypeB1Sum("-6", invoice));
             input.total.IcmsTot.VIcmsDeson = util.ToOrbitString(util.GetTaxTypeB1SumDeson("-6", invoice));
-           
             input.total.IcmsTot.VBcSt = util.ToOrbitString(util.GetTaxTypeB1VBcSum("-5", invoice));
             input.total.IcmsTot.VSt = util.ToOrbitString(util.GetTaxTypeB1Sum("-5", invoice));
             input.total.IcmsTot.VFcpSt = util.ToOrbitString(util.GetTaxTypeB1Sum("-14", invoice));
@@ -154,9 +157,13 @@ namespace OrbitService.OutboundDFe.mappers
             input.total.IcmsTot.VPis = util.ToOrbitString(util.GetTaxTypeB1Sum("-8", invoice));
             input.total.IcmsTot.VCofins = util.ToOrbitString(util.GetTaxTypeB1Sum("-10", invoice));
             input.total.IcmsTot.VOutro = util.ToOrbitString(util.GetVSumDespAdic("3", invoice));
-            input.total.IcmsTot.VNf = util.ToOrbitString(invoice.Identificacao.ValorTotalNF);
             input.total.IcmsTot.VIcmsUfDest = util.ToOrbitString(util.GetTaxTypeB1Sum("-9", invoice));
             input.total.IcmsTot.VIcmsUfRemet = util.ToOrbitString(util.GetTaxTypeB1Sum("-13", invoice));
+
+            input.total.IcmsTot.VNf = util.ToOrbitString(invoice.Identificacao.ValorTotalNF);
+
+
+
 
             foreach (Det det in input.det)
             {
@@ -176,6 +183,8 @@ namespace OrbitService.OutboundDFe.mappers
 
             #endregion TOTAL                              
 
+            input.exporta.UfSaidaPais = !String.IsNullOrEmpty(invoice.Identificacao.UFDeExportacao) ? invoice.Identificacao.UFDeExportacao : null;
+            input.exporta.XLocExporta = !String.IsNullOrEmpty(invoice.Identificacao.LocalDeExportacao) ? invoice.Identificacao.UFDeExportacao : null;
             input.infAdic.InfAdFisco = !string.IsNullOrEmpty(invoice.Identificacao.InfAdFisco) ? invoice.Identificacao.InfAdFisco : null;
             input.identificacao.IdLocalDestino = invoice.CabecalhoLinha[0].IdLocalDestino;
             input.Emitente.InscricaoEstadual = invoice.Filial.InscIeFilial;
@@ -234,12 +243,47 @@ namespace OrbitService.OutboundDFe.mappers
                 det.prod.VOutro = !String.IsNullOrEmpty(ReturnValorUnitarioDespesaAdicional(item, "3")) ? ReturnValorUnitarioDespesaAdicional(item, "3") : null;
                 det.prod.IndTot = "1"; //TODO
                 det.prod.ValorDesconto = util.ToOrbitString(item.ValorTotalDescontoLinha);
+                det.prod.XPed = !String.IsNullOrEmpty(item.NumeroPedido) ? item.NumeroPedido : null;
+                det.prod.NItemPed = !String.IsNullOrEmpty(item.NumeroItemPedido) ? item.NumeroItemPedido : null;
                 det.Imposto = ReturnListImposto(item);
+                det.prod.Di = ReturnListDi(item,invoice);
                 lstDet.Add(det);
 
             }
             return lstDet;
 
+        }
+
+        public List<Di> ReturnListDi(CabecalhoLinha cabecalhoLinha, Invoice invoice)
+        {
+            List<Di> listDi = new List<Di>();
+            List<Adi> listAdi = new List<Adi>();
+            Adi adi = new Adi();
+            Di di = new Di();
+            foreach (var item in cabecalhoLinha.DadosDI)
+            {
+                adi.NAdicao = item.NumeroAdicao;
+                adi.NSeqAdic = item.NumeroSequenciaAdicao;
+                adi.CFabricante = invoice.Parceiro.CodigoParceiro;
+                adi.VDescDI = util.ToOrbitString(item.ValorDescontoDI);
+                listAdi.Add(adi);
+
+                di.NumeroDocumentoImportacao = item.NumeroDocImportacao;
+                di.Ddi = util.ConvertDateB1ToFormatOrbit(item.Ddi);
+                di.LocalDesembaracoAduaneiro = item.LocalDesembaracoAduaneiro;
+                di.UfDesembaracoAduaneiro = item.UFDesembaracoAduaneiro;
+                di.DataDesembaracoAduaneiro = util.ConvertDateB1ToFormatOrbit(item.DataDesembaracoAduaneiro);
+                di.ViaTransporteInternacional = item.ViaTransporteInternacional.Substring(0, 1);
+                di.Vafrmm = !String.IsNullOrEmpty(item.ValorFrmm) ? item.ValorFrmm : null;
+                di.TpIntermedio = item.TpIntermedio.Substring(0, 1);
+                di.CnpjAdiquirente = !String.IsNullOrEmpty(item.CNPJAdiquirente) ? Regex.Replace(item.CNPJAdiquirente, @"\.|\/|-", "") : null;
+                di.UfAdiquirente = item.UFAdiquirente;
+                di.CodigoExportador = invoice.Parceiro.CodigoParceiro;
+                di.Adi = listAdi; 
+                listDi.Add(di);
+            }
+
+            return listDi;
         }
 
         public Imposto ReturnListImposto(CabecalhoLinha cabecalhoLinha)
@@ -324,6 +368,12 @@ namespace OrbitService.OutboundDFe.mappers
                         case "-13":
                             imposto.IcmsUfDest.VIcmsUfRemet = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
                             break;
+                        case "-11":
+                            imposto.Ii.VBc = util.ToOrbitString(util.GetTaxTypeB1VBcSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+                            imposto.Ii.VDespAdu = "0.00";
+                            imposto.Ii.VIi = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+                            imposto.Ii.VIof = "0.00";
+                            break;
 
                     }
                 }
@@ -334,24 +384,24 @@ namespace OrbitService.OutboundDFe.mappers
 
         public string ReturnValorUnitarioDespesaAdicional(CabecalhoLinha cabecalhoLinha, string TipoDespesa)
         {
-            string valorUnitarioDespesa = string.Empty;
+            double valorUnitarioDespesa = 0.00;
             foreach (var DespAdc in cabecalhoLinha.DespesaAdicional.Where(i => i.TipoDespesa == TipoDespesa))
             {
                 switch (DespAdc.TipoDespesa)
                 {
                     case "1":
-                        valorUnitarioDespesa = util.ToOrbitString(DespAdc.ValorUnitarioDespesa);
+                        valorUnitarioDespesa += DespAdc.ValorUnitarioDespesa;
                         break;
                     case "2":
-                        valorUnitarioDespesa = util.ToOrbitString(DespAdc.ValorUnitarioDespesa);
+                        valorUnitarioDespesa += DespAdc.ValorUnitarioDespesa;
                         break;
                     case "3":
-                        valorUnitarioDespesa = util.ToOrbitString(DespAdc.ValorUnitarioDespesa);
+                        valorUnitarioDespesa += DespAdc.ValorUnitarioDespesa;
                         break;
                 }
             }
 
-            return valorUnitarioDespesa;
+            return valorUnitarioDespesa > 0 ? util.ToOrbitString(valorUnitarioDespesa) : null;
         }
     }
 }

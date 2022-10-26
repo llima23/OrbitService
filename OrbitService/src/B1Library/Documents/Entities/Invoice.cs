@@ -30,6 +30,11 @@ namespace B1Library.Documents
         public string TipoDocumento { get; set; }
         public string TipoNF { get; set; }
 
+        public string ChaveDeAcessoNFe { get; set; }
+        public string ProtocoloNFe { get; set; }
+
+        public int BaseEntry { get; set; }
+
         public string IdRetornoOrbit { get; set; }
 
         public string CANCELED { get; set; }//Criar Campo na View
@@ -73,8 +78,10 @@ namespace B1Library.Documents
             ImpostoLinha = new List<ImpostoLinha>();
             ImpostoRetidoLinha = new List<ImpostoRetidoLinha>();
             DespesaAdicional = new List<DespesaAdicional>();
+            DadosDI = new List<DadosDI>();
         }
-
+        public string NumeroItemPedido { get; set; }
+        public string NumeroPedido { get; set; }
         public string SoImposto { get; set; }
         public string NItem { get; set; }
         public string CSTCofinsLinha { get; set; }
@@ -91,6 +98,7 @@ namespace B1Library.Documents
         public List<ImpostoLinha> ImpostoLinha { get; set; }
         public List<ImpostoRetidoLinha> ImpostoRetidoLinha { get; set; }
         public List<DespesaAdicional> DespesaAdicional { get; set; }
+        public List<DadosDI> DadosDI { get; set; }
         public int ItemLinhaDocumento { get; set; }
         public string OrigICMS { get; set; }
         public double ValorTotalDescontoLinha { get; set; }
@@ -109,6 +117,24 @@ namespace B1Library.Documents
         public int BaseEntry { get; set; }//Criar campo na View
     }
 
+    public class DadosDI
+    {
+        public string CNPJAdiquirente { get; set; }
+        public DateTime DataDesembaracoAduaneiro { get; set; }
+        public DateTime Ddi { get; set; }
+        public string LocalDesembaracoAduaneiro { get; set; }
+        public string NumeroAdicao { get; set; }
+        public string NumeroDocImportacao { get; set; }
+        public string NumeroDrawBack { get; set; }
+        public string NumeroSequenciaAdicao { get; set; }
+        public string TpIntermedio { get; set; }
+        public string UFAdiquirente { get; set; }
+        public string UFDesembaracoAduaneiro { get; set; }
+        public double ValorDescontoDI { get; set; }
+        public string ValorFrmm { get; set; }
+        public string ViaTransporteInternacional { get; set; }
+    }
+
     public class DespesaAdicional
     {
         public string TipoDespesa { get; set; }
@@ -125,6 +151,7 @@ namespace B1Library.Documents
 
     public class Parceiro
     {
+        public string IdEstrangeiro { get; set; }
         public string InscSuframa { get; set; }
         public string BairroParceiro { get; set; }
         public string CEPParceiro { get; set; }
@@ -179,6 +206,12 @@ namespace B1Library.Documents
 
     public class Identificacao
     {
+        public string JustContigencia { get; set; }
+        public string LocalDeExportacao { get; set; }
+        public string UFDeExportacao { get; set; }
+        public string HoraDeEnvio { get; set; }
+        public string EnviaDataHora { get; set; }
+        public DateTime DataDeEnvio { get; set; }
         public string InfAdFisco { get; set; }
         public string RegEspTrib { get; set; }
         public string TipoRps { get; set; }

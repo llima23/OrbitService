@@ -102,10 +102,10 @@ namespace B1Library.Implementations.Repositories
         public List<Invoice> GetCancelOutboundNFe()
         {
             List<Invoice> invoices = new List<Invoice>();
-            foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFSe)
+            foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFe)
             {
                 SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.CancelOutboundNFe));
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1SendDocumentToOrbit()));
+                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1CancelDocumentInOrbit()));
             }
             return invoices;
         }
@@ -113,10 +113,10 @@ namespace B1Library.Implementations.Repositories
         public List<Invoice> GetCancelOutboundNFSe()
         {
             List<Invoice> invoices = new List<Invoice>();
-            foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFSe)
+            foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFe)
             {
                 SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.CancelOutboundNFSe));
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1SendDocumentToOrbit()));
+                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1CancelDocumentInOrbit()));
             }
             return invoices;
         }
@@ -126,8 +126,19 @@ namespace B1Library.Implementations.Repositories
             List<Invoice> invoices = new List<Invoice>();
             foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFSe)
             {
-                SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.CancelOutboundNFSe));
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1SendDocumentToOrbit()));
+                SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.InutilOutboundNFSe));
+                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1CancelDocumentInOrbit()));
+            }
+            return invoices;
+        }
+
+        public List<Invoice> GetInutilOutboundNFe()
+        {
+            List<Invoice> invoices = new List<Invoice>();
+            foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFe)
+            {
+                SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.InutilOutboundNFe));
+                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1CancelDocumentInOrbit()));
             }
             return invoices;
         }

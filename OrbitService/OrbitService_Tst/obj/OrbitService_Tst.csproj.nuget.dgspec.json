@@ -1,0 +1,397 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\OrbitService_Tst\\OrbitService_Tst.csproj": {}
+  },
+  "projects": {
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\OrbitService_Tst\\OrbitService_Tst.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\OrbitService_Tst\\OrbitService_Tst.csproj",
+        "projectName": "OrbitService_Tst",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\OrbitService_Tst\\OrbitService_Tst.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\OrbitService_Tst\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Cancel-NFe\\OrbitService\\OrbitService.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Cancel-NFe\\OrbitService\\OrbitService.csproj"
+              },
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
+        "projectName": "B1Library",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Cancel-NFe\\OrbitService\\OrbitService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Cancel-NFe\\OrbitService\\OrbitService.csproj",
+        "projectName": "OrbitService",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Cancel-NFe\\OrbitService\\OrbitService.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\Cancel-NFe\\OrbitService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\B1Library\\B1Library.csproj"
+              },
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting.WindowsServices": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
+        "projectName": "OrbitLibrary",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.15.0, )"
+            },
+            "ServiceStack.Common": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "System.Data.Odbc": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.21.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
+        "projectName": "OrbitLibrary_Test",
+        "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\OrbitLibrary_Test.csproj",
+        "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+        "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\test\\OrbitLibrary-Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj": {
+                "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\src\\OrbitLibrary\\OrbitLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

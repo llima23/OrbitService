@@ -55,7 +55,7 @@ namespace B1Library.Documents.Entities
         {
 			StringBuilder sb = new StringBuilder();
 			sb.AppendLine($@"SELECT
-	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
+	                         COALESCE(T0.""DocEntry"",0)			 AS ""DocEntry"",
 							 COALESCE(T1.""BaseEntry"", 0)           AS ""BaseEntry"",
 							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
 							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
@@ -64,14 +64,29 @@ namespace B1Library.Documents.Entities
 							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1"",
 							 COALESCE(T0.""U_TAX4_Justi"", '')       AS ""Justificativa"",
 							 COALESCE(T0.""CANCELED"", '')           AS ""CANCELED"",
-							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado""
+							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado"",
+							 REPLACE(REPLACE((
+									 SELECT
+									 COALESCE(OI.""TaxDate"", '')                  AS ""DataEmissao"",
+									 COALESCE(OI.""DocDate"", '')                  AS ""DataLancamento"",
+									 COALESCE(CAST(OI.""Serial"" AS VARCHAR), '')  AS ""NumeroDocumento"",
+									 COALESCE(OI.""SeriesStr"", '')                AS ""SerieDocumento"",
+									 COALESCE(T0.""U_TAX4_Justi"", '')             AS ""Justificativa"",
+								     COALESCE(T0.""U_TAX4_Chave"", '')              AS ""ChaveDeAcessoNFe"",
+									 COALESCE(T0.""U_TAX4_Prot"", '')             AS ""ProtocoloNFe"",
+								     COALESCE(CG.""U_TAX4_EstabID"", '')           AS ""BranchId"",
+									 COALESCE(C2.""U_TAX4_versao"", '')            AS ""Versao""
+									 FROM {B1TableName} OI
+								     JOIN ""@TAX4_CONFIG"" C2 ON OI.""BPLId"" = C2.""U_TAX4_Filial""
+									 JOIN ""@TAX4_LCONFIGADDON"" CG ON OI.""BPLId"" = CG.""U_TAX4_Empresa""
+									 WHERE T0.""DocEntry"" = OI.""DocEntry"" FOR JSON),'[',''),']','') 	
+									 AS ""Identificacao""
 							 FROM {B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
 							 JOIN {B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
 							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""
 							 WHERE
-							 ""U_TAX4_CodInt"" = '2'
-							 and NF.""SeqCode"" <> 0
+							 NF.""SeqCode"" <> 0
 							 and T0.""U_TAX4_CARGAFISCAL"" = 'N'
 							 and T0.""CANCELED"" = 'C'
 							 and T0.""DocStatus"" = 'C'");
@@ -100,6 +115,8 @@ namespace B1Library.Documents.Entities
 	 		                        END AS ""TipoDocumento"",
 	                         CASE T0.""ObjType""
 	 		                        WHEN '13' THEN ('1')
+									WHEN '16' THEN ('0')
+									WHEN '14' THEN ('0')
 	 		                        WHEN '15' THEN ('1')
 	 		                        WHEN '18' THEN ('0')
 	 		                        WHEN '20' THEN ('0')
@@ -137,7 +154,14 @@ namespace B1Library.Documents.Entities
 									 COALESCE(C2.""U_TAX4_itCultural"", '')        AS ""IncentivadorCultural"",
 									 COALESCE(C2.""U_TAX4_tipoRPS"",'')			   AS ""TipoRps"",
 									 COALESCE(C2.""U_TAX4_RegEspTrib"",'')		   AS ""RegEspTrib"",
-									 COALESCE(OI.""U_TAX4_InfAd"",'')			   AS ""InfAdFisco""
+									 COALESCE(OI.""U_TAX4_InfAd"",'')			   AS ""InfAdFisco"",
+								     COALESCE(OI.""U_TAX4_DataHora"",'')		   AS ""EnviaDataHora"",
+									 COALESCE(OI.""U_TAX4_DataEnt"",null)		   AS ""DataDeEnvio"",
+									 COALESCE(OI.""U_TAX4_HoraEnt"",'')			   AS ""HoraDeEnvio"",
+									 COALESCE(OI.""U_TAX4_Local_Exp"",'')		   AS ""LocalDeExportacao"",
+									 COALESCE(OI.""U_TAX4_UF_Exp"",'')			   AS ""UFDeExportacao"",
+									 COALESCE(C2.""U_TAX4_justf"",'')			   AS ""JustContigencia""
+									 
 
 									 FROM {B1TableName} OI 
 								     JOIN {B1TableNameChild}12 PT ON PT.""DocEntry"" = OI.""DocEntry""
@@ -211,14 +235,16 @@ namespace B1Library.Documents.Entities
 								 COALESCE(TL.""CFOPCode"", '')														AS ""CodigoCFOP"",
 								 COALESCE(OT.""U_TAX4_LisSer"", '')													AS ""ItemListaServico"",
 								 COALESCE(OD.""ServiceCD"", '')														AS ""CodigoTributacaoMuncipio"",
-								 COALESCE(TL.""U_TAX4_MotDes"", '')													AS ""MotivoDesoneracao"",		
+								 COALESCE(TL.""U_TAX4_MotDes"", '')													AS ""MotivoDesoneracao"",
+								 COALESCE(TL.""U_TAX4_nPedido"",'')													AS ""NumeroPedido"",
+								 COALESCE(TL.""U_TAX4_nItemPedido"",'')											    AS ""NumeroItemPedido"",
 								 CASE SUBSTRING(TL.""CFOPCode"",0,1) 
 								 WHEN '1' THEN('1')
 								 WHEN '5' THEN('1')
 								 WHEN '2' THEN('2')
 								 WHEN '6' THEN('2')
 								 WHEN '3' THEN('3')
-								 WHEN '7' THEN('7')
+								 WHEN '7' THEN('3')
 								 END AS ""IdLocalDestino"",
 								 CASE(TL.""CSTfIPI"")
 								 WHEN '02' THEN('302')
@@ -283,6 +309,29 @@ namespace B1Library.Documents.Entities
 								WHERE TD.""DocEntry"" = T0.""DocEntry"" AND TD.""LineNum"" = TL.""LineNum""
 								FOR JSON) AS ""DespesaAdicional"" ");
 			#endregion DespesaAdicional
+			#region DADOSDI
+			sb.AppendLine($@",(SELECT 
+							 COALESCE(""U_TAX4_CNPJAD"",'')				AS ""CNPJAdiquirente"",
+							 COALESCE(""U_TAX4_DDA"",'')					AS ""DataDesembaracoAduaneiro"",
+							 COALESCE(""U_TAX4_DDI"",'')					AS ""Ddi"",
+							 COALESCE(""U_TAX4_FI"",'')					AS ""TpIntermedio"",
+							 COALESCE(""U_TAX4_LDA"",'')					AS ""LocalDesembaracoAduaneiro"",
+							 COALESCE(""U_TAX4_NAdicao"",'')				AS ""NumeroAdicao"",
+							 COALESCE(""U_TAX4_NDI"",'')					AS ""NumeroDocImportacao"",
+							 COALESCE(""U_TAX4_NRDRW"",'')					AS ""NumeroDrawBack"",
+							 COALESCE(""U_TAX4_NSeqAdicao"",'')			AS ""NumeroSequenciaAdicao"",
+							 COALESCE(""U_TAX4_UFAD"",'')					AS ""UFAdiquirente"",
+							 COALESCE(""U_TAX4_UFD"",'')					AS ""UFDesembaracoAduaneiro"",
+							 COALESCE(""U_TAX4_VAFRMM"",'')				AS ""ValorFrmm"",
+							 COALESCE(""U_TAX4_VDesc"",0)					AS ""ValorDescontoDI"",
+							 COALESCE(""U_TAX4_VT"",'')					AS ""ViaTransporteInternacional"" 
+							 FROM ""@TAX4_DADOSDI"" DI
+							 LEFT JOIN ""@TAX4_ADICOES"" AD ON DI.""U_TAX4_DocEntry"" = AD.""U_TAX4_DocEntry"" and DI.""U_TAX4_LineNum"" = AD.""U_TAX4_LineNum""
+							 WHERE DI.""U_TAX4_DocEntry"" = T0.""DocEntry""
+							 AND DI.""U_TAX4_LineNum"" = TL.""LineNum""
+							 FOR JSON)
+							 AS ""DadosDI""");
+			#endregion DADOSDI
 			sb.AppendLine(@$"FROM {B1TableNameChild}1 TL 
 							 JOIN OITM OT ON TL.""ItemCode"" = OT.""ItemCode""
 							 LEFT JOIN ONCM CM ON OT.""NCMCode"" = CM.""AbsEntry""
@@ -313,11 +362,11 @@ namespace B1Library.Documents.Entities
 							COALESCE(DC.""U_TAX4_Mod"",'')					AS ""ModDocRef""
 							FROM ""@TAX4_DOCREF"" DC
 							WHERE DC.""U_TAX4_DocEntry"" = T0.""DocEntry""
-							AND DC.""U_TAX4_FormType"" = T0.""ObjType""
 							FOR JSON)
 							AS ""DocRef"" ");
-            #endregion DOCREF
-            sb.AppendLine($@"FROM {B1TableName} T0  
+			#endregion DOCREF
+	
+			sb.AppendLine($@"FROM {B1TableName} T0  
 							JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
 							LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
 			sb.AppendLine(useCasesB1.GetCommandUseCase());
@@ -358,7 +407,8 @@ namespace B1Library.Documents.Entities
 		 						COALESCE(OY.""Name"", '')                          AS ""NomePaisParceiro"",
 		 						COALESCE(UF.""U_TAX4_Cod"", '')                    AS ""CodigoUFParceiro"",
 		 						COALESCE(D1.""U_TAX4_indIEDest"", '')              AS ""IndicadorIEParceiro"",
-		 						COALESCE(PT.""Incoterms"", '')                     AS ""ModalidadeFrete""
+		 						COALESCE(PT.""Incoterms"", '')                     AS ""ModalidadeFrete"",
+								COALESCE(PT.""TaxId5"",'')						   AS ""IdEstrangeiro""
 								FROM {B1TableNameChild}12 PT
 								LEFT JOIN OCRY OY ON PT.""CountryS"" = OY.""Code""
 								LEFT JOIN OCNT OT ON PT.""CountyS"" = OT.""AbsId""
@@ -400,7 +450,8 @@ namespace B1Library.Documents.Entities
 		 						COALESCE(OY.""Name"", '')                          AS ""NomePaisParceiro"",
 		 						COALESCE(UF.""U_TAX4_Cod"", '')                    AS ""CodigoUFParceiro"",
 		 						COALESCE(D1.""U_TAX4_indIEDest"", '')              AS ""IndicadorIEParceiro"",
-		 						COALESCE(PT.""Incoterms"", '')                     AS ""ModalidadeFrete""
+		 						COALESCE(PT.""Incoterms"", '')                     AS ""ModalidadeFrete"",
+								COALESCE(PT.""TaxId5"",'')						   AS ""IdEstrangeiro""
 								FROM {B1TableNameChild}12 PT
 								LEFT JOIN OCRY OY ON PT.""CountryB"" = OY.""Code""
 								LEFT JOIN OCNT OT ON PT.""CountyB"" = OT.""AbsId""

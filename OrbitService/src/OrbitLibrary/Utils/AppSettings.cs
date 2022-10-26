@@ -18,7 +18,7 @@ namespace OrbitLibrary.Utils
         public static AppSettings GetAppSettings()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(Directory.GetCurrentDirectory());
+            sb.Append("C:\\4TAX_Services\\Orbit_GeradorStringConexao");
             sb.Append(@"\connector.json");
 
             using (StreamReader r = new StreamReader(sb.ToString()))
@@ -33,7 +33,7 @@ namespace OrbitLibrary.Utils
         public static List<AppSettings> GetListAppSettings()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(Directory.GetCurrentDirectory());
+            sb.Append("C:\\4TAX_Services\\Orbit_GeradorStringConexao");
             sb.Append(@"\connector.json");
 
             using (StreamReader r = new StreamReader(sb.ToString()))

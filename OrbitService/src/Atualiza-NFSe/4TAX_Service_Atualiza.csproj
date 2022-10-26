@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-_4TAX_Service_Atualiza-AD666DCE-A1D1-4C6A-AB14-1C56A89912E0</UserSecretsId>
+    <RootNamespace>_4TAX_Service_Atualiza</RootNamespace>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <FileVersion>1.0.0.3</FileVersion>
+    <Version>1.0.0.1</Version>
+    <Company>Seidor Brasil</Company>
+    <Product>4TAX Serviço Atualiza NFSe</Product>
+    <Authors>Seidor Brasil</Authors>
+    <Description>Serviço responsável pela atualização de status de NFSe no SAP B1.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+    <PackageReference Include="Moq" Version="4.18.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.15.0" />
+    <PackageReference Include="System.Data.Odbc" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrbitLibrary\OrbitLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\..\..\..\.nuget\packages\restsharp\106.15.0\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

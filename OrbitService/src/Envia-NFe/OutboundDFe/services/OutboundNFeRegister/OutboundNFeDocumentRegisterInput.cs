@@ -60,6 +60,11 @@ namespace OrbitService.OutboundDFe.services.OutboundDFeRegister
 
         [JsonProperty("exporta")]
         public Exporta exporta { get; set; }
+        public bool ShouldSerializeexporta()
+        {
+            return !string.IsNullOrEmpty(exporta.XLocExporta);
+        }
+
 
         [JsonProperty("compra")]
         public Compra compra { get; set; }
@@ -346,6 +351,10 @@ namespace OrbitService.OutboundDFe.services.OutboundDFeRegister
 
         [JsonProperty("idEstrangeiro")]
         public string IdEstrangeiro { get; set; }
+        public bool ShouldSerializeIdEstrangeiro()
+        {
+            return !string.IsNullOrEmpty(IdEstrangeiro);
+        }
 
         [JsonProperty("nome")]
         public string Nome { get; set; }

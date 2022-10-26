@@ -45,8 +45,10 @@ namespace B1Library.Utilities
             sb.AppendLine(@$"""U_TAX4_Stat"" = '{documentData.GetStatusMessage()}'");
             sb.AppendLine(@$",""U_TAX4_CodInt"" = '{(int)documentData.Status}'");
             sb.AppendLine(@$",""U_TAX4_IdRet"" = '{documentData.IdOrbit}' ");
+            sb.AppendLine(@$",""U_TAX4_Chave"" = '{documentData.ChaveDeAcessoNFe}' ");
+            sb.AppendLine(@$",""U_TAX4_Prot"" = '{documentData.ProtocoloNFe}' ");
             sb.AppendLine(@$"WHERE ");
-            sb.AppendLine(@$"""DocEntry"" = {documentData.DocEntry}");
+            sb.AppendLine(@$"""DocEntry"" in ({documentData.DocEntry}, {documentData.BaseEntry})");
             return sb.ToString();
         }
     }

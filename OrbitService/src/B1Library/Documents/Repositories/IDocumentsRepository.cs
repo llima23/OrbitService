@@ -14,7 +14,7 @@ namespace B1Library.Documents
         List<Invoice> GetOutboundNFSe();
         List<Invoice> GetCancelOutboundNFe();
         List<Invoice> GetCancelOutboundNFSe();
-
+        List<Invoice> GetInutilOutboundNFe();
         List<Invoice> GetInutilOutboundNFSe();
 
         List<Invoice> GetConsultOutboundNFe();

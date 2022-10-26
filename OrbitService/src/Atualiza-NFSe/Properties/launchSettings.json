@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "_4TAX_Service_Atualiza": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

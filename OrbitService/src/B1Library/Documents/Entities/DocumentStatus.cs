@@ -25,12 +25,16 @@
         public string IdOrbit { get; set; }
         public string StatusOrbit { get; set; }
         public string Descricao { get; set; }
+
+        public string ChaveDeAcessoNFe { get; set; }
+        public string ProtocoloNFe { get; set; }
         public int ObjetoB1 { get; set; }
         public int DocEntry { get; set; }
+        public int BaseEntry { get; set; }
         public int CodigoStatusOrbitB1 { get; set; }
         public StatusCode Status { get; set; }
 
-        public DocumentStatus(string OutputIdOrbit, string OutputStatusOrbit, string OutputDescricao, int InvoiceObjetoB1, int InvoiceDocEntry, StatusCode status)
+        public DocumentStatus(string OutputIdOrbit, string OutputStatusOrbit, string OutputDescricao, int InvoiceObjetoB1, int InvoiceDocEntry, StatusCode status, string chaveDeAcesso = null, string protocoloNFe = null, int baseEntry = 0)
         {
             CodigoStatusOrbitB1 = (int)status;
             IdOrbit = OutputIdOrbit;
@@ -39,6 +43,9 @@
             ObjetoB1 = InvoiceObjetoB1;
             DocEntry = InvoiceDocEntry;
             Status = status;
+            ChaveDeAcessoNFe = chaveDeAcesso;
+            ProtocoloNFe = protocoloNFe;
+            BaseEntry = baseEntry;
         }
 
         public string GetStatusMessage()

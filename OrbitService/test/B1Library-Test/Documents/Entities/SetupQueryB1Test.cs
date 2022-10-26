@@ -92,7 +92,7 @@ namespace B1Library_Tests.Documents.Entities
                 cut = new SetupQueryB1(new DBDocumentsRepository(mockWrapper.Object), item, useCasesB1);
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine($@"SELECT
-	                         COALESCE(T0.""DocEntry"",0)            AS ""DocEntry"",
+	                         COALESCE(T0.""DocEntry"",0)			 AS ""DocEntry"",
 							 COALESCE(T1.""BaseEntry"", 0)           AS ""BaseEntry"",
 							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
 							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
@@ -101,13 +101,26 @@ namespace B1Library_Tests.Documents.Entities
 							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1"",
 							 COALESCE(T0.""U_TAX4_Justi"", '')       AS ""Justificativa"",
 							 COALESCE(T0.""CANCELED"", '')           AS ""CANCELED"",
-							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado""
+							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado"",
+							 REPLACE(REPLACE((
+									 SELECT
+									 COALESCE(OI.""TaxDate"", '')                  AS ""DataEmissao"",
+									 COALESCE(OI.""DocDate"", '')                  AS ""DataLancamento"",
+									 COALESCE(CAST(OI.""Serial"" AS VARCHAR), '')  AS ""NumeroDocumento"",
+									 COALESCE(OI.""SeriesStr"", '')                AS ""SerieDocumento"",
+COALESCE(T0.""U_TAX4_Justi"", '')             AS ""Justificativa"",
+ COALESCE(CG.""U_TAX4_EstabID"", '')           AS ""BranchId"",
+									 COALESCE(C2.""U_TAX4_versao"", '')            AS ""Versao""
+									 FROM {cut.B1TableName} OI
+								     JOIN ""@TAX4_CONFIG"" C2 ON OI.""BPLId"" = C2.""U_TAX4_Filial""
+									 WHERE T0.""DocEntry"" = OI.""DocEntry"" FOR JSON),'[',''),']','') 	
+									 AS ""Identificacao""
 							 FROM {cut.B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
 							 JOIN {cut.B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
+ JOIN ""@TAX4_LCONFIGADDON"" CG ON OI.""BPLId"" = CG.""U_TAX4_Empresa""
 							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""
 							 WHERE
-							 ""U_TAX4_CodInt"" = '2'
 							 and NF.""SeqCode"" <> 0
 							 and T0.""U_TAX4_CARGAFISCAL"" = 'N'
 							 and T0.""CANCELED"" = 'C'

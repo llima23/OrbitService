@@ -60,9 +60,13 @@ namespace B1Library.usecase
 													and T0.""U_TAX4_CARGAFISCAL"" = 'N'
 													and OM.""NfmCode"" IN ('NFS-e')";
 
-        public const string commandCancelOutboundNFe = @" and OM.""NfmCode"" IN ('55')";
+        public const string commandCancelOutboundNFe = @" and OM.""NfmCode"" IN ('55') and ""U_TAX4_CodInt"" = '2'";
 
-        public const string commandCancelOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e')";
+        public const string commandCancelOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" = '2'";
+
+        public const string commandInutillOutboundNFe = @" and OM.""NfmCode"" IN ('55') and ""U_TAX4_CodInt"" = '3'";
+
+        public const string commandInutilOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" = '3'";
 
         public const string commandConsultaNFe = @"WHERE ""U_TAX4_CodInt"" = '1' 
 													    and T0.""U_TAX4_IdRet"" <> ''
@@ -86,8 +90,8 @@ namespace B1Library.usecase
                 UseCase.OutboundNFSe => commandOutboundNFSe,
                 UseCase.CancelOutboundNFe => commandCancelOutboundNFe,
                 UseCase.CancelOutboundNFSe => commandCancelOutboundNFSe,
-                UseCase.InutilOutboundNFe => commandCancelOutboundNFe,
-                UseCase.InutilOutboundNFSe => commandCancelOutboundNFSe,
+                UseCase.InutilOutboundNFe => commandInutillOutboundNFe,
+                UseCase.InutilOutboundNFSe => commandInutilOutboundNFSe,
                 UseCase.ConsultaNFe => commandConsultaNFe,
                 UseCase.ConsultaNFSe => commandConsultaNFSe,
                 _ => "",

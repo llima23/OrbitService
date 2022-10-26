@@ -10,7 +10,7 @@ namespace OrbitLibrary_Test.Builders
     {
         public static ServiceConfiguration CreateFakeConfigurationForTest(string baseURI = "http://localhost")
         {
-            return new ServiceConfiguration(new Uri(baseURI), "user", "password", Guid.NewGuid());
+            return new ServiceConfiguration(new Uri(baseURI), "user", "password","Y", Guid.NewGuid());
         }
 
         public static OperationRequest CreateOperationRequest(string url = "http://localhost", Method method = Method.POST)
