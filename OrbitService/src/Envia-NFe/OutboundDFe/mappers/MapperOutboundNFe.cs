@@ -317,6 +317,7 @@ namespace OrbitService.OutboundDFe.mappers
                             imposto.Icms.Orig = cabecalhoLinha.OrigICMS;
                             imposto.Icms.Cst = cabecalhoLinha.CSTICMSLinha;
                             imposto.Icms.ModBc = "3"; //MAPEAR
+                            imposto.Icms.PRedBc = item.pRedBc > 0 ? util.ToOrbitString(item.pRedBc) : null;
                             imposto.Icms.VBc = util.ToOrbitString(util.GetTaxTypeB1VBcSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
                             imposto.Icms.PImp = util.ToOrbitString(item.PorcentagemImposto); //TODO:
                             imposto.Icms.VImp = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));

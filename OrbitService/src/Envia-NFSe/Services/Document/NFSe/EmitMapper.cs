@@ -18,7 +18,7 @@ namespace _4TAX_Service.Services.Document.NFSe
 
                 requestInput.branchId = b1Document.BranchId;
                 requestInput.numeroLote = b1Document.DocEntry.ToString();
-
+                requestInput.erpId = b1Document.DocEntry.ToString();
                 #region IDENTIFICAÇÃO
 
                 requestInput.rps.identificacao.cNf = (b1Document.DocEntry + 100).ToString();

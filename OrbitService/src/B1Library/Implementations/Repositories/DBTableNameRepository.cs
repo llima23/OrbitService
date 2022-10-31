@@ -72,7 +72,7 @@ namespace B1Library.Implementations.Repositories
 
             tableName = new TableName();
             tableName.TableHeader = "ORPC";
-            tableName.Type = Type.Saida;
+            tableName.Type = Type.Entrada;
             tableName.ObjB1Type = 19;
             tableName.TableChild = tableName.TableHeader.Remove(0, 1);
             tables.Add(tableName);
@@ -86,7 +86,7 @@ namespace B1Library.Implementations.Repositories
 
             tableName = new TableName();
             tableName.TableHeader = "ORPD";
-            tableName.Type = Type.Saida;
+            tableName.Type = Type.Entrada;
             tableName.ObjB1Type = 21;
             tableName.TableChild = tableName.TableHeader.Remove(0, 1);
             tables.Add(tableName);

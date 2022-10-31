@@ -268,6 +268,7 @@ namespace B1Library.Documents.Entities
 								 COALESCE(TX.""U_VICMSOpL"", 0)           AS ""VICMSOp"",
 								 COALESCE(TX.""U_VDifL"", 0)              AS ""VDif"",
 								 COALESCE(TX.""U_PDif"", 0)              AS ""PDif"",
+								 COALESCE(TX.""U_ReduICMS"",0)		   AS ""pRedBc"",
 								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"" ");
 			if (VerifyIfFieldExists(MVast))
 			{
@@ -368,8 +369,10 @@ namespace B1Library.Documents.Entities
 	
 			sb.AppendLine($@"FROM {B1TableName} T0  
 							JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
+							JOIN ""@TAX4_CONFIG"" CO ON T0.""BPLId"" = CO.""U_TAX4_Filial""
 							LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
 			sb.AppendLine(useCasesB1.GetCommandUseCase());
+			sb.AppendLine(@"AND ADD_DAYS (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), -(CO.""U_TAX4_DtRetro"")) <= T0.""DocDate""");
 			sb.AppendLine("FOR JSON");
 			return Convert.ToString(sb);
 		}

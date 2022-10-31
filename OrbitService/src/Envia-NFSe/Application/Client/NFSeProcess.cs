@@ -4,6 +4,7 @@ using _4TAX_Service.Infrastructure;
 using _4TAX_Service.Services.Document.NFSe;
 using Newtonsoft.Json;
 using OrbitLibrary.Common;
+using OrbitLibrary.Data;
 using OrbitLibrary.Utils;
 using System;
 using System.Collections.Generic;
@@ -17,9 +18,11 @@ namespace _4TAX_Service.Application.Client
     public class NFSeProcess : NFSeHandler
     {
         public ServiceConfiguration sConfig;
-        public NFSeProcess(ServiceConfiguration sConfig)
+        public IWrapper dbWrapper;
+        public NFSeProcess(ServiceConfiguration sConfig, IWrapper dbWrapper)
         {
             this.sConfig = sConfig;
+            this.dbWrapper = dbWrapper;
         }
 
         public void IntegrateNFSe(List<NFSeB1Object> ListNFSe, EmitMapper emitMapper, Emit emit)
@@ -32,6 +35,7 @@ namespace _4TAX_Service.Application.Client
                     EmitRequestInput input = emitMapper.ConvertToOrbitObject(item);
                     //Logs.InsertLog($"Json NFSe: {JsonConvert.SerializeObject(input)}");
                     OperationResponse<EmitSuccessResponseOutput, EmitFailResponseOutput> response = SendNFSeToOrbit(item, emitMapper, emit);
+                    Logs.InsertLog($"Response: {response.Content} + IsSucessfull: {response.isSuccessful}");
                     if (response.isSuccessful)
                     {
                         UpdateStatusNFSeB1Sucess(response, item.DocEntry, item.BPLId);
@@ -64,7 +68,7 @@ namespace _4TAX_Service.Application.Client
 
         public bool UpdateStatusNFSeB1Sucess(OperationResponse<EmitSuccessResponseOutput, EmitFailResponseOutput> response, int DocEntry, int BPLId)
         {
-            DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(Defaults.GetWrapper());
+            DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(dbWrapper);
             EmitSuccessResponseOutput output = response.GetSuccessResponse();
             Logs.InsertLog($"NFSe Inserida na fila de emissão: {DocEntry} nfsID: {output.nfseId}");
             //Logs.InsertLog($"Json NFSe: {JsonConvert.DeserializeObject(JsonConvert.SerializeObject(response.Request.Body))}");
@@ -73,7 +77,7 @@ namespace _4TAX_Service.Application.Client
 
         public bool UpdateStatusNFSeB1Failed(OperationResponse<EmitSuccessResponseOutput, EmitFailResponseOutput> response, int DocEntry, int BPLId)
         {
-            DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(Defaults.GetWrapper());
+            DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(dbWrapper);
             EmitFailResponseOutput output = response.GetErrorResponse();            
             string msgError = $"{output.errors.Select(x => x.msg).FirstOrDefault()} - {output.errors.Select(x => x.param).FirstOrDefault()}";            
             Logs.InsertLog($"Erro ao enviar NFSe para Orbit: {DocEntry} Erro: {msgError}");

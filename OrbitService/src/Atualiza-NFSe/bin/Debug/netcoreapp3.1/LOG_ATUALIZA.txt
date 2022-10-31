@@ -52,3 +52,15 @@
 01/09/2022 15:42:25 - NFSe Integrada com sucesso: 160  nfsID: 6310eb4e30c559845b29e1b1
 01/09/2022 15:42:35 - NFSe Integrada com sucesso: 203  nfsID: 6310eb5030c559845b29e2a4
 01/09/2022 15:42:46 - NFSe Integrada com sucesso: 209  nfsID: 6310eb5130c559845b29e3cb
+28/10/2022 16:39:06 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at _4TAX_Service_Atualiza.Application.NFSeFetch.GetListNFSe() in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Atualiza-NFSe\Application\DataFetch\NFSeFetch.cs:line 54
+28/10/2022 16:39:25 - Erro Execução serviço Atualiza NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service_Atualiza.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, Consulta consulta) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Atualiza-NFSe\Application\Client\NFSeProcess.cs:line 30
+   at _4TAX_Service_Atualiza.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Atualiza-NFSe\Worker.cs:line 54
+28/10/2022 16:39:38 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure , CallSite , Object )
+   at _4TAX_Service_Atualiza.Application.NFSeFetch.GetListNFSe() in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Atualiza-NFSe\Application\DataFetch\NFSeFetch.cs:line 54
+28/10/2022 16:40:22 - Notas a Atualizar: 4
+28/10/2022 16:40:59 - NFSe Integrada com sucesso: 849  nfsID: 635c27ef2058a7b5066c643b

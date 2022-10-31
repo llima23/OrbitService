@@ -58,7 +58,7 @@ namespace _4TAX_Service
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
                     foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        NFSeProcess nFSeProcess = new NFSeProcess(serviceDependencies.sConfig);
+                        NFSeProcess nFSeProcess = new NFSeProcess(serviceDependencies.sConfig, serviceDependencies.DbWrapper);
                         NFSeFetch nFSeFetch = new NFSeFetch(serviceDependencies.DbWrapper);
                         nFSeProcess.IntegrateNFSe(nFSeFetch.GetListNFSe(), new EmitMapper(), new Emit(serviceDependencies.sConfig, Defaults.GetCommunicationProvider()));
                     }

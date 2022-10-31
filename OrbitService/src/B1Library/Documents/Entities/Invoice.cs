@@ -249,6 +249,7 @@ namespace B1Library.Documents
 
     public class ImpostoLinha
     {
+        public double pRedBc { get; set; }
         public double PDif { get; set; }
         public double VDif { get; set; }
         public double VICMSOp { get; set; }

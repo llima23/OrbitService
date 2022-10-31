@@ -3,6 +3,7 @@ using _4TAX_Service_Atualiza.Common.Domain;
 using _4TAX_Service_Atualiza.Infrastructure;
 using _4TAX_Service_Atualiza.Services.Document.NFSe;
 using OrbitLibrary.Common;
+using OrbitLibrary.Data;
 using OrbitLibrary.Utils;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,11 @@ namespace _4TAX_Service_Atualiza.Application.Client
     public class NFSeProcess : NFSeHandler
     {
         public ServiceConfiguration sConfig;
-        public NFSeProcess(ServiceConfiguration sConfig)
+        public IWrapper dbWrapper;
+        public NFSeProcess(ServiceConfiguration sConfig, IWrapper dbWrapper)
         {
             this.sConfig = sConfig;
+            this.dbWrapper = dbWrapper;
         }
 
         public void IntegrateNFSe(List<NFSeB1Object> ListNFSe, Consulta consulta)
@@ -57,7 +60,7 @@ namespace _4TAX_Service_Atualiza.Application.Client
         }
         public bool UpdateStatusNFSeB1Sucess(OperationResponse<ConsultaSuccessResponseOutput, ConsultaFailedResponseOutput> response, int DocEntry, int BPLId)
         {
-            DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(Defaults.GetWrapper());
+            DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(dbWrapper);
             ConsultaSuccessResponseOutput output = response.GetSuccessResponse();
             Type myType = typeof(ConsultaSuccessResponseOutput);
             // Get the PropertyInfo object by passing the property name.
@@ -81,7 +84,7 @@ namespace _4TAX_Service_Atualiza.Application.Client
         }
         public bool UpdateStatusNFSeB1Failed(OperationResponse<ConsultaSuccessResponseOutput, ConsultaFailedResponseOutput> response, int DocEntry, int BPLId)
         {
-            DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(Defaults.GetWrapper());
+            DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(dbWrapper);
             ConsultaFailedResponseOutput output = response.GetErrorResponse();
             Logs.InsertLog($"NFSe integrada com erro: {DocEntry}  Output: {output}");
             return dataBaseNFSeProcess.UpdateNFSeODBC(MyQuery.QueryUpdateStatusFailInB1(DocEntry, BPLId, output.message));

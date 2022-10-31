@@ -38,10 +38,18 @@ namespace OrbitLibrary.Utils
 
             using (StreamReader r = new StreamReader(sb.ToString()))
             {
-                string encryptedJson = r.ReadToEnd();
-                string json = new SettingsCrypto().Decrypt(encryptedJson);
-                List<AppSettings> config = JsonConvert.DeserializeObject<List<AppSettings>>(json);
-                return config;
+                string json = "";
+                try
+                {
+                    string encryptedJson = r.ReadToEnd();
+                    json = new SettingsCrypto().Decrypt(encryptedJson);
+                    List<AppSettings> config = JsonConvert.DeserializeObject<List<AppSettings>>(json);
+                    return config;
+                }
+                catch
+                {
+                    throw new Exception(json);
+                }
             }
         }
 

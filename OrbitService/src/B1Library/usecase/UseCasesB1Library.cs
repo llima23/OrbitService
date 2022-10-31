@@ -64,9 +64,9 @@ namespace B1Library.usecase
 
         public const string commandCancelOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" = '2'";
 
-        public const string commandInutillOutboundNFe = @" and OM.""NfmCode"" IN ('55') and ""U_TAX4_CodInt"" = '3'";
+        public const string commandInutillOutboundNFe = @" and OM.""NfmCode"" IN ('55') and ""U_TAX4_CodInt"" in ('0','3')";
 
-        public const string commandInutilOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" = '3'";
+        public const string commandInutilOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" in ('0','3')";
 
         public const string commandConsultaNFe = @"WHERE ""U_TAX4_CodInt"" = '1' 
 													    and T0.""U_TAX4_IdRet"" <> ''

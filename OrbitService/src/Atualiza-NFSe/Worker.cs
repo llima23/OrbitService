@@ -49,13 +49,13 @@ namespace _4TAX_Service_Atualiza
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
                     foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        NFSeProcess nFSeProcess = new NFSeProcess(serviceDependencies.sConfig);
-                        NFSeFetch nFSeFetch = new NFSeFetch(serviceDependencies.DbWrapper);
-                        nFSeProcess.IntegrateNFSe(nFSeFetch.GetListNFSe(), new Consulta(serviceDependencies.sConfig, Defaults.GetCommunicationProvider()));
+                        if(serviceDependencies.sConfig.Ativo == "Y")
+                        {
+                            NFSeProcess nFSeProcess = new NFSeProcess(serviceDependencies.sConfig, serviceDependencies.DbWrapper);
+                            NFSeFetch nFSeFetch = new NFSeFetch(serviceDependencies.DbWrapper);
+                            nFSeProcess.IntegrateNFSe(nFSeFetch.GetListNFSe(), new Consulta(serviceDependencies.sConfig, Defaults.GetCommunicationProvider()));
+                        }
                     }
-                   
-                    
-                   
                 }
                 catch (Exception ex)
                 {

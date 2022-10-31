@@ -514,3 +514,10 @@ Path '', line 1, position 1.
 05/10/2022 12:44:20 - Count Notas: 1
 05/10/2022 12:48:17 - Count Notas: 1
 05/10/2022 12:49:09 - Count Notas: 1
+28/10/2022 16:26:40 - Count Notas: 1
+28/10/2022 16:26:49 - Erro so integrar NFSe: 849 ERRO: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'OrbitLibrary.Utils.AppSettings' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+28/10/2022 16:27:28 - Count Notas: 1
+28/10/2022 16:29:48 - Count Notas: 1
+28/10/2022 16:30:07 - NFSe Inserida na fila de emissão: 849 nfsID: 635c27ef2058a7b5066c643b
