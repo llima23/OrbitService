@@ -138,14 +138,12 @@ namespace _4TAX_Service.Services.Document.Properties
             {
                 descricao = new List<string>();
                 evento = new Evento();
-                nfseSubstituida = new NfseSubstituida();
-                rpsSubstituido = new RpsSubstituido();
             }
             public string serie { get; set; }
             public string numero { get; set; }
             public string tipoRps { get; set; }
             public DateTime dataEmissao { get; set; }
-            public string competencia { get; set; }
+            public DateTime competencia { get; set; }
             public string sequencia { get; set; }
             public string naturezaOperacao { get; set; }
             public string regimeEspecialTributacao { get; set; }
@@ -155,10 +153,8 @@ namespace _4TAX_Service.Services.Document.Properties
             public List<string> descricao { get; set; }
             public string situacao { get; set; }
             public Evento evento { get; set; }
-            public NfseSubstituida nfseSubstituida { get; set; } = null;//Verificar Funcionalidade da Tag - ToDo:
             public string cNf { get; set; }
             public int indPres { get; set; }
-            public RpsSubstituido rpsSubstituido { get; set; } = null;//Verificar Funcionalidade da Tag - ToDo:
             public string optanteSimplesNacional { get; set; }
         }
 
@@ -284,7 +280,6 @@ namespace _4TAX_Service.Services.Document.Properties
                 pedagio = new Pedagio();
                 pag = new Pag();
                 intermediario = new Intermediario();
-                construcaoCivil = new ConstrucaoCivil();
                 transporte = new Transporte();
             }
 
@@ -298,7 +293,6 @@ namespace _4TAX_Service.Services.Document.Properties
             {
                 return (intermediario.cnpj != null && intermediario.cpf != null);
             }
-            public ConstrucaoCivil construcaoCivil { get; set; }
             public Transporte transporte { get; set; }
         }
 
@@ -341,6 +335,10 @@ namespace _4TAX_Service.Services.Document.Properties
             public string unidade { get; set; }
             public string localServico { get; set; }
             public Endereco endereco { get; set; }
+            public bool ShouldSerializeendereco()
+            {
+                return (endereco.codigoMunicipio != "9999999");
+            }
             public Fatura fatura { get; set; }
         }
 
@@ -414,6 +412,7 @@ namespace _4TAX_Service.Services.Document.Properties
             }
             public Rps rps { get; set; }
             public string[] emails { get; set; }
+         
             public string branchId { get; set; }
             public string erpId { get; set; }
             public bool isForceProductionEnv { get; set; }

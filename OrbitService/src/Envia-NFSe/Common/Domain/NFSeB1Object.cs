@@ -205,6 +205,12 @@ namespace _4TAX_Service.Common.Domain
         [JsonProperty("U_TAX4_NatOper")]
         public string U_TAX4_NatOper { get; set; }
 
+        [JsonProperty("U_TAX4_NatOpNFSe")]
+        public string U_TAX4_NatOpNFSe { get; set; }
+
+        [JsonProperty("U_TAX4_TpOpNFSe")]
+        public string U_TAX4_TpOpNFSe { get; set; }
+
         [JsonProperty("U_TAX4_condPag")]
         public string U_TAX4_CondPag { get; set; }
 

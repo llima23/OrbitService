@@ -24,22 +24,34 @@ namespace OrbitService
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(1000, stoppingToken);
-
-                List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
-                foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
+                try
                 {
-                    try
+                    _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                    await Task.Delay(1000, stoppingToken);
+
+                    List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
+                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        OtherDocumentsRegisterUseCase useCase = new OtherDocumentsRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
-                        useCase.Execute();
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception(ex.Message);
+                        if (serviceDependencies.sConfig.Ativo & serviceDependencies.sConfig.IntegraDocFiscal)
+                        {
+                            try
+                            {
+                                OtherDocumentsRegisterUseCase useCase = new OtherDocumentsRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
+                                useCase.Execute();
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new Exception(ex.Message);
+                            }
+                        }
+
                     }
                 }
+                catch
+                {
+
+                }
+
             }
         }
     }

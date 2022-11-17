@@ -41,7 +41,7 @@ namespace OrbitService.OutboundDFe.mappers
             input.tipoOperacao = invoice.TipoDocumento;
             input.Versao = invoice.Identificacao.Versao;
             input.dadosCobranca = util.ToOrbitString(invoice.Identificacao.DadosCobranca);
-            input.Key = invoice.Identificacao.Key;
+            input.Key = !string.IsNullOrEmpty(invoice.Identificacao.Key) ? invoice.Identificacao.Key : null;
             #endregion HEADER
             #region IDENTIFICACAO
             input.identificacao.CodigoUf = invoice.Filial.CodigoUFFilial;
@@ -92,6 +92,7 @@ namespace OrbitService.OutboundDFe.mappers
             input.Destinatario.Endereco.Uf = invoice.Parceiro.UFParceiro;
             input.Destinatario.Endereco.Cep = !String.IsNullOrEmpty(invoice.Parceiro.CEPParceiro) ? Regex.Replace(invoice.Parceiro.CEPParceiro, @"(\.)|-", "") : null;
             input.Destinatario.Endereco.CodigoPais = invoice.Parceiro.CodigoPaisParceiro;
+            input.Destinatario.Endereco.Ie = !String.IsNullOrEmpty(invoice.Parceiro.InscIeParceiro) ? Regex.Replace(invoice.Parceiro.InscIeParceiro, @"(\.)|-", "") : null;
             input.Destinatario.Ie = !String.IsNullOrEmpty(invoice.Parceiro.InscIeParceiro) ? Regex.Replace(invoice.Parceiro.InscIeParceiro, @"(\.)|-", "") : null;
             input.Destinatario.IndIeDestinatario = invoice.Parceiro.IndicadorIEParceiro;
             #endregion DESTINATARIO            
@@ -187,7 +188,7 @@ namespace OrbitService.OutboundDFe.mappers
             input.exporta.XLocExporta = !String.IsNullOrEmpty(invoice.Identificacao.LocalDeExportacao) ? invoice.Identificacao.UFDeExportacao : null;
             input.infAdic.InfAdFisco = !string.IsNullOrEmpty(invoice.Identificacao.InfAdFisco) ? invoice.Identificacao.InfAdFisco : null;
             input.identificacao.IdLocalDestino = invoice.CabecalhoLinha[0].IdLocalDestino;
-            input.Emitente.InscricaoEstadual = invoice.Filial.InscIeFilial;
+            input.Emitente.InscricaoEstadual = !String.IsNullOrEmpty(invoice.Filial.InscIeFilial) ? Regex.Replace(invoice.Filial.InscIeFilial, @"(\.)|-", "") : null;
 
             return input;
         }
@@ -195,11 +196,18 @@ namespace OrbitService.OutboundDFe.mappers
         public DocumentStatus ToDocumentStatusResponseError(Invoice invoice, dynamic output)
         {
             string DescricaoErro = string.Empty;
-            foreach (var item in output.errors)
+            try
             {
-                DescricaoErro += item.param + " - " + item.msg + "\r";
+                foreach (var item in output.errors)
+                {
+                    DescricaoErro += item.param + " - " + item.msg + "\r";
+                }
             }
-            DocumentStatus newStatusData = new DocumentStatus(Convert.ToString(output.nfeId), Convert.ToString(output.message), DescricaoErro, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Erro);
+            catch
+            {
+                DescricaoErro = output.message;
+            }
+            DocumentStatus newStatusData = new DocumentStatus(Convert.ToString(output.nfeId), Convert.ToString(output.message).Replace("'",""), DescricaoErro.Replace("'", ""), invoice.ObjetoB1, invoice.DocEntry, StatusCode.Erro);
             return newStatusData;
         }
 

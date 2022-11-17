@@ -2,9 +2,11 @@ using B1Library.Implementations.Repositories;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OrbitLibrary.Utils;
+using OrbitService.Applications;
 using OrbitService.OutboundDFe.usecases;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ namespace OrbitService
 {
     public class Worker : BackgroundService
     {
+        protected static string CaminhoLOGTXT = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.ToString()) + "\\LOG.txt";
         private readonly ILogger<Worker> _logger;
 
         public Worker(ILogger<Worker> logger)
@@ -31,11 +34,11 @@ namespace OrbitService
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
                     foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        if (serviceDependencies.sConfig.Ativo == "Y")
+                        if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocDFe)
                         {
                             try
                             {
-                                OutboundNFeRegisterUseCase useCase = new OutboundNFeRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
+                               OutboundNFeRegisterUseCase useCase = new OutboundNFeRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
                                 useCase.Execute();
                             }
                             catch (Exception ex)
@@ -47,7 +50,7 @@ namespace OrbitService
                 }
                 catch(Exception ex)
                 {
-
+                    Logs.InsertLog($"Erro Execução serviço Envia NF-e: {ex}");
                 }
            
             }

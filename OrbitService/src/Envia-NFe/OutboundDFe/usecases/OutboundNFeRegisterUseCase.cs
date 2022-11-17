@@ -1,10 +1,12 @@
-﻿using B1Library.Documents;
+﻿using B1Library.Applications;
+using B1Library.Documents;
 using Newtonsoft.Json;
 using OrbitLibrary.Common;
 using OrbitService.OutboundDFe.mappers;
 using OrbitService.OutboundDFe.services.OutboundDFeRegister;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace OrbitService.OutboundDFe.usecases
@@ -24,30 +26,42 @@ namespace OrbitService.OutboundDFe.usecases
 
         public void Execute()
         {
-            MapperOutboundNFe mapper = new MapperOutboundNFe();
-            OutboundNFeDocumentRegisterService outboundNFeRegister = new OutboundNFeDocumentRegisterService(sConfig, communicationProvider);
-            List<Invoice> OutBoundNFeDocuments = documentsRepository.GetOutboundNFe();
-            foreach (Invoice invoice in OutBoundNFeDocuments)
+            try
             {
-                OutboundNFeDocumentRegisterInput input = new OutboundNFeDocumentRegisterInput();
-                input = mapper.ToinboundNFeDocumentRegisterInput(invoice);
-                OperationResponse<OutboundNFeDocumentRegisterOutput, OutboundNFeDocumentRegisterError> response = outboundNFeRegister.Execute(input);
-
-                if (response.isSuccessful)
+                MapperOutboundNFe mapper = new MapperOutboundNFe();
+                OutboundNFeDocumentRegisterService outboundNFeRegister = new OutboundNFeDocumentRegisterService(sConfig, communicationProvider);
+                List<Invoice> OutBoundNFeDocuments = documentsRepository.GetOutboundNFe();
+                foreach (Invoice invoice in OutBoundNFeDocuments.OrderBy(x => x.DocEntry))
                 {
-                    OutboundNFeDocumentRegisterOutput output = response.GetSuccessResponse();
-                    DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
-                }
+                    OutboundNFeDocumentRegisterInput input = new OutboundNFeDocumentRegisterInput();
+                    input = mapper.ToinboundNFeDocumentRegisterInput(invoice);
+                    OperationResponse<OutboundNFeDocumentRegisterOutput, OutboundNFeDocumentRegisterError> response = outboundNFeRegister.Execute(input);
 
-                else
-                {
-                    //É usuado como dynamic pois a variavel 'value' do Output, retorna hora como string e hora como objeto, inviabilizando a deserialização do objeto.
-                    dynamic output = JsonConvert.DeserializeObject(response.Content);
-                    DocumentStatus documentStatus = mapper.ToDocumentStatusResponseError(invoice, output);
-                    documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
+                   dynamic json = JsonConvert.SerializeObject(input);
+
+                    Logs.InsertLog($"Json enviado: {json}");
+
+                    if (response.isSuccessful)
+                    {
+                        OutboundNFeDocumentRegisterOutput output = response.GetSuccessResponse();
+                        DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
+                        documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
+                    }
+
+                    else
+                    {
+                        //É usuado como dynamic pois a variavel 'value' do Output, retorna hora como string e hora como objeto, inviabilizando a deserialização do objeto.
+                        dynamic output = JsonConvert.DeserializeObject(response.Content);
+                        DocumentStatus documentStatus = mapper.ToDocumentStatusResponseError(invoice, output);
+                        documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
+                    }
                 }
             }
+            catch(Exception ex)
+            {
+                Logs.InsertLog($"Erro Execução serviço Envia NFSe: {ex}");
+            }
+     
         }
 
     }

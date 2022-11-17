@@ -24,9 +24,6 @@ namespace B1Library_Tests.Implementations.Repositories
             dBTableNameRepository = new DBTableNameRepository();
             mockWrapper = new Mock<IWrapper>();
             cut = new DBDocumentsRepository(mockWrapper.Object);
-
-      
-
         }
         [Fact]
         public void ShouldGetInboundOtherDocuments()

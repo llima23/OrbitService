@@ -737,13 +737,6 @@ D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\test\OrbitLibrary
 D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.pdb
 D:\Desenvolvimento\RepositoryOrbitB1\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.genruntimeconfig.cache
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\CoverletSourceRootsMapping
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.csproj.AssemblyReference.cache
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.GeneratedMSBuildEditorConfig.editorconfig
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.AssemblyInfoInputs.cache
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.AssemblyInfo.cs
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.csproj.CoreCompileInputs.cache
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.dll
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.pdb
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\testhost.exe
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\testhost.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -857,5 +850,12 @@ D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\bin
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.csproj.AssemblyReference.cache
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.AssemblyInfoInputs.cache
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.AssemblyInfo.cs
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.csproj.CoreCompileInputs.cache
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.csproj.CopyComplete
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.dll
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.pdb
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\test\OrbitLibrary-Test\obj\Debug\netcoreapp3.1\OrbitLibrary_Test.genruntimeconfig.cache

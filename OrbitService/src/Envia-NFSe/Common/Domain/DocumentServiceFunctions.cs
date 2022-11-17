@@ -14,22 +14,22 @@ namespace _4TAX_Service.Common.Domain.Properties
             {
                 result = RPS;
 
-                if ((MunFilial == "3283" || MunFilial == "2188") && RPS == "RPS")
+                if (RPS == "RPS")
                 {
                     result = "1";
                 }
-                if ((MunFilial == "3283" || MunFilial == "2188") && RPS == "RPS-M")
+                if (RPS == "RPS-M")
                 {
                     result = "2";
                 }
-                if ((MunFilial == "3283" || MunFilial == "2188") && RPS == "RPS-C")
+                if (RPS == "RPS-C")
                 {
                     result = "3";
                 }
             }
             else
             {
-                result = "RPS";
+                result = "1";
             }
 
             return result;

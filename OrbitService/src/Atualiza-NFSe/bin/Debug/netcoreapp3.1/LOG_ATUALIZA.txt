@@ -64,3 +64,5 @@
    at _4TAX_Service_Atualiza.Application.NFSeFetch.GetListNFSe() in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Atualiza-NFSe\Application\DataFetch\NFSeFetch.cs:line 54
 28/10/2022 16:40:22 - Notas a Atualizar: 4
 28/10/2022 16:40:59 - NFSe Integrada com sucesso: 849  nfsID: 635c27ef2058a7b5066c643b
+03/11/2022 16:02:27 - Notas a Atualizar: 1
+03/11/2022 16:02:55 - NFSe Integrada com sucesso: 1164  nfsID: 63640ff42058a7b5060c3300

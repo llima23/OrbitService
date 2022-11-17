@@ -49,7 +49,7 @@ namespace _4TAX_Service_Atualiza
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
                     foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        if(serviceDependencies.sConfig.Ativo == "Y")
+                        if(serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocDFe)
                         {
                             NFSeProcess nFSeProcess = new NFSeProcess(serviceDependencies.sConfig, serviceDependencies.DbWrapper);
                             NFSeFetch nFSeFetch = new NFSeFetch(serviceDependencies.DbWrapper);

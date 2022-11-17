@@ -718,7 +718,6 @@ D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\bin\Debug\netcoreapp3.1\OrbitLibrary.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\bin\Debug\netcoreapp3.1\B1Library.pdb
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\bin\Debug\netcoreapp3.1\OrbitLibrary.pdb
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\obj\Debug\netcoreapp3.1\OrbitService.GeneratedMSBuildEditorConfig.editorconfig
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfoInputs.cache
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\obj\Debug\netcoreapp3.1\OrbitService.AssemblyInfo.cs
@@ -727,3 +726,4 @@ D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\obj\Debug\netcoreapp3.1\OrbitService.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\obj\Debug\netcoreapp3.1\OrbitService.pdb
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\obj\Debug\netcoreapp3.1\OrbitService.genruntimeconfig.cache
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Inbound-OtherDocuments\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache

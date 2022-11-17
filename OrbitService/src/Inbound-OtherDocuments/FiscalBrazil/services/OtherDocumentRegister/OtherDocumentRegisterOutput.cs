@@ -7,6 +7,7 @@ namespace OrbitService.FiscalBrazil.services.Output
 {
     public class OtherDocumentRegisterOutput
     {
+        public string dfe { get; set; } = "OutroDocumento";
         public Data data { get; set; }
     }
     public class Data

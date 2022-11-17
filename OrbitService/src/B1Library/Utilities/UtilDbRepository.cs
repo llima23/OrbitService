@@ -1,4 +1,5 @@
-﻿using B1Library.Documents;
+﻿using B1Library.Applications;
+using B1Library.Documents;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -41,12 +42,14 @@ namespace B1Library.Utilities
         {
             StringBuilder sb = new StringBuilder();
             //TODO: update command to dynamic generate table name
+    
             sb.Append(@$"UPDATE {tableName.TableHeader} SET ");
-            sb.AppendLine(@$"""U_TAX4_Stat"" = '{documentData.GetStatusMessage()}'");
+            sb.AppendLine(@$"""U_TAX4_Stat"" = '{documentData.GetStatusMessage().Replace("'", "")}'");
             sb.AppendLine(@$",""U_TAX4_CodInt"" = '{(int)documentData.Status}'");
             sb.AppendLine(@$",""U_TAX4_IdRet"" = '{documentData.IdOrbit}' ");
             sb.AppendLine(@$",""U_TAX4_Chave"" = '{documentData.ChaveDeAcessoNFe}' ");
             sb.AppendLine(@$",""U_TAX4_Prot"" = '{documentData.ProtocoloNFe}' ");
+            sb.AppendLine(@$",""U_TAX4_IdComu"" = '{documentData.CommunicationId}' ");
             sb.AppendLine(@$"WHERE ");
             sb.AppendLine(@$"""DocEntry"" in ({documentData.DocEntry}, {documentData.BaseEntry})");
             return sb.ToString();

@@ -1,0 +1,4 @@
+11/11/2022 18:20:33 - Erro Execução serviço Envia NFSe: System.Exception: teste
+   at OrbitService.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFe\Worker.cs:line 45
+11/11/2022 18:23:13 - Erro Execução serviço Envia NFSe: System.Exception: teste
+   at OrbitService.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFe\Worker.cs:line 47

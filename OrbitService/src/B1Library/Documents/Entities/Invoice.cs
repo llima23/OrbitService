@@ -17,28 +17,27 @@ namespace B1Library.Documents
             Duplicata = new List<Duplicata>();
             DocRef = new List<DocRef>();
         }
-        public List<DocRef> DocRef { get; set; }
-        public List<CabecalhoLinha> CabecalhoLinha { get; set; }
-        public int CargaFiscal { get; set; }
-        public string CodInt { get; set; }
-        public List<Duplicata> Duplicata { get; set; }
-        public Parceiro Parceiro { get; set; }
         public int DocEntry { get; set; }
-        public Filial Filial { get; set; }
-        public Identificacao Identificacao { get; set; }
+        public string CodInt { get; set; }
         public string ModeloDocumento { get; set; }
+        public int CargaFiscal { get; set; }
+        public int ObjetoB1 { get; set; }
+        public string CANCELED { get; set; }
+        public int BPLId { get; set; }
         public string TipoDocumento { get; set; }
         public string TipoNF { get; set; }
-
         public string ChaveDeAcessoNFe { get; set; }
         public string ProtocoloNFe { get; set; }
-
         public int BaseEntry { get; set; }
-
         public string IdRetornoOrbit { get; set; }
 
-        public string CANCELED { get; set; }//Criar Campo na View
-        public int ObjetoB1 { get; set; }
+
+        public List<Duplicata> Duplicata { get; set; }
+        public List<DocRef> DocRef { get; set; }
+        public List<CabecalhoLinha> CabecalhoLinha { get; set; }
+        public Parceiro Parceiro { get; set; }
+        public Filial Filial { get; set; }
+        public Identificacao Identificacao { get; set; }
 
         public void AddItemLine(CabecalhoLinha itemLine)
         {
@@ -80,6 +79,7 @@ namespace B1Library.Documents
             DespesaAdicional = new List<DespesaAdicional>();
             DadosDI = new List<DadosDI>();
         }
+        public int DocEntry { get; set; }
         public string NumeroItemPedido { get; set; }
         public string NumeroPedido { get; set; }
         public string SoImposto { get; set; }

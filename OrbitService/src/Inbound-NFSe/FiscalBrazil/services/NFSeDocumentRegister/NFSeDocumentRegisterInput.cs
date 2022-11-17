@@ -6,10 +6,9 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
 {
     public class NFSeDocumentRegisterInput
     {
-        public string dfe { get; set; } = "nfse";
-
+        public string dfe { get; set; } = "Nfse";
         [JsonProperty("event")]
-        public string evento { get; set; }
+        public string Event { get;set; } = "emit";
 
         [JsonProperty("data")]
         public NFServico NFServico { get; set; }

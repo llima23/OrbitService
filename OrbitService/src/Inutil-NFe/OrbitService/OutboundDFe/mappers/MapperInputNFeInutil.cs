@@ -25,7 +25,7 @@ namespace OrbitService.OutboundDFe.mappers
 
         public DocumentStatus MapperOrbitOutputToUpdateB1Sucess(Invoice invoice, OutboundDFeDocumentInutilOutputNFe output)
         {
-            return new DocumentStatus(invoice.IdRetornoOrbit, "", output.retInutNFe.infInut.xMotivo, invoice.ObjetoB1, invoice.DocEntry, StatusCode.InutilizadaSucess, invoice.ChaveDeAcessoNFe, invoice.ProtocoloNFe, invoice.BaseEntry);
+            return new DocumentStatus(invoice.IdRetornoOrbit, "", output.retInutNFe.infInut.xMotivo, invoice.ObjetoB1, invoice.DocEntry, StatusCode.InutilizadaSucess, invoice.ChaveDeAcessoNFe, invoice.ProtocoloNFe, invoice.BaseEntry, output.communicationIds[0]);
         }
 
         public DocumentStatus MapperOrbitOutputToUpdateB1Error(Invoice invoice, OutboundDFeDocumentInutilOutputNFe output)

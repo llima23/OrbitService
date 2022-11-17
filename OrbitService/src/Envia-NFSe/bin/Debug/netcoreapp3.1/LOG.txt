@@ -521,3 +521,33 @@ Path '', line 1, position 1.
 28/10/2022 16:27:28 - Count Notas: 1
 28/10/2022 16:29:48 - Count Notas: 1
 28/10/2022 16:30:07 - NFSe Inserida na fila de emissão: 849 nfsID: 635c27ef2058a7b5066c643b
+03/11/2022 16:01:04 - Count Notas: 1
+03/11/2022 16:01:09 - Response: {"erpId":"1164","nfseId":"63640ff42058a7b5060c3300","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+03/11/2022 16:01:30 - NFSe Inserida na fila de emissão: 1164 nfsID: 63640ff42058a7b5060c3300
+04/11/2022 10:11:29 - Erro Execução serviço Envia NFSe: System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFSe\Worker.cs:line 57
+04/11/2022 10:12:44 - Count Notas: 1
+04/11/2022 10:12:50 - Response: {"erpId":"1164","nfseId":"63640ff42058a7b5060c3300","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+04/11/2022 10:16:53 - Count Notas: 1
+04/11/2022 10:16:58 - Response: {"erpId":"1164","nfseId":"63640ff42058a7b5060c3300","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+04/11/2022 10:17:57 - Count Notas: 1
+04/11/2022 10:18:03 - Response: {"erpId":"1164","nfseId":"63640ff42058a7b5060c3300","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+04/11/2022 10:33:44 - Count Notas: 1
+04/11/2022 10:33:48 - Response: {"erpId":"1164","nfseId":"63640ff42058a7b5060c3300","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+04/11/2022 10:34:35 - NFSe Inserida na fila de emissão: 1164 nfsID: 63640ff42058a7b5060c3300
+04/11/2022 10:39:57 - Count Notas: 1
+04/11/2022 10:40:35 - Count Notas: 1
+04/11/2022 10:42:05 - Count Notas: 1
+04/11/2022 10:42:20 - Response: {"erpId":"1164","nfseId":"63640ff42058a7b5060c3300","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+04/11/2022 10:42:23 - NFSe Inserida na fila de emissão: 1164 nfsID: 63640ff42058a7b5060c3300
+04/11/2022 11:16:22 - Count Notas: 1
+04/11/2022 11:16:27 - Response: {"erpId":"1164","nfseId":"63640ff42058a7b5060c3300","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+04/11/2022 11:17:06 - NFSe Inserida na fila de emissão: 1164 nfsID: 63640ff42058a7b5060c3300
+08/11/2022 14:43:23 - Count Notas: 1
+10/11/2022 09:59:51 - Count Notas: 1
+10/11/2022 13:05:46 - Count Notas: 1
+10/11/2022 13:05:46 - Lista Discriminação: 0002 + Analise e desenvolvimento de sistemas + 1 + 50
+10/11/2022 13:06:14 - Lista Discriminação: 0002 + Analise e desenvolvimento de sistemas + 1 + 50
+10/11/2022 13:07:22 - Response: {"erpId":"1212","nfseId":"636d217a2058a7b5061a0e16","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+10/11/2022 13:07:23 - NFSe Inserida na fila de emissão: 1212 nfsID: 636d217a2058a7b5061a0e16
+10/11/2022 14:18:37 - Count Notas: 1

@@ -1,4 +1,5 @@
-﻿using _4TAX_Service.Common.Domain;
+﻿using _4TAX_Service.Application;
+using _4TAX_Service.Common.Domain;
 using _4TAX_Service.Common.Domain.Properties;
 using System;
 using System.Collections.Generic;
@@ -24,17 +25,14 @@ namespace _4TAX_Service.Services.Document.NFSe
                 requestInput.rps.identificacao.cNf = (b1Document.DocEntry + 100).ToString();
                 requestInput.rps.identificacao.serie = b1Document.SeriesStr;
                 requestInput.rps.identificacao.numero = b1Document.Serial;
-                requestInput.rps.identificacao.tpOperacao = null; //Verificar Funcionalidade do Campo - ToDo:
+                requestInput.rps.identificacao.tpOperacao = b1Document.U_TAX4_TpOpNFSe != "0" ? b1Document.U_TAX4_TpOpNFSe : null;
                 requestInput.rps.identificacao.dataEmissao = Convert.ToDateTime(b1Document.DocDate);
-                requestInput.rps.identificacao.competencia = Convert.ToDateTime(b1Document.DocDate).ToString("yyyy-MM-dd");
+                requestInput.rps.identificacao.competencia = Convert.ToDateTime(b1Document.DocDate);
                 requestInput.rps.identificacao.indPres = 0; // TODO: Implementação Addon 
-                requestInput.rps.identificacao.naturezaOperacao = "1"; // TODO: Implementação Addon 
+                //requestInput.rps.identificacao.naturezaOperacao = b1Document.U_TAX4_NatOpNFSe != "0" ? b1Document.U_TAX4_NatOpNFSe :null;
                 requestInput.rps.identificacao.tipoRps = DocumentServiceFunctions.setTipoRps(b1Document.U_TAX4_tipoRPS, b1Document.County);
 
-                if (!String.IsNullOrEmpty(b1Document.U_TAX4_tpTribNfse))
-                {
-                    requestInput.rps.identificacao.regimeEspecialTributacao = b1Document.U_TAX4_tpTribNfse.Split("-")[0].ToString().Trim();
-                }
+                requestInput.rps.identificacao.regimeEspecialTributacao = String.IsNullOrEmpty(b1Document.U_TAX4_tpTribNfse) ? null : b1Document.U_TAX4_tpTribNfse.Substring(0,1);
 
                 if (b1Document.U_TAX4_RegEspTrib == "6")
                 {
@@ -77,7 +75,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                         requestInput.rps.tomador.inscricaoEstadual = Functions.RemoveCaracteresEspeciais(b1Document.TaxId1);
                 }
                 else
-                    requestInput.rps.tomador.inscricaoEstadual = "000000";
+                    requestInput.rps.tomador.inscricaoEstadual = null;
 
                 requestInput.rps.tomador.docEstrangeiro = String.IsNullOrEmpty(b1Document.TaxId5) ? "" : b1Document.TaxId5;
 
@@ -91,7 +89,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                     requestInput.rps.tomador.nomeFantasia = requestInput.rps.tomador.razaoSocial;
                 }
 
-                requestInput.rps.tomador.inscricaoMunicipal = !String.IsNullOrEmpty(b1Document.TaxId3) ? Functions.RemoverAcento(b1Document.TaxId3) : "00000000";
+                requestInput.rps.tomador.inscricaoMunicipal = !String.IsNullOrEmpty(b1Document.TaxId3) ? Functions.RemoverAcento(b1Document.TaxId3) : null;
 
                 #region TOMADOR - CONTATO
                 requestInput.rps.tomador.contato.email = b1Document.E_Mail;
@@ -100,8 +98,16 @@ namespace _4TAX_Service.Services.Document.NFSe
                 requestInput.rps.tomador.contato.fax = !String.IsNullOrEmpty(b1Document.Fax) ? Functions.RemoveCaracteresEspeciais(b1Document.Fax) : null;
                 requestInput.rps.tomador.contato.site = !String.IsNullOrEmpty(b1Document.NTSWebSite) ? b1Document.NTSWebSite : null;
 
-                string[] recebeEmail = {b1Document.E_Mail};
-                requestInput.emails = recebeEmail;
+                if (!String.IsNullOrEmpty(b1Document.E_Mail))
+                {
+                    string[] recebeEmail = {b1Document.E_Mail};
+                    requestInput.emails = recebeEmail;
+                }
+                else
+                {
+                    requestInput.emails = null;
+                }
+          
                 #endregion
 
                     #region TOMADOR - ENDEREÇO
@@ -181,6 +187,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                             descricao.Add("Valor Total dos Tributos: R$ " + Linhas.RECEBEIBPT);
                         }
                     }
+                    Logs.InsertLog($"Lista Discriminação: {Linhas.ItemCode} + {Linhas.ItemName} + {Linhas.Quantity} + {Linhas.Price}");
                     string[] intList = descricao.ToArray();
                     requestInput.rps.servico.discriminacao = intList;
                     requestInput.rps.servico.itemListaServico = Linhas.U_TAX4_LisSer;
@@ -195,12 +202,10 @@ namespace _4TAX_Service.Services.Document.NFSe
                     else
                         requestInput.rps.servico.cnae = Functions.RemoveCaracteresEspeciais(Linhas.U_TAX4_CodCNAE);
 
-                    if (!String.IsNullOrEmpty(Linhas.U_TAX4_TrMun))
-                        requestInput.rps.servico.codigoTributacaoMunicipio = Linhas.U_TAX4_TrMun;
-                    else
-                        requestInput.rps.servico.codigoTributacaoMunicipio = Functions.RemoveCaracteresEspeciais(Linhas.ServiceCD);
+                        requestInput.rps.servico.codigoTributacaoMunicipio = !String.IsNullOrEmpty(Linhas.U_TAX4_TrMun) ? Linhas.U_TAX4_TrMun : null;
+        
 
-                    requestInput.rps.servico.codigoMunicipioIncidencia = b1Document.IbgeCode;
+                    requestInput.rps.servico.codigoMunicipioIncidencia = requestInput.rps.identificacao.regimeEspecialTributacao == "T" ? "3550308" : b1Document.IbgeCode;
 
 
                     #endregion
@@ -244,7 +249,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                                         requestInput.rps.servico.valores.inss.baseCalculo = Linhas.LineTotal.ToString();
                                         break;
                                     case "6":
-                                        requestInput.rps.servico.valores.iss.exigibilidadeIss = "2";
+                                        requestInput.rps.servico.valores.iss.exigibilidadeIss = b1Document.U_TAX4_NatOpNFSe != "0" ? b1Document.U_TAX4_NatOpNFSe : null;
                                         requestInput.rps.servico.valores.iss.baseCalculo = Linhas.LineTotal;
                                         requestInput.rps.servico.valores.iss.retido = true;
                                         requestInput.rps.servico.valores.iss.aliquota = LineTaxWithholding.RATE;
@@ -270,7 +275,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                                         break;
                                     case "-7":
                                         requestInput.rps.servico.valores.iss.retido = false;
-                                        requestInput.rps.servico.valores.iss.exigibilidadeIss = "2";
+                                        requestInput.rps.servico.valores.iss.exigibilidadeIss = b1Document.U_TAX4_NatOpNFSe != "0" ? b1Document.U_TAX4_NatOpNFSe : null;
                                         requestInput.rps.servico.valores.iss.baseCalculo = Linhas.LineTotal;
                                         requestInput.rps.servico.valores.iss.aliquota = LineTax.TaxRate;
                                         requestInput.rps.servico.valores.iss.valor = LineTax.TaxSum;
@@ -312,6 +317,11 @@ namespace _4TAX_Service.Services.Document.NFSe
                 lstDetPag.Add(detPag);
                 requestInput.rps.pag.detPag = lstDetPag;
                 #endregion
+
+                if(b1Document.IbgeCode == "9999999")
+                {
+                    requestInput.rps.tomador.endereco = null;
+                }
 
                 return requestInput;
             }

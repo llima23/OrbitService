@@ -24,7 +24,6 @@ namespace OrbitService
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-               
                 try
                 {
                     _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
@@ -33,7 +32,7 @@ namespace OrbitService
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
                     foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        if (serviceDependencies.sConfig.Ativo == "Y")
+                        if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocDFe)
                         {
                             try
                             {
@@ -49,7 +48,7 @@ namespace OrbitService
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception(ex.Message);
+                  
                 }
 
             }

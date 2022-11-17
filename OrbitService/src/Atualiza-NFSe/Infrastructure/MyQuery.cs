@@ -20,7 +20,7 @@ namespace _4TAX_Service_Atualiza.Infrastructure
         public static string QueryUpdateStatusSuccessInB1(int DocEntry, int? BplId, string mStat, string idOrbit, string CodVeri, string NumeroNfse, string NumeroRPS)
         {           
             return $@"UPDATE OINV 
-                         SET ""U_TAX4_Stat"" = '{mStat}', 
+                         SET ""U_TAX4_Stat"" = '{mStat.Replace("'", "")}', 
                              ""U_TAX4_CodInt"" = '{GetStatusOrbitToB1(mStat)}',
                              ""U_TAX4_IdRet"" = '{idOrbit}',
                              ""U_TAX4_CodVeri"" = '{CodVeri}',

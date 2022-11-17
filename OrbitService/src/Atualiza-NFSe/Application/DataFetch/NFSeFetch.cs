@@ -26,11 +26,7 @@ namespace _4TAX_Service_Atualiza.Application
             DataSet dsResult = new DataSet();
             try
             {
-#if DEBUG
-                string command = @$"SELECT ""U_TAX4_IdRet"", ""BPLId"",""DocEntry"" FROM ""OINV"" WHERE ""U_TAX4_CodInt"" = '1'";
-#else
-                string command = @$"SELECT ""U_TAX4_IdRet"", ""BPLId"",""DocEntry"" FROM ""OINV"" WHERE ""U_TAX4_CodInt"" = '1'";  
-#endif
+                string command = @$"SELECT ""U_TAX4_IdRet"", ""BPLId"",""DocEntry"" FROM ""OINV"" WHERE ""U_TAX4_CodInt"" = '1' and ""Model"" = '46'";
                 dsResult = dbWrapper.ExecuteQuery(command);  //TODO Resources                
                 return JsonConvert.DeserializeObject(JsonConvert.SerializeObject(dsResult.Tables[0]));
             }

@@ -27,25 +27,37 @@ namespace OrbitService_Cancel_NFSe
             _logger = logger;
         }
 
+
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(1000, stoppingToken);
                 try
                 {
-                    IWrapper dbWrapper = Defaults.GetWrapper();
-                    DBServiceConfigurationRepository repo = new DBServiceConfigurationRepository(dbWrapper);
-                    ServiceConfiguration sConfig = repo.GetConfiguration();
-                    OutboundNFSeDocumentCancelUseCase use = new OutboundNFSeDocumentCancelUseCase(new DBDocumentsRepository(dbWrapper), sConfig, Defaults.GetCommunicationProvider());
-                    use.Execute();
+                    _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                    await Task.Delay(1000, stoppingToken);
+                    List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
+                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
+                    {
+                        if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocDFe)
+                        {
+                            try
+                            {
+                                OutboundNFSeDocumentCancelUseCase useCase = new OutboundNFSeDocumentCancelUseCase(new DBDocumentsRepository(serviceDependencies.DbWrapper),serviceDependencies.sConfig, serviceDependencies.communicationProvider);
+                                useCase.Execute();
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new Exception(ex.Message);
+                            }
+                        }
+                    }
                 }
-                catch(Exception ex) 
+                catch (Exception ex)
                 {
-                    Logs.InsertLog($"Erro Execução serviço Envia NFSe: {ex}");
+
                 }
-           
+
             }
         }
     }

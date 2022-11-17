@@ -29,7 +29,6 @@ namespace B1Library.Utilities
             double sum = 0.00;
             foreach (CabecalhoLinha item in invoice.CabecalhoLinha)
             {
-                sum = 0.00;
                 var taxesDeson = item.ImpostoLinha.Where(tl => tl.TipoImpostoOrbit == TipoImpostoOrbit && tl.SimOuNaoDesoneracao == "Y");
                 sum += taxesDeson.Sum(i => i.ValorImposto);
             }

@@ -30,7 +30,7 @@ namespace OrbitService
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
                     foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                        if (serviceDependencies.sConfig.Ativo == "Y")
+                        if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocDFe)
                         {
                             try
                             {

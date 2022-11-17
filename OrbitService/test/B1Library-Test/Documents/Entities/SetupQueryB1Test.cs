@@ -220,7 +220,7 @@ COALESCE(T0.""U_TAX4_Justi"", '')             AS ""Justificativa"",
 									 AS ""Identificacao""");
                 #endregion IDENTIFICACAO
                 #region PARCEIRO
-                sb.AppendLine(cut.RetunCommandParceiro());
+                sb.AppendLine(cut.RetunCommandParceiroHANA2());
                 #endregion PARCEIRO
                 #region FILIAL
                 sb.AppendLine(@$",REPLACE(REPLACE(( 
