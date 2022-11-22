@@ -16,6 +16,7 @@ namespace B1Library.Documents
             Identificacao = new Identificacao();
             Duplicata = new List<Duplicata>();
             DocRef = new List<DocRef>();
+            Emails = new List<Emails>();
         }
         public int DocEntry { get; set; }
         public string CodInt { get; set; }
@@ -31,7 +32,7 @@ namespace B1Library.Documents
         public int BaseEntry { get; set; }
         public string IdRetornoOrbit { get; set; }
 
-
+        public List<Emails> Emails { get; set; }
         public List<Duplicata> Duplicata { get; set; }
         public List<DocRef> DocRef { get; set; }
         public List<CabecalhoLinha> CabecalhoLinha { get; set; }
@@ -59,6 +60,10 @@ namespace B1Library.Documents
 
     }
 
+    public class Emails
+    {
+        public string email { get; set; }
+    }
     public class DocRef
     {
         public DateTime DataDocRef { get; set; }
@@ -206,6 +211,7 @@ namespace B1Library.Documents
 
     public class Identificacao
     {
+        public string ObsAbertura { get; set; }
         public string JustContigencia { get; set; }
         public string LocalDeExportacao { get; set; }
         public string UFDeExportacao { get; set; }

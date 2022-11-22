@@ -31,15 +31,19 @@ namespace OrbitService
                 List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
                 foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                 {
-                    try
+                    if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocFiscal)
                     {
-                       InboundNFeRegisterUseCase useCase = new InboundNFeRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
-                       useCase.Execute();
+                        try
+                        {
+                            InboundNFeRegisterUseCase useCase = new InboundNFeRegisterUseCase(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
+                            useCase.Execute();
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception(ex.Message);
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        throw new Exception(ex.Message);
-                    }
+
                 }
             }
         }

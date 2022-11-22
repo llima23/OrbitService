@@ -18,7 +18,7 @@ namespace OrbitService.FiscalBrazil.services
 
         }
 
-        public OperationResponse<OtherDocumentRegisterOutput, OtherDocumentRegisterError> Execute(OtherDocumentRegisterInput input)
+        public OperationResponse<OtherDocumentRegisterOutput, OtherDocumentRegisterError> Execute(Root input)
         {
             return InvokeOperation(
                     GetBuilder()

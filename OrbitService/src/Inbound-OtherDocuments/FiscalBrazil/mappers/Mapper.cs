@@ -147,10 +147,15 @@ namespace OrbitService.FiscalBrazil.mappers
 
         public DocumentStatus ToDocumentStatusResponseSucessful(Invoice invoice, OtherDocumentRegisterOutput output)
         {
-            StatusCode status = StatusCode.Sucess;
-            if (output.data.status == "Erro")
+            StatusCode status = StatusCode.CargaFiscal;
+            if (output.data.status == "Erro" || output.data.status == "Alerta")
             {
                 status = StatusCode.Erro;
+            }
+            else
+            {
+                output.data.status = "Sucess";
+                output.data.description = string.Empty;
             }
             DocumentStatus newStatusData = new DocumentStatus(output.data._id, output.data.status, output.data.description, invoice.ObjetoB1, invoice.DocEntry, status);
             return newStatusData;

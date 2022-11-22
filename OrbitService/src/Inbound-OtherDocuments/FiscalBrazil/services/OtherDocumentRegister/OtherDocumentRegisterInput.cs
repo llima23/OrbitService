@@ -12,12 +12,11 @@ namespace OrbitService.FiscalBrazil.services.Input
         public OtherDocumentRegisterInput Data { get; set; }
 
         [JsonProperty("event")]
-        public string Event { get; set; } = "EMISSÃO";
+        public string Event { get; set; } = "emit";
 
         [JsonProperty("dfe")]
-        public string Dfe { get; set; } = "OtherDocuments";
+        public string Dfe { get; set; } = "outro";
     }
-
 
     public class OtherDocumentRegisterInput
     {
@@ -73,7 +72,7 @@ namespace OrbitService.FiscalBrazil.services.Input
         [JsonProperty("valorItem")]
         public string ValorItem { get; set; }
 
-        [JsonProperty("impostos")]
+        [JsonProperty("Impostos")]
         public Impostos Impostos { get; set; }
     }
 

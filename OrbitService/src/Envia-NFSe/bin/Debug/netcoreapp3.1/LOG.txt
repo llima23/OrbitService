@@ -551,3 +551,44 @@ Path '', line 1, position 1.
 10/11/2022 13:07:22 - Response: {"erpId":"1212","nfseId":"636d217a2058a7b5061a0e16","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
 10/11/2022 13:07:23 - NFSe Inserida na fila de emissão: 1212 nfsID: 636d217a2058a7b5061a0e16
 10/11/2022 14:18:37 - Count Notas: 1
+18/11/2022 11:39:59 - Count Notas: 1
+18/11/2022 11:40:00 - Lista Discriminação: SP0000010 + Serviço de Intermediação - Mandato + 1 + 100
+18/11/2022 11:40:14 - Lista Discriminação: SP0000010 + Serviço de Intermediação - Mandato + 1 + 100
+18/11/2022 11:41:11 - Count Notas: 1
+18/11/2022 11:41:12 - Lista Discriminação: SP0000010 + Serviço de Intermediação - Mandato + 1 + 100
+18/11/2022 11:42:27 - Count Notas: 1
+18/11/2022 11:42:28 - Lista Discriminação: SP0000010 + Serviço de Intermediação - Mandato + 1 + 100
+18/11/2022 11:52:38 - Count Notas: 2
+18/11/2022 11:52:46 - Erro ao Processar NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFSe\Application\DataFetch\NFSeFetch.cs:line 82
+18/11/2022 11:52:50 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFSe\Application\Client\NFSeProcess.cs:line 31
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFSe\Worker.cs:line 65
+18/11/2022 11:52:53 - Count Notas: 2
+18/11/2022 11:55:18 - Count Notas: 2
+18/11/2022 11:55:31 - Lista Discriminação: SP0000010 + Serviço de Intermediação - Mandato + 1 + 100
+18/11/2022 12:01:43 - Count Notas: 2
+18/11/2022 12:02:27 - Lista Discriminação: SP0000010 + Serviço de Intermediação - Mandato + 1 + 100
+18/11/2022 12:04:44 - Count Notas: 2
+18/11/2022 12:05:14 - Lista Discriminação: SP0000010 + Serviço de Intermediação - Mandato + 1 + 100
+18/11/2022 12:07:32 - Count Notas: 1
+18/11/2022 12:07:37 - Lista Discriminação: 0002 + Analise e desenvolvimento de sistemas + 1 + 1000
+18/11/2022 12:31:07 - Count Notas: 1
+18/11/2022 12:31:18 - Response: {"erpId":"1253","nfseId":"6377a5462058a7b506851b18","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+18/11/2022 12:31:18 - NFSe Inserida na fila de emissão: 1253 nfsID: 6377a5462058a7b506851b18
+18/11/2022 12:31:37 - Count Notas: 1
+18/11/2022 12:32:17 - Response: {"erpId":"1253","nfseId":"6377a5462058a7b506851b18","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+18/11/2022 12:32:17 - NFSe Inserida na fila de emissão: 1253 nfsID: 6377a5462058a7b506851b18
+18/11/2022 12:32:36 - Count Notas: 1
+22/11/2022 10:52:49 - Count Notas: 1
+22/11/2022 10:52:58 - Erro ao Processar NFSe: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'Newtonsoft.Json.JsonConvert.DeserializeObject<System.Collections.Generic.List<_4TAX_Service.Common.Domain.Emails>>(string)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , Type , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at _4TAX_Service.Application.NFSeFetch.GetListNFSe() in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFSe\Application\DataFetch\NFSeFetch.cs:line 98
+22/11/2022 10:53:00 - Erro Execução serviço Envia NFSe: System.NullReferenceException: Object reference not set to an instance of an object.
+   at _4TAX_Service.Application.Client.NFSeProcess.IntegrateNFSe(List`1 ListNFSe, EmitMapper emitMapper, Emit emit) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFSe\Application\Client\NFSeProcess.cs:line 31
+   at _4TAX_Service.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Envia-NFSe\Worker.cs:line 65
+22/11/2022 10:53:03 - Count Notas: 1
+22/11/2022 10:54:10 - Count Notas: 1
+22/11/2022 10:58:16 - Count Notas: 1
+22/11/2022 10:59:31 - Count Notas: 1

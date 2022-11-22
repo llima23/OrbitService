@@ -411,8 +411,10 @@ namespace _4TAX_Service.Services.Document.Properties
                 rps = new Rps();
             }
             public Rps rps { get; set; }
-            public string[] emails { get; set; }
-         
+
+            [JsonProperty("emails")]
+            public List<string> emails { get; set; }
+
             public string branchId { get; set; }
             public string erpId { get; set; }
             public bool isForceProductionEnv { get; set; }

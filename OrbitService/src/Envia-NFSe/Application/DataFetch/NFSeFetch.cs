@@ -60,6 +60,24 @@ namespace _4TAX_Service.Application
             }
         }
 
+        public dynamic GetEmails(string cardCode)
+        {
+            DataSet dsResult = new DataSet();
+            try
+            {
+                dsResult = dbWrapper.ExecuteQuery(GetCommandListEmails(cardCode));
+                return JsonConvert.DeserializeObject(JsonConvert.SerializeObject(dsResult.Tables[0]));
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
         public List<NFSeB1Object> GetListNFSe()
         {
             List<NFSeB1Object> NFSeList = new List<NFSeB1Object>();
@@ -77,6 +95,9 @@ namespace _4TAX_Service.Application
                     {
                         NFSeB1Object nFSeB1Object = new NFSeB1Object(Convert.ToInt32(item.DocEntry));
                         nFSeB1Object = JsonConvert.DeserializeObject<NFSeB1Object>(JsonConvert.SerializeObject(item));
+                        string listEmails = Convert.ToString(GetEmails(nFSeB1Object.CardCode));
+                        nFSeB1Object.Emails = JsonConvert.DeserializeObject<List<Emails>>(listEmails);
+
                         dynamic dataLines = GetLines(item.DocEntry.ToString());
 
                         foreach (var line in dataLines)
@@ -206,6 +227,7 @@ namespace _4TAX_Service.Application
 	 T0.""U_TAX4_tpTribNfse"",
 	 T0.""U_TAX4_TpOpNFSe"",
 	 T0.""U_TAX4_NatOpNFSe"",
+     T0.""U_TAX4_tpOperacao"",
 	 T2.""ObjectType"",
 	 T2.""TaxId0"",
 	 T2.""TaxId1"",
@@ -312,7 +334,7 @@ AND ADD_DAYS (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), -(T6.""U_TAX4_DtRetro"")) <=
 	 REPLACE(T6.""OSvcCode"",'-1',NULL) AS OSvcCode,
 	 T6.""U_TAX4_CodAti"",
 	 T8.""ServiceCD"",
-	 T0.""U_TAX4_IBPT"",
+	 COALESCE(T0.""U_TAX4_IBPT"",0) as U_TAX4_IBPT,
 	 T6.""U_TAX4_LisSer"",
 	 T0.""Quantity"",
 	 T0.""Price"",
@@ -336,7 +358,8 @@ AND ADD_DAYS (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), -(T6.""U_TAX4_DtRetro"")) <=
 	 0) AS TAXSUM,
 	 T3.""staType"",
 	 COALESCE(T3.""TaxRate"",
-	 0) AS TAXRATE 
+	 0) AS TAXRATE,
+    T0.""WtLiable""
 FROM ""INV1"" T0 
 INNER JOIN ""INV12"" T2 ON T0.""DocEntry"" = T2.""DocEntry"" 
 INNER JOIN ""INV4"" T3 ON T0.""DocEntry"" = T3.""DocEntry"" 
@@ -356,6 +379,16 @@ LEFT JOIN ""OCNT"" T11 ON CAST(T2.""County"" AS VARCHAR) = CAST(T11.""AbsId"" AS
 WHERE T0.""DocEntry"" = {docentry}";
 
             return result;
+        }
+
+        private string GetCommandListEmails(string cardCode)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($@"SELECT
+								COALESCE(T0.""E_MailL"",'') AS ""email""
+								FROM ""OCPR"" T0
+								WHERE T0.""CardCode"" = '{cardCode}' AND ""Active"" = 'Y' AND ""NFeRcpn"" = 'Y' ");
+            return Convert.ToString(sb);
         }
 
     }

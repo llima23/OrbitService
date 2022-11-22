@@ -14,7 +14,9 @@ namespace _4TAX_Service.Common.Domain
             Linhas = new List<Linha>();
             LinesTaxWithholding = new List<LineTaxWithholding>();
             LinesTax = new List<LineTax>();
+            Emails = new List<Emails>();
         }
+        public List<Emails> Emails { get; set; }
 
         [JsonProperty("BranchId")]
         public string BranchId { get; set; }
@@ -187,6 +189,9 @@ namespace _4TAX_Service.Common.Domain
         [JsonProperty("U_TAX4_Operacao")]
         public string U_TAX4_Operacao { get; set; }
 
+        [JsonProperty("U_TAX4_tpOperacao")]
+        public string U_TAX4_tpOperacao { get; set; }
+
         [JsonProperty("U_TAX4_regTrib")]
         public string U_TAX4_RegTrib { get; set; }
 
@@ -251,6 +256,10 @@ namespace _4TAX_Service.Common.Domain
         public List<LineTax> LinesTax { get; set; }
     }
 
+    public class Emails
+    {
+        public string email { get; set; }
+    }
     public class Linha
     {
         [JsonProperty("ItemCode")]
@@ -281,7 +290,7 @@ namespace _4TAX_Service.Common.Domain
         public string ServiceCD { get; set; }
 
         [JsonProperty("U_TAX4_IBPT")]
-        public string U_TAX4_IBPT { get; set; }
+        public double U_TAX4_IBPT { get; set; }
 
         [JsonProperty("U_TAX4_LisSer")]
         public string U_TAX4_LisSer { get; set; }

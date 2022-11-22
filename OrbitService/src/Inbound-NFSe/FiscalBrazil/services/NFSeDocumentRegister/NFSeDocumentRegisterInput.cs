@@ -6,7 +6,7 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
 {
     public class NFSeDocumentRegisterInput
     {
-        public string dfe { get; set; } = "Nfse";
+        public string dfe { get; set; } = "nfse";
         [JsonProperty("event")]
         public string Event { get;set; } = "emit";
 
@@ -16,6 +16,11 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
 
     public partial class NFServico
     {
+        public NFServico()
+        {
+            Nfse nfse = new Nfse();
+        }
+        public Nfse nfse { get; set; }
         [JsonProperty("branchId")]
         public string BranchId { get; set; }
 
@@ -41,7 +46,7 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
 
         public Status status { get; set; }
 
-        public Nfse nfse { get; set; }
+     
 
         public string tipoOperacao { get; set; } = "input";
 
@@ -64,6 +69,7 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
             public string numero { get; set; }
 
             public string dataEmissao { get; set; }
+            public string codigoMunicipioGerador { get; set; }
         }
 
         public class Emails { }
@@ -98,8 +104,9 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
             return (Intermediario != null);
         }
 
+        [JsonProperty("pag")]
         public Pag Pag { get; set; }
-
+        [JsonProperty("prestador")]
         public Prestador Prestador { get; set; }
 
         public class Emails { }
@@ -116,31 +123,33 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
 
         public string regimeDeTributacao { get; set; }
 
+        [JsonProperty("endereco")]
         public enderecoPrestador Endereco { get; set; }
 
 
     }
     public class enderecoPrestador
     {
-        public string TipoLogradouro { get; set; }
-        public string Logradouro { get; set; }
-        public string Numero { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
-        public string CodigoMunicipio { get; set; }
-        public string NomeMunicipio { get; set; }
-        public string CodigoPais { get; set; }
-        public string NomePais { get; set; }
-        public string Uf { get; set; }
-        public string Cep { get; set; }
+        public string tipoLogradouro { get; set; }
+        public string logradouro { get; set; }
+        public string numero { get; set; }
+        public string complemento { get; set; }
+        public string bairro { get; set; }
+        public string codigoMunicipio { get; set; }
+        public string nomeMunicipio { get; set; }
+        public string codigoPais { get; set; }
+        public string nomePais { get; set; }
+        public string uf { get; set; }
+        public string cep { get; set; }
         public string tpBairro { get; set; }
         //public string enderecoExterior { get; set; }
         //public string siafiMunicipio { get; set; }
         public string cUf { get; set; }
-        public string NomeUf { get; set; }
+        public string nomeUf { get; set; }
     }
     public partial class Pag
     {
+        [JsonProperty("detPag")]
         public List<DetPag> DetPag { get; set; }
     }
     public partial class DetPag

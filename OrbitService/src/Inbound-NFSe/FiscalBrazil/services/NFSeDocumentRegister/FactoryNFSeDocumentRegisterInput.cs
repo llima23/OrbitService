@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using static OrbitService.FiscalBrazil.services.NFSeDocumentRegister.NFServico;
 
 namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
 {
@@ -8,7 +9,9 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
         {
             NFSeDocumentRegisterInput instance = new NFSeDocumentRegisterInput();
             instance.NFServico = new NFServico();
+            instance.NFServico.nfse = new Nfse();
             instance.NFServico.Rps = new Rps();
+            instance.NFServico.status = new Status();
             instance.NFServico.Rps.Prestador = new Prestador();
             instance.NFServico.Rps.Prestador.Endereco = new enderecoPrestador();
             instance.NFServico.Rps.Pag = new Pag();

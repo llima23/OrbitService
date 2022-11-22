@@ -30,8 +30,10 @@ namespace OrbitService.FiscalBrazil.usecases
             List<Invoice> inboundOtherDocuments = documentsRepository.GetInboundOtherDocuments();
             foreach (Invoice invoice in inboundOtherDocuments)
             {
+                Root root = new Root();
                 OtherDocumentRegisterInput input = mapper.ToOtherDocumentRegisterInput(invoice);
-                OperationResponse<OtherDocumentRegisterOutput, OtherDocumentRegisterError> response = otherDocumentRegister.Execute(input);
+                root.Data = input;
+                OperationResponse<OtherDocumentRegisterOutput, OtherDocumentRegisterError> response = otherDocumentRegister.Execute(root);
 
                 if (response.isSuccessful)
                 {

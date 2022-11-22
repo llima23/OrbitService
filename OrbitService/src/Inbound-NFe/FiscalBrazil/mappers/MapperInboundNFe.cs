@@ -49,6 +49,7 @@ namespace OrbitService.FiscalBrazil.mappers
             input.identificacao.Serie = invoice.Identificacao.SerieDocumento;
             input.identificacao.NumeroDocFiscal = invoice.Identificacao.NumeroDocumento;
             input.identificacao.DataHoraEmissao = util.ConvertDateB1ToFormatOrbit(invoice.Identificacao.DataEmissao, invoice.Identificacao.DocTime);
+            input.identificacao.DataHoraSaidaOuEntrada = util.ConvertDateB1ToFormatOrbit(invoice.Identificacao.DataEmissao, invoice.Identificacao.DocTime);
             input.identificacao.CodigoMunicipioFg = invoice.Filial.CodigoIBGEMunicipioFilial;
             input.identificacao.FormatoNfe = invoice.Identificacao.OperacaoNFe;
             input.identificacao.Finalidade = invoice.Identificacao.FinalideDocumento;
@@ -139,6 +140,7 @@ namespace OrbitService.FiscalBrazil.mappers
             input.Emitente.Endereco.Numero = invoice.Parceiro.NumeroLogradouroParceiro;
             input.Emitente.Endereco.Bairro = invoice.Parceiro.BairroParceiro;
             input.Emitente.Endereco.CodigoMunicipio = invoice.Parceiro.CodigoIBGEMunicipioParceiro;
+            input.Emitente.Endereco.Municipio = "SÃO PAULO";
             input.Emitente.Endereco.Uf = invoice.Parceiro.UFParceiro;
             input.Emitente.Endereco.Cep = !String.IsNullOrEmpty(invoice.Parceiro.CEPParceiro) ? Regex.Replace(invoice.Parceiro.CEPParceiro, @"(\.)|-", "") : string.Empty;
             input.Emitente.Endereco.CodigoPais = invoice.Parceiro.CodigoPaisParceiro;
@@ -162,12 +164,12 @@ namespace OrbitService.FiscalBrazil.mappers
 
         public DocumentStatus ToDocumentStatusResponseSucessful(Invoice invoice, InboundNFeDocumentRegisterOutput output)
         {
-            StatusCode status = StatusCode.Sucess;
+            StatusCode status = StatusCode.CargaFiscal;
             if(output.data.status == "Erro")
             {
                status = StatusCode.Erro;
             }
-            DocumentStatus newStatusData = new DocumentStatus(output.data._id, output.data.status,output.data.description,invoice.ObjetoB1,invoice.DocEntry, status);
+            DocumentStatus newStatusData = new DocumentStatus(output.data._id, output.data.status,output.data.description,invoice.ObjetoB1,invoice.DocEntry, status, invoice.Identificacao.Key);
             return newStatusData;
         }
 

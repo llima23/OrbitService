@@ -110,6 +110,11 @@ namespace B1Library.mapper
 
                 Logs.InsertLog($"Preencheu o objeto  DOCREF");
                 #endregion DOCREF 
+                #region LISTEMAILS
+                queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnCommandListEmails(invoice));
+                jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0])));
+                invoice.Emails = JsonConvert.DeserializeObject<List<Emails>>(jsonConvert);
+                #endregion LISTEMAILS
                 listInvoice.Add(invoice);
             }
             return listInvoice;

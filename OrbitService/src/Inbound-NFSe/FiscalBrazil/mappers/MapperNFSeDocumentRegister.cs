@@ -4,6 +4,7 @@ using OrbitService.FiscalBrazil.services.NFSeDocumentRegister;
 using OrbitService.FiscalBrazil.util;
 using System;
 using System.Collections.Generic;
+using static OrbitService.FiscalBrazil.services.NFSeDocumentRegister.NFServico;
 
 namespace OrbitService.FiscalBrazil.mappers
 {
@@ -81,15 +82,15 @@ namespace OrbitService.FiscalBrazil.mappers
                 input.NFServico.Rps.Prestador.inscricaoMunicipal = invoice.Parceiro.InscIeParceiro;
 
                 #region Prestador ENDEREÇO
-                input.NFServico.Rps.Prestador.Endereco.TipoLogradouro = invoice.Parceiro.TipoLogradouroParceiro;
-                input.NFServico.Rps.Prestador.Endereco.Logradouro = invoice.Parceiro.LogradouroParceiro;
-                input.NFServico.Rps.Prestador.Endereco.Numero = invoice.Parceiro.NumeroLogradouroParceiro;
-                input.NFServico.Rps.Prestador.Endereco.Bairro = invoice.Parceiro.BairroParceiro;
-                input.NFServico.Rps.Prestador.Endereco.CodigoMunicipio = invoice.Parceiro.CodigoIBGEMunicipioParceiro;
-                input.NFServico.Rps.Prestador.Endereco.Uf = invoice.Parceiro.UFParceiro;
+                input.NFServico.Rps.Prestador.Endereco.tipoLogradouro = invoice.Parceiro.TipoLogradouroParceiro;
+                input.NFServico.Rps.Prestador.Endereco.logradouro = invoice.Parceiro.LogradouroParceiro;
+                input.NFServico.Rps.Prestador.Endereco.numero = invoice.Parceiro.NumeroLogradouroParceiro;
+                input.NFServico.Rps.Prestador.Endereco.bairro = invoice.Parceiro.BairroParceiro;
+                input.NFServico.Rps.Prestador.Endereco.codigoMunicipio = invoice.Parceiro.CodigoIBGEMunicipioParceiro;
+                input.NFServico.Rps.Prestador.Endereco.uf = invoice.Parceiro.UFParceiro;
                 input.NFServico.Rps.Prestador.Endereco.cUf = invoice.Parceiro.CodigoUFParceiro;
-                input.NFServico.Rps.Prestador.Endereco.Cep = invoice.Parceiro.CEPParceiro;
-                input.NFServico.Rps.Prestador.Endereco.CodigoPais = invoice.Parceiro.CodigoPaisParceiro;
+                input.NFServico.Rps.Prestador.Endereco.cep = invoice.Parceiro.CEPParceiro;
+                input.NFServico.Rps.Prestador.Endereco.codigoPais = invoice.Parceiro.CodigoPaisParceiro;
                 input.NFServico.Rps.Prestador.Endereco.tpBairro = invoice.Parceiro.BairroParceiro;
                 #endregion Prestador ENDEREÇO
 
@@ -98,7 +99,7 @@ namespace OrbitService.FiscalBrazil.mappers
                 #region SERVIÇO
                 foreach (var Linhas in invoice.CabecalhoLinha)
                 {
-                    input.NFServico.Rps.Servico.CodigoServico = Linhas.CodigoServicoLinha;
+                    input.NFServico.Rps.Servico.CodigoServico = Linhas.CodigoTributacaoMuncipio;
                     input.NFServico.Rps.Servico.Quantidade = Convert.ToInt32(Linhas.QuantidadeLinha);
                     input.NFServico.Rps.Servico.ValorUnitario = Linhas.ValorUnitarioLinha;
 
@@ -232,6 +233,24 @@ namespace OrbitService.FiscalBrazil.mappers
                 input.NFServico.Rps.Pag.DetPag = lstDetPag;
                 #endregion
 
+                #region NFSE
+                input.NFServico.nfse.numero = input.NFServico.Rps.Identificacao.Numero;
+                input.NFServico.nfse.dataEmissao = input.NFServico.Rps.Identificacao.DataEmissao;
+                input.NFServico.nfse.codigoMunicipioGerador = input.NFServico.Rps.Prestador.Endereco.codigoMunicipio;
+                #endregion NFSE
+                #region STATUS
+                input.NFServico.status.cStat = "0";
+                input.NFServico.status.mStat = "NFSE EMITIDA";
+
+                List<Eventos> lstEventos = new List<Eventos>();
+                Eventos eventos = new Eventos();
+                eventos.type = "EMISSÃO NFSE";
+                lstEventos.Add(eventos);
+
+                input.NFServico.eventos = lstEventos;
+
+                #endregion STATUS
+
                 return input;
             }
             catch (Exception ex)
@@ -252,12 +271,12 @@ namespace OrbitService.FiscalBrazil.mappers
 
         public DocumentStatus ToDocumentStatusResponseSucessful(Invoice invoice, NFSeDocumentRegisterOutput output)
         {
-            StatusCode status = StatusCode.Sucess;
-            if (output.data.status == "Erro")
+            StatusCode status = StatusCode.CargaFiscal;
+            if (output.data.status == "Erro" || output.data.status == "Alerta")
             {
                 status = StatusCode.Erro;
             }
-            DocumentStatus newStatusData = new DocumentStatus(output.data._id, output.data.status, output.data.description, invoice.ObjetoB1, invoice.DocEntry, status);
+            DocumentStatus newStatusData = new DocumentStatus(output.data._id, output.data.status, output.data.status + " - " + output.data.description, invoice.ObjetoB1, invoice.DocEntry, status);
             return newStatusData;
         }
     }

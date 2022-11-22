@@ -103,6 +103,10 @@ namespace OrbitService.OutboundDFe.mappers
             #region EMAIL
             List<string> lstEmail = new List<string>();
             lstEmail.Add(invoice.Parceiro.EmailParceiro);
+            foreach (var item in invoice.Emails)
+            {
+                lstEmail.Add(item.email);
+            }
             input.Emails = lstEmail;
             #endregion EMAIL
             #region TRANSP
@@ -186,7 +190,8 @@ namespace OrbitService.OutboundDFe.mappers
 
             input.exporta.UfSaidaPais = !String.IsNullOrEmpty(invoice.Identificacao.UFDeExportacao) ? invoice.Identificacao.UFDeExportacao : null;
             input.exporta.XLocExporta = !String.IsNullOrEmpty(invoice.Identificacao.LocalDeExportacao) ? invoice.Identificacao.UFDeExportacao : null;
-            input.infAdic.InfAdFisco = !string.IsNullOrEmpty(invoice.Identificacao.InfAdFisco) ? invoice.Identificacao.InfAdFisco : null;
+            input.infAdic.InfAdFisco = !String.IsNullOrEmpty(invoice.Identificacao.InfAdFisco) ? invoice.Identificacao.InfAdFisco : null;
+            input.infAdic.InfCpl = !String.IsNullOrEmpty(invoice.Identificacao.ObsAbertura) ? invoice.Identificacao.ObsAbertura : null;
             input.identificacao.IdLocalDestino = invoice.CabecalhoLinha[0].IdLocalDestino;
             input.Emitente.InscricaoEstadual = !String.IsNullOrEmpty(invoice.Filial.InscIeFilial) ? Regex.Replace(invoice.Filial.InscIeFilial, @"(\.)|-", "") : null;
 

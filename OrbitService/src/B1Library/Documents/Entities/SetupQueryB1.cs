@@ -23,6 +23,10 @@ namespace B1Library.Documents.Entities
 		public string MVast = "Lucro";
 		public string AliquotaIntDestino = "AliqDest";
 		public string PartilhaInterestadual = "IntPart";
+		public string VICMSOpL = "VICMSOpL";
+		public string VDifL = "VDifL";
+		public string PDif = "PDif";
+		public string ReduICMS = "ReduICMS";
 		public string B1TableName = string.Empty;
 		public string B1TableNameChild = string.Empty;
 
@@ -269,11 +273,23 @@ namespace B1Library.Documents.Entities
 								 COALESCE(TT.""U_TAX4_TpImp"", '')     AS ""TipoImpostoOrbit"",
 								 COALESCE(TT.""Name"", '')             AS ""NomeImposto"",
 								 COALESCE(TX.""BaseSum"", 0)           AS ""ValorBaseImposto"",
-								 COALESCE(TX.""U_VICMSOpL"", 0)           AS ""VICMSOp"",
-								 COALESCE(TX.""U_VDifL"", 0)              AS ""VDif"",
-								 COALESCE(TX.""U_PDif"", 0)              AS ""PDif"",
-								 COALESCE(TX.""U_ReduICMS"",0)		   AS ""pRedBc"",
 								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"" ");
+			if (VerifyIfFieldExists(VDifL))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_VDifL"",0)			   AS ""VDif""");
+			}
+			if (VerifyIfFieldExists(PDif))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_PDif"",0)			   AS ""PDif""");
+			}
+			if (VerifyIfFieldExists(ReduICMS))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_ReduICMS"",0)			   AS ""pRedBc""");
+			}
+			if (VerifyIfFieldExists(VICMSOpL))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_VICMSOpL"",0)			   AS ""VICMSOp""");
+			}
 			if (VerifyIfFieldExists(MVast))
 			{
 				sb.AppendLine(@$"	 ,COALESCE(TX.""U_Lucro"",0)			   AS ""MVast""");
@@ -591,6 +607,7 @@ namespace B1Library.Documents.Entities
 									 COALESCE(OI.""U_TAX4_HoraEnt"",'')			   AS ""HoraDeEnvio"",
 									 COALESCE(OI.""U_TAX4_Local_Exp"",'')		   AS ""LocalDeExportacao"",
 									 COALESCE(OI.""U_TAX4_UF_Exp"",'')			   AS ""UFDeExportacao"",
+									 COALESCE(OI.""Header"",'')					   AS ""ObsAbertura"",
 									 COALESCE(C2.""U_TAX4_justf"",'')			   AS ""JustContigencia""
 									 
 
@@ -790,11 +807,23 @@ namespace B1Library.Documents.Entities
 								 COALESCE(TT.""U_TAX4_TpImp"", '')     AS ""TipoImpostoOrbit"",
 								 COALESCE(TT.""Name"", '')             AS ""NomeImposto"",
 								 COALESCE(TX.""BaseSum"", 0)           AS ""ValorBaseImposto"",
-								 COALESCE(TX.""U_VICMSOpL"", 0)           AS ""VICMSOp"",
-								 COALESCE(TX.""U_VDifL"", 0)              AS ""VDif"",
-								 COALESCE(TX.""U_PDif"", 0)              AS ""PDif"",
-								 COALESCE(TX.""U_ReduICMS"",0)		   AS ""pRedBc"",
 								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"" ");
+			if (VerifyIfFieldExists(VDifL))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_VDifL"",0)			   AS ""VDif""");
+			}
+			if (VerifyIfFieldExists(PDif))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_PDif"",0)			   AS ""PDif""");
+			}
+			if (VerifyIfFieldExists(ReduICMS))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_ReduICMS"",0)			   AS ""pRedBc""");
+			}
+			if (VerifyIfFieldExists(VICMSOpL))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_VICMSOpL"",0)			   AS ""VICMSOp""");
+			}
 			if (VerifyIfFieldExists(MVast))
 			{
 				sb.AppendLine(@$"	 ,COALESCE(TX.""U_Lucro"",0)			   AS ""MVast""");
@@ -889,6 +918,17 @@ namespace B1Library.Documents.Entities
 								WHERE DC.""U_TAX4_DocEntry"" = {invoice.DocEntry}");
 			return Convert.ToString(sb);
         }
+
+		public string ReturnCommandListEmails(Invoice invoice)
+        {
+			sb = new StringBuilder();
+			sb.AppendLine($@"SELECT
+								COALESCE(T0.""E_MailL"",'') AS ""email""
+								FROM ""OCPR"" T0
+								WHERE T0.""CardCode"" = '{invoice.Parceiro.CodigoParceiro}' AND ""Active"" = 'Y' AND ""NFeRcpn"" = 'Y' ");
+			return Convert.ToString(sb);
+
+		}
 		#endregion SETUP QUERY HANA 1.0
 
 		public bool VerifyIfFieldExists(string ValidFieldExist)

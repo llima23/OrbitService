@@ -23,8 +23,8 @@
         
 
         public string IdOrbit { get; set; }
-        public string StatusOrbit { get; set; }
-        public string Descricao { get; set; }
+        public string StatusOrbit { get; set; } = "";
+        public string Descricao { get; set; } = "";
 
         public string ChaveDeAcessoNFe { get; set; }
         public string ProtocoloNFe { get; set; }

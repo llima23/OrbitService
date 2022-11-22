@@ -33,7 +33,12 @@ namespace _4TAX_Service.Application.Client
                 try
                 {
                     EmitRequestInput input = emitMapper.ConvertToOrbitObject(item);
-                    //Logs.InsertLog($"Json NFSe: {JsonConvert.SerializeObject(input)}");
+                    var jsonInput = JsonConvert.SerializeObject(input, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+                    if(item.U_TAX4_tpOperacao == "Y")
+                    {
+                        Logs.InsertLog($"Json NFSe: {JsonConvert.SerializeObject(input)}");
+                    }
+                  
                     OperationResponse<EmitSuccessResponseOutput, EmitFailResponseOutput> response = SendNFSeToOrbit(item, emitMapper, emit);
                     Logs.InsertLog($"Response: {response.Content} + IsSucessfull: {response.isSuccessful}");
                     if (response.isSuccessful)
