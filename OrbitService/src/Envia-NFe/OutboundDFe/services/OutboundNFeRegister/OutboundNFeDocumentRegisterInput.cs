@@ -1157,6 +1157,10 @@ namespace OrbitService.OutboundDFe.services.OutboundDFeRegister
 
     public class InfAdic
     {
+        public InfAdic()
+        {
+            ObsFisco = new List<ObsFisco>();
+        }
         [JsonProperty("infAdFisco")]
         public string InfAdFisco { get; set; }
 
@@ -1167,7 +1171,12 @@ namespace OrbitService.OutboundDFe.services.OutboundDFeRegister
         public ObsCont ObsCont { get; set; }
 
         [JsonProperty("obsFisco")]
-        public ObsFisco ObsFisco { get; set; }
+        public List<ObsFisco> ObsFisco { get; set; }
+        public bool ShouldSerializeObsFisco()
+        {
+            return ObsFisco.Count > 0;
+        }
+
 
         [JsonProperty("procRef")]
         public ProcRef ProcRef { get; set; }
@@ -1591,6 +1600,7 @@ namespace OrbitService.OutboundDFe.services.OutboundDFeRegister
 
     public class Transp
     {
+      
         [JsonProperty("modFrete")]
         public string ModFrete { get; set; }
 

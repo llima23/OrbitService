@@ -15,10 +15,10 @@ namespace OrbitService_Cancel_NFSe.OutboundDFe.mappers
         {
             OutboundDFeDocumentCancelInputNFSe input = new OutboundDFeDocumentCancelInputNFSe
             {
-                branchId = invoice.Identificacao.BranchId,
-                nfseId = invoice.Identificacao.IdRetornoOrbit,
-                motivo = invoice.Identificacao.Justificativa,
-                soft_cancel = true
+                branchId = invoice.BranchId,
+                nfseId = invoice.IdRetornoOrbit,
+                motivo = invoice.Justificativa,
+                soft_cancel = false
             };
             return input;
         }
@@ -29,7 +29,7 @@ namespace OrbitService_Cancel_NFSe.OutboundDFe.mappers
             {
                 output.message += item.description + " - " + "\r";
             }
-            DocumentStatus documentStatus = new DocumentStatus(invoice.Identificacao.IdRetornoOrbit, Convert.ToString(output.success), output.message, invoice.ObjetoB1, invoice.DocEntry, StatusCode.CanceladaSucess);
+            DocumentStatus documentStatus = new DocumentStatus(invoice.Identificacao.IdRetornoOrbit, Convert.ToString(output.success), output.message, invoice.ObjetoB1, invoice.DocEntry, StatusCode.CanceladaSucess, null, null, invoice.BaseEntry);
             return documentStatus;
         }
 
@@ -44,7 +44,8 @@ namespace OrbitService_Cancel_NFSe.OutboundDFe.mappers
             {
                 DescricaoErro += item.description + " - " + "\r";
             }
-            DocumentStatus newStatusData = new DocumentStatus(Convert.ToString(invoice.Identificacao.IdRetornoOrbit), Convert.ToString(output.success), DescricaoErro, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Erro);
+            DescricaoErro += "\r" + output.message;
+            DocumentStatus newStatusData = new DocumentStatus(Convert.ToString(invoice.IdRetornoOrbit), Convert.ToString(output.success), DescricaoErro, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Erro,null,null,invoice.BaseEntry);
             return newStatusData;
         }
     }

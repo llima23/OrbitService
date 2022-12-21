@@ -46,7 +46,7 @@ namespace _4TAX_Service.Application
             DataSet dsResult = new DataSet();
             try
             {
-                string command = @$"SELECT * FROM ""BUSCADADOSNFSELINHAS"" WHERE ""DocEntry"" = {DocEntry}";
+                //  string command = @$"SELECT * FROM ""BUSCADADOSNFSELINHAS"" WHERE ""DocEntry"" = {DocEntry}";
                 dsResult = dbWrapper.ExecuteQuery(GetCommandSQLLines(DocEntry));
                 return JsonConvert.DeserializeObject(JsonConvert.SerializeObject(dsResult.Tables[0]));
             }
@@ -85,7 +85,7 @@ namespace _4TAX_Service.Application
             try
             {
                 dynamic data = GetHeader();
-                if(data != null)
+                if (data != null)
                 {
                     if (data.Count > 0)
                     {
@@ -99,16 +99,18 @@ namespace _4TAX_Service.Application
                         nFSeB1Object.Emails = JsonConvert.DeserializeObject<List<Emails>>(listEmails);
 
                         dynamic dataLines = GetLines(item.DocEntry.ToString());
-
+                        nFSeB1Object.Linhas = new List<Linha>();
+                        nFSeB1Object.LinesTax = new List<LineTax>();
+                        nFSeB1Object.LinesTaxWithholding = new List<LineTaxWithholding>();
                         foreach (var line in dataLines)
                         {
                             Linha linha = new Linha();
                             linha = JsonConvert.DeserializeObject<Linha>(JsonConvert.SerializeObject(line));
-                            nFSeB1Object.Linhas = new List<Linha>();
+
                             nFSeB1Object.Linhas.Add(linha);
 
                             dynamic dataTax = GetLineTax(line.DocEntry.ToString(), line.LineNum.ToString());
-                            nFSeB1Object.LinesTax = new List<LineTax>();
+
                             foreach (var LinesTax in dataTax)
                             {
                                 LineTax oLineTax = new LineTax();
@@ -121,7 +123,7 @@ namespace _4TAX_Service.Application
                                 if (linha.WtLiable == "Y")
                                 {
                                     dynamic dataTaxWithholding = GetLineTaxWithholding(line.DocEntry.ToString(), line.LineNum.ToString());
-                                    nFSeB1Object.LinesTaxWithholding = new List<LineTaxWithholding>();
+
                                     foreach (var LinesTaxWithholding in dataTaxWithholding)
                                     {
                                         LineTaxWithholding oLineTax = new LineTaxWithholding();
@@ -136,7 +138,7 @@ namespace _4TAX_Service.Application
                         NFSeList.Add(nFSeB1Object);
                     }
                 }
-               
+
 
                 return NFSeList;
             }
@@ -159,7 +161,8 @@ namespace _4TAX_Service.Application
                 //TODO
                 string command = @$"SELECT COALESCE(T0.""Rate"",0) as ""RATE"", 
                                            COALESCE(T0.""WTAmnt"",0) as ""WTAMNT"",
-                                           COALESCE(T2.""U_TAX4_TpImp"",'') as ""U_TAX4_TpImp""  
+                                           COALESCE(T2.""U_TAX4_TpImp"",'') as ""U_TAX4_TpImp"",
+                                           ""Doc1LineNo""
                                            FROM ""INV5"" T0
                                            INNER JOIN ""OWHT"" T1 on T0.""WTCode"" = T1.""WTCode""
                                            INNER JOIN ""OWTT"" T2 on T1.""WTTypeId"" = T2.""WTTypeId""
@@ -187,7 +190,9 @@ namespace _4TAX_Service.Application
                                            COALESCE(T0.""TaxSum"",0) as ""TaxSum"",
                                            T1.""U_TAX4_TpImp"",
 		                                   ""CSTfPIS"",
-                                           ""CSTfCOFINS""
+                                           ""CSTfCOFINS"",
+                                           T0.""LineNum"",
+                                           T0.""TaxInPrice""
                                            FROM ""INV4"" T0
                                            INNER JOIN ""OSTT"" T1 on T0.""staType"" = T1.""AbsId"" 
                                            INNER JOIN INV1 T2 on T0.""DocEntry"" = T2.""DocEntry"" and T0.""LineNum"" = T2.""LineNum""
@@ -207,7 +212,7 @@ namespace _4TAX_Service.Application
 
         private string GetCommandSQLHeader()
         {
-            string result = $@"SELECT
+            string result = $@"SELECT TOP 10
 	 DISTINCT T0.""DocEntry"",
 	 T0.""DocNum"",
 	 T0.""CANCELED"",
@@ -215,7 +220,7 @@ namespace _4TAX_Service.Application
 	 T0.""CardCode"",
 	 T0.""Address"" AS EnderecoT,
 	 T0.""CardName"",
-	 T0.""DiscPrcnt"",
+	 COALESCE(T0.""DiscPrcnt"",0) AS DiscPrcnt,
 	 CAST(T0.""Header"" AS VARCHAR) AS Comments,
 	 T0.""GroupNum"",
 	 T0.""PeyMethod"",
@@ -225,7 +230,7 @@ namespace _4TAX_Service.Application
 	 T0.""SeriesStr"",
 	 T0.""U_TAX4_tpOperacao"",
 	 T0.""U_TAX4_tpTribNfse"",
-	 T0.""U_TAX4_TpOpNFSe"",
+	 --T0.""U_TAX4_TpOpNFSe"",
 	 T0.""U_TAX4_NatOpNFSe"",
      T0.""U_TAX4_tpOperacao"",
 	 T2.""ObjectType"",
@@ -289,7 +294,8 @@ namespace _4TAX_Service.Application
 	 CASE WHEN T20.""MltpBrnchs"" = 'Y' 
 THEN T19.""U_TAX4_EstabID"" 
 ELSE T18.""U_TAX4_EstabID"" 
-END AS ""BranchId"" 
+END AS ""BranchId"",
+COALESCE(T6.""U_TAX4_EnvEm"",'')			   AS ""EnviaEmail""
 FROM ""OINV"" T0 
 LEFT JOIN ""INV1"" T1 ON T0.""DocEntry"" = T1.""DocEntry"" 
 LEFT JOIN ""INV12"" T2 ON T0.""DocEntry"" = T2.""DocEntry"" 
@@ -317,67 +323,98 @@ WHERE T0.""CANCELED"" = 'N'
 AND T4.""ItemClass"" = 1 
 AND T17.""NfmCode"" = 'NFS-e' 
 AND T0.""U_TAX4_CodInt"" = '0'
-AND ADD_DAYS (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), -(T6.""U_TAX4_DtRetro"")) <= T0.""DocDate""";
+AND T0.""DocDate"" >= T6.""U_TAX4_DateInt""
+AND ""U_TAX4_CARGAFISCAL"" = 'N'
+AND ""SeqCode"" > 0";
 
             return result;
-            
+
         }
 
         private string GetCommandSQLLines(string docentry)
         {
-            string result = $@"SELECT T0.""ItemCode"",
-	 T0.""LineNum"",
-	 T0.""LineTotal"",
-	 T0.""U_TAX4_CodServ"",
-	 T0.""DocEntry"",
-	 T5.""BPLId"",
-	 REPLACE(T6.""OSvcCode"",'-1',NULL) AS OSvcCode,
-	 T6.""U_TAX4_CodAti"",
-	 T8.""ServiceCD"",
-	 COALESCE(T0.""U_TAX4_IBPT"",0) as U_TAX4_IBPT,
-	 T6.""U_TAX4_LisSer"",
-	 T0.""Quantity"",
-	 T0.""Price"",
-	 T6.""ItemName"",
-	 T6.""U_TAX4_CodCNAE"",
-	 T6.""U_TAX4_TrMun"",
-	 T11.""IbgeCode"",
-	 T0.""DiscPrcnt"",
-	 T10.""WTTypeId"",
-	 COALESCE(T9.""LineTotal"",
-	 0) AS LineTotalDespAd,
-	 COALESCE(T0.""Rate"",
-	 0) AS RATE,
-	 COALESCE(T10.""WTAmnt"",
-	 0) AS WTAmnt,
-	 COALESCE(T0.""CSTfPIS"",
-	 0) AS CSTFPIS,
-	 COALESCE(T0.""CSTfCOFINS"",
-	 0) AS CSTFCOFINS,
-	 COALESCE(T3.""TaxSum"",
-	 0) AS TAXSUM,
-	 T3.""staType"",
-	 COALESCE(T3.""TaxRate"",
-	 0) AS TAXRATE,
-    T0.""WtLiable""
-FROM ""INV1"" T0 
-INNER JOIN ""INV12"" T2 ON T0.""DocEntry"" = T2.""DocEntry"" 
-INNER JOIN ""INV4"" T3 ON T0.""DocEntry"" = T3.""DocEntry"" 
-AND T0.""LineNum"" = T3.""LineNum"" 
-LEFT JOIN ""INV13"" T4 ON T0.""DocEntry"" = T4.""DocEntry"" 
-AND T0.""LineNum"" = T4.""LineNum"" 
-INNER JOIN ""OINV"" T5 ON T0.""DocEntry"" = T5.""DocEntry"" 
-INNER JOIN ""OITM"" T6 ON T0.""ItemCode"" = T6.""ItemCode"" 
-INNER JOIN ""OBPL"" T7 ON T5.""BPLId"" = T7.""BPLId"" 
-LEFT JOIN ""OSCD"" T8 ON T6.""OSvcCode"" = T8.""AbsEntry"" 
-AND T7.""County"" = T8.""County"" 
-LEFT JOIN ""INV3"" T9 ON T0.""DocEntry"" = T9.""DocEntry"" 
-AND T0.""LineNum"" = T9.""LineNum"" 
-LEFT JOIN ""INV5"" T10 ON T8.""AbsEntry"" = T10.""AbsEntry"" 
-AND T0.""LineNum"" = T10.""LineNum"" 
-LEFT JOIN ""OCNT"" T11 ON CAST(T2.""County"" AS VARCHAR) = CAST(T11.""AbsId"" AS VARCHAR)
-WHERE T0.""DocEntry"" = {docentry}";
+            //            string result = $@"SELECT T0.""ItemCode"",
+            //	 T0.""LineNum"",
+            //	 T0.""LineTotal"",
+            //	 T0.""U_TAX4_CodServ"",
+            //	 T0.""DocEntry"",
+            //	 T5.""BPLId"",
+            //	 REPLACE(T6.""OSvcCode"",'-1',NULL) AS OSvcCode,
+            //	 T6.""U_TAX4_CodAti"",
+            //	 T8.""ServiceCD"",
+            //	 COALESCE(T0.""U_TAX4_IBPT"",0) as U_TAX4_IBPT,
+            //	 T6.""U_TAX4_LisSer"",
+            //	 T0.""Quantity"",
+            //	 T0.""Price"",
+            //	 T6.""ItemName"",
+            //	 T6.""U_TAX4_CodCNAE"",
+            //	 T6.""U_TAX4_TrMun"",
+            //	 T11.""IbgeCode"",
+            //	 T0.""DiscPrcnt"",
+            //	 T10.""WTTypeId"",
+            //	 COALESCE(T9.""LineTotal"",
+            //	 0) AS LineTotalDespAd,
+            //	 COALESCE(T0.""Rate"",
+            //	 0) AS RATE,
+            //	 COALESCE(T10.""WTAmnt"",
+            //	 0) AS WTAmnt,
+            //	 COALESCE(T0.""CSTfPIS"",
+            //	 0) AS CSTFPIS,
+            //	 COALESCE(T0.""CSTfCOFINS"",
+            //	 0) AS CSTFCOFINS,
+            //	 COALESCE(T3.""TaxSum"",
+            //	 0) AS TAXSUM,
+            //	 T3.""staType"",
+            //	 COALESCE(T3.""TaxRate"",
+            //	 0) AS TAXRATE,
+            //    T0.""WtLiable""
+            //FROM ""INV1"" T0 
+            //INNER JOIN ""INV12"" T2 ON T0.""DocEntry"" = T2.""DocEntry"" 
+            //INNER JOIN ""INV4"" T3 ON T0.""DocEntry"" = T3.""DocEntry"" 
+            //AND T0.""LineNum"" = T3.""LineNum"" 
+            //LEFT JOIN ""INV13"" T4 ON T0.""DocEntry"" = T4.""DocEntry"" 
+            //AND T0.""LineNum"" = T4.""LineNum"" 
+            //INNER JOIN ""OINV"" T5 ON T0.""DocEntry"" = T5.""DocEntry"" 
+            //INNER JOIN ""OITM"" T6 ON T0.""ItemCode"" = T6.""ItemCode"" 
+            //INNER JOIN ""OBPL"" T7 ON T5.""BPLId"" = T7.""BPLId"" 
+            //LEFT JOIN ""OSCD"" T8 ON T6.""OSvcCode"" = T8.""AbsEntry"" 
+            //AND T7.""County"" = T8.""County"" 
+            //LEFT JOIN ""INV3"" T9 ON T0.""DocEntry"" = T9.""DocEntry"" 
+            //AND T0.""LineNum"" = T9.""LineNum"" 
+            //LEFT JOIN ""INV5"" T10 ON T8.""AbsEntry"" = T10.""AbsEntry"" 
+            //AND T0.""LineNum"" = T10.""LineNum"" 
+            //LEFT JOIN ""OCNT"" T11 ON CAST(T2.""County"" AS VARCHAR) = CAST(T11.""AbsId"" AS VARCHAR)
+            //WHERE T0.""DocEntry"" = {docentry}";
 
+
+            string result = $@"SELECT T0.""ItemCode"",
+	                         T0.""LineNum"",
+	                         T0.""LineTotal"",
+	                         T0.""U_TAX4_CodServ"",
+	                         T0.""DocEntry"",
+	                         T5.""BPLId"",
+	                         REPLACE(T6.""OSvcCode"",'-1',NULL) AS OSvcCode,
+	                         T6.""U_TAX4_CodAti"",
+	                         T8.""ServiceCD"",
+	                         COALESCE(T0.""U_TAX4_IBPT"",0) as U_TAX4_IBPT,
+	                         T6.""U_TAX4_LisSer"",
+	                         T0.""Quantity"",
+	                         T0.""Price"",
+                             T0.""PriceBefDi"",
+	                         T6.""ItemName"",
+	                         T6.""U_TAX4_CodCNAE"",
+	                         T6.""U_TAX4_TrMun"",
+	                         T11.""IbgeCode"",
+	                         COALESCE(T0.""DiscPrcnt"",0) as DiscPrcnt,
+	                         T0.""WtLiable""
+                             FROM ""INV1"" T0 
+                             INNER JOIN ""INV12"" T2 ON T0.""DocEntry"" = T2.""DocEntry"" 
+                             INNER JOIN ""OINV"" T5 ON T0.""DocEntry"" = T5.""DocEntry"" 
+                             INNER JOIN ""OITM"" T6 ON T0.""ItemCode"" = T6.""ItemCode"" 
+                             INNER JOIN ""OBPL"" T7 ON T5.""BPLId"" = T7.""BPLId"" 
+                             LEFT JOIN ""OSCD"" T8 ON T6.""OSvcCode"" = T8.""AbsEntry"" AND T7.""County"" = T8.""County"" 
+                             LEFT JOIN ""OCNT"" T11 ON CAST(T2.""County"" AS VARCHAR) = CAST(T11.""AbsId"" AS VARCHAR)
+                             WHERE T0.""DocEntry"" = {docentry}";
             return result;
         }
 

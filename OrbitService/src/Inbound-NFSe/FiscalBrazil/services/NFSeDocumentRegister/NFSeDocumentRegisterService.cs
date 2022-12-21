@@ -4,7 +4,7 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
 {
     public class NFSeDocumentRegisterService : BaseService<NFSeDocumentRegisterOutput, NFSeDocumentRegisterError>
     {
-        public const string ENDPOINT = "/taxdocumentservice/api/Nfse";
+        public const string ENDPOINT = "/taxdocumentservice/api/dfe";
 
         public NFSeDocumentRegisterService(ServiceConfiguration sConfig, CommunicationProvider communicationClient) : base(sConfig, communicationClient)
         {
@@ -19,7 +19,7 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
                         .CredentialsProvider(sConfig.CredentialsProvider)
                         .AddHeader("target", "taxdocumentservice")
                         .Body(input)
-                        .Serializer(new JsonRequestBodySerializer()),
+                        .Serializer(new JsonRequestBodySerializer(removeNullFields: true)),
                     new JsonResponseBodyDeserializer());
         }
     }

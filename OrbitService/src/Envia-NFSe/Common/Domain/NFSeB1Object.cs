@@ -245,6 +245,8 @@ namespace _4TAX_Service.Common.Domain
         public string ListaServico { get; set; }
         [JsonProperty("Name")]
         public string NomePais { get; set; }
+        [JsonProperty("EnviaEmail")]
+        public string EnviaEmail { get; set; }
 
         //TODO: Esconder e criar metodo para inserir e remover linhas
         [JsonProperty("Linhas")]
@@ -262,6 +264,8 @@ namespace _4TAX_Service.Common.Domain
     }
     public class Linha
     {
+        [JsonProperty("PriceBefDi")]
+        public double PriceBefDi { get; set; }
         [JsonProperty("ItemCode")]
         public string ItemCode { get; set; }
 
@@ -368,6 +372,7 @@ namespace _4TAX_Service.Common.Domain
 
     public class LineTaxWithholding
     {
+        public string Doc1LineNo { get; set; }
         [JsonProperty("RATE")]
         public double RATE { get; set; }
 
@@ -381,6 +386,8 @@ namespace _4TAX_Service.Common.Domain
 
     public class LineTax
     {
+        [JsonProperty("TaxInPrice")]
+        public string TaxInPrice { get; set; }
         [JsonProperty("TaxRate")]
         public double TaxRate { get; set; }
 
@@ -393,5 +400,8 @@ namespace _4TAX_Service.Common.Domain
         public string CSTfPIS { get; set; }
         [JsonProperty("CSTfCOFINS")]
         public string CSTfCOFINS { get; set; }
+
+        [JsonProperty("LineNum")]
+        public string LineNum { get; set; }
     }
 }

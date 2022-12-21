@@ -10,6 +10,7 @@ namespace B1Library.Documents
         List<Invoice> GetInboundCTe();
         List<Invoice> GetInboundNFe();
         List<Invoice> GetInboundNFSe();
+        List<Invoice> GetInboundCce();
         List<Invoice> GetOutboundNFe();
         List<Invoice> GetOutboundNFSe();
         List<Invoice> GetCancelOutboundNFe();

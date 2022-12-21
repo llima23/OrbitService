@@ -17,7 +17,8 @@ namespace B1Library.usecase
         InutilOutboundNFe = 8,
         InutilOutboundNFSe = 9,
         ConsultaNFe = 10,
-        ConsultaNFSe = 11
+        ConsultaNFSe = 11,
+        InboundCce = 12
     }
 
     public class UseCasesB1Library
@@ -28,6 +29,10 @@ namespace B1Library.usecase
         {
             EnumUseCase = enumUseCase;
         }
+        public const string commandCce = @"WHERE ""U_TAX4_CodInt"" = '0' 
+													and T0.""SeqCode"" < 0 
+													and T0.""U_TAX4_CARGAFISCAL"" = 'N'
+													and OM.""NfmCode"" IN ('6','28','29')";
 
         public const string commandOtherDocuments = @"WHERE ""U_TAX4_CodInt"" = '0' 
 													and T0.""SeqCode"" < 0 
@@ -42,6 +47,11 @@ namespace B1Library.usecase
         public const string commandInboundNFSe = @"WHERE ""U_TAX4_CodInt"" = '0' 
 													and T0.""SeqCode"" < 0 
 													and T0.""U_TAX4_CARGAFISCAL"" = 'N'
+													and OM.""NfmCode"" IN ('NFS-e')
+                                                    OR
+                                                    ""U_TAX4_CodInt"" = '0' 
+													and T0.""SeqCode"" > 0 
+													and T0.""U_TAX4_CARGAFISCAL"" = 'S'
 													and OM.""NfmCode"" IN ('NFS-e')";
 
         public const string commandInboundCTe = @"WHERE ""U_TAX4_CodInt"" = '0' 
@@ -94,6 +104,7 @@ namespace B1Library.usecase
                 UseCase.InutilOutboundNFSe => commandInutilOutboundNFSe,
                 UseCase.ConsultaNFe => commandConsultaNFe,
                 UseCase.ConsultaNFSe => commandConsultaNFSe,
+                UseCase.InboundCce => commandCce,
                 _ => "",
             };
         }

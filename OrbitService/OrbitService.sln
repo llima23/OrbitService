@@ -93,19 +93,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4TAX_Service_Atualiza", "sr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cancel-NFe", "Cancel-NFe", "{6677A63C-93A1-4F80-88B1-375D61B3CC6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitService", "src\Cancel-NFe\OrbitService\OrbitService.csproj", "{083408E1-B2C3-42C4-8A50-AAC50AFE385B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService", "src\Cancel-NFe\OrbitService\OrbitService.csproj", "{083408E1-B2C3-42C4-8A50-AAC50AFE385B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cancel-NFe-Test", "Cancel-NFe-Test", "{B90041A1-ACF4-42AA-8700-1481DD382496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitService_Tst", "OrbitService_Tst\OrbitService_Tst.csproj", "{D97792AE-DC54-45C9-A40B-D4B83C9D5F7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService_Tst", "OrbitService_Tst\OrbitService_Tst.csproj", "{D97792AE-DC54-45C9-A40B-D4B83C9D5F7B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inutil-NFe", "Inutil-NFe", "{DB0335AB-B98E-4EA3-BD73-6F11961D3AAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitService", "src\Inutil-NFe\OrbitService\OrbitService.csproj", "{48D17CB4-893C-4C5E-9534-22A0DD6AF37B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService", "src\Inutil-NFe\OrbitService\OrbitService.csproj", "{48D17CB4-893C-4C5E-9534-22A0DD6AF37B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inutil-NFe-Test", "Inutil-NFe-Test", "{70FF5C1B-7EFF-4F11-9DCE-2DB028948BCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitService_Test", "OrbitService_Test\OrbitService_Test.csproj", "{CF3E1B72-9881-49DD-852C-4A87B767D33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrbitService_Test", "OrbitService_Test\OrbitService_Test.csproj", "{CF3E1B72-9881-49DD-852C-4A87B767D33C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inbound-Cce", "Inbound-Cce", "{2367DF79-F68D-43CB-8FF4-A0165A48E72B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitService", "src\Inbound-Cce\OrbitService\OrbitService.csproj", "{39E3FA3B-E029-47B9-9AD7-5898BA71AD14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,6 +213,10 @@ Global
 		{CF3E1B72-9881-49DD-852C-4A87B767D33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF3E1B72-9881-49DD-852C-4A87B767D33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF3E1B72-9881-49DD-852C-4A87B767D33C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E3FA3B-E029-47B9-9AD7-5898BA71AD14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E3FA3B-E029-47B9-9AD7-5898BA71AD14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E3FA3B-E029-47B9-9AD7-5898BA71AD14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E3FA3B-E029-47B9-9AD7-5898BA71AD14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -262,6 +270,8 @@ Global
 		{48D17CB4-893C-4C5E-9534-22A0DD6AF37B} = {DB0335AB-B98E-4EA3-BD73-6F11961D3AAF}
 		{70FF5C1B-7EFF-4F11-9DCE-2DB028948BCA} = {F701513E-CCE6-4C60-B621-130E7982762E}
 		{CF3E1B72-9881-49DD-852C-4A87B767D33C} = {70FF5C1B-7EFF-4F11-9DCE-2DB028948BCA}
+		{2367DF79-F68D-43CB-8FF4-A0165A48E72B} = {007A70D0-774E-4635-9955-F0C2CDCC62EE}
+		{39E3FA3B-E029-47B9-9AD7-5898BA71AD14} = {2367DF79-F68D-43CB-8FF4-A0165A48E72B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40EC3E27-C0F5-43B7-A752-D518DDCC0193}

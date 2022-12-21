@@ -54,6 +54,13 @@ namespace B1Library.Implementations.Repositories
             tableName.Type = Type.Entrada;
             tableName.TableChild = tableName.TableHeader.Remove(0, 1);
             tables.Add(tableName);
+
+            tableName = new TableName();
+            tableName.TableHeader = "OINV";
+            tableName.ObjB1Type = 13;
+            tableName.TableChild = tableName.TableHeader.Remove(0, 1);
+            tableName.Type = Type.Saida;
+            tables.Add(tableName);
             return tables;
         }
 

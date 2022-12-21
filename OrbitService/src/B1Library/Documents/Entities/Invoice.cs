@@ -17,9 +17,11 @@ namespace B1Library.Documents
             Duplicata = new List<Duplicata>();
             DocRef = new List<DocRef>();
             Emails = new List<Emails>();
+            Transportadora = new Transportadora();
         }
         public int DocEntry { get; set; }
         public string CodInt { get; set; }
+        public string BranchId { get; set; }
         public string ModeloDocumento { get; set; }
         public int CargaFiscal { get; set; }
         public int ObjetoB1 { get; set; }
@@ -30,6 +32,7 @@ namespace B1Library.Documents
         public string ChaveDeAcessoNFe { get; set; }
         public string ProtocoloNFe { get; set; }
         public int BaseEntry { get; set; }
+        public string Justificativa { get; set; }
         public string IdRetornoOrbit { get; set; }
 
         public List<Emails> Emails { get; set; }
@@ -39,6 +42,7 @@ namespace B1Library.Documents
         public Parceiro Parceiro { get; set; }
         public Filial Filial { get; set; }
         public Identificacao Identificacao { get; set; }
+        public Transportadora Transportadora { get; set; }
 
         public void AddItemLine(CabecalhoLinha itemLine)
         {
@@ -60,6 +64,21 @@ namespace B1Library.Documents
 
     }
 
+    public class Transportadora
+    {
+        public string Bairro { get; set; }
+        public string CEP { get; set; }
+        public string CNPJ { get; set; }
+        public string CPF { get; set; }
+        public string CardName { get; set; }
+        public string Complemento { get; set; }
+        public string InscEstadual { get; set; }
+        public string Logradouro { get; set; }
+        public string Numero { get; set; }
+        public string TipoLogradouro { get; set; }
+        public string NomeMunicipio { get; set; }
+        public string UF { get; set; }
+    }
     public class Emails
     {
         public string email { get; set; }
@@ -84,6 +103,8 @@ namespace B1Library.Documents
             DespesaAdicional = new List<DespesaAdicional>();
             DadosDI = new List<DadosDI>();
         }
+        public string CodigoAtividade { get; set; }
+        public string CodigoServicoEntrada { get; set; }
         public int DocEntry { get; set; }
         public string NumeroItemPedido { get; set; }
         public string NumeroPedido { get; set; }
@@ -211,6 +232,20 @@ namespace B1Library.Documents
 
     public class Identificacao
     {
+        public double DescontoTotal { get; set; }
+        public string Carrier { get; set; }
+        public string PlacaVeiculo { get; set; }
+        public string EstadoVeiculo { get; set; }
+        public string EnviaEmail { get; set; }
+        public string MarcaVolume { get; set; }
+        public string DescricaoVolume { get; set; }
+        public double QuantidadeVolume { get; set; }
+        public double NumeroVolume { get; set; }
+        public double PesoBruto { get; set; }
+        public double PesoLiquido { get; set; }
+        public string DescricaoFormaDePagamento { get; set; }
+        public string ObsFiscoCampo { get; set; }
+        public string ObsFiscoTexto { get; set; }
         public string ObsAbertura { get; set; }
         public string JustContigencia { get; set; }
         public string LocalDeExportacao { get; set; }
@@ -275,5 +310,6 @@ namespace B1Library.Documents
         public double PorcentagemImpostoRetido { get; set; }
         public string TipoImpostoOrbit { get; set; }
         public double ValorImpostoRetido { get; set; }
+        public double TaxbleAmnt { get; set;}
     }
 }

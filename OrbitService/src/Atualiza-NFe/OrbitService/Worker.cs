@@ -2,9 +2,11 @@ using B1Library.Implementations.Repositories;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OrbitLibrary.Utils;
+using OrbitService.Applications;
 using OrbitService.OutboundNFe.usecases;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ namespace OrbitService
 {
     public class Worker : BackgroundService
     {
+        protected static string CaminhoLOGTXT = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.ToString()) + "\\LOG.txt";
         private readonly ILogger<Worker> _logger;
 
         public Worker(ILogger<Worker> logger)
@@ -41,14 +44,14 @@ namespace OrbitService
                             }
                             catch (Exception ex)
                             {
-                                throw new Exception(ex.Message);
+                                Logs.InsertLog($"Erro Execução serviço Envia NF-e: {ex}");
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                  
+                    Logs.InsertLog($"Erro Execução serviço Envia NF-e: {ex}");
                 }
 
             }

@@ -101,23 +101,44 @@ namespace OrbitService.OutboundDFe.mappers
             input.det = ReturnListDetInboundNFe(invoice);
             #endregion DET
             #region EMAIL
-            List<string> lstEmail = new List<string>();
-            lstEmail.Add(invoice.Parceiro.EmailParceiro);
-            foreach (var item in invoice.Emails)
+            if (invoice.Identificacao.EnviaEmail == "S")
             {
-                lstEmail.Add(item.email);
+                List<string> lstEmail = new List<string>();
+                lstEmail.Add(invoice.Parceiro.EmailParceiro);
+                foreach (var item in invoice.Emails)
+                {
+                    lstEmail.Add(item.email);
+                }
+                input.Emails = lstEmail;
             }
-            input.Emails = lstEmail;
             #endregion EMAIL
             #region TRANSP
             input.transp.ModFrete = invoice.Parceiro.ModalidadeFrete;
+            if (!String.IsNullOrEmpty(invoice.Identificacao.Carrier))
+            {
+                Transporta transporta = new Transporta();
+                transporta.Cnpj = !String.IsNullOrEmpty(invoice.Transportadora.CNPJ) ? Regex.Replace(invoice.Transportadora.CNPJ, @"\.|\/|-", "") : null;
+                transporta.Cpf = !String.IsNullOrEmpty(invoice.Transportadora.CPF) ? Regex.Replace(invoice.Transportadora.CPF, @"\.|\/|-", "") : null;
+                transporta.InscricaoEstadual = !String.IsNullOrEmpty(invoice.Transportadora.InscEstadual) ? Regex.Replace(invoice.Transportadora.InscEstadual, @"\.|\/|-", "") : null;
+                transporta.EnderecoCompleto = ReturnEnderecoCompletoTransp(invoice.Transportadora);
+                transporta.NomeMunicipio = !String.IsNullOrEmpty(invoice.Transportadora.NomeMunicipio) ? invoice.Transportadora.NomeMunicipio : null;
+                transporta.Uf = !String.IsNullOrEmpty(invoice.Transportadora.UF) ? invoice.Transportadora.UF : null;
+                input.transp.Transporta = transporta;
+            }
+            if(!String.IsNullOrEmpty(invoice.Identificacao.PlacaVeiculo) && !String.IsNullOrEmpty(invoice.Identificacao.EstadoVeiculo))
+            {
+                VeicTransp veic = new VeicTransp();
+                veic.Placa = invoice.Identificacao.PlacaVeiculo;
+                veic.Uf = invoice.Identificacao.EstadoVeiculo;
+                input.transp.VeicTransp = veic;
+            }
             #endregion TRANSP
             #region COBR
             #region FATURA
             input.cobr.Fatura.Numero = invoice.Identificacao.NumeroDocumento;
             input.cobr.Fatura.ValorOriginal = util.ToOrbitString(invoice.Identificacao.ValorTotalNF);
-            input.cobr.Fatura.ValorDesconto = "0.00";
-            input.cobr.Fatura.ValorLiquido = util.ToOrbitString(invoice.Identificacao.ValorTotalNF);
+            input.cobr.Fatura.ValorDesconto = util.ToOrbitString(invoice.Identificacao.DescontoTotal);
+            input.cobr.Fatura.ValorLiquido = util.ToOrbitString(invoice.Identificacao.ValorTotalNF - invoice.Identificacao.DescontoTotal);
             #endregion FATURA
             #region DUPLICATA
             List <Duplicatum> lstDuplicata = new List<Duplicatum>();
@@ -140,7 +161,8 @@ namespace OrbitService.OutboundDFe.mappers
             DetPag detPag = new DetPag();
             detPag.IndPag = !string.IsNullOrEmpty(invoice.Identificacao.CondicaoDePagamentoDocumento) ? invoice.Identificacao.CondicaoDePagamentoDocumento : null;
             detPag.TPag = invoice.Identificacao.FormaDePagamentoDocumento;
-            detPag.VPag = invoice.Identificacao.FormaDePagamentoDocumento != "90" ? util.ToOrbitString(invoice.Identificacao.ValorTotalNF) : "0.00";
+            detPag.VPag = invoice.Identificacao.FormaDePagamentoDocumento != "90" ? util.ToOrbitString(invoice.Identificacao.ValorTotalNF - invoice.Identificacao.DescontoTotal) : "0.00";
+            detPag.XPag = invoice.Identificacao.FormaDePagamentoDocumento == "99" ? invoice.Identificacao.DescricaoFormaDePagamento : null;
             lstDetPag.Add(detPag);
             input.pag.DetPag = lstDetPag;
             #endregion PAG           
@@ -192,6 +214,35 @@ namespace OrbitService.OutboundDFe.mappers
             input.exporta.XLocExporta = !String.IsNullOrEmpty(invoice.Identificacao.LocalDeExportacao) ? invoice.Identificacao.UFDeExportacao : null;
             input.infAdic.InfAdFisco = !String.IsNullOrEmpty(invoice.Identificacao.InfAdFisco) ? invoice.Identificacao.InfAdFisco : null;
             input.infAdic.InfCpl = !String.IsNullOrEmpty(invoice.Identificacao.ObsAbertura) ? invoice.Identificacao.ObsAbertura : null;
+
+            if (!String.IsNullOrEmpty(invoice.Identificacao.ObsFiscoTexto))
+            {
+                string[] subs = invoice.Identificacao.ObsFiscoTexto.Split(',');
+                foreach (var item in subs)
+                {
+                    ObsFisco obsFisco = new ObsFisco
+                    {
+                        XCampo = !String.IsNullOrEmpty(invoice.Identificacao.ObsFiscoCampo) ? invoice.Identificacao.ObsFiscoCampo : null,
+                        XTexto = item.Trim()
+                    };
+                    input.infAdic.ObsFisco.Add(obsFisco);
+                }
+            }
+
+            
+            if (invoice.Identificacao.PesoLiquido > 0 && invoice.Identificacao.PesoBruto > 0)
+            {
+                List<Vol> listVol = new List<Vol>();
+                Vol vol = new Vol();
+                vol.PesoLiquido = util.ToOrbitStringVolume(invoice.Identificacao.PesoLiquido);
+                vol.PesoBruto = util.ToOrbitStringVolume(invoice.Identificacao.PesoBruto);
+                vol.Marca = !String.IsNullOrEmpty(invoice.Identificacao.MarcaVolume) ? invoice.Identificacao.MarcaVolume : null;
+                vol.Numeracao = invoice.Identificacao.NumeroVolume > 0 ? Convert.ToString(invoice.Identificacao.NumeroVolume) : null;
+                vol.Quantidade = invoice.Identificacao.QuantidadeVolume > 0 ? Convert.ToString(invoice.Identificacao.QuantidadeVolume) : null;
+                vol.Especie = !String.IsNullOrEmpty(invoice.Identificacao.DescricaoVolume) ? invoice.Identificacao.DescricaoVolume : null;
+                listVol.Add(vol);
+                input.transp.Vol = listVol;
+            }
             input.identificacao.IdLocalDestino = invoice.CabecalhoLinha[0].IdLocalDestino;
             input.Emitente.InscricaoEstadual = !String.IsNullOrEmpty(invoice.Filial.InscIeFilial) ? Regex.Replace(invoice.Filial.InscIeFilial, @"(\.)|-", "") : null;
 
@@ -416,6 +467,17 @@ namespace OrbitService.OutboundDFe.mappers
             }
 
             return valorUnitarioDespesa > 0 ? util.ToOrbitString(valorUnitarioDespesa) : null;
+        }
+
+        public string ReturnEnderecoCompletoTransp(Transportadora transp)
+        {
+            string retorno = (!String.IsNullOrEmpty(transp.TipoLogradouro) ? transp.TipoLogradouro + " " : null) + 
+            (!String.IsNullOrEmpty(transp.Logradouro) ? transp.Logradouro + " " : null) + 
+            (!String.IsNullOrEmpty(transp.Numero) ? transp.Numero + " " : null) + 
+            (!String.IsNullOrEmpty(transp.Complemento) ? transp.Complemento + " " : null) +
+            (!String.IsNullOrEmpty(transp.Bairro) ? transp.Bairro + " " : null) + 
+            (!String.IsNullOrEmpty(transp.CEP) ? transp.CEP + " " : null);
+            return retorno;
         }
     }
 }

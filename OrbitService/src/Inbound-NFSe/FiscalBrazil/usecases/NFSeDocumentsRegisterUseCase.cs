@@ -1,4 +1,5 @@
-﻿using B1Library.Documents;
+﻿using B1Library.Applications;
+using B1Library.Documents;
 using OrbitLibrary.Common;
 using OrbitService.FiscalBrazil.mappers;
 using OrbitService.FiscalBrazil.services.NFSeDocumentRegister;
@@ -28,6 +29,7 @@ namespace OrbitService.FiscalBrazil.usecases
             {
                 NFSeDocumentRegisterInput input = mapper.ToNFSeDocumentRegisterInput(invoice);
                 OperationResponse<NFSeDocumentRegisterOutput, NFSeDocumentRegisterError> response = NFSeDocumentRegister.Execute(input);
+                Logs.InsertLog($"{response.Content}");
 
                 if (response.isSuccessful)
                 {

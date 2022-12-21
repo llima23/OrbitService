@@ -25,7 +25,7 @@ namespace _4TAX_Service.Services.Document.Properties
         {
             public double aliquota { get; set; } = 0.00;
             public double valor { get; set; } = 0.00;
-            public double baseCalculo { get; set; } = 0.00;
+            public string baseCalculo { get; set; } = "0.00";
             public string cst { get; set; }
             public string percentual { get; set; }
         }
@@ -263,7 +263,7 @@ namespace _4TAX_Service.Services.Document.Properties
         {
             public double aliquota { get; set; } = 0.00;
             public double valor { get; set; } = 0.00;
-            public double baseCalculo { get; set; } = 0.00;
+            public string baseCalculo { get; set; } = "0.00";
             public string cst { get; set; }
             public double percentual { get; set; } = 0.00;
         }

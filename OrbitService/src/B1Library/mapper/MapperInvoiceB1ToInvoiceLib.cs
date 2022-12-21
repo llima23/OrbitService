@@ -56,6 +56,13 @@ namespace B1Library.mapper
 
                 Logs.InsertLog($"Preencheu o objeto FILIAL");
                 #endregion FILIAL
+
+                #region TRANSPORTADORA
+                queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnCommandTransportadora(invoice));
+                jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0]))).Replace("[", "").Replace("]", "");
+                invoice.Transportadora = JsonConvert.DeserializeObject<Transportadora>(jsonConvert);
+                #endregion
+
                 #region HEADER LINHA
                 queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnCommandHeaderLinha(invoice));
                 jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0])));
@@ -108,12 +115,13 @@ namespace B1Library.mapper
                 jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0])));
                 invoice.DocRef = JsonConvert.DeserializeObject<List<DocRef>>(jsonConvert);
 
-                Logs.InsertLog($"Preencheu o objeto  DOCREF");
+                Logs.InsertLog($"Preencheu o objeto  DOCREF123");
                 #endregion DOCREF 
                 #region LISTEMAILS
                 queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnCommandListEmails(invoice));
                 jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0])));
                 invoice.Emails = JsonConvert.DeserializeObject<List<Emails>>(jsonConvert);
+                Logs.InsertLog($"Preencheu o objeto  EMAILS");
                 #endregion LISTEMAILS
                 listInvoice.Add(invoice);
             }
@@ -127,9 +135,6 @@ namespace B1Library.mapper
             {
                 Invoice invoice = new Invoice();
                 invoice = JsonConvert.DeserializeObject<Invoice>(JsonConvert.SerializeObject(header));
-                queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnCommandIdentificacao(invoice));
-                jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0]))).Replace("[", "").Replace("]", "");
-                invoice.Identificacao = JsonConvert.DeserializeObject<Identificacao>(jsonConvert);
                 listInvoice.Add(invoice);
             }
             return listInvoice;

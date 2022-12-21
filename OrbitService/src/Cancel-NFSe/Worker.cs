@@ -55,7 +55,7 @@ namespace OrbitService_Cancel_NFSe
                 }
                 catch (Exception ex)
                 {
-
+                    Logs.InsertLog($"{ex.Message}");
                 }
 
             }

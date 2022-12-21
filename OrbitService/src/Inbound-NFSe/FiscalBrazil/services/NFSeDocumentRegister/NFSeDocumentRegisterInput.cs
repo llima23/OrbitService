@@ -126,6 +126,11 @@ namespace OrbitService.FiscalBrazil.services.NFSeDocumentRegister
         [JsonProperty("endereco")]
         public enderecoPrestador Endereco { get; set; }
 
+        public bool ShouldSerializeEndereco()
+        {
+            return (!string.IsNullOrEmpty(Endereco.logradouro));
+        }
+
 
     }
     public class enderecoPrestador

@@ -1,5 +1,6 @@
 ﻿using B1Library.Documents;
 using B1Library.Utilities;
+using OrbitService.Applications;
 using OrbitService.FiscalBrazil.services.NFSeDocumentRegister;
 using OrbitService.FiscalBrazil.util;
 using System;
@@ -99,7 +100,7 @@ namespace OrbitService.FiscalBrazil.mappers
                 #region SERVIÇO
                 foreach (var Linhas in invoice.CabecalhoLinha)
                 {
-                    input.NFServico.Rps.Servico.CodigoServico = Linhas.CodigoTributacaoMuncipio;
+                    input.NFServico.Rps.Servico.CodigoServico = !String.IsNullOrEmpty(Linhas.CodigoTributacaoMuncipio) ? Linhas.CodigoTributacaoMuncipio : Linhas.CodigoServicoEntrada;
                     input.NFServico.Rps.Servico.Quantidade = Convert.ToInt32(Linhas.QuantidadeLinha);
                     input.NFServico.Rps.Servico.ValorUnitario = Linhas.ValorUnitarioLinha;
 
@@ -127,6 +128,7 @@ namespace OrbitService.FiscalBrazil.mappers
                     input.NFServico.Rps.Servico.ItemListaServico = Linhas.ItemListaServico;
                     input.NFServico.Rps.Servico.CodigoTributacaoMunicipio = Linhas.CodigoTributacaoMuncipio;
                     input.NFServico.Rps.Servico.CodigoMunicipioIncidencia = invoice.Parceiro.CodigoIBGEMunicipioParceiro;
+                    input.NFServico.Rps.Servico.CodigoAtividade = Linhas.CodigoAtividade;
 
                     #region SERVIÇO - VALORES
                     input.NFServico.Rps.Servico.Valores.TotalServicos = invoice.Identificacao.ValorTotalNF;
@@ -145,31 +147,31 @@ namespace OrbitService.FiscalBrazil.mappers
                                 case "1":
                                     input.NFServico.Rps.Servico.Valores.Pis.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Pis.Valor += LineTaxWithholding.ValorImpostoRetido;
-                                    input.NFServico.Rps.Servico.Valores.Pis.baseCalculo = util.ToOrbitString(Linhas.ValorTotalLinnha);
+                                    input.NFServico.Rps.Servico.Valores.Pis.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
                                     break;
                                 case "2":
                                     input.NFServico.Rps.Servico.Valores.Cofins.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Cofins.Valor += LineTaxWithholding.ValorImpostoRetido;
-                                    input.NFServico.Rps.Servico.Valores.Cofins.baseCalculo = util.ToOrbitString(Linhas.ValorTotalLinnha);
+                                    input.NFServico.Rps.Servico.Valores.Cofins.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
                                     break;
                                 case "3":
                                     input.NFServico.Rps.Servico.Valores.Ir.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Ir.Valor = LineTaxWithholding.ValorImpostoRetido;
-                                    input.NFServico.Rps.Servico.Valores.Ir.baseCalculo = util.ToOrbitString(Linhas.ValorTotalLinnha);
+                                    input.NFServico.Rps.Servico.Valores.Ir.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
                                     break;
                                 case "4":
                                     input.NFServico.Rps.Servico.Valores.Csll.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Csll.Valor = LineTaxWithholding.ValorImpostoRetido;
-                                    input.NFServico.Rps.Servico.Valores.Csll.baseCalculo = util.ToOrbitString(Linhas.ValorTotalLinnha);
+                                    input.NFServico.Rps.Servico.Valores.Csll.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
                                     break;
                                 case "5":
                                     input.NFServico.Rps.Servico.Valores.Inss.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Inss.Valor = LineTaxWithholding.ValorImpostoRetido;
-                                    input.NFServico.Rps.Servico.Valores.Inss.baseCalculo = util.ToOrbitString(Linhas.ValorTotalLinnha);
+                                    input.NFServico.Rps.Servico.Valores.Inss.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
                                     break;
                                 case "6":
                                     input.NFServico.Rps.Servico.Valores.Iss.ExigibilidadeIss = "2";
-                                    input.NFServico.Rps.Servico.Valores.Iss.BaseCalculo = Linhas.ValorTotalLinnha;
+                                    input.NFServico.Rps.Servico.Valores.Iss.BaseCalculo = LineTaxWithholding.TaxbleAmnt;
                                     input.NFServico.Rps.Servico.Valores.Iss.Retido = true;
                                     input.NFServico.Rps.Servico.Valores.Iss.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Iss.ValorRetido += LineTaxWithholding.ValorImpostoRetido;
@@ -191,7 +193,7 @@ namespace OrbitService.FiscalBrazil.mappers
                                     input.NFServico.Rps.Servico.Valores.Cofins.Aliquota = LineTax.PorcentagemImposto;
                                     input.NFServico.Rps.Servico.Valores.Cofins.Valor += LineTax.ValorImposto;
                                     input.NFServico.Rps.Servico.Valores.Cofins.baseCalculo = util.ToOrbitString(Linhas.ValorTotalLinnha);
-                                    input.NFServico.Rps.Servico.Valores.Cofins.Cst = Linhas.CSTCofinsLinha;
+                                    
                                     break;
                                 case "-7":
                                     input.NFServico.Rps.Servico.Valores.Iss.Retido = false;
@@ -205,12 +207,15 @@ namespace OrbitService.FiscalBrazil.mappers
                                     input.NFServico.Rps.Servico.Valores.Pis.Aliquota = LineTax.PorcentagemImposto;
                                     input.NFServico.Rps.Servico.Valores.Pis.Valor += LineTax.ValorImposto;
                                     input.NFServico.Rps.Servico.Valores.Pis.baseCalculo = util.ToOrbitString(Linhas.ValorTotalLinnha);
-                                    input.NFServico.Rps.Servico.Valores.Pis.Cst = Linhas.CSTPisLinha;
+                                    
                                     break;
                             }
                         }
                     }
                     #endregion SERVIÇO - VALORES - IMPOSTO NÃO RETIDO
+
+                    input.NFServico.Rps.Servico.Valores.Cofins.Cst = Linhas.CSTCofinsLinha;
+                    input.NFServico.Rps.Servico.Valores.Pis.Cst = Linhas.CSTPisLinha;
 
                     input.NFServico.Rps.Servico.Valores.Iss.ValorRetido = input.NFServico.Rps.Servico.Valores.Iss.ValorRetido;
                     input.NFServico.Rps.Servico.Valores.Iss.Valor = input.NFServico.Rps.Servico.Valores.Iss.Valor;
@@ -236,7 +241,7 @@ namespace OrbitService.FiscalBrazil.mappers
                 #region NFSE
                 input.NFServico.nfse.numero = input.NFServico.Rps.Identificacao.Numero;
                 input.NFServico.nfse.dataEmissao = input.NFServico.Rps.Identificacao.DataEmissao;
-                input.NFServico.nfse.codigoMunicipioGerador = input.NFServico.Rps.Prestador.Endereco.codigoMunicipio;
+                input.NFServico.nfse.codigoMunicipioGerador = input.NFServico.Rps.Tomador.Endereco.CodigoMunicipio;
                 #endregion NFSE
                 #region STATUS
                 input.NFServico.status.cStat = "0";
@@ -255,6 +260,7 @@ namespace OrbitService.FiscalBrazil.mappers
             }
             catch (Exception ex)
             {
+                Logs.InsertLog($"Erro Preenchimento Mapper: {ex.Message}");
                 return null;
             }
             finally
@@ -272,11 +278,7 @@ namespace OrbitService.FiscalBrazil.mappers
         public DocumentStatus ToDocumentStatusResponseSucessful(Invoice invoice, NFSeDocumentRegisterOutput output)
         {
             StatusCode status = StatusCode.CargaFiscal;
-            if (output.data.status == "Erro" || output.data.status == "Alerta")
-            {
-                status = StatusCode.Erro;
-            }
-            DocumentStatus newStatusData = new DocumentStatus(output.data._id, output.data.status, output.data.status + " - " + output.data.description, invoice.ObjetoB1, invoice.DocEntry, status);
+            DocumentStatus newStatusData = new DocumentStatus(output.data.document_id, "", "", invoice.ObjetoB1, invoice.DocEntry, status);
             return newStatusData;
         }
     }
