@@ -437,3 +437,46 @@
 21/12/2022 14:02:18 - Preencheu o objeto  DUPLICATA
 21/12/2022 14:02:18 - Preencheu o objeto  DOCREF123
 21/12/2022 14:02:19 - Preencheu o objeto  EMAILS
+30/12/2022 15:53:08 - 3
+30/12/2022 15:54:31 - Encontrou o DocEntry: 1591
+30/12/2022 15:54:32 - Preencheu o objeto IDENTIFICACAO
+30/12/2022 15:54:34 - Preencheu o objeto PARCEIRO
+30/12/2022 15:54:35 - Preencheu o objeto FILIAL
+30/12/2022 15:55:26 - 3
+30/12/2022 15:55:31 - Encontrou o DocEntry: 1591
+30/12/2022 15:55:31 - Preencheu o objeto IDENTIFICACAO
+30/12/2022 15:55:31 - Preencheu o objeto PARCEIRO
+30/12/2022 15:55:31 - Preencheu o objeto FILIAL
+30/12/2022 15:55:32 - Preencheu o objeto  IMPOSTO LINHA
+30/12/2022 15:55:32 - Preencheu o objeto  RETENCAO IMPOSTO LINHA
+30/12/2022 15:55:32 - Preencheu o objeto  DESPESA ADICIONAL
+30/12/2022 15:55:32 - Preencheu o objeto  DADOS DI
+30/12/2022 15:55:32 - Preencheu o objeto  DUPLICATA
+30/12/2022 15:55:32 - Preencheu o objeto  DOCREF123
+30/12/2022 15:55:32 - Preencheu o objeto  EMAILS
+30/12/2022 16:18:17 - 3
+30/12/2022 16:18:23 - Encontrou o DocEntry: 1591
+30/12/2022 16:18:23 - Preencheu o objeto IDENTIFICACAO
+30/12/2022 16:18:23 - Preencheu o objeto PARCEIRO
+30/12/2022 16:18:23 - Preencheu o objeto FILIAL
+30/12/2022 16:18:24 - Preencheu o objeto  IMPOSTO LINHA
+30/12/2022 16:18:24 - Preencheu o objeto  RETENCAO IMPOSTO LINHA
+30/12/2022 16:18:24 - Preencheu o objeto  DESPESA ADICIONAL
+30/12/2022 16:18:24 - Preencheu o objeto  DADOS DI
+30/12/2022 16:18:24 - Preencheu o objeto  DUPLICATA
+30/12/2022 16:18:24 - Preencheu o objeto  DOCREF123
+30/12/2022 16:18:24 - Preencheu o objeto  EMAILS
+30/12/2022 16:21:10 - 3
+30/12/2022 16:21:31 - Encontrou o DocEntry: 1591
+30/12/2022 16:21:31 - Preencheu o objeto IDENTIFICACAO
+30/12/2022 16:21:31 - Preencheu o objeto PARCEIRO
+30/12/2022 16:21:31 - Preencheu o objeto FILIAL
+30/12/2022 16:21:32 - Preencheu o objeto  IMPOSTO LINHA
+30/12/2022 16:21:32 - Preencheu o objeto  RETENCAO IMPOSTO LINHA
+30/12/2022 16:21:32 - Preencheu o objeto  DESPESA ADICIONAL
+30/12/2022 16:21:32 - Preencheu o objeto  DADOS DI
+30/12/2022 16:21:32 - Preencheu o objeto  DUPLICATA
+30/12/2022 16:21:32 - Preencheu o objeto  DOCREF123
+30/12/2022 16:21:32 - Preencheu o objeto  EMAILS
+30/12/2022 16:21:51 - Json enviado: {"key":null,"branchId":"d1540357-5a30-41dd-bb6a-be3f7a363660","versao":"4.00","created_at":null,"identificacao":{"codigoUf":"35","codigoNf":"1591","tpNf":"1","naturezaOperacao":"S-Comodato","serie":"2","numeroDocFiscal":"499","dataHoraEmissao":"2022-12-30T16:21:32-03:00","dataHoraSaidaOuEntrada":"2022-12-30T16:21:32-03:00","idLocalDestino":"1","codigoMunicipioFg":"3550308","formatoDanfe":null,"formatoNfe":"1","finalidade":"1","indFinal":"0","indPres":"9","indIntermed":0,"xJust":null,"dhCont":null,"nFref":[]},"avulsa":null,"destinatario":{"cnpj":"61585865000151","nome":"RAIA DROGASIL S/A","endereco":{"logradouro":"Avenida Corifeu de Azevedo Marques","numero":"3097","complemento":null,"bairro":"VILA BUTANTA","codigoMunicipio":"3550308","municipio":null,"uf":"SP","cep":"05339000","codigoPais":"1058","pais":null,"fone":null,"email":null,"ie":"100931575117"},"indIeDestinatario":"1","ie":"100931575117","isuf":null,"im":null,"email":null},"retirada":null,"entrega":null,"emitente":{"nome":null,"inscricaoEstadual":"129672815112","codigoRegimeTributario":null,"certificado_arquivo":null,"certificado_senha":null,"inscricaoEstadualST":null,"inscricaoMunicipal":null,"cnae":null,"nomeFantasia":null,"endereco":{"logradouro":null,"numero":null,"complemento":null,"bairro":null,"codigoMunicipio":null,"municipio":null,"uf":null,"cep":null,"codigoPais":null,"pais":null,"fone":null,"email":null,"ie":null}},"det":[{"nItem":"1","prod":{"codigo":"P13","cean":"SEM GTIN","descricao":"P13","ncm":"27112100","cest":"2805000","indEscala":null,"cnpjFab":null,"cBenef":"DF890000","codigoExtIpi":null,"codigoFiscalOperacoes":"5908","unidadeComercial":"KG","quantidadeComercial":"1.00","valorUnitarioComercializacao":"300.00","valorTotalBruto":"300.00","ceanTrib":"SEM GTIN","unidadeTributavel":"KG","quantidadeTributavel":"1.00","valorUnitarioTributacao":"300.00","valorFrete":"0.00","vOutro":null,"indTot":"1","di":[],"detExport":null,"xPed":null,"nItemPed":null,"nfci":null,"rastro":null,"comb":null,"nrecopi":null,"nve":null},"imposto":{"vTotTrib":null,"icms":{"orig":"0","cst":"41","crt":null,"csosn":null,"modBc":"3","modBcSt":null,"motDeson":"9","vBc":null,"vIcmsOp":null,"pImp":null,"pFcp":null,"pMvast":null,"pRedBcSt":null,"pCredSn":null,"pMva":null,"pImpSt":null,"pFcpSt":null,"pRedBc":null,"pDif":null,"pBcOp":null,"vImp":null,"vFcp":null,"vBcFcp":null,"vBcSt":null,"vImpSt":null,"vBcFcpSt":null,"vFcpSt":null,"vDeson":"22.58","vIcmsDif":null,"vCredIcmsSn":null,"vBcUfDest":null,"vIcmsSubstituto":null,"vBcStDest":null,"vIcmsStDest":null,"ufSt":null},"pis":{"cst":"99","qBcProd":null,"vBc":"0.00","pPis":"0.00","vPis":"0.00","vAliqProd":null},"cofins":{"cst":"99","vBc":"0.00","pImp":"0.00","vImp":"0.00","qBcProd":null,"vAliqProd":null},"ipi":{"cEnq":"999","cnpjProd":null,"cSelo":null,"qSelo":null,"cst":"99","vBc":"0.00","pImp":"0.00","vImp":"0.00","qUnid":null,"vUnid":null,"vIpiDevol":null}},"impostoDevol":{"pDevol":null,"ipi":null},"infAdProd":null}],"transp":{"modFrete":"0","transporta":null,"retTransp":null,"veicTransp":null,"reboque":null,"vagao":null,"balsa":null,"vol":null},"cobr":{"fatura":{"numero":"499","valorOriginal":"300.00","valorDesconto":"0.00","valorLiquido":"300.00"},"duplicata":[]},"pag":{"valorTroco":null,"detPag":[{"indPag":"0","tPag":"15","vPag":"300.00","xPag":null,"card":null}]},"infAdic":{"infAdFisco":null,"infCpl":null,"obsCont":null,"procRef":null},"compra":null,"cana":null,"total":{"icmsTot":{"vBc":"0.00","vIcms":"0.00","vIcmsDeson":"22.58","vFcpUfDest":"0.00","vIcmsUfDest":"0.00","vIcmsUfRemet":"0.00","vFcp":"0.00","vBcSt":"0.00","vSt":"0.00","vFcpSt":"0.00","vFcpStRet":"0.00","vProd":"300.00","vFrete":"0.00","vSeg":"0.00","vDesc":"0.00","vIi":"0.00","vIpi":"0.00","vIpiDevol":"0.00","vPis":"0.00","vCofins":"0.00","vOutro":"0.00","vNf":"300.00","vTotTrib":null},"issqnTot":null,"retTrib":null},"autXML":null,"infIntermed":null,"emails":["",""],"status":{"mStat":null,"cStat":null},"eventos":[],"dadosCobranca":"0.00","tipoOperacao":"output"}
+30/12/2022 16:21:53 - 3

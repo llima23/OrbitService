@@ -79,3 +79,4 @@ D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Cancel-NFe\OrbitServic
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Cancel-NFe\OrbitService\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Cancel-NFe\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Cancel-NFe\OrbitService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.ServiceProcess.ServiceController.dll
+D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Cancel-NFe\OrbitService\obj\Debug\netcoreapp3.1\OrbitService.csproj.AssemblyReference.cache

@@ -29,8 +29,8 @@ namespace B1Library.Utilities
             double sum = 0.00;
             foreach (CabecalhoLinha item in invoice.CabecalhoLinha)
             {
-                var taxesDeson = item.ImpostoLinha.Where(tl => tl.TipoImpostoOrbit == TipoImpostoOrbit && tl.SimOuNaoDesoneracao == "Y");
-                sum += taxesDeson.Sum(i => i.ValorImposto);
+                var taxesDeson = item.ImpostoLinha.Where(tl => tl.TipoImpostoOrbit == TipoImpostoOrbit && (tl.SimOuNaoDesoneracao == "Y" || tl.ValorIcmsDesonerado > 0));
+                sum += taxesDeson.Sum(i => i.ValorImposto) + taxesDeson.Sum(i => i.ValorIcmsDesonerado);
             }
             return sum;
         }
@@ -70,7 +70,7 @@ namespace B1Library.Utilities
             double result = 0.00;
             foreach (ImpostoLinha impostoLinha in ListimpostoLinha.Where(i => i.TipoImpostoOrbit == TipoImposto))
             {
-                result += impostoLinha.ValorImposto;
+                result += impostoLinha.ValorImposto + impostoLinha.ValorIcmsDesonerado;
             }
             return result;
 

@@ -1,4 +1,4 @@
-﻿using OrbitService.FiscalBrazil.services.NFSeDocumentRegister;
+﻿using OrbitService.InboundNFSe.services.NFSeDocumentRegister;
 using Xunit;
 
 namespace OrbitService_Test.FiscalBrazil.services

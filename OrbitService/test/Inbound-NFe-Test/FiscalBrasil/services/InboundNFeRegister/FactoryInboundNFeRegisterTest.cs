@@ -1,4 +1,4 @@
-﻿using OrbitService.FiscalBrazil.services.InboundNFeRegister;
+﻿using OrbitService.InboundNFe.services.InboundNFeRegister;
 using System;
 using System.Collections.Generic;
 using System.Text;

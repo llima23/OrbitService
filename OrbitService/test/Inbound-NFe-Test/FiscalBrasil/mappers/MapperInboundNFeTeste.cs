@@ -1,8 +1,8 @@
 ﻿using B1Library.Documents;
 using B1Library.Utilities;
 using Newtonsoft.Json;
-using OrbitService.FiscalBrazil.mappers;
-using OrbitService.FiscalBrazil.services.InboundNFeRegister;
+using OrbitService.InboundNFe.mappers;
+using OrbitService.InboundNFe.services.InboundNFeRegister;
 using OrbitService_Test.TestUtils;
 using System;
 using System.Collections.Generic;

@@ -106,4 +106,3 @@ D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.CoreCompileInputs.cache
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.pdb
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\OrbitLibrary\obj\Debug\netcoreapp3.1\OrbitLibrary.csproj.AssemblyReference.cache

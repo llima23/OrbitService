@@ -1,5 +1,5 @@
-﻿using OrbitService.FiscalBrazil.services;
-using OrbitService.FiscalBrazil.services.Input;
+﻿using OrbitService.InboundOtherDocuments.services;
+using OrbitService.InboundOtherDocuments.services.Input;
 using Xunit;
 
 namespace OrbitService_Test.FiscalBrazil.services

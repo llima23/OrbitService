@@ -32,7 +32,7 @@ namespace B1Library.usecase
         public const string commandCce = @"WHERE ""U_TAX4_CodInt"" = '0' 
 													and T0.""SeqCode"" < 0 
 													and T0.""U_TAX4_CARGAFISCAL"" = 'N'
-													and OM.""NfmCode"" IN ('6','28','29')";
+													and OM.""NfmCode"" IN ('6','28','29','66')";
 
         public const string commandOtherDocuments = @"WHERE ""U_TAX4_CodInt"" = '0' 
 													and T0.""SeqCode"" < 0 
@@ -72,11 +72,11 @@ namespace B1Library.usecase
 
         public const string commandCancelOutboundNFe = @" and OM.""NfmCode"" IN ('55') and ""U_TAX4_CodInt"" = '2'";
 
-        public const string commandCancelOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" = '2'";
+        public const string commandCancelOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" = '2' and ""U_TAX4_IdRet"" is not null and ""U_TAX4_IdRet"" <> ''";
 
         public const string commandInutillOutboundNFe = @" and OM.""NfmCode"" IN ('55') and ""U_TAX4_CodInt"" in ('0','3')";
 
-        public const string commandInutilOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" in ('0','3')";
+        public const string commandInutilOutboundNFSe = @" and OM.""NfmCode"" IN ('NFS-e') and ""U_TAX4_CodInt"" in ('0','3') and""U_TAX4_IdRet"" is not null and ""U_TAX4_IdRet"" <> ''";
 
         public const string commandConsultaNFe = @"WHERE ""U_TAX4_CodInt"" = '1' 
 													    and T0.""U_TAX4_IdRet"" <> ''

@@ -620,3 +620,17 @@ Path '', line 1, position 1.
 02/12/2022 10:56:19 - Count Notas: 4
 02/12/2022 10:57:50 - Count Notas: 4
 02/12/2022 11:17:01 - Count Notas: 4
+03/01/2023 10:08:50 - Count Notas: 1
+03/01/2023 10:11:53 - Count Notas: 1
+03/01/2023 10:20:16 - Count Notas: 1
+03/01/2023 10:20:55 - Response: {"erpId":"1597","nfseId":"63b324557725e62256559c0c","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+03/01/2023 10:20:55 - NFSe Inserida na fila de emissão: 1597 nfsID: 63b324557725e62256559c0c
+03/01/2023 10:22:02 - Count Notas: 1
+03/01/2023 10:22:37 - Response: {"erpId":"1597","nfseId":"63b324557725e62256559c0c","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+03/01/2023 10:22:37 - NFSe Inserida na fila de emissão: 1597 nfsID: 63b324557725e62256559c0c
+03/01/2023 10:55:16 - Count Notas: 1
+03/01/2023 10:55:53 - Response: {"erpId":"1602","nfseId":"63b432b27725e62256478ae3","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+03/01/2023 10:55:53 - NFSe Inserida na fila de emissão: 1602 nfsID: 63b432b27725e62256478ae3
+03/01/2023 11:30:20 - Count Notas: 1
+03/01/2023 11:30:38 - Response: {"erpId":"1606","nfseId":"63b43c087725e622564f16d3","message":"NFSe inserida na fila de emissão"} + IsSucessfull: True
+03/01/2023 11:30:40 - NFSe Inserida na fila de emissão: 1606 nfsID: 63b43c087725e622564f16d3

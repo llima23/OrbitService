@@ -3,8 +3,8 @@ using OrbitLibrary.Common;
 using OrbitLibrary.Utils;
 using OrbitLibrary_Test.Builders;
 using OrbitLibrary_Test.TestUtils;
-using OrbitService.FiscalBrazil.services;
-using OrbitService.FiscalBrazil.services.NFSeDocumentRegister;
+using OrbitService.InboundNFSe.services;
+using OrbitService.InboundNFSe.services.NFSeDocumentRegister;
 using System.Collections.Generic;
 using Xunit;
 

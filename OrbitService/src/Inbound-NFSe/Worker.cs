@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OrbitLibrary.Utils;
 using OrbitService.Applications;
-using OrbitService.FiscalBrazil.usecases;
+using OrbitService.InboundNFSe.usecases;
 using System;
 using System.Collections.Generic;
 using System.IO;

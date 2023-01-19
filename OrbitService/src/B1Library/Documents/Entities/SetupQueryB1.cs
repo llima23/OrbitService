@@ -1,5 +1,4 @@
 ﻿using B1Library.Applications;
-using B1Library.Documents.Repositories;
 using B1Library.Implementations.Repositories;
 using B1Library.usecase;
 using Newtonsoft.Json;
@@ -97,7 +96,8 @@ namespace B1Library.Documents.Entities
 							 NF.""SeqCode"" <> 0
 							 and T0.""U_TAX4_CARGAFISCAL"" = 'N'
 							 and T0.""CANCELED"" = 'C'
-							 and T0.""DocStatus"" = 'C'");
+							 and T0.""DocStatus"" = 'C'
+								");
             sb.AppendLine(useCasesB1.GetCommandUseCase());
             sb.AppendLine("FOR JSON");
             return Convert.ToString(sb);
@@ -504,7 +504,10 @@ namespace B1Library.Documents.Entities
 							 COALESCE(T0.""U_TAX4_Justi"", '')       AS ""Justificativa"",
 							 COALESCE(T0.""CANCELED"", '')           AS ""CANCELED"",
 							 COALESCE(T0.""U_TAX4_Cancelado"", '')   AS ""U_TAX4_Cancelado"",
-							 COALESCE(C2.""U_TAX4_EstabID"",'')	     AS ""BranchId""
+							 COALESCE(C2.""U_TAX4_EstabID"",'')	     AS ""BranchId"",
+							 COALESCE(T0.""DocDate"",'')			 AS ""DataDocumento"",
+							 COALESCE(CO.""U_TAX4_CamPDF"",'')		 AS ""CaminhoPDF"",
+							 COALESCE(CO.""U_TAX4_CamXML"",'')		 AS ""CaminhoXML""
 							 FROM {B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
 							 JOIN {B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
@@ -517,8 +520,9 @@ namespace B1Library.Documents.Entities
 							 and T0.""CANCELED"" = 'C'
 							 and T0.""DocStatus"" = 'C'");
             sb.AppendLine(useCasesB1.GetCommandUseCase());
-            sb.AppendLine(@"AND ADD_DAYS (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), -(CO.""U_TAX4_DtRetro"")) <= T0.""DocDate""");
-            return Convert.ToString(sb);
+			sb.AppendLine(@"AND T0.""DocDate"" >= CO.""U_TAX4_DateInt""");
+			//sb.AppendLine(@"AND ADD_DAYS (TO_DATE (CURRENT_DATE, 'YYYY-MM-DD'), -(CO.""U_TAX4_DtRetro"")) <= T0.""DocDate""");
+			return Convert.ToString(sb);
         }
         public string ReturnCommandB1ConsultDocumentInOrbit()
         {
@@ -529,9 +533,12 @@ namespace B1Library.Documents.Entities
 							 COALESCE(T0.""U_TAX4_CodInt"", '')      AS ""CodInt"",
 							 COALESCE(T0.""U_TAX4_IdRet"", '')       AS ""IdRetornoOrbit"",
 							 COALESCE(OM.""NfmCode"", '')            AS ""ModeloDocumento"",
-							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1""
+							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1"",
+							 COALESCE(CO.""U_TAX4_CamPDF"",'')		 AS ""CaminhoPDF"",
+							 COALESCE(CO.""U_TAX4_CamXML"",'')		 AS ""CaminhoXML""
 							 FROM {B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
+							 JOIN ""@TAX4_CONFIG"" CO ON T0.""BPLId"" = CO.""U_TAX4_Filial""
 							 JOIN {B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
 							 LEFT JOIN NFN1 NF ON T0.""SeqCode"" = NF.""SeqCode""");
             sb.AppendLine(useCasesB1.GetCommandUseCase());
@@ -547,7 +554,6 @@ namespace B1Library.Documents.Entities
 	                         COALESCE(T0.""ObjType"",0)				AS ""ObjetoB1"",
 	                         COALESCE(T0.""CANCELED"",'')           AS ""CANCELED"",
 							 COALESCE(T0.""BPLId"",0)				AS ""BPLId"",
-							 
 	                         CASE T0.""ObjType""
 	 		                        WHEN '13' THEN ('output')
 	 		                        WHEN '15' THEN ('output')
@@ -810,7 +816,12 @@ namespace B1Library.Documents.Entities
 								 WHEN '05' THEN('102')
 								 WHEN '55' THEN('102')
 								 ELSE '999'
-								 END AS ""cEnq""");
+								 END AS ""cEnq"",
+								 COALESCE(TL.""Text"",'')	as ""Text"" ");
+			if (VerifyIfFieldExists("UFFiscBene"))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""UFFiscBene"",0)		   AS ""CodigoBeneficioFiscal""");
+			}
             sb.AppendLine($@"FROM {B1TableNameChild}1 TL 
 							 JOIN OITM OT ON TL.""ItemCode"" = OT.""ItemCode""
 							 LEFT JOIN ONCM CM ON OT.""NCMCode"" = CM.""AbsEntry""
@@ -857,7 +868,12 @@ namespace B1Library.Documents.Entities
             {
                 sb.AppendLine(@$"	 ,COALESCE(TX.""U_IntPart"",0)		   AS ""PartilhaInterestadual""");
             }
-            sb.AppendLine(@$"	FROM {B1TableNameChild}4 TX 
+			//ICMS_DE
+			if (VerifyIfFieldExists("ICMS_DEL"))
+			{
+				sb.AppendLine(@$"	 ,COALESCE(TX.""U_ICMS_DEL"",0)		   AS ""ValorIcmsDesonerado""");
+			}
+			sb.AppendLine(@$"	FROM {B1TableNameChild}4 TX 
 								JOIN OSTT TT ON TX.""staType"" = TT.""AbsId"" 
 								WHERE TX.""DocEntry"" = {cabecalhoLinha.DocEntry}
 								AND TX.""LineNum"" = {cabecalhoLinha.ItemLinhaDocumento}");

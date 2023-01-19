@@ -2,7 +2,7 @@ using B1Library.Implementations.Repositories;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OrbitLibrary.Utils;
-using OrbitService.FiscalBrazil.usecases;
+using OrbitService.InboundOtherDocuments.usecases;
 using System;
 using System.Collections.Generic;
 using System.Linq;

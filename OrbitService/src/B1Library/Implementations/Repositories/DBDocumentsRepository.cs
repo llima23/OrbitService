@@ -6,7 +6,6 @@ using System;
 using System.Text.RegularExpressions;
 using System.Text;
 using B1Library.Utilities;
-using B1Library.Documents.Repositories;
 using B1Library.Applications;
 using B1Library.Documents.Entities;
 using static B1Library.Implementations.Repositories.DBTableNameRepository;
@@ -167,13 +166,14 @@ namespace B1Library.Implementations.Repositories
 
         public List<Invoice> GetInutilOutboundNFSe()
         {
-            List<Invoice> invoices = new List<Invoice>();
+            List<Invoice> listInvoices = new List<Invoice>();
             foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFSe)
             {
                 SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.InutilOutboundNFSe));
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1CancelDocumentInOrbit()));
+                MapperInvoiceB1ToInvoiceLib mapper = new MapperInvoiceB1ToInvoiceLib(this, setupQueryB1);
+                listInvoices = mapper.ReturnInvoiceB1ToCancel(listInvoices);
             }
-            return invoices;
+            return listInvoices;
         }
 
 

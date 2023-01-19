@@ -117,10 +117,11 @@ namespace OrbitService.OutboundDFe.mappers
             if (!String.IsNullOrEmpty(invoice.Identificacao.Carrier))
             {
                 Transporta transporta = new Transporta();
+                transporta.Nome = invoice.Transportadora.CardName.Length > 60 ? invoice.Transportadora.CardName.Substring(0, 59) : invoice.Transportadora.CardName;
                 transporta.Cnpj = !String.IsNullOrEmpty(invoice.Transportadora.CNPJ) ? Regex.Replace(invoice.Transportadora.CNPJ, @"\.|\/|-", "") : null;
                 transporta.Cpf = !String.IsNullOrEmpty(invoice.Transportadora.CPF) ? Regex.Replace(invoice.Transportadora.CPF, @"\.|\/|-", "") : null;
                 transporta.InscricaoEstadual = !String.IsNullOrEmpty(invoice.Transportadora.InscEstadual) ? Regex.Replace(invoice.Transportadora.InscEstadual, @"\.|\/|-", "") : null;
-                transporta.EnderecoCompleto = ReturnEnderecoCompletoTransp(invoice.Transportadora);
+                transporta.EnderecoCompleto = ReturnEnderecoCompletoTransp(invoice.Transportadora).Trim();
                 transporta.NomeMunicipio = !String.IsNullOrEmpty(invoice.Transportadora.NomeMunicipio) ? invoice.Transportadora.NomeMunicipio : null;
                 transporta.Uf = !String.IsNullOrEmpty(invoice.Transportadora.UF) ? invoice.Transportadora.UF : null;
                 input.transp.Transporta = transporta;
@@ -311,6 +312,8 @@ namespace OrbitService.OutboundDFe.mappers
                 det.prod.NItemPed = !String.IsNullOrEmpty(item.NumeroItemPedido) ? item.NumeroItemPedido : null;
                 det.Imposto = ReturnListImposto(item);
                 det.prod.Di = ReturnListDi(item,invoice);
+                det.prod.CBenef = !String.IsNullOrEmpty(item.CodigoBeneficioFiscal) ? item.CodigoBeneficioFiscal : null;
+                det.InfAdProd = !String.IsNullOrEmpty(item.Text) ? Regex.Replace(item.Text, @"(\.)|-", "").Trim() : null;
                 lstDet.Add(det);
 
             }
@@ -385,7 +388,7 @@ namespace OrbitService.OutboundDFe.mappers
                             imposto.Icms.VBc = util.ToOrbitString(util.GetTaxTypeB1VBcSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
                             imposto.Icms.PImp = util.ToOrbitString(item.PorcentagemImposto); //TODO:
                             imposto.Icms.VImp = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
-                            if (item.SimOuNaoDesoneracao == "Y")
+                            if (item.SimOuNaoDesoneracao == "Y" || item.ValorIcmsDesonerado > 0)
                             {
                                 imposto.Icms.VDeson = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
                                 imposto.Icms.MotDeson = cabecalhoLinha.MotivoDesoneracao;
@@ -477,7 +480,7 @@ namespace OrbitService.OutboundDFe.mappers
             (!String.IsNullOrEmpty(transp.Complemento) ? transp.Complemento + " " : null) +
             (!String.IsNullOrEmpty(transp.Bairro) ? transp.Bairro + " " : null) + 
             (!String.IsNullOrEmpty(transp.CEP) ? transp.CEP + " " : null);
-            return retorno;
+            return Regex.Replace(retorno, @"\.|\/|-", "");
         }
     }
 }

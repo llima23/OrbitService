@@ -6,18 +6,20 @@ namespace OrbitLibrary.Data
     public class DbWrapper : IWrapper
     {
         public const int COMMAND_TIMEOUT = 600;
-  
+
         private DBFactory factory;
         public string DataBaseType { get; set; }
         public string DataBaseName { get; set; }
+        public IDbConnection connection;
 
         public DbWrapper(DBFactory factory)
         {
             this.factory = factory;
             this.DataBaseName = factory.DataBaseName;
             this.DataBaseType = factory.DataBaseType;
+            this.connection = factory.CreateConnection();
         }
-  
+
 
         public bool CanDbConnect()
         {
@@ -62,6 +64,7 @@ namespace OrbitLibrary.Data
         {
             IDbCommand queryCommand = factory.CreateCommand();
             queryCommand.CommandText = queryString;
+
             return ExecuteQueryCommand(queryCommand);
         }
 
@@ -76,21 +79,22 @@ namespace OrbitLibrary.Data
 
             try
             {
-                IDbConnection connection = factory.CreateConnection();
                 IDbDataAdapter dataAdapter = factory.CreateDataAdapter();
-
-                connection.Open();
-                command.Connection = connection;
+                if (this.connection.State != ConnectionState.Open)
+                {
+                    this.connection.Open();
+                }
+                command.Connection = this.connection;
                 command.CommandTimeout = COMMAND_TIMEOUT;
                 dataAdapter.SelectCommand = command;
                 dataAdapter.Fill(resultDataSet);
-                connection.Close();
+                //connection.Close();
             }
             catch (Exception ex)
             {
                 throw new ArgumentException(ex.ToString());
             }
-            
+
             return resultDataSet;
         }
     }

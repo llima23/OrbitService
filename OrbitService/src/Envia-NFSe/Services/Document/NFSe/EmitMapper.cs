@@ -21,7 +21,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                 EmitRequestInput requestInput = new EmitRequestInput();
 
                 requestInput.branchId = b1Document.BranchId;
-                requestInput.numeroLote = b1Document.DocEntry.ToString();
+                requestInput.numeroLote = b1Document.NumeroLote > 0 ? b1Document.NumeroLote.ToString() : b1Document.DocEntry.ToString();
                 requestInput.erpId = b1Document.DocEntry.ToString();
                 #region IDENTIFICAÇÃO
 
@@ -32,11 +32,14 @@ namespace _4TAX_Service.Services.Document.NFSe
                 requestInput.rps.identificacao.dataEmissao = Convert.ToDateTime(b1Document.DocDate);
                 requestInput.rps.identificacao.competencia = Convert.ToDateTime(b1Document.DocDate);
                 requestInput.rps.identificacao.indPres = 0; // TODO: Implementação Addon 
-                requestInput.rps.identificacao.naturezaOperacao = b1Document.U_TAX4_NatOpNFSe != "0" ? b1Document.U_TAX4_NatOpNFSe :null;
+                requestInput.rps.identificacao.naturezaOperacao = b1Document.U_TAX4_NatOpNFSe != "0" ? b1Document.U_TAX4_NatOpNFSe : null;
                 requestInput.rps.identificacao.tipoRps = DocumentServiceFunctions.setTipoRps(b1Document.U_TAX4_tipoRPS, b1Document.County);
 
                 requestInput.rps.identificacao.regimeEspecialTributacao = String.IsNullOrEmpty(b1Document.U_TAX4_tpTribNfse) ? null : b1Document.U_TAX4_tpTribNfse.Substring(0, 1);
-
+                if(b1Document.U_TAX4_RegEspTrib != "0")
+                {
+                    requestInput.rps.identificacao.regimeEspecialTributacao = b1Document.U_TAX4_RegEspTrib;
+                }
                 if (b1Document.U_TAX4_RegEspTrib == "6")
                 {
                     requestInput.rps.identificacao.optanteSimplesNacional = "1";
@@ -75,7 +78,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                         requestInput.rps.tomador.inscricaoEstadual = Functions.RemoveCaracteresEspeciais(b1Document.TaxId1);
                 }
                 else
-                requestInput.rps.tomador.inscricaoEstadual = null;
+                    requestInput.rps.tomador.inscricaoEstadual = null;
 
                 if (!String.IsNullOrEmpty(b1Document.TaxId5))
                 {
@@ -101,23 +104,19 @@ namespace _4TAX_Service.Services.Document.NFSe
                 requestInput.rps.tomador.contato.fax = !String.IsNullOrEmpty(b1Document.Fax) ? Functions.RemoveCaracteresEspeciais(b1Document.Fax) : null;
                 requestInput.rps.tomador.contato.site = !String.IsNullOrEmpty(b1Document.NTSWebSite) ? b1Document.NTSWebSite : null;
 
-                if(b1Document.EnviaEmail == "Y")
+                if (b1Document.EnviaEmail == "S")
                 {
-                    if (!String.IsNullOrEmpty(b1Document.E_Mail))
+                    List<string> lstEmail = new List<string>();
+                    if (!string.IsNullOrEmpty(b1Document.E_Mail))
                     {
-                        List<string> lstEmail = new List<string>();
                         lstEmail.Add(b1Document.E_Mail);
-                        foreach (var item in b1Document.Emails)
-                        {
-                            lstEmail.Add(item.email);
-                        }
+                    }
 
-                        requestInput.emails = lstEmail;
-                    }
-                    else
+                    foreach (var item in b1Document.Emails)
                     {
-                        requestInput.emails = null;
+                        lstEmail.Add(item.email);
                     }
+                    requestInput.emails = lstEmail;
                 }
 
                 else
@@ -231,7 +230,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                     requestInput.rps.servico.valores.descontoCondicionado = 0;//TODO
                     requestInput.rps.servico.valores.descontoIncondicionado += Linhas.PriceBefDi > Linhas.Price ? Linhas.PriceBefDi - Linhas.Price : 0;
 
-                  
+
                     LineTotal += Linhas.LineTotal;
 
                     #region SERVIÇO - VALORES - IMPOSTO RETIDO
@@ -242,7 +241,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                             switch (LineTaxWithholding.U_TAX4_TpImp)
                             {
 
-                           
+
                                 case "1":
                                     requestInput.rps.servico.valores.pis.aliquota = LineTaxWithholding.RATE;
                                     requestInput.rps.servico.valores.pis.valor += LineTaxWithholding.WTAMNT;
@@ -317,7 +316,7 @@ namespace _4TAX_Service.Services.Document.NFSe
 
 
 
-                    requestInput.rps.servico.valores.iss.valorRetido = Math.Round(requestInput.rps.servico.valores.iss.valorRetido,6);
+                    requestInput.rps.servico.valores.iss.valorRetido = Math.Round(requestInput.rps.servico.valores.iss.valorRetido, 6);
                     requestInput.rps.servico.valores.iss.valor = Math.Round(requestInput.rps.servico.valores.iss.valor, 6);
                     requestInput.rps.servico.valores.csll.valor = Math.Round(requestInput.rps.servico.valores.csll.valor, 6);
                     requestInput.rps.servico.valores.ir.valor = Math.Round(requestInput.rps.servico.valores.ir.valor, 6);

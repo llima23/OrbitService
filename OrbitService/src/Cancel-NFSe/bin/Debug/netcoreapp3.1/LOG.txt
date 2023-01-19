@@ -30,3 +30,5 @@
    at OrbitLibrary.Data.DbWrapper.ExecuteQueryCommand(IDbCommand command) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\OrbitLibrary\Data\DbWrapper.cs:line 86
 25/11/2022 18:01:04 - 1
 25/11/2022 18:04:24 - 1
+30/12/2022 16:13:48 - 0
+30/12/2022 16:13:52 - 0

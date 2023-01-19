@@ -1,5 +1,7 @@
 ﻿using B1Library.Documents;
+using DownloadAutomatico;
 using OrbitLibrary.Common;
+using OrbitLibrary.Utils;
 using OrbitService.OutboundNFe.mappers;
 using OrbitService.OutboundNFe.services;
 using System;
@@ -33,6 +35,17 @@ namespace OrbitService.OutboundNFe.usecases
                     OutboundDFeDocumentConsultaOutputNFe output = response.GetSuccessResponse();
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
                     documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
+
+                    if(documentStatus.Status == StatusCode.Sucess)
+                    {
+                        DownloadAutomaticoXMLDanfe download = new DownloadAutomaticoXMLDanfe(sConfig, communicationProvider);
+                        download.codigoIntegracao = invoice.CodInt;
+                        download.chaveSefaz = output.key;
+                        download.caminhoPadraoPDF = invoice.CaminhoPDF;
+                        download.caminhoPadraoXML = invoice.CaminhoXML;
+                        //download.ano = invoice.id
+                    }
+                   
                 }
                 else
                 {

@@ -19,6 +19,8 @@ namespace B1Library.Documents
             Emails = new List<Emails>();
             Transportadora = new Transportadora();
         }
+        public string CaminhoPDF { get; set; }
+        public string CaminhoXML { get; set; }
         public int DocEntry { get; set; }
         public string CodInt { get; set; }
         public string BranchId { get; set; }
@@ -35,6 +37,7 @@ namespace B1Library.Documents
         public string Justificativa { get; set; }
         public string IdRetornoOrbit { get; set; }
 
+        public DateTime DataDocumento { get; set; }
         public List<Emails> Emails { get; set; }
         public List<Duplicata> Duplicata { get; set; }
         public List<DocRef> DocRef { get; set; }
@@ -103,6 +106,8 @@ namespace B1Library.Documents
             DespesaAdicional = new List<DespesaAdicional>();
             DadosDI = new List<DadosDI>();
         }
+        public string Text { get; set; }
+        public string CodigoBeneficioFiscal { get; set; }
         public string CodigoAtividade { get; set; }
         public string CodigoServicoEntrada { get; set; }
         public int DocEntry { get; set; }
@@ -290,8 +295,9 @@ namespace B1Library.Documents
 
     public class ImpostoLinha
     {
+        public double ValorIcmsDesonerado { get; set; } = 0.00;
         public double pRedBc { get; set; }
-        public double PDif { get; set; }
+        public double PDif { get; set; } 
         public double VDif { get; set; }
         public double VICMSOp { get; set; }
         public string NomeImposto { get; set; }

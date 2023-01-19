@@ -1,5 +1,8 @@
+using B1Library.Implementations.Repositories;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using OrbitLibrary.Utils;
+using OrbitService.InboundCce.usecases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +26,24 @@ namespace OrbitService
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 await Task.Delay(1000, stoppingToken);
+
+                List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
+                foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
+                {
+                    if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocFiscal)
+                    {
+                        try
+                        {
+                            UseCaseInboundCce useCase = new UseCaseInboundCce(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBDocumentsRepository(serviceDependencies.DbWrapper));
+                            useCase.Execute();
+                        }
+                        catch (Exception ex)
+                        {
+                            
+                        }
+                    }
+
+                }
             }
         }
     }

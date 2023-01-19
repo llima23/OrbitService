@@ -1,0 +1,5 @@
+02/01/2023 13:29:22 - Erro Execução serviço Envia NF-e: Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot apply indexing with [] to an expression of type 'System.Collections.Generic.SortedDictionary<string,string>.ValueCollection'
+   at CallSite.Target(Closure , CallSite , Object , Int32 )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   at OrbitService.OutboundNFe.usecases.OutboundNFeDocumentConsultaUseCase.Execute() in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Atualiza-NFe\OrbitService\OutboundNFe\usecases\OutboundNFeDocumentConsultaUseCase.cs:line 43
+   at OrbitService.Worker.ExecuteAsync(CancellationToken stoppingToken) in D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Atualiza-NFe\OrbitService\Worker.cs:line 43

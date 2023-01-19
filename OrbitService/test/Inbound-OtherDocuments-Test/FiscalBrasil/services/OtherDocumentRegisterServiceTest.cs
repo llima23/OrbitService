@@ -3,10 +3,10 @@ using OrbitLibrary.Common;
 using OrbitLibrary.Utils;
 using OrbitLibrary_Test.Builders;
 using OrbitLibrary_Test.TestUtils;
-using OrbitService.FiscalBrazil.services;
-using OrbitService.FiscalBrazil.services.Error;
-using OrbitService.FiscalBrazil.services.Input;
-using OrbitService.FiscalBrazil.services.Output;
+using OrbitService.InboundOtherDocuments.services;
+using OrbitService.InboundOtherDocuments.services.Error;
+using OrbitService.InboundOtherDocuments.services.Input;
+using OrbitService.InboundOtherDocuments.services.Output;
 using System.Collections.Generic;
 using Xunit;
 
@@ -31,7 +31,7 @@ namespace OrbitService_Test.FiscalBrazil.services
                 .Callback<OperationRequest>(r => t.request = r)
                 .Returns(TestsBuilder.CreateOperationResponse<OtherDocumentRegisterOutput, OtherDocumentRegisterError>(t.request));
 
-            OtherDocumentRegisterInput input = new OtherDocumentRegisterInput();
+            Root input = new Root();
             OperationResponse<OtherDocumentRegisterOutput, OtherDocumentRegisterError> response = cut.Execute(input);
 
             Assert.NotNull(response);

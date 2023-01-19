@@ -1,8 +1,8 @@
 ﻿using B1Library.Documents;
 using B1Library.Utilities;
-using OrbitService.FiscalBrazil.mappers;
-using OrbitService.FiscalBrazil.services.Input;
-using OrbitService.FiscalBrazil.services.Output;
+using OrbitService.InboundOtherDocuments.mappers;
+using OrbitService.InboundOtherDocuments.services.Input;
+using OrbitService.InboundOtherDocuments.services.Output;
 using OrbitService_Test.TestUtils;
 using Xunit;
 

@@ -1,6 +1,6 @@
 ﻿using B1Library.Documents;
-using OrbitService.FiscalBrazil.mappers;
-using OrbitService.FiscalBrazil.services.NFSeDocumentRegister;
+using OrbitService.InboundNFSe.mappers;
+using OrbitService.InboundNFSe.services.NFSeDocumentRegister;
 using OrbitService_Test.TestUtils;
 using System;
 using Xunit;
@@ -44,7 +44,7 @@ namespace OrbitService_Test.FiscalBrasil.mappers
         {
             Invoice invoice = InvoiceB1FakeGenerator.GetFakeB1NFSeDocuments();
             NFSeDocumentRegisterOutput output = new NFSeDocumentRegisterOutput();
-            output.data.status = "sucess";
+            //output.data.status = "sucess";
             DocumentStatus newStatus = cut.ToDocumentStatusResponseSucessful(invoice, output);
 
             Assert.NotNull(newStatus);
