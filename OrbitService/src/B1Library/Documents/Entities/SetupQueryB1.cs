@@ -507,7 +507,8 @@ namespace B1Library.Documents.Entities
 							 COALESCE(C2.""U_TAX4_EstabID"",'')	     AS ""BranchId"",
 							 COALESCE(T0.""DocDate"",'')			 AS ""DataDocumento"",
 							 COALESCE(CO.""U_TAX4_CamPDF"",'')		 AS ""CaminhoPDF"",
-							 COALESCE(CO.""U_TAX4_CamXML"",'')		 AS ""CaminhoXML""
+							 COALESCE(CO.""U_TAX4_CamXML"",'')		 AS ""CaminhoXML"",
+							 COALESCE(CO.""U_TAX4_DownloadAuto"",'') AS ""DownloadAutomatico""
 							 FROM {B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
 							 JOIN {B1TableNameChild}1 T1 ON T0.""DocEntry"" = T1.""DocEntry""
@@ -535,7 +536,8 @@ namespace B1Library.Documents.Entities
 							 COALESCE(OM.""NfmCode"", '')            AS ""ModeloDocumento"",
 							 COALESCE(T0.""ObjType"", 0)             AS ""ObjetoB1"",
 							 COALESCE(CO.""U_TAX4_CamPDF"",'')		 AS ""CaminhoPDF"",
-							 COALESCE(CO.""U_TAX4_CamXML"",'')		 AS ""CaminhoXML""
+							 COALESCE(CO.""U_TAX4_CamXML"",'')		 AS ""CaminhoXML"",
+						     COALESCE(CO.""U_TAX4_DownloadAuto"",'') AS ""DownloadAutomatico""
 							 FROM {B1TableName} T0
 							 JOIN ONFM OM ON T0.""Model"" = OM.""AbsEntry""
 							 JOIN ""@TAX4_CONFIG"" CO ON T0.""BPLId"" = CO.""U_TAX4_Filial""
@@ -554,6 +556,7 @@ namespace B1Library.Documents.Entities
 	                         COALESCE(T0.""ObjType"",0)				AS ""ObjetoB1"",
 	                         COALESCE(T0.""CANCELED"",'')           AS ""CANCELED"",
 							 COALESCE(T0.""BPLId"",0)				AS ""BPLId"",
+							 COALESCE(CO.""U_TAX4_DownloadAuto"",'') AS ""DownloadAutomatico"",
 	                         CASE T0.""ObjType""
 	 		                        WHEN '13' THEN ('output')
 	 		                        WHEN '15' THEN ('output')

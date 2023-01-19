@@ -39,7 +39,7 @@ namespace OrbitService.OutboundDFe.usecases
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
                     documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
 
-                    if (documentStatus.Status == StatusCode.CanceladaSucess)
+                    if (documentStatus.Status == StatusCode.CanceladaSucess && invoice.DownloadAutomatico == "1")
                     {
                         DownloadAutomaticoXMLDanfe download = new DownloadAutomaticoXMLDanfe(sConfig, communicationProvider);
                         download.nfID = invoice.IdRetornoOrbit;

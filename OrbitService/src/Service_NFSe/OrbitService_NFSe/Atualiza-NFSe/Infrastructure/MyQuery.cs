@@ -15,9 +15,12 @@ namespace _4TAX_Service_Atualiza.Infrastructure
         public string IdRetornoOrbit { get; set; }
 
     }
-    public static class MyQuery
+
+    
+    public class MyQuery
     {
-        public static string QueryUpdateStatusSuccessInB1(int DocEntry, int? BplId, string mStat, string idOrbit, string CodVeri, string NumeroNfse, string NumeroRPS)
+        public string statusIntegracao { get; set; }
+        public  string QueryUpdateStatusSuccessInB1(int DocEntry, int? BplId, string mStat, string idOrbit, string CodVeri, string NumeroNfse, string NumeroRPS)
         {           
             return $@"UPDATE OINV 
                          SET ""U_TAX4_Stat"" = '{mStat.Replace("'", "")}', 
@@ -29,7 +32,7 @@ namespace _4TAX_Service_Atualiza.Infrastructure
                        WHERE ""DocEntry"" = {DocEntry} 
                          {(BplId == null ? "" : $@"AND ""BPLId"" = {BplId}")}";
         }
-        public static string QueryUpdateStatusFailInB1(int docEntry, int? BPLId, string statRet)
+        public  string QueryUpdateStatusFailInB1(int docEntry, int? BPLId, string statRet)
         {
             return $@"UPDATE OINV 
                          SET ""U_TAX4_Stat"" = '{statRet}', 
@@ -39,7 +42,7 @@ namespace _4TAX_Service_Atualiza.Infrastructure
         }
 
 
-        public static string GetStatusOrbitToB1(string statusOrbit)
+        public string GetStatusOrbitToB1(string statusOrbit)
         {
             string StatusB1 = string.Empty;
 
@@ -89,6 +92,8 @@ namespace _4TAX_Service_Atualiza.Infrastructure
                     break;
             }
 
+            statusIntegracao = StatusB1;
+            
             return StatusB1;
         }
     }

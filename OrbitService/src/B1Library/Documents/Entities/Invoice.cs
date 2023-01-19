@@ -19,6 +19,7 @@ namespace B1Library.Documents
             Emails = new List<Emails>();
             Transportadora = new Transportadora();
         }
+        public string DownloadAutomatico { get; set; }
         public string CaminhoPDF { get; set; }
         public string CaminhoXML { get; set; }
         public int DocEntry { get; set; }

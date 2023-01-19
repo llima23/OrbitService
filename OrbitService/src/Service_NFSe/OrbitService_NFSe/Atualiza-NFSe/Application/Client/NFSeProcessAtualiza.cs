@@ -2,6 +2,7 @@
 using _4TAX_Service_Atualiza.Common.Domain;
 using _4TAX_Service_Atualiza.Infrastructure;
 using _4TAX_Service_Atualiza.Services.Document.NFSe;
+using DownloadAutomatico;
 using OrbitLibrary.Common;
 using OrbitLibrary.Data;
 using OrbitLibrary.Utils;
@@ -78,16 +79,18 @@ namespace _4TAX_Service_Atualiza.Application.Client
                 recebeCodVeri = string.Empty;
                 recebeNumeroNFse = string.Empty;
             }
-            Logs.InsertLog($"NFSe Integrada com sucesso: {DocEntry}  nfsID: {output._id}");           
-
-            return dataBaseNFSeProcess.UpdateNFSeODBC(MyQuery.QueryUpdateStatusSuccessInB1(DocEntry, BPLId, output.status.mStat, output._id, recebeCodVeri, recebeNumeroNFse,output.rps.identificacao.numero));
+            Logs.InsertLog($"NFSe Integrada com sucesso: {DocEntry}  nfsID: {output._id}");
+            MyQuery myQuery = new MyQuery();
+            bool result = dataBaseNFSeProcess.UpdateNFSeODBC(myQuery.QueryUpdateStatusSuccessInB1(DocEntry, BPLId, output.status.mStat, output._id, recebeCodVeri, recebeNumeroNFse, output.rps.identificacao.numero));
+            return result;
         }
         public bool UpdateStatusNFSeB1Failed(OperationResponse<ConsultaSuccessResponseOutput, ConsultaFailedResponseOutput> response, int DocEntry, int BPLId)
         {
             DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(dbWrapper);
             ConsultaFailedResponseOutput output = response.GetErrorResponse();
             Logs.InsertLog($"NFSe integrada com erro: {DocEntry}  Output: {output}");
-            return dataBaseNFSeProcess.UpdateNFSeODBC(MyQuery.QueryUpdateStatusFailInB1(DocEntry, BPLId, output.message));
+            MyQuery myQuery = new MyQuery();
+            return dataBaseNFSeProcess.UpdateNFSeODBC(myQuery.QueryUpdateStatusFailInB1(DocEntry, BPLId, output.message));
         }
     }
 }

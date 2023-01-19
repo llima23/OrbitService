@@ -36,19 +36,19 @@ namespace OrbitService.OutboundNFe.usecases
                     DocumentStatus documentStatus = mapper.ToDocumentStatusResponseSucessful(invoice, output);
                     documentsRepository.UpdateDocumentStatus(documentStatus, invoice.ObjetoB1);
 
-                    //if(documentStatus.Status == StatusCode.Sucess)
-                    //{
-                    //    DownloadAutomaticoXMLDanfe download = new DownloadAutomaticoXMLDanfe(sConfig, communicationProvider);
-                    //    download.nfID = invoice.IdRetornoOrbit;
-                    //    download.chaveSefaz = output.key;
-                    //    download.modelo = invoice.ModeloDocumento;
-                    //    download.ano = output.identificacao.dataHoraEmissao.ToString("yyyy");
-                    //    download.mes = output.identificacao.dataHoraEmissao.ToString("MM");
-                    //    download.caminhoPadraoPDF = invoice.CaminhoPDF;
-                    //    download.caminhoPadraoXML = invoice.CaminhoXML;
-                    //    download.DownloadDanfe();
-                    //    download.DownloadXML();
-                    //}
+                    if (documentStatus.Status == StatusCode.Sucess && invoice.DownloadAutomatico == "1")
+                    {
+                        DownloadAutomaticoXMLDanfe download = new DownloadAutomaticoXMLDanfe(sConfig, communicationProvider);
+                        download.nfID = invoice.IdRetornoOrbit;
+                        download.chaveSefaz = output.key;
+                        download.modelo = invoice.ModeloDocumento;
+                        download.ano = output.identificacao.dataHoraEmissao.ToString("yyyy");
+                        download.mes = output.identificacao.dataHoraEmissao.ToString("MM");
+                        download.caminhoPadraoPDF = invoice.CaminhoPDF;
+                        download.caminhoPadraoXML = invoice.CaminhoXML;
+                        download.DownloadDanfe();
+                        download.DownloadXML();
+                    }
 
 
                 }
