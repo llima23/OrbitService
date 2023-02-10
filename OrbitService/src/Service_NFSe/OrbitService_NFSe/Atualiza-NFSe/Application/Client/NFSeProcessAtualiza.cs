@@ -82,6 +82,10 @@ namespace _4TAX_Service_Atualiza.Application.Client
             Logs.InsertLog($"NFSe Integrada com sucesso: {DocEntry}  nfsID: {output._id}");
             MyQuery myQuery = new MyQuery();
             bool result = dataBaseNFSeProcess.UpdateNFSeODBC(myQuery.QueryUpdateStatusSuccessInB1(DocEntry, BPLId, output.status.mStat, output._id, recebeCodVeri, recebeNumeroNFse, output.rps.identificacao.numero));
+            if(myQuery.statusIntegracao == "2")
+            {
+
+            }
             return result;
         }
         public bool UpdateStatusNFSeB1Failed(OperationResponse<ConsultaSuccessResponseOutput, ConsultaFailedResponseOutput> response, int DocEntry, int BPLId)

@@ -239,15 +239,15 @@ namespace _4TAX_Service.Application
 	 T2.""TaxId3"",
 	 T2.""TaxId4"",
 	 T2.""TaxId5"",
-	 T2.""StreetS"" AS RuaT,
-	 CAST (T2.""BuildingS"" AS VARCHAR) AS ComplementoT,
-	 T2.""BlockS"" AS BairroT,
-	 T2.""ZipCodeS"" AS CepT,
-	 T2.""CountyS"" AS CodMunicipioT,
-	 T2.""StateS"" AS EstadoT,
-	 T2.""CityS"" AS CidadeT,
-	 T2.""AddrTypeS"" AS LogradouroT,
-	 T2.""StreetNoS"" AS NumeroRuaT,
+	 T2.""StreetB"" AS RuaT,
+	 CAST (T2.""BuildingB"" AS VARCHAR) AS ComplementoT,
+	 T2.""BlockB"" AS BairroT,
+	 T2.""ZipCodeB"" AS CepT,
+	 T2.""CountyB"" AS CodMunicipioT,
+	 T2.""StateB"" AS EstadoT,
+	 T2.""CityB"" AS CidadeT,
+	 T2.""AddrTypeB"" AS LogradouroT,
+	 T2.""StreetNoB"" AS NumeroRuaT,
 	 T3.""AddrType"",
 	 T3.""E_Mail"",
 	 T3.""NTSWebSite"",
@@ -256,6 +256,7 @@ namespace _4TAX_Service.Application
 	 T3.""Phone2"",
 	 T3.""ShipToDef"",
 	 T3.""CardFName"",
+     T4.""ItemClass"",
 	 T7.""County"",
 	 T7.""TaxIdNum"",
 	 T7.""TaxIdNum3"",
@@ -311,8 +312,8 @@ LEFT JOIN ""INV13"" T10 ON T0.""DocEntry"" = T10.""DocEntry""
 AND T9.""LineNum"" = T10.""LineNum"" 
 and T9.""ExpnsCode"" = T10.""ExpnsCode"" 
 INNER JOIN ""OSTT"" T11 ON T9.""staType"" = T11.""AbsId"" 
-INNER JOIN ""OCRY"" T12 ON T2.""CountryS"" = T12.""Code"" 
-LEFT JOIN ""OCNT"" T13 ON CAST(T2.""CountyS"" AS VARCHAR) = CAST(T13.""AbsId"" AS VARCHAR) 
+INNER JOIN ""OCRY"" T12 ON T2.""CountryB"" = T12.""Code"" 
+LEFT JOIN ""OCNT"" T13 ON CAST(T2.""CountyB"" AS VARCHAR) = CAST(T13.""AbsId"" AS VARCHAR) 
 LEFT JOIN ""OUSG"" T14 ON T1.""Usage"" = T14.""ID"" 
 INNER JOIN ""OCTG"" T15 ON T3.""GroupNum"" = T15.""GroupNum"" 
 LEFT JOIN ""OPYM"" T16 ON T0.""PeyMethod"" = T16.""PayMethCod"" 
@@ -321,7 +322,7 @@ LEFT JOIN ""@TAX4_CONFIGADDON"" T18 ON 1 = 1
 LEFT JOIN ""@TAX4_LCONFIGADDON"" T19 ON T19.""U_TAX4_Empresa"" = T0.""BPLId"" 
 LEFT JOIN ""OADM"" T20 ON 1 = 1 
 WHERE T0.""CANCELED"" = 'N' 
-AND T4.""ItemClass"" = 1 
+--AND T4.""ItemClass"" = 1 
 AND T17.""NfmCode"" = 'NFS-e' 
 AND T0.""U_TAX4_CodInt"" = '0'
 AND T0.""DocDate"" >= T6.""U_TAX4_DateInt""

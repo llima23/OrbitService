@@ -338,7 +338,7 @@ namespace _4TAX_Service.Services.Document.NFSe
                 requestInput.rps.pag.detPag = lstDetPag;
                 #endregion
 
-                if (b1Document.IbgeCode == "9999999")
+                if (b1Document.CntCodNum != "1058" && !string.IsNullOrEmpty(b1Document.CntCodNum))
                 {
                     requestInput.rps.tomador.endereco = null;
                 }

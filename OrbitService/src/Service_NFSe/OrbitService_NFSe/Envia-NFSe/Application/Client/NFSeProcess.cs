@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using OrbitLibrary.Common;
 using OrbitLibrary.Data;
 using OrbitLibrary.Utils;
+using OrbitService_NFSe.Envia_NFSe.Application;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,9 @@ namespace _4TAX_Service.Application.Client
             {
                 try
                 {
+                    ValidaObjetoOrbit valida = new ValidaObjetoOrbit();
                     EmitRequestInput input = emitMapper.ConvertToOrbitObject(item);
+                    valida.ValidaObjeto(input,item);
                     var jsonInput = JsonConvert.SerializeObject(input, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
                     if(item.U_TAX4_tpOperacao == "Y")
                     {
@@ -52,7 +55,8 @@ namespace _4TAX_Service.Application.Client
                 }
                 catch (Exception ex)
                 {
-                    Logs.InsertLog($"Erro so integrar NFSe: {item.DocEntry.ToString()} ERRO: {ex.Message}");
+                    DataBaseNFSeProcess dataBaseNFSeProcess = new DataBaseNFSeProcess(dbWrapper);
+                    dataBaseNFSeProcess.UpdateNFSeODBC(MyQuery.AtualizarNotaFiscalFail(item.DocEntry, item.BPLId, ex.Message));
                 }
                 finally
                 {                    

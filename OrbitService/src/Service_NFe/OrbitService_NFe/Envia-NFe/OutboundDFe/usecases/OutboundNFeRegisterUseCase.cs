@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using OrbitLibrary.Common;
 using OrbitService.OutboundDFe.mappers;
 using OrbitService.OutboundDFe.services.OutboundDFeRegister;
+using OrbitService_NFe.Envia_NFe.OutboundDFe.usecases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,7 @@ namespace OrbitService.OutboundDFe.usecases
         {
             try
             {
+                ValidaObjetoOrbit validaObjeto = new ValidaObjetoOrbit();
                 MapperOutboundNFe mapper = new MapperOutboundNFe();
                 OutboundNFeDocumentRegisterService outboundNFeRegister = new OutboundNFeDocumentRegisterService(sConfig, communicationProvider);
                 List<Invoice> OutBoundNFeDocuments = documentsRepository.GetOutboundNFe();
@@ -37,6 +39,7 @@ namespace OrbitService.OutboundDFe.usecases
                     this.invoice = invoice;
                     OutboundNFeDocumentRegisterInput input = new OutboundNFeDocumentRegisterInput();
                     input = mapper.ToinboundNFeDocumentRegisterInput(invoice);
+                    validaObjeto.ValidaObjeto(input);
                     OperationResponse<OutboundNFeDocumentRegisterOutput, OutboundNFeDocumentRegisterError> response = outboundNFeRegister.Execute(input);
                     Logs.InsertLog($"ContentResponse: {response.Content}");
                     if (response.isSuccessful)

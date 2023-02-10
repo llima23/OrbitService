@@ -121,7 +121,7 @@ namespace OrbitService.OutboundDFe.mappers
                 transporta.Cnpj = !String.IsNullOrEmpty(invoice.Transportadora.CNPJ) ? Regex.Replace(invoice.Transportadora.CNPJ, @"\.|\/|-", "") : null;
                 transporta.Cpf = !String.IsNullOrEmpty(invoice.Transportadora.CPF) ? Regex.Replace(invoice.Transportadora.CPF, @"\.|\/|-", "") : null;
                 transporta.InscricaoEstadual = !String.IsNullOrEmpty(invoice.Transportadora.InscEstadual) ? Regex.Replace(invoice.Transportadora.InscEstadual, @"\.|\/|-", "") : null;
-                transporta.EnderecoCompleto = ReturnEnderecoCompletoTransp(invoice.Transportadora).Trim();
+                transporta.EnderecoCompleto = ReturnEnderecoCompletoTransp(invoice.Transportadora).Trim().Length > 60 ? ReturnEnderecoCompletoTransp(invoice.Transportadora).Trim().Substring(0,59) : ReturnEnderecoCompletoTransp(invoice.Transportadora).Trim();
                 transporta.NomeMunicipio = !String.IsNullOrEmpty(invoice.Transportadora.NomeMunicipio) ? invoice.Transportadora.NomeMunicipio : null;
                 transporta.Uf = !String.IsNullOrEmpty(invoice.Transportadora.UF) ? invoice.Transportadora.UF : null;
                 input.transp.Transporta = transporta;
@@ -298,11 +298,11 @@ namespace OrbitService.OutboundDFe.mappers
                 det.prod.Cest = !String.IsNullOrEmpty(item.CodigoCEST) ? item.CodigoCEST : null;
                 det.prod.UnidadeComercial = item.UnidadeComercial;
                 det.prod.QuantidadeComercial = util.ToOrbitString(item.QuantidadeLinha);
-                det.prod.ValorUnitarioComercializacao = util.ToOrbitString(item.ValorUnitarioLinha);
+                det.prod.ValorUnitarioComercializacao = util.ToOrbitString4CasaDecimais(item.ValorUnitarioLinha);
                 det.prod.ValorTotalBruto = item.SoImposto != "Y" ? util.ToOrbitString(item.ValorTotalLinnha) : "0.00";
                 det.prod.UnidadeTributavel = item.UnidadeComercial.ToString();
                 det.prod.QuantidadeTributavel = util.ToOrbitString(item.QuantidadeLinha);
-                det.prod.ValorUnitarioTributacao = util.ToOrbitString(item.ValorUnitarioLinha);
+                det.prod.ValorUnitarioTributacao = util.ToOrbitString4CasaDecimais(item.ValorUnitarioLinha);
                 det.prod.ValorFrete = !String.IsNullOrEmpty(ReturnValorUnitarioDespesaAdicional(item, "1")) ? ReturnValorUnitarioDespesaAdicional(item, "1") : "0.00";
                 det.prod.ValorSeguro = !String.IsNullOrEmpty(ReturnValorUnitarioDespesaAdicional(item, "2")) ? ReturnValorUnitarioDespesaAdicional(item, "2") : null;
                 det.prod.VOutro = !String.IsNullOrEmpty(ReturnValorUnitarioDespesaAdicional(item, "3")) ? ReturnValorUnitarioDespesaAdicional(item, "3") : null;

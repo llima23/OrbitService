@@ -12,5 +12,6 @@ namespace AccountService_ContasContabeis.ContasContabeis.repository
         public string ReturnIdOrbitFatherAccountB1(string fatherAccount);
         public int UpdateAccountStatusSucess(Account account, ContasContabeisOutput output);
         public int UpdateAccountStatusError(Account account, ContasContabeisError output);
+        public int UpdateStatusErrorValidation(Account account, string content);
     }
 }

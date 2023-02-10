@@ -49,6 +49,7 @@ namespace OrbitService.OutboundDFe.usecases
                         download.mes = invoice.DataDocumento.ToString("MM");
                         download.caminhoPadraoPDF = invoice.CaminhoPDF;
                         download.caminhoPadraoXML = invoice.CaminhoXML;
+                        download.codigoIntegracao = invoice.CodInt;
                         download.DownloadXML();
                     }
 

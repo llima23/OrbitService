@@ -13,31 +13,54 @@ namespace AccountService_ContasContabeis.ContasContabeis.Infrastructure.reposito
     public class DBAccountRepository: IDBAccountRepository
     {
         private IWrapper Wrapper;
-        public string QUERY = @"SELECT 
-	                                 ""AcctCode"",
-	                                 ""AcctName"",
-	                                 ""U_TAX4_LIDO"", 
-	                                 ""FatherNum"",
-	                                 ""Levels"", 
-	                                 CASE ""Postable""
-                                     WHEN 'Y' THEN ('A')
-                                     WHEN 'N' THEN ('S')
-                                     END AS ""AcctType"",
-                                     CASE LEFT(""AcctCode"",1)
-                                     WHEN '1' THEN('01')
-                                     WHEN '2' THEN('02')
-                                     WHEN '3' THEN('04')
-                                     WHEN '4' THEN('04')
-                                     WHEN '5' THEN('04')
-                                     WHEN '6' THEN('05')
-                                     WHEN '7' THEN('09')
-                                     WHEN '8' THEN('09')
-                                     WHEN '9' THEN('09')
-                                     WHEN 'A' THEN('09')
-                                     END AS ""OriginCode"",
-	                                 ""CreateDate"" 
-	                                 FROM OACT 
-	                                 WHERE ""U_TAX4_LIDO"" = 'N'";
+        //public string QUERY = @"SELECT 
+        //                          ""AcctCode"",
+        //                          ""AcctName"",
+        //                          ""U_TAX4_LIDO"", 
+        //                          ""FatherNum"",
+        //                          ""Levels"", 
+        //                          CASE ""Postable""
+        //                             WHEN 'Y' THEN ('A')
+        //                             WHEN 'N' THEN ('S')
+        //                             END AS ""AcctType"",
+        //                             COALESCE(""U_TAX4_NatGrpCnt"",'') as ""OriginCode"",
+        //                          ""CreateDate"",
+        //                             ""U_TAX4_IdRet""
+        //                          FROM OACT 
+        //                          WHERE ""U_TAX4_LIDO"" = 'N'";
+
+        public string QUERY = @"SELECT * FROM (
+                                SELECT
+                                T0.""AcctCode"",
+                                T0.""AcctName"",
+                                T0.""U_TAX4_LIDO"",
+                                T0.""FatherNum"",
+                                T0.""Levels"",
+                                CASE T0.""Postable""WHEN 'Y' THEN 'A'WHEN 'N' THEN 'S'END AS ""AcctType"",
+                                COALESCE(T0.""U_TAX4_NatGrpCnt"",'') AS ""OriginCode"",
+                                T0.""CreateDate"",
+                                T0.""U_TAX4_IdRet"",
+                                T0.""GroupMask""
+                                FROM OACT T0
+                                JOIN OACT T1 ON T0.""FatherNum"" = T1.""AcctCode"" AND T1.""U_TAX4_IdRet"" IS NOT NULL
+                                WHERE COALESCE(t0.""U_TAX4_LIDO"",'N') = 'N' AND T0.""U_TAX4_IdRet"" IS NULL AND T0.""Levels"" > '1'
+                                UNION
+                                SELECT
+                                T0.""AcctCode"",
+                                T0.""AcctName"",
+                                T0.""U_TAX4_LIDO"",
+                                T0.""FatherNum"",
+                                T0.""Levels"",
+                                CASE T0.""Postable""WHEN 'Y' THEN 'A'WHEN 'N' THEN 'S'END AS ""AcctType"",
+                                COALESCE(T0.""U_TAX4_NatGrpCnt"",'') AS ""OriginCode"",
+                                T0.""CreateDate"",
+                                T0.""U_TAX4_IdRet"",
+                                T0.""GroupMask""
+                                FROM OACT T0
+                                WHERE COALESCE(t0.""U_TAX4_LIDO"",'N') = 'N'
+                                AND T0.""U_TAX4_IdRet"" IS NULL
+                                AND T0.""Levels"" = '1' ) SQ 
+                                ORDER BY SQ.""GroupMask"", SQ.""Levels"", SQ.""AcctCode""";
         private string jsonConvert;
         private string idOrbit { get; set; }
         private DataSet queryResult;
@@ -53,6 +76,10 @@ namespace AccountService_ContasContabeis.ContasContabeis.Infrastructure.reposito
             jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0])));
             result = JsonConvert.DeserializeObject<List<Account>>(jsonConvert);
             return result;
+        }
+        public int UpdateStatusErrorValidation(Account account, string message)
+        {
+            return Wrapper.ExecuteNonQuery(@$"UPDATE ""OACT"" SET ""U_TAX4_LIDO"" = 'N', ""U_TAX4_Stat"" = '{message}' WHERE ""AcctCode"" = '{account.AcctCode}'");
         }
         public string ReturnIdOrbitFatherAccountB1(string fatherAccount)
         {
@@ -71,9 +98,16 @@ namespace AccountService_ContasContabeis.ContasContabeis.Infrastructure.reposito
         public int UpdateAccountStatusError(Account account, ContasContabeisError output)
         {
             string messageError = string.Empty;
-            foreach (Error item in output.errors)
+            try
             {
-                messageError += item.msg + " - " + item.param + " - ";
+                foreach (Error item in output.errors)
+                {
+                    messageError += item.msg + " - " + item.param + " - ";
+                }
+            }
+            catch
+            {
+                messageError = output.message;
             }
             return Wrapper.ExecuteNonQuery(@$"UPDATE OACT SET ""U_TAX4_LIDO"" = 'N', ""U_TAX4_Stat"" = '{messageError}' WHERE ""AcctCode"" = '{account.AcctCode}'");
         }

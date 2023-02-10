@@ -14,9 +14,10 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.mapper
         {
             this.useCase = useCase;
         }
-        public LancamentoContabilInput ToAccountServiceRegisterInput(LancamentoContabilB1 lcm)
+        public BodyLCMInput ToAccountServiceRegisterInput(LancamentoContabilB1 lcm)
         {
-            LancamentoContabilInput input = new LancamentoContabilInput();
+            BodyLCMInput input = new BodyLCMInput();
+            input.header.erp_id = lcm.header.TransId.ToString();
             input.header.post_date = lcm.header.PostDate.ToString("yyyy-MM-dd");
             input.header.description = lcm.header.Description;
             input.header.entry_type = lcm.header.Entry_Type;
@@ -26,6 +27,7 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.mapper
             foreach (Lines item in lcm.lines)
             {
                 Transaction transaction = new Transaction();
+                transaction.erp_id = lcm.header.TransId.ToString();
                 transaction.accountId = item.AccountId;
                 transaction.nature = item.Debit > 0 ? "D" : "C";
                 transaction.historic = item.Historic;

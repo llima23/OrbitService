@@ -27,6 +27,7 @@ namespace OrbitService.InboundOtherDocuments.mappers
             input.BranchId = invoice.Identificacao.BranchId;
             input.CreatedAt = invoice.Identificacao.DataEmissao;
             input.UpdatedAt = invoice.Identificacao.DataLancamento;
+            
             #endregion DATA
             #region IDENTIFICACAO
             input.Identificacao.DataEmissao = invoice.Identificacao.DataEmissao.ToString("yyyy-MM-dd");
@@ -35,7 +36,7 @@ namespace OrbitService.InboundOtherDocuments.mappers
             input.Identificacao.Modelo = invoice.ModeloDocumento;
             input.Identificacao.Serie = invoice.Identificacao.SerieDocumento;
             input.Identificacao.Finalidade = invoice.Identificacao.FinalideDocumento;
-            input.Identificacao.TipoOperacao = invoice.Identificacao.TipoOperacaoDocumento;
+            
             #endregion IDENTIFICACAO
             #region EMITENTE
             input.Emitente.RazaoSocial = invoice.Filial.RazaoSocialFilial;
@@ -74,7 +75,8 @@ namespace OrbitService.InboundOtherDocuments.mappers
             input.Valores.Ir = util.GetTaxTypeB1Sum("IR", invoice);
             input.Valores.OutrasRetencoes = util.GetTaxTypeB1Sum("OUTRASRETENCOES", invoice);
             #endregion VALORES IMPOSTOS RETIDOS
-            input.Valores.ValorLiquido = util.GetTaxTypeB1Sum("VALORLIQUIDO",invoice);
+            input.Valores.ValorLiquido = util.GetVProdSum(invoice.CabecalhoLinha);
+            input.Valores.ValorBruto = util.GetVProdSum(invoice.CabecalhoLinha);
             #endregion VALORES
 
             #region ITEM
@@ -148,16 +150,7 @@ namespace OrbitService.InboundOtherDocuments.mappers
         public DocumentStatus ToDocumentStatusResponseSucessful(Invoice invoice, OtherDocumentRegisterOutput output)
         {
             StatusCode status = StatusCode.CargaFiscal;
-            if (output.data.status == "Erro" || output.data.status == "Alerta")
-            {
-                status = StatusCode.Erro;
-            }
-            else
-            {
-                output.data.status = "Sucess";
-                output.data.description = string.Empty;
-            }
-            DocumentStatus newStatusData = new DocumentStatus(output.data._id, output.data.status, output.data.description, invoice.ObjetoB1, invoice.DocEntry, status);
+            DocumentStatus newStatusData = new DocumentStatus(output.data.document_id, "", "", invoice.ObjetoB1, invoice.DocEntry, status);
             return newStatusData;
         }
     }

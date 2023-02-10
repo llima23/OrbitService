@@ -32,6 +32,7 @@ namespace OrbitService.InboundOtherDocuments.usecases
             {
                 Root root = new Root();
                 OtherDocumentRegisterInput input = mapper.ToOtherDocumentRegisterInput(invoice);
+                root.tipoOperacao = invoice.TipoNF == "0" ? "input" : "output";
                 root.Data = input;
                 OperationResponse<OtherDocumentRegisterOutput, OtherDocumentRegisterError> response = otherDocumentRegister.Execute(root);
 

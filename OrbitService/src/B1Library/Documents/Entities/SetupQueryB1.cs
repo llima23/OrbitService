@@ -842,7 +842,10 @@ namespace B1Library.Documents.Entities
 								 COALESCE(TT.""U_TAX4_TpImp"", '')     AS ""TipoImpostoOrbit"",
 								 COALESCE(TT.""Name"", '')             AS ""NomeImposto"",
 								 COALESCE(TX.""BaseSum"", 0)           AS ""ValorBaseImposto"",
-								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"" ");
+								 COALESCE(TX.""Unencumbrd"", '')       AS ""SimOuNaoDesoneracao"",
+								 COALESCE(TX.""U_Isento"", 0)		   AS ""BaseIsenta"",
+								 COALESCE(TX.""U_Base"", 0)			   AS ""BaseDeCalculo"",
+								 COALESCE(TX.""U_Outros"", 0)		   AS ""BaseOutras""");
             if (VerifyIfFieldExists(VDifL))
             {
                 sb.AppendLine(@$"	 ,COALESCE(TX.""U_VDifL"",0)			   AS ""VDif""");
@@ -877,7 +880,7 @@ namespace B1Library.Documents.Entities
 				sb.AppendLine(@$"	 ,COALESCE(TX.""U_ICMS_DEL"",0)		   AS ""ValorIcmsDesonerado""");
 			}
 			sb.AppendLine(@$"	FROM {B1TableNameChild}4 TX 
-								JOIN OSTT TT ON TX.""staType"" = TT.""AbsId"" 
+								JOIN OSTT TT ON TX.""staType"" = TT.""AbsId""
 								WHERE TX.""DocEntry"" = {cabecalhoLinha.DocEntry}
 								AND TX.""LineNum"" = {cabecalhoLinha.ItemLinhaDocumento}");
             return Convert.ToString(sb);
@@ -989,7 +992,7 @@ namespace B1Library.Documents.Entities
 		COALESCE(C1.""State"", '')     AS ""UF""
 		FROM OCRD T0
 		JOIN CRD1 C1 ON T0.""CardCode"" = C1.""CardCode""
-		JOIN CRD7 C7 ON T0.""CardCode"" = C7.""CardCode"" AND C1.""Address"" = C7.""Address""
+		LEFT JOIN CRD7 C7 ON T0.""CardCode"" = C7.""CardCode"" AND C1.""Address"" = C7.""Address""
 		LEFT JOIN OCNT OC ON T0.""County"" = OC.""AbsId""
 		WHERE C1.""AdresType"" = 'S' AND T0.""CardCode"" = '{invoice.Identificacao.Carrier}'");
             return Convert.ToString(sb);

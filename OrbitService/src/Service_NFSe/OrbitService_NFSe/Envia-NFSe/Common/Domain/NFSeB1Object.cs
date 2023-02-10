@@ -16,6 +16,7 @@ namespace _4TAX_Service.Common.Domain
             LinesTax = new List<LineTax>();
             Emails = new List<Emails>();
         }
+        public string ItemClass { get; set; }
         public List<Emails> Emails { get; set; }
 
         [JsonProperty("BranchId")]

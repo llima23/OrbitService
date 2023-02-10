@@ -20,7 +20,16 @@ namespace OrbitService.OutboundDFe.mappers
 
         public DocumentStatus ToDocumentStatusResponseSucessful(Invoice invoice, OutboundDFeDocumentCancelOutputNFe output)
         {
-            DocumentStatus documentStatus = new DocumentStatus(invoice.IdRetornoOrbit, "", output.retEnvEvento.xMotivo, invoice.ObjetoB1, invoice.DocEntry, StatusCode.CanceladaSucess, output.retEnvEvento.retEvento[0].infEvento.chNFe, output.retEnvEvento.retEvento[0].infEvento.nProt, invoice.BaseEntry, output.communicationIds[0]);
+            string communicationId = string.Empty;
+            try
+            {
+                communicationId = output.communicationIds[0];
+            }
+            catch
+            {
+                communicationId = "";
+            }
+            DocumentStatus documentStatus = new DocumentStatus(invoice.IdRetornoOrbit, "", output.retEnvEvento.xMotivo, invoice.ObjetoB1, invoice.DocEntry, StatusCode.CanceladaSucess, output.retEnvEvento.retEvento[0].infEvento.chNFe, output.retEnvEvento.retEvento[0].infEvento.nProt, invoice.BaseEntry, communicationId);
             return documentStatus;
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrbitService_COL_Fiscal.Utils;
+using System;
 using System.Data;
 
 namespace OrbitLibrary.Data
@@ -6,20 +7,18 @@ namespace OrbitLibrary.Data
     public class DbWrapper : IWrapper
     {
         public const int COMMAND_TIMEOUT = 600;
-
+  
         private DBFactory factory;
         public string DataBaseType { get; set; }
         public string DataBaseName { get; set; }
-        public IDbConnection connection;
 
         public DbWrapper(DBFactory factory)
         {
             this.factory = factory;
             this.DataBaseName = factory.DataBaseName;
             this.DataBaseType = factory.DataBaseType;
-            this.connection = factory.CreateConnection();
         }
-
+  
 
         public bool CanDbConnect()
         {
@@ -38,9 +37,20 @@ namespace OrbitLibrary.Data
 
         public int ExecuteNonQuery(string commandString)
         {
-            IDbCommand command = factory.CreateCommand();
-            command.CommandText = commandString;
-            return ExecuteNonQueryCommand(command);
+            int ResultCode = 0;
+
+            try
+            {
+                IDbCommand command = factory.CreateCommand();
+                command.CommandText = commandString;
+                ResultCode = ExecuteNonQueryCommand(command);
+            }
+            catch (Exception e)
+            {
+                Log.InsertLog($"Error in ExecuteNonQuery:{e.Message} - Query: {commandString}");                
+            }
+
+            return ResultCode;
         }
 
         public int ExecuteNonQueryCommand(IDbCommand command)
@@ -64,7 +74,6 @@ namespace OrbitLibrary.Data
         {
             IDbCommand queryCommand = factory.CreateCommand();
             queryCommand.CommandText = queryString;
-
             return ExecuteQueryCommand(queryCommand);
         }
 
@@ -79,22 +88,21 @@ namespace OrbitLibrary.Data
 
             try
             {
+                IDbConnection connection = factory.CreateConnection();
                 IDbDataAdapter dataAdapter = factory.CreateDataAdapter();
-                if (this.connection.State != ConnectionState.Open)
-                {
-                    this.connection.Open();
-                }
-                command.Connection = this.connection;
+
+                connection.Open();
+                command.Connection = connection;
                 command.CommandTimeout = COMMAND_TIMEOUT;
                 dataAdapter.SelectCommand = command;
                 dataAdapter.Fill(resultDataSet);
-                //connection.Close();
+                connection.Close();
             }
             catch (Exception ex)
             {
                 throw new ArgumentException(ex.ToString());
             }
-
+            
             return resultDataSet;
         }
     }

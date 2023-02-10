@@ -15,5 +15,7 @@ namespace AccountService_ContasContabeis.ContasContabeis.Infrastructure.Document
         public int Levels { get; set; }
         public string Postable { get; set; }
         public string U_TAX4_LIDO { get; set; }
+        public string U_TAX4_IdRet { get; set; }
+        public string GroupMask { get; set; }
     }
 }

@@ -266,6 +266,9 @@ namespace OrbitService.InboundNFe.mappers
                             imposto.Icms.VBc = util.ToOrbitString(util.GetTaxTypeB1VBcSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
                             imposto.Icms.PImp = util.ToOrbitString(item.PorcentagemImposto); //TODO:
                             imposto.Icms.VImp = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+                            imposto.Icms.percBaseCalculo = item.BaseDeCalculo;
+                            imposto.Icms.percBaseIsenta = item.BaseIsenta;
+                            imposto.Icms.percBaseOutras = item.BaseDeCalculo;
                             if (item.SimOuNaoDesoneracao == "Y" || item.ValorIcmsDesonerado > 0)
                             {
                                 imposto.Icms.VDeson = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));

@@ -2,9 +2,14 @@
 using AccountService_LancamentoContabil.LancamentoContabil.mapper;
 using AccountService_LancamentoContabil.LancamentoContabil.service;
 using AccountService_LancamentoContabil.LancamentoContabil.service.Establishments;
+using Newtonsoft.Json;
 using OrbitLibrary.Common;
+using OrbitService_COL_Fiscal.LancamentoContabil.service.GET;
+using OrbitService_Fiscal.LancamentoContabil.LancamentoContabil;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace AccountService_LancamentoContabil.LancamentoContabil.usecase
 {
@@ -13,7 +18,7 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.usecase
         private ServiceConfiguration sConfig;
         private CommunicationProvider communicationProvider;
         private IDBLancamentoContabilRepository accountRepository;
-        private int TransId = 0;
+        private string TransId;
         public UseCaseLCM(ServiceConfiguration sConfig, CommunicationProvider communicationProvider, IDBLancamentoContabilRepository accountRepository)
         {
             this.sConfig = sConfig;
@@ -22,34 +27,56 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.usecase
         }
         public void Execute()
         {
-            try
+            LancamentoContabilInput input = new LancamentoContabilInput();
+            List<BodyLCMInput> listBody = new List<BodyLCMInput>();
+            MapperInputLCMB1ToOrbit mapper = new MapperInputLCMB1ToOrbit(this);
+            LancamentoContabilService outboundAccountRegister = new LancamentoContabilService(sConfig, communicationProvider);
+            List<LancamentoContabilB1> listLCM = accountRepository.ReturnListLCMToOrbit();
+            foreach (LancamentoContabilB1 lcm in listLCM)
             {
-                MapperInputLCMB1ToOrbit mapper = new MapperInputLCMB1ToOrbit(this);
-                LancamentoContabilService outboundAccountRegister = new LancamentoContabilService(sConfig, communicationProvider);
-                List<LancamentoContabilB1> listLCM = accountRepository.ReturnListLCMToOrbit();
-                foreach (LancamentoContabilB1 lcm in listLCM)
+                validationLCM validation = new validationLCM(lcm, accountRepository);
+                if (validation.ValidationHeaderRequiredFields() && validation.ValidationLinesRequiredFields())
                 {
-                    TransId = lcm.header.TransId;
-                    LancamentoContabilInput input = mapper.ToAccountServiceRegisterInput(lcm);
-                    OperationResponse<LancamentoContabilOutput, LancamentoContabilError> response = outboundAccountRegister.Execute(input);
-                    if (response.isSuccessful)
-                    {
-                        LancamentoContabilOutput output = response.GetSuccessResponse();
-                        accountRepository.UpdateAccountStatusSucess(lcm, output);
-                    }
+                    BodyLCMInput body = mapper.ToAccountServiceRegisterInput(lcm);
+                    TransId += "'" + lcm.header.TransId + "',";
+                    listBody.Add(body);
+                }
+            }
+            TransId = TransId.Remove(TransId.Length - 1);
+            string json = JsonConvert.SerializeObject(listBody, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+            byte[] bytes = Encoding.Default.GetBytes(json);
+            input.data = Convert.ToBase64String(bytes);
 
-                    else
+            OperationResponse<LancamentoContabilOutput, LancamentoContabilError> response = outboundAccountRegister.Execute(input);
+            if (response.isSuccessful)
+            {
+                LancamentoContabilOutput output = response.GetSuccessResponse();
+                accountRepository.UpdateAccountStatusSucessIdLote(TransId, output);
+            }
+            else
+            {
+                LancamentoContabilError output = response.GetErrorResponse();
+                accountRepository.UpdateAccountStatusError(TransId, output);
+            }
+        }
+
+        public void ExecuteAtualizaLCM()
+        {
+            MapperInputLCMB1ToOrbit mapper = new MapperInputLCMB1ToOrbit(this);
+            LcmGetService serviceGET = new LcmGetService(sConfig, communicationProvider);
+            List<LancamentoContabilB1> listLCM = accountRepository.ReturnListLCMToUpdate();
+            foreach (LancamentoContabilB1 lcm in listLCM)
+            {
+                OperationResponse<LcmGetOutput, LcmGetError> response = serviceGET.Execute(lcm.header.IdOrbitLote);
+                if (response.isSuccessful)
+                {
+                    LcmGetOutput output = response.GetSuccessResponse();
+                    foreach (Success item in output.data.success.Where(s => s.externalId == lcm.header.TransId.ToString()))
                     {
-                        LancamentoContabilError output = response.GetErrorResponse();
-                        accountRepository.UpdateAccountStatusError(lcm, output);
+                        accountRepository.UpdateAccountStatusSucess(item.externalId, item.id);
                     }
                 }
             }
-            catch(Exception ex)
-            {
-                accountRepository.UpdateAccountStatusErrorException(TransId, ex.Message);
-            }
-           
         }
 
         public string GetEstabFiscalIdFromOrbit(string branchId, LancamentoContabilB1 lcm)
@@ -64,7 +91,7 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.usecase
                 {
                     LancamentoContabilError outputError = new LancamentoContabilError();
                     outputError.errors[0].msg = "Estabelecimento não cadastrado para filial utilizada";
-                    accountRepository.UpdateAccountStatusError(lcm, outputError);
+                    accountRepository.UpdateAccountStatusError(TransId, outputError);
                 }
                 estabFiscalId = output.id;
                 accountRepository.UpdateEstabFiscalInLConfigAddon(output.id, branchId);
@@ -72,7 +99,7 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.usecase
             else
             {
                 LancamentoContabilError output = response.GetErrorResponse();
-                accountRepository.UpdateAccountStatusError(lcm, output);
+                accountRepository.UpdateAccountStatusError(TransId, output);
             }
             return estabFiscalId;
         }

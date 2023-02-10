@@ -296,6 +296,9 @@ namespace B1Library.Documents
 
     public class ImpostoLinha
     {
+        public double BaseIsenta { get; set; }
+        public double BaseDeCalculo { get; set; }
+        public double BaseOutras { get; set; }
         public double ValorIcmsDesonerado { get; set; } = 0.00;
         public double pRedBc { get; set; }
         public double PDif { get; set; } 

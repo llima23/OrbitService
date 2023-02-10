@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,10 +8,8 @@ namespace OrbitService.OutboundDFe.services
     public class OutboundDFeDocumentInutilOutputNFe
     {
         public RetInutNFe retInutNFe { get; set; }
-        public List<string> communicationIds { get; set; }
         public DocumentsIdsByNnf documentsIdsByNnf { get; set; }
-        public string code { get; set; }
-        public string message { get; set; }
+        public List<string> communicationIds { get; set; }
     }
 
     public class AttributesInutilNFe
@@ -21,6 +20,8 @@ namespace OrbitService.OutboundDFe.services
 
     public class DocumentsIdsByNnf
     {
+        [JsonProperty("523")]
+        public string _523 { get; set; }
     }
 
     public class InfInut

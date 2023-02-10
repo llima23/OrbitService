@@ -20,6 +20,14 @@ namespace OrbitLibrary.Common
 
         public SessionCredentials ResolveCredentials(bool forceNewAuthentication = false)
         {
+
+            if (lastValidSessionCredentials != null)
+            {
+                if (this.sConfig.TenantID.ToString() != lastValidSessionCredentials.TenantId)
+                {
+                    return generateNewSessionCredentials();
+                }
+            }
             if (!forceNewAuthentication)
             {
                 if (lastValidSessionCredentials != null && lastValidSessionCredentials.IsValid())
@@ -27,6 +35,7 @@ namespace OrbitLibrary.Common
                     return lastValidSessionCredentials;
                 }
             }
+
 
             return generateNewSessionCredentials();
         }
@@ -57,9 +66,14 @@ namespace OrbitLibrary.Common
                     .Where(t => t.tenantId == sConfig.TenantID.ToString());
 
                 tenantObject = selectedTenants.Count() > 0 ? selectedTenants.First() : null;
-            }           
+            }
 
-            return updateLastSessionCredentials(new SessionCredentials(tenantObject == null ? string.Empty : tenantObject.pk, authenticationOutput.token));
+            //OrbitService_COL_Fiscal.Utils.Log.InsertLog($"PK:{tenantObject.pk}");
+            //OrbitService_COL_Fiscal.Utils.Log.InsertLog($"TENANT ORBIT:{tenantObject.tenantId}");
+            //OrbitService_COL_Fiscal.Utils.Log.InsertLog($"TENANT NAME:{tenantObject.tenantName}");
+            //OrbitService_COL_Fiscal.Utils.Log.InsertLog($"TENANT B1:{sConfig.TenantID}");
+
+            return updateLastSessionCredentials(new SessionCredentials(tenantObject == null ? string.Empty : tenantObject.pk, authenticationOutput.token, tenantObject.tenantId));
         }
 
         private SessionCredentials updateLastSessionCredentials(SessionCredentials sessionCredentials)

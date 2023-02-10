@@ -16,6 +16,7 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.infrastructure.do
     }
     public class Header
     {
+        public string IdOrbitLote { get; set; }
         public string Description { get; set; }
         public string Entry_Type { get; set; }
         public string Establishment_id { get; set; }

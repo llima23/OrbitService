@@ -16,6 +16,9 @@ namespace OrbitService.InboundOtherDocuments.services.Input
 
         [JsonProperty("dfe")]
         public string Dfe { get; set; } = "outro";
+
+        [JsonProperty("tipoOperacao")]
+        public string tipoOperacao { get; set; }
     }
 
     public class OtherDocumentRegisterInput

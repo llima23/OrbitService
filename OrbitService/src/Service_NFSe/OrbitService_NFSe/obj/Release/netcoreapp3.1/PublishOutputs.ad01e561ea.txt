@@ -5,8 +5,6 @@ D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\O
 D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\OrbitService_NFSe.deps.json
 D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\OrbitService_NFSe.runtimeconfig.json
 D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\OrbitService_NFSe.pdb
-D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\BouncyCastle.Crypto.dll
-D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\itextsharp.dll
 D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\Microsoft.AspNetCore.Authentication.Abstractions.dll
 D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\Microsoft.AspNetCore.Authentication.Core.dll
 D:\Desenvolvimento\4TAX_Service_Connector\Orbit_Servicos\NFS-E\ServiceUni_NFSe\Microsoft.AspNetCore.Authorization.dll

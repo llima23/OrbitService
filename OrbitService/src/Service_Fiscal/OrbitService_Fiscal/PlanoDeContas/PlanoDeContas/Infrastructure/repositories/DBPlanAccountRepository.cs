@@ -31,6 +31,19 @@ namespace AccountService_PlanoDeContas.PlanoDeContas.Infrastructure.repositories
         {
             this.wrapper = wrapper;
         }
+
+        public int CountAccountIntegrate()
+        {
+            DataSet queryResult = wrapper.ExecuteQuery(@$"SELECT COUNT(*) FROM ""OACT"" WHERE ""U_TAX4_IdRet"" IS NOT NULL OR ""U_TAX4_IdRet"" != ''");
+            return Convert.ToInt32(queryResult.Tables[0].Rows[0].ItemArray[0].ToString());
+
+        }
+        public int CountAccountTotalIntegrate()
+        {
+            DataSet queryResult = wrapper.ExecuteQuery(@$"SELECT COUNT(*) FROM ""OACT""");
+            return Convert.ToInt32(queryResult.Tables[0].Rows[0].ItemArray[0].ToString());
+
+        }
         public bool ValidadeIfExistsIdOrbitPlanAccountSucess()
         {
             DataSet queryResult = wrapper.ExecuteQuery(@$"SELECT ""U_TAX4_IdPLNConta"", ""U_TAX4_IntegraPlano"" FROM ""@TAX4_CONFIGADDON"" WHERE ""U_TAX4_TenantId"" = '{tenantId}'");

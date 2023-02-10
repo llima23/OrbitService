@@ -121,6 +121,20 @@ namespace B1Library.Utilities
             }
         }
 
+        public string ToOrbitString4CasaDecimais(double valor)
+        {
+            if (valor > 0)
+            {
+                string ValueString = string.Format(cultureInfo, "{0:0.000000}", valor);
+                ValueString = ValueString.Remove(ValueString.Length - 2);
+                return ValueString;
+            }
+            else
+            {
+                return "0.00";
+            }
+        }
+
         public string ToOrbitStringVolume(double valor)
         {
             if (valor > 0)

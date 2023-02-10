@@ -9194,7 +9194,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\B1USER2\\.nuget\\packages\\": {},
+    "C:\\Users\\B1USER1\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -9203,14 +9203,14 @@
       "projectUniqueName": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\OrbitService_Tst\\OrbitService_Tst.csproj",
       "projectName": "OrbitService_Tst",
       "projectPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\OrbitService_Tst\\OrbitService_Tst.csproj",
-      "packagesPath": "C:\\Users\\B1USER2\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\B1USER1\\.nuget\\packages\\",
       "outputPath": "D:\\Repository\\AWS\\luis_lima\\OrbitService\\OrbitService\\OrbitService_Tst\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\B1USER2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\B1USER1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

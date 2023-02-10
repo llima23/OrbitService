@@ -773,6 +773,13 @@ namespace OrbitService.InboundNFe.services.InboundNFeRegister
 
     public class Icms
     {
+        [JsonProperty("percBaseCalculo")]
+        public double percBaseCalculo { get; set; }
+        [JsonProperty("percBaseIsenta")]
+        public double percBaseIsenta { get; set; }
+        [JsonProperty("percBaseOutras")]
+        public double percBaseOutras { get; set; }
+
         [JsonProperty("orig")]
         public string Orig { get; set; }
 

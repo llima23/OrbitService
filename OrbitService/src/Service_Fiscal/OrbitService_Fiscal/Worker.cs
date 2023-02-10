@@ -14,6 +14,8 @@ using OrbitService.InboundCce.usecases;
 using OrbitService.InboundNFe.usecases;
 using OrbitService.InboundNFSe.usecases;
 using OrbitService.InboundOtherDocuments.usecases;
+using OrbitService_Fiscal.Pagamentos.Pagamentos.mapper.repositories;
+using OrbitService_Fiscal.Pagamentos.Pagamentos.usecase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +27,7 @@ namespace OrbitService_Fiscal
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-
+        private ServiceDependencies service;
         public Worker(ILogger<Worker> logger)
         {
             _logger = logger;
@@ -37,43 +39,28 @@ namespace OrbitService_Fiscal
             {
                 try
                 {
-                    _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                    List<Thread> threads = new List<Thread>();
                     await Task.Delay(1000, stoppingToken);
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
-                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
+                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies.Where(i => i.DbWrapper.DataBaseName == "SBO_ORBITDEV"))
                     {
-                        if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocFiscal)
-                        {
-                            //ExecuteEnviaNFe(serviceDependencies);
-                            //ExecuteAtualizaNFe(serviceDependencies);
-                            //ExecuteCancelaNFe(serviceDependencies);
-                            //ExecuteInutilizaNFe(serviceDependencies);
-                            Thread t = new Thread(() => ExecuteCentroDeCusto(serviceDependencies));
-                            t.Start();
-                            Thread t2 = new Thread(() => ExecuteContasContabeis(serviceDependencies));
-                            t2.Start();
-                            Thread t3 = new Thread(() => ExecuteInboundCce(serviceDependencies));
-                            t3.Start();
-                            Thread t4 = new Thread(() => ExecuteInboundNFe(serviceDependencies));
-                            t4.Start();
-                            Thread t5 = new Thread(() => ExecuteInboundNFSe(serviceDependencies));
-                            t5.Start();
-                            Thread t6 = new Thread(() => ExecuteInboundOtherDocuments(serviceDependencies));
-                            t6.Start();
-                            Thread t7 = new Thread(() => ExecuteLCM(serviceDependencies));
-                            t7.Start();
-                            Thread t8 = new Thread(() => ExecutePlanoDeContas(serviceDependencies));
-                            t8.Start();
-                            t.Join();
-                            t2.Join();
-                            t3.Join();
-                            t4.Join();
-                            t5.Join();
-                            t6.Join();
-                            t7.Join();
-                            t8.Join();
-                        }
+                       ExecuteContasContabeis(serviceDependencies);
+                        //this.service = serviceDependencies;
+                        //if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocFiscal)
+                        //{
+                           
+                        //    Thread t = new Thread(() => ExecuteAll());
+                        //    threads.Add(t);
+                        //}
                     }
+                    //foreach (Thread item in threads)
+                    //{
+                    //    item.Start();
+                    //}
+                    //foreach (Thread item in threads)
+                    //{
+                    //    item.Join();
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -81,6 +68,49 @@ namespace OrbitService_Fiscal
                 }
 
             }
+        }
+        private void ExecuteAll()
+        {
+            Thread t = new Thread(() => ExecuteCentroDeCusto(this.service));
+            t.Start();
+            Thread t2 = new Thread(() => ExecuteContasContabeis(this.service));
+            t2.Start();
+            Thread t3 = new Thread(() => ExecuteInboundCce(this.service));
+            t3.Start();
+            Thread t4 = new Thread(() => ExecuteInboundNFe(this.service));
+            t4.Start();
+            Thread t5 = new Thread(() => ExecuteInboundNFSe(this.service));
+            t5.Start();
+            Thread t6 = new Thread(() => ExecuteInboundOtherDocuments(this.service));
+            t6.Start();
+            Thread t7 = new Thread(() => ExecuteLCM(this.service));
+            t7.Start();
+            Thread t8 = new Thread(() => ExecutePlanoDeContas(this.service));
+            t8.Start();
+            Thread t9 = new Thread(() => ExecutePayments(this.service));
+            t9.Start();
+
+            t.Join();
+            t2.Join();
+            t3.Join();
+            t4.Join();
+            t5.Join();
+            t6.Join();
+            t7.Join();
+            t8.Join();
+            t9.Join();
+        }
+        private void ExecutePayments(ServiceDependencies serviceDependencies)
+        {
+            try
+            {
+                UseCasePayments useCase = new UseCasePayments(serviceDependencies.sConfig, serviceDependencies.communicationProvider, new DBPaymentsRepository(serviceDependencies.DbWrapper));
+                useCase.Execute();
+            }
+            catch
+            {
+            }
+
         }
 
         private void ExecutePlanoDeContas(ServiceDependencies serviceDependencies)

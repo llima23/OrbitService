@@ -24,30 +24,33 @@ namespace AccountService_PlanoDeContas.PlanoDeContas.usecase
         }
         public void Execute()
         {
-            if (!accountsRepository.ValidadeIfExistsIdOrbitPlanAccountSucess())
+            if (accountsRepository.CountAccountIntegrate() == accountsRepository.CountAccountTotalIntegrate())
             {
-                PlanoDeContasServicesCreate planAccountCreate = new PlanoDeContasServicesCreate(sConfig, communicationProvider);
-                PlanoDeContasInputCreate inputCreate = new PlanoDeContasInputCreate
+                if (!accountsRepository.ValidadeIfExistsIdOrbitPlanAccountSucess())
                 {
-                    alias = "Plano De Contas"
-                };
-                OperationResponse<PlanoDeContasOutputCreate, PlanoDeContasError> responseCreate = planAccountCreate.ExecuteCreate(inputCreate);
-                if (responseCreate.isSuccessful)
-                {
-                    //Do UpdateB1
-                    PlanoDeContasOutputCreate outputCreate = responseCreate.GetSuccessResponse();
-                    accountsRepository.idOrbitPlanoConta = outputCreate.id;
+                    PlanoDeContasServicesCreate planAccountCreate = new PlanoDeContasServicesCreate(sConfig, communicationProvider);
+                    PlanoDeContasInputCreate inputCreate = new PlanoDeContasInputCreate
+                    {
+                        alias = "Plano De Contas"
+                    };
+                    OperationResponse<PlanoDeContasOutputCreate, PlanoDeContasError> responseCreate = planAccountCreate.ExecuteCreate(inputCreate);
+                    if (responseCreate.isSuccessful)
+                    {
+                        //Do UpdateB1
+                        PlanoDeContasOutputCreate outputCreate = responseCreate.GetSuccessResponse();
+                        accountsRepository.idOrbitPlanoConta = outputCreate.id;
+                    }
                 }
-            }
-            if(accountsRepository.planoDeContaIntegrado != "S")
-            {
-                MapperAssociatePlanAccountToOrbit mapper = new MapperAssociatePlanAccountToOrbit();
-                PlanoDeContasServicesAssociate outboundAccountRegister = new PlanoDeContasServicesAssociate(sConfig, communicationProvider);
-                PlanoDeContaInputAssociate input = mapper.MapperListAccountToAssociatePlanOrbit(accountsRepository.ReturnListOfPlanAccountToAssociate(), accountsRepository.idOrbitPlanoConta);
-                OperationResponse<PlanoDeContaOutputAssociate, PlanoDeContasError> response = outboundAccountRegister.ExecuteAssociate(input);
-                if (response.isSuccessful)
+                if (accountsRepository.planoDeContaIntegrado != "S")
                 {
-                    accountsRepository.UpdatePlanAccountStatusSucess();
+                    MapperAssociatePlanAccountToOrbit mapper = new MapperAssociatePlanAccountToOrbit();
+                    PlanoDeContasServicesAssociate outboundAccountRegister = new PlanoDeContasServicesAssociate(sConfig, communicationProvider);
+                    PlanoDeContaInputAssociate input = mapper.MapperListAccountToAssociatePlanOrbit(accountsRepository.ReturnListOfPlanAccountToAssociate(), accountsRepository.idOrbitPlanoConta);
+                    OperationResponse<PlanoDeContaOutputAssociate, PlanoDeContasError> response = outboundAccountRegister.ExecuteAssociate(input);
+                    if (response.isSuccessful)
+                    {
+                        accountsRepository.UpdatePlanAccountStatusSucess();
+                    }
                 }
             }
         }

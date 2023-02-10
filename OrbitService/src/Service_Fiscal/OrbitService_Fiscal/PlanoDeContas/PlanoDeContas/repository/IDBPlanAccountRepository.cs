@@ -13,5 +13,7 @@ namespace AccountService_PlanoDeContas.PlanoDeContas.repository
         public int UpdatePlanAccountStatusSucess();
         public bool ValidadeIfExistsIdOrbitPlanAccountSucess();
         public List<PlanAccount> ReturnListOfPlanAccountToAssociate();
+        public int CountAccountTotalIntegrate();
+        public int CountAccountIntegrate();
     }
 }

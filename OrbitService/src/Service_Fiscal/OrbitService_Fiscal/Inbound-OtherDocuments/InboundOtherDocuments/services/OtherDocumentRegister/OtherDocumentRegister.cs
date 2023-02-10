@@ -26,7 +26,7 @@ namespace OrbitService.InboundOtherDocuments.services
                         .AddHeader("target", "taxdocumentservice")
                         .CredentialsProvider(sConfig.CredentialsProvider)
                         .Body(input)
-                        .Serializer(new JsonRequestBodySerializer()),
+                        .Serializer(new JsonRequestBodySerializer(removeNullFields: true)),
                     new JsonResponseBodyDeserializer());
         }
     }

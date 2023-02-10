@@ -202,7 +202,6 @@ namespace _4TAX_Service.Services.Document.Properties
 
         public class Iss
         {
-            public int responsavel { get; set; }
             public double baseCalculo { get; set; } = 0.00;
             public double aliquota { get; set; } = 0.00;
             public double valor { get; set; } = 0.00;

@@ -79,8 +79,6 @@ D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitServ
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitService_NFSe\obj\Debug\netcoreapp3.1\OrbitService_NFSe.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitService_NFSe\obj\Debug\netcoreapp3.1\OrbitService_NFSe.pdb
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitService_NFSe\obj\Debug\netcoreapp3.1\OrbitService_NFSe.genruntimeconfig.cache
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitService_NFSe\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
-D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitService_NFSe\bin\Debug\netcoreapp3.1\itextsharp.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitService_NFSe\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Abstractions.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitService_NFSe\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Core.dll
 D:\Repository\AWS\luis_lima\OrbitService\OrbitService\src\Service_NFSe\OrbitService_NFSe\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
