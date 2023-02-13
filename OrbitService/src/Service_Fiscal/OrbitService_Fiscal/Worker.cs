@@ -42,25 +42,25 @@ namespace OrbitService_Fiscal
                     List<Thread> threads = new List<Thread>();
                     await Task.Delay(1000, stoppingToken);
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
-                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies.Where(i => i.DbWrapper.DataBaseName == "SBO_ORBITDEV"))
+                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies.Where(x => x.DbWrapper.DataBaseName == "SBO_ORBITDEV"))
                     {
-                       ExecuteContasContabeis(serviceDependencies);
-                        //this.service = serviceDependencies;
-                        //if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocFiscal)
-                        //{
-                           
-                        //    Thread t = new Thread(() => ExecuteAll());
-                        //    threads.Add(t);
-                        //}
+                       
+                        this.service = serviceDependencies;
+                        if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocFiscal)
+                        {
+
+                            Thread t = new Thread(() => ExecuteAll());
+                            threads.Add(t);
+                        }
                     }
-                    //foreach (Thread item in threads)
-                    //{
-                    //    item.Start();
-                    //}
-                    //foreach (Thread item in threads)
-                    //{
-                    //    item.Join();
-                    //}
+                    foreach (Thread item in threads)
+                    {
+                        item.Start();
+                    }
+                    foreach (Thread item in threads)
+                    {
+                        item.Join();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -83,8 +83,8 @@ namespace OrbitService_Fiscal
             t5.Start();
             Thread t6 = new Thread(() => ExecuteInboundOtherDocuments(this.service));
             t6.Start();
-            Thread t7 = new Thread(() => ExecuteLCM(this.service));
-            t7.Start();
+            //Thread t7 = new Thread(() => ExecuteLCM(this.service));
+            //t7.Start();
             Thread t8 = new Thread(() => ExecutePlanoDeContas(this.service));
             t8.Start();
             Thread t9 = new Thread(() => ExecutePayments(this.service));
@@ -96,7 +96,7 @@ namespace OrbitService_Fiscal
             t4.Join();
             t5.Join();
             t6.Join();
-            t7.Join();
+            //t7.Join();
             t8.Join();
             t9.Join();
         }

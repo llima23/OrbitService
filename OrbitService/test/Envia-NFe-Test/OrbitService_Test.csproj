@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Envia-NFe\OrbitService.csproj" />
     <ProjectReference Include="..\..\src\OrbitLibrary\OrbitLibrary.csproj" />
     <ProjectReference Include="..\OrbitLibrary-Test\OrbitLibrary_Test.csproj" />
   </ItemGroup>

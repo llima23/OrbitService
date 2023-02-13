@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Inbound-OtherDocuments\OrbitService.csproj" />
     <ProjectReference Include="..\OrbitLibrary-Test\OrbitLibrary_Test.csproj" />
   </ItemGroup>
 

@@ -5,8 +5,6 @@ using AccountService_PlanoDeContas.PlanoDeContas.service.Associate;
 using AccountService_PlanoDeContas.PlanoDeContas.service.Create;
 using OrbitLibrary.Common;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AccountService_PlanoDeContas.PlanoDeContas.usecase
 {
@@ -31,7 +29,7 @@ namespace AccountService_PlanoDeContas.PlanoDeContas.usecase
                     PlanoDeContasServicesCreate planAccountCreate = new PlanoDeContasServicesCreate(sConfig, communicationProvider);
                     PlanoDeContasInputCreate inputCreate = new PlanoDeContasInputCreate
                     {
-                        alias = "Plano De Contas"
+                        alias = "Plano De Contas " + DateTime.Now.ToString("yyyy")
                     };
                     OperationResponse<PlanoDeContasOutputCreate, PlanoDeContasError> responseCreate = planAccountCreate.ExecuteCreate(inputCreate);
                     if (responseCreate.isSuccessful)
@@ -39,6 +37,7 @@ namespace AccountService_PlanoDeContas.PlanoDeContas.usecase
                         //Do UpdateB1
                         PlanoDeContasOutputCreate outputCreate = responseCreate.GetSuccessResponse();
                         accountsRepository.idOrbitPlanoConta = outputCreate.id;
+                        accountsRepository.UpdatePlanAccountStatusSucess();
                     }
                 }
                 if (accountsRepository.planoDeContaIntegrado != "S")

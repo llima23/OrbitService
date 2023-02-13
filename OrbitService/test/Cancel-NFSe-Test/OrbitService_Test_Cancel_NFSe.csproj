@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Cancel-NFSe\OrbitService_Cancel_NFSe.csproj" />
     <ProjectReference Include="..\Envia-NFe-Test\OrbitService_Test.csproj" />
     <ProjectReference Include="..\OrbitLibrary-Test\OrbitLibrary_Test.csproj" />
   </ItemGroup>

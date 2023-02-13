@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Inutil-NFSe\OrbitService\OrbitService.csproj" />
     <ProjectReference Include="..\..\OrbitLibrary-Test\OrbitLibrary_Test.csproj" />
   </ItemGroup>
 
