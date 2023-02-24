@@ -189,14 +189,45 @@ namespace _4TAX_Service.Services.Document.NFSe
                     descricao.Add("Quantidade: " + Linhas.Quantity);
                     descricao.Add("Valor Unitário: R$ " + Linhas.Price);
                     descricao.Add("Valor Total do Item: R$ " + Linhas.LineTotal);
-                    if (!string.IsNullOrEmpty(b1Document.Comments))
+                    switch (b1Document.TipoObservacao)
                     {
-                        string[] subs = b1Document.Comments.Split('\r');
-                        foreach (var item in subs)
-                        {
-                            descricao.Add(item);
-                        }
+                        case "1":
+                            if (!string.IsNullOrEmpty(b1Document.ObsAbertura) && !string.IsNullOrEmpty(b1Document.ObsDocumento))
+                            {
+                                string[] subs = b1Document.ObsAbertura.Split('\r');
+                                foreach (var item in subs)
+                                {
+                                    descricao.Add(item);
+                                }
+                                subs = b1Document.ObsDocumento.Split('\r');
+                                foreach (var item in subs)
+                                {
+                                    descricao.Add(item);
+                                }
+                            }
+                            break;
+                        case "2":
+                            if (!string.IsNullOrEmpty(b1Document.ObsDocumento))
+                            {
+                                string[] subs = b1Document.ObsDocumento.Split('\r');
+                                foreach (var item in subs)
+                                {
+                                    descricao.Add(item);
+                                }
+                            }
+                            break;
+                        case "3":
+                            if (!string.IsNullOrEmpty(b1Document.ObsAbertura))
+                            {
+                                string[] subs = b1Document.ObsAbertura.Split('\r');
+                                foreach (var item in subs)
+                                {
+                                    descricao.Add(item);
+                                }
+                            }
+                            break;
                     }
+
                     if (Linhas.U_TAX4_IBPT > 0)
                     {
 
@@ -219,9 +250,11 @@ namespace _4TAX_Service.Services.Document.NFSe
 
                     requestInput.rps.servico.codigoTributacaoMunicipio = !String.IsNullOrEmpty(Linhas.U_TAX4_TrMun) ? Linhas.U_TAX4_TrMun : null;
 
-
                     requestInput.rps.servico.codigoMunicipioIncidencia = requestInput.rps.identificacao.regimeEspecialTributacao == "T" ? "3550308" : b1Document.IbgeCode;
-
+                    if(b1Document.IbgeCode == "3144805")
+                    {
+                        requestInput.rps.servico.codigoMunicipioIncidencia = b1Document.IbgeCode;
+                    }
 
                     #endregion
                     #region SERVIÇO - VALORES
@@ -272,7 +305,8 @@ namespace _4TAX_Service.Services.Document.NFSe
                                     requestInput.rps.servico.valores.iss.baseCalculo = LineTotal;
                                     requestInput.rps.servico.valores.iss.retido = true;
                                     requestInput.rps.servico.valores.iss.aliquota = LineTaxWithholding.RATE;
-                                    requestInput.rps.servico.valores.iss.valorRetido += Linhas.WTAMNT;
+                                    requestInput.rps.servico.valores.iss.valorRetido += LineTaxWithholding.WTAMNT;
+                                    requestInput.rps.servico.valores.iss.responsavel = 1;
                                     break;
                             }
                             requestInput.rps.servico.valores.outrasRetencoes = 0.00;

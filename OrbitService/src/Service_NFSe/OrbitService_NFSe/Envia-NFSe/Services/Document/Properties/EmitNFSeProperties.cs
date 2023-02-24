@@ -202,14 +202,19 @@ namespace _4TAX_Service.Services.Document.Properties
 
         public class Iss
         {
-            public double baseCalculo { get; set; } = 0.00;
-            public double aliquota { get; set; } = 0.00;
-            public double valor { get; set; } = 0.00;
-            public double valorRetido { get; set; } = 0.00;
+            public double baseCalculo { get; set; }
+            public double aliquota { get; set; }
+            public double valor { get; set; }
+            public double valorRetido { get; set; }
             public bool retido { get; set; }
             public string exigibilidadeIss { get; set; }
-            public int valorReducaoBC { get; set; }
-            public int reducao { get; set; }
+
+            [JsonProperty("responsavel")]
+            public int responsavel { get; set; }
+            public bool ShouldSerializeresponsavel()
+            {
+                return (responsavel > 0);
+            }
         }
 
         public class Listum

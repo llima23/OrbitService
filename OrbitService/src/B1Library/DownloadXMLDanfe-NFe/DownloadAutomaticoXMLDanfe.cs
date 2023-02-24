@@ -20,7 +20,8 @@ namespace DownloadAutomatico
         public string caminhoPadraoXML { get; set; }
         public string ano { get; set; }
         public string mes { get; set; }
-        public string caminhoArquivo { get; set; }
+        public string caminhoArquivoDANFE { get; set; }
+        public string caminhoArquivoXML { get; set; }
         public string chaveSefaz { get; set; }
         public string prot { get; set; }
         private DownloadService service;
@@ -36,14 +37,10 @@ namespace DownloadAutomatico
 
         public void DownloadDanfe()
         {
-            DirectoryInfo di1 = Directory.CreateDirectory($@"{caminhoPadraoPDF.Trim()}\{ano}\{mes}\");
+            DirectoryInfo di1 = Directory.CreateDirectory($@"{caminhoPadraoPDF.Trim()}\NF-e\{ano}\{mes}\");
             if (modelo == "55")
             {
-                caminhoArquivo = $@"{caminhoPadraoPDF.Trim()}\{ano}\{mes}\{chaveSefaz}.pdf";
-            }
-            else
-            {
-                caminhoArquivo = $@"{caminhoPadraoPDF.Trim()}\{ano}\{mes}\{"RPS_" + rps + "NFSE_" + NFse}.pdf";
+                caminhoArquivoDANFE = $@"{caminhoPadraoPDF.Trim()}\NF-e\{ano}\{mes}\{chaveSefaz}.pdf";
             }
             ExecutePDF(nfID);
         }
@@ -55,7 +52,7 @@ namespace DownloadAutomatico
                 OperationResponse<object, object> response = service.ExecutePDF(id);
                 byte[] bytes = Convert.FromBase64String(response.Content);
                 System.IO.FileStream stream =
-                new FileStream(caminhoArquivo, FileMode.CreateNew);
+                new FileStream(caminhoArquivoDANFE, FileMode.CreateNew);
                 System.IO.BinaryWriter writer =
                 new BinaryWriter(stream);
                 writer.Write(bytes, 0, bytes.Length);
@@ -69,27 +66,18 @@ namespace DownloadAutomatico
 
         public void DownloadXML()
         {
-            if (modelo == "55")
-            {
-                DirectoryInfo di = Directory.CreateDirectory($@"{caminhoPadraoXML.Trim()}\{ano}\{mes}\XML Autorizado\");
-                caminhoArquivo = $@"{caminhoPadraoXML.Trim()}\{ano}\{mes}\XML Autorizado\{chaveSefaz}.xml";
-
+                DirectoryInfo di = Directory.CreateDirectory($@"{caminhoPadraoXML.Trim()}\NF-e\{ano}\{mes}\XML Autorizado\");
+            caminhoArquivoXML = $@"{caminhoPadraoXML.Trim()}\NF-e\{ano}\{mes}\XML Autorizado\{chaveSefaz}.xml";
                 if(codigoIntegracao == "5")
                 {
                     di = Directory.CreateDirectory($@"{caminhoPadraoXML.Trim()}\{ano}\{mes}\XML de Cancelamento\");
-                    caminhoArquivo = $@"{caminhoPadraoXML.Trim()}\{ano}\{mes}\XML de Cancelamento\{prot}.xml";
+                caminhoArquivoXML = $@"{caminhoPadraoXML.Trim()}\NF-e\{ano}\{mes}\XML de Cancelamento\{prot}.xml";
                 }
-            }
-            else
-            {
-                caminhoArquivo = $@"{caminhoPadraoXML.Trim()}\{ano}\{mes}\{"RPS_" + rps + "NFSE_" + NFse}.pdf";
-            }
-
             OperationResponse<object, object> response = service.ExecuteXML(nfID);
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(response.Content);
             doc.PreserveWhitespace = true;
-            doc.Save(caminhoArquivo);
+            doc.Save(caminhoArquivoXML);
         }
     }
 }

@@ -383,6 +383,7 @@ namespace OrbitService.InboundNFSe.services.NFSeDocumentRegister
 
         [JsonProperty("baseCalculo")]
         public string baseCalculo { get; set; }
+        public string codigo_receita { get; set; }
 
     }
     public partial class Pis
@@ -399,6 +400,8 @@ namespace OrbitService.InboundNFSe.services.NFSeDocumentRegister
         [JsonProperty("baseCalculo")]
         public string baseCalculo { get; set; }
 
+        public string codigo_receita { get; set; }
+
     }
     public partial class Inss
     {
@@ -411,7 +414,7 @@ namespace OrbitService.InboundNFSe.services.NFSeDocumentRegister
         [JsonProperty("baseCalculo")]
         public string baseCalculo { get; set; }
 
-
+        public string codigo_receita { get; set; }
     }
     public partial class Ir
     {
@@ -423,6 +426,7 @@ namespace OrbitService.InboundNFSe.services.NFSeDocumentRegister
 
         [JsonProperty("baseCalculo")]
         public string baseCalculo { get; set; }
+        public string codigo_receita { get; set; }
     }
     public partial class Csll
     {
@@ -434,6 +438,8 @@ namespace OrbitService.InboundNFSe.services.NFSeDocumentRegister
 
         [JsonProperty("baseCalculo")]
         public string baseCalculo { get; set; }
+
+        public string codigo_receita { get; set; }
     }
     public partial class Iss
     {
@@ -459,6 +465,8 @@ namespace OrbitService.InboundNFSe.services.NFSeDocumentRegister
 
         [JsonProperty("exigibilidadeIss")]
         public string ExigibilidadeIss { get; set; }
+
+        public string codigo_receita { get; set; }
     }
     public partial class Tomador
     {

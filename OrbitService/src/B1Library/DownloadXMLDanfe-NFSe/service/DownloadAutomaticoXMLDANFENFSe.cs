@@ -8,7 +8,7 @@ namespace B1Library.DownloadXMLDanfe_NFSe.service
     public class DownloadAutomaticoXMLDANFENFSe : BaseService<object,object>
     {
         public const string ENDPOINT = "/documentservice/api/nfse/print/{id}";
-        public const string ENDPOINTXML = "/documentservice/api/nfse/xml/emit/{id}";
+        public const string ENDPOINTXML = "/documentservice/api/nfse/county_xml/{id}";
         public DownloadAutomaticoXMLDANFENFSe(ServiceConfiguration sConfig, CommunicationProvider communicationClient) : base(sConfig, communicationClient)
         {
 

@@ -23,9 +23,11 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.infrastructure.do
         public string BranchId { get; set; }
         public DateTime PostDate { get; set; }
         public int TransId { get; set; }
+        
     }
     public class Lines
     {
+        public int Line_ID { get; set; }
         public string AccountId { get; set; }
         public string CostCenterId { get; set; }
         public double Credit { get; set; }

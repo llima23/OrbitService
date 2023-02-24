@@ -30,14 +30,14 @@ namespace OrbitLibrary.Infrastructure.Repositories
                     }
 
                     //string baseURIString = "https://dev.api.orbitspot.com/"; //queryResult.Tables[0].Rows[0]["U_TAX4_UrlOrbit"].ToString();
-                    //string username = "luis.lima@seidor.com.br"; //queryResult.Tables[0].Rows[0]["U_TAX4_usr4TAX"].ToString();
-                    //string password = "Seidor1@";//queryResult.Tables[0].Rows[0]["U_TAX4_pass4TAX"].ToString();
+                    //string username = "juliano.moura@seidor.com.br"; //queryResult.Tables[0].Rows[0]["U_TAX4_usr4TAX"].ToString();
+                    //string password = "6s2v5399ai$Z2ZYV";//queryResult.Tables[0].Rows[0]["U_TAX4_pass4TAX"].ToString();
                     //string tenant = "2f3b81f0-c5a6-49a6-8e99-3083ce1d9d5c";//queryResult.Tables[0].Rows[0]["U_TAX4_TenantId"].ToString();
                     //bool ativo = queryResult.Tables[0].Rows[0]["U_TAX4_Ativo"].ToString() == "Y" ? true : false;
                     //bool integraDocDFe = queryResult.Tables[0].Rows[0]["U_TAX4_IntegraDocDFe"].ToString() == "Y" ? true : false;
                     //bool integraDocFiscal = queryResult.Tables[0].Rows[0]["U_TAX4_IntegraDocFisc"].ToString() == "Y" ? true : false;
 
-                    string baseURIString =queryResult.Tables[0].Rows[0]["U_TAX4_UrlOrbit"].ToString();
+                    string baseURIString = queryResult.Tables[0].Rows[0]["U_TAX4_UrlOrbit"].ToString();
                     string username = queryResult.Tables[0].Rows[0]["U_TAX4_usr4TAX"].ToString();
                     string password = queryResult.Tables[0].Rows[0]["U_TAX4_pass4TAX"].ToString();
                     string tenant = queryResult.Tables[0].Rows[0]["U_TAX4_TenantId"].ToString();

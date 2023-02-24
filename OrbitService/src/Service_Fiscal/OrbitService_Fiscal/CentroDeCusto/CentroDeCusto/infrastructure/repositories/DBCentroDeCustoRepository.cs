@@ -10,7 +10,7 @@ using System.Text;
 
 namespace AccountService_CentroDeCusto.CentroDeCusto.infrastructure.repositories
 {
-    public class DBCentroDeCustoRepository: IDBCentroDeCustoRepository
+    public class DBCentroDeCustoRepository : IDBCentroDeCustoRepository
     {
         private IWrapper Wrapper;
         public string QUERY = @"SELECT  
@@ -43,9 +43,17 @@ namespace AccountService_CentroDeCusto.CentroDeCusto.infrastructure.repositories
         public int UpdateAccountStatusError(CentroDeCustoB1 account, CentroDeCustoError output)
         {
             string messageError = string.Empty;
-            foreach (Error item in output.errors)
+
+            if (output.errors == null)
             {
-                messageError += item.msg + " - " + item.param + " - ";
+                messageError = output.message;
+            }
+            else
+            {
+                foreach (Error item in output.errors)
+                {
+                    messageError += item.msg + " - " + item.param + " - ";
+                }
             }
             return Wrapper.ExecuteNonQuery(@$"UPDATE OPRC SET ""U_TAX4_LIDO"" = 'N' WHERE ""PrcCode"" = '{account.PrcCode}'");
         }

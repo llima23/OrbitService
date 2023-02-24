@@ -27,7 +27,7 @@ namespace OrbitService.InboundCce.services
             destinatario = new Destinatario();
             item = new List<Item>();
             valores = new Valores();
-            StatusDoc = new StatusDoc();
+            statusDoc = new StatusDoc();
         }
         public string branchId { get; set; }
         public string created_at { get; set; }
@@ -37,7 +37,7 @@ namespace OrbitService.InboundCce.services
         public Destinatario destinatario { get; set; }
         public List<Item> item { get; set; }
         public Valores valores { get; set; }
-        public StatusDoc StatusDoc { get; set; }
+        public StatusDoc statusDoc { get; set; }
     }
 
     public class Destinatario
@@ -122,7 +122,7 @@ namespace OrbitService.InboundCce.services
     {
         public Item()
         {
-            Impostos = new Impostos();
+            impostos = new Impostos();
         }
         public string codigoItem { get; set; }
         public string descricaoItem { get; set; }
@@ -130,7 +130,7 @@ namespace OrbitService.InboundCce.services
         public string unidadeMedida { get; set; }
         public double quantidade { get; set; }
         public double valorItem { get; set; }
-        public Impostos Impostos { get; set; }
+        public Impostos impostos { get; set; }
     }
 
     public class StatusDoc

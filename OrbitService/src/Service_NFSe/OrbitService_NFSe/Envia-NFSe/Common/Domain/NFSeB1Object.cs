@@ -16,6 +16,7 @@ namespace _4TAX_Service.Common.Domain
             LinesTax = new List<LineTax>();
             Emails = new List<Emails>();
         }
+  
         public string ItemClass { get; set; }
         public List<Emails> Emails { get; set; }
 
@@ -46,8 +47,14 @@ namespace _4TAX_Service.Common.Domain
         [JsonProperty("DiscPrcnt")]
         public double DiscPrcnt { get; set; }
 
-        [JsonProperty("Comments")]
-        public string Comments { get; set; }
+        [JsonProperty("TipoObservacao")]
+        public string TipoObservacao { get; set; }
+
+        [JsonProperty("ObsAbertura")]
+        public string ObsAbertura { get; set; }
+
+        [JsonProperty("ObsDocumento")]
+        public string ObsDocumento { get; set; }
 
         [JsonProperty("GroupNum")]
         public int GroupNum { get; set; }

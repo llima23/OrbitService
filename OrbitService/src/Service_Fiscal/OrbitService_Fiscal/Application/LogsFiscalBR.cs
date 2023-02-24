@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace _4TAX_Service_Atualiza.Application
+namespace OrbitService_Fiscal.Application
 {
-    public class Logs
+    public class LogsFiscalBR
     {
-        protected static string CaminhoLOGTXT = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.ToString()) + "\\LOG_ATUALIZA.txt";
+        protected static string CaminhoLOGTXT = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.ToString()) + "\\LOGFISCALBR.txt";
 
         /// <summary>
         /// Método dinâmico para inserção de log em documento txt definido no CaminhoLOGTXT

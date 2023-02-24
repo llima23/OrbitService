@@ -21,18 +21,18 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.mapper
             input.header.post_date = lcm.header.PostDate.ToString("yyyy-MM-dd");
             input.header.description = lcm.header.Description;
             input.header.entry_type = lcm.header.Entry_Type;
-            input.header.establishment_id = String.IsNullOrEmpty(lcm.header.Establishment_id) ? useCase.GetEstabFiscalIdFromOrbit(lcm.header.BranchId,lcm) : lcm.header.Establishment_id;
+            input.header.establishment_id = "4064ffe4-dc22-4a8b-a423-d77dca9c8d6f";//String.IsNullOrEmpty(lcm.header.Establishment_id) ? useCase.GetEstabFiscalIdFromOrbit(lcm.header.BranchId,lcm) : lcm.header.Establishment_id;
             input.header.header_accounting_entry_number = lcm.header.TransId.ToString();
             List<Transaction> listTR = new List<Transaction>();
             foreach (Lines item in lcm.lines)
             {
                 Transaction transaction = new Transaction();
-                transaction.erp_id = lcm.header.TransId.ToString();
                 transaction.accountId = item.AccountId;
                 transaction.nature = item.Debit > 0 ? "D" : "C";
                 transaction.historic = item.Historic;
                 transaction.value = item.Debit > 0 ? item.Debit : item.Credit;
                 transaction.costCenterId = !String.IsNullOrEmpty(item.CostCenterId) ? item.CostCenterId : null;
+                transaction.erp_id = lcm.header.TransId.ToString() + " - " + item.Line_ID.ToString() + transaction.nature;
                 listTR.Add(transaction);
             }
             input.transactions = listTR;

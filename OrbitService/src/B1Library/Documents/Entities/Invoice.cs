@@ -19,6 +19,7 @@ namespace B1Library.Documents
             Emails = new List<Emails>();
             Transportadora = new Transportadora();
         }
+        public string EnviaEmailAutomatico { get; set; }
         public string DownloadAutomatico { get; set; }
         public string CaminhoPDF { get; set; }
         public string CaminhoXML { get; set; }
@@ -238,6 +239,8 @@ namespace B1Library.Documents
 
     public class Identificacao
     {
+        public string ObsDocumento { get; set; }
+        public string TipoObservacao { get; set; }
         public double DescontoTotal { get; set; }
         public string Carrier { get; set; }
         public string PlacaVeiculo { get; set; }
@@ -312,7 +315,10 @@ namespace B1Library.Documents
         public string SimOuNaoDesoneracao { get; set; } = "N";
         public double MVast { get; set; } //TODO : Colocar na View U_lucro
         public double AliquotaIntDestino { get; set; }
-        public double PartilhaInterestadual { get; set; }    
+        public double PartilhaInterestadual { get; set; }
+        public double vBCUFD { get; set; }
+        public double vFCUFD { get; set; }
+        public double vICUFD { get; set; }
     }
 
     public class ImpostoRetidoLinha
@@ -321,5 +327,7 @@ namespace B1Library.Documents
         public string TipoImpostoOrbit { get; set; }
         public double ValorImpostoRetido { get; set; }
         public double TaxbleAmnt { get; set;}
+        public string CodOfiReceita { get; set; }
+        public string TipoImpostoOWHT { get; set; }
     }
 }

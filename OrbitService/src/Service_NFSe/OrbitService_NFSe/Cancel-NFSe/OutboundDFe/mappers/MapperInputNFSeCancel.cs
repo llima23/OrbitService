@@ -29,7 +29,7 @@ namespace OrbitService_Cancel_NFSe.OutboundDFe.mappers
             {
                 output.message += item.description + " - " + "\r";
             }
-            DocumentStatus documentStatus = new DocumentStatus(invoice.Identificacao.IdRetornoOrbit, Convert.ToString(output.success), output.message, invoice.ObjetoB1, invoice.DocEntry, StatusCode.CanceladaSucess, null, null, invoice.BaseEntry);
+            DocumentStatus documentStatus = new DocumentStatus(invoice.Identificacao.IdRetornoOrbit, Convert.ToString(output.success), output.message, invoice.ObjetoB1, invoice.DocEntry, StatusCode.CancelEmProcess, null, null, invoice.BaseEntry);
             return documentStatus;
         }
 

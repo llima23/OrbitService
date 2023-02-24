@@ -214,8 +214,21 @@ namespace OrbitService.OutboundDFe.mappers
             input.exporta.UfSaidaPais = !String.IsNullOrEmpty(invoice.Identificacao.UFDeExportacao) ? invoice.Identificacao.UFDeExportacao : null;
             input.exporta.XLocExporta = !String.IsNullOrEmpty(invoice.Identificacao.LocalDeExportacao) ? invoice.Identificacao.UFDeExportacao : null;
             input.infAdic.InfAdFisco = !String.IsNullOrEmpty(invoice.Identificacao.InfAdFisco) ? invoice.Identificacao.InfAdFisco : null;
-            input.infAdic.InfCpl = !String.IsNullOrEmpty(invoice.Identificacao.ObsAbertura) ? invoice.Identificacao.ObsAbertura : null;
-
+            switch (invoice.Identificacao.TipoObservacao)
+            {
+                case "1":
+                    input.infAdic.InfCpl = String.IsNullOrEmpty(invoice.Identificacao.ObsAbertura) && String.IsNullOrEmpty(invoice.Identificacao.ObsDocumento) ? null : invoice.Identificacao.ObsAbertura + invoice.Identificacao.ObsDocumento;
+                    break;
+                case "2":
+                    input.infAdic.InfCpl = String.IsNullOrEmpty(invoice.Identificacao.ObsDocumento) ? null : invoice.Identificacao.ObsDocumento;
+                    break;
+                case "3":
+                    input.infAdic.InfCpl = String.IsNullOrEmpty(invoice.Identificacao.ObsAbertura) ? null : invoice.Identificacao.ObsAbertura;
+                    break;
+                default:
+                    input.infAdic.InfCpl = null;
+                    break;
+            }
             if (!String.IsNullOrEmpty(invoice.Identificacao.ObsFiscoTexto))
             {
                 string[] subs = invoice.Identificacao.ObsFiscoTexto.Split(',');
@@ -402,6 +415,15 @@ namespace OrbitService.OutboundDFe.mappers
                                 imposto.Icms.PDif = util.ToOrbitString(item.PDif);
                                 imposto.Icms.VIcmsOp = util.ToOrbitString(item.VICMSOp);
                             }
+                            if(item.PartilhaInterestadual > 0)
+                            {
+                                imposto.IcmsUfDest.VBcUfDest = util.ToOrbitString(util.GetTaxTypeB1VBcUFDestSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+                                imposto.IcmsUfDest.VBcFcpUfDest = util.ToOrbitString(util.GetTaxTypeB1VBcFCPDestSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+                                imposto.IcmsUfDest.PIcmsUfDest = util.ToOrbitString(item.AliquotaIntDestino);
+                                imposto.IcmsUfDest.PIcmsInter = util.ToOrbitString(item.PorcentagemImposto);
+                                imposto.IcmsUfDest.PIcmsInterPart = util.ToOrbitString(item.PartilhaInterestadual);
+                                imposto.IcmsUfDest.VIcmsUfDest = util.ToOrbitString(util.GetTaxTypeB1VBcICUFDestSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+                            }
                             break;
                         case "-4":
                             imposto.Ipi.CEnq = cabecalhoLinha.cEnq;
@@ -422,12 +444,7 @@ namespace OrbitService.OutboundDFe.mappers
                             }
                             break;
                         case "-9":
-                            imposto.IcmsUfDest.VBcUfDest = util.ToOrbitString(util.GetTaxTypeB1VBcSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
-                            imposto.IcmsUfDest.VBcFcpUfDest = util.ToOrbitString(util.GetTaxTypeB1VBcSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
-                            imposto.IcmsUfDest.PIcmsUfDest = util.ToOrbitString(item.AliquotaIntDestino);
-                            imposto.IcmsUfDest.PIcmsInter = util.ToOrbitString(item.PorcentagemImposto);
-                            imposto.IcmsUfDest.PIcmsInterPart = util.ToOrbitString(item.PartilhaInterestadual);
-                            imposto.IcmsUfDest.VIcmsUfDest = util.ToOrbitString(util.GetTaxTypeB1VImpSumForItem(cabecalhoLinha.ImpostoLinha, item.TipoImpostoOrbit));
+
                             break;
                         case "-3":
                             imposto.IcmsUfDest.PFcpUfDest = util.ToOrbitString(item.PorcentagemImposto);

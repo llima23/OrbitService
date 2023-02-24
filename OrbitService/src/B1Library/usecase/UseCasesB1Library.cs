@@ -48,11 +48,29 @@ namespace B1Library.usecase
 													and T0.""SeqCode"" < 0 
 													and T0.""U_TAX4_CARGAFISCAL"" = 'N'
 													and OM.""NfmCode"" IN ('NFS-e')
+                                                    and T0.""CANCELED"" = 'N'
+                                                    AND T0.""DocDate"" >= CO.""U_TAX4_DateInt""
                                                     OR
                                                     ""U_TAX4_CodInt"" = '0' 
 													and T0.""SeqCode"" > 0 
 													and T0.""U_TAX4_CARGAFISCAL"" = 'S'
-													and OM.""NfmCode"" IN ('NFS-e')";
+													and OM.""NfmCode"" IN ('NFS-e')
+                                                    and T0.""CANCELED"" = 'N'
+                                                    AND T0.""DocDate"" >= CO.""U_TAX4_DateInt""
+                                                    OR
+                                                    ""U_TAX4_CodInt"" = '7'
+													and T0.""SeqCode"" > 0 
+													and T0.""U_TAX4_CARGAFISCAL"" = 'S'
+													and OM.""NfmCode"" IN ('NFS-e')
+                                                    and T0.""CANCELED"" = 'Y'
+                                                    AND T0.""DocDate"" >= CO.""U_TAX4_DateInt""
+                                                    OR
+                                                    ""U_TAX4_CodInt"" = '7'
+													and T0.""SeqCode"" < 0 
+													and T0.""U_TAX4_CARGAFISCAL"" = 'N'
+													and OM.""NfmCode"" IN ('NFS-e')
+                                                    and T0.""CANCELED"" = 'Y'
+                                                    AND T0.""DocDate"" >= CO.""U_TAX4_DateInt""";
 
         public const string commandInboundCTe = @"WHERE ""U_TAX4_CodInt"" = '0' 
 													and T0.""SeqCode"" < 0 
@@ -83,7 +101,7 @@ namespace B1Library.usecase
                                                         and T0.""U_TAX4_IdRet"" is not null
                                                         and OM.""NfmCode"" IN ('55')";
 
-        public const string commandConsultaNFSe = @"WHERE ""U_TAX4_CodInt"" = '1' 
+        public const string commandConsultaNFSe = @"WHERE ""U_TAX4_CodInt"" in ('1','4')
 													    and T0.""U_TAX4_IdRet"" <> ''
                                                         and T0.""U_TAX4_IdRet"" is not null
                                                         and OM.""NfmCode"" IN ('NFS-e')";

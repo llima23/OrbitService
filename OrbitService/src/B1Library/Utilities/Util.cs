@@ -63,7 +63,36 @@ namespace B1Library.Utilities
                 result += impostoLinha.ValorBaseImposto;
             }
             return result;
+        }
 
+        public double GetTaxTypeB1VBcUFDestSumForItem(List<ImpostoLinha> ListimpostoLinha, string TipoImposto)
+        {
+            double result = 0.00;
+            foreach (ImpostoLinha impostoLinha in ListimpostoLinha.Where(i => i.TipoImpostoOrbit == TipoImposto))
+            {
+                result += impostoLinha.vBCUFD;
+            }
+            return result;
+        }
+
+        public double GetTaxTypeB1VBcFCPDestSumForItem(List<ImpostoLinha> ListimpostoLinha, string TipoImposto)
+        {
+            double result = 0.00;
+            foreach (ImpostoLinha impostoLinha in ListimpostoLinha.Where(i => i.TipoImpostoOrbit == TipoImposto))
+            {
+                result += impostoLinha.vFCUFD;
+            }
+            return result;
+        }
+
+        public double GetTaxTypeB1VBcICUFDestSumForItem(List<ImpostoLinha> ListimpostoLinha, string TipoImposto)
+        {
+            double result = 0.00;
+            foreach (ImpostoLinha impostoLinha in ListimpostoLinha.Where(i => i.TipoImpostoOrbit == TipoImposto))
+            {
+                result += impostoLinha.vICUFD;
+            }
+            return result;
         }
         public double GetTaxTypeB1VImpSumForItem(List<ImpostoLinha> ListimpostoLinha, string TipoImposto)
         {

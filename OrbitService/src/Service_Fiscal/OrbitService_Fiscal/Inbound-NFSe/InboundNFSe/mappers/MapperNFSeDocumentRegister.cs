@@ -24,8 +24,10 @@ namespace OrbitService.InboundNFSe.mappers
                 NFSeDocumentRegisterInput input = FactoryNFSeDocumentRegisterInput.CreateNFSeDocumentRegisterInputInstance();
 
                 #region DATA
+                input.Event = invoice.CANCELED == "Y" ? "cancel" : "emit";
                 input.NFServico.BranchId = invoice.Identificacao.BranchId;
                 input.NFServico.numeroLote = invoice.Identificacao.DocEntry.ToString();
+                
 
                 string[] recebeEmail = { invoice.Parceiro.EmailParceiro };
                 input.NFServico.emails = recebeEmail;
@@ -147,26 +149,31 @@ namespace OrbitService.InboundNFSe.mappers
                                     input.NFServico.Rps.Servico.Valores.Pis.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Pis.Valor += LineTaxWithholding.ValorImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Pis.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
+                                    input.NFServico.Rps.Servico.Valores.Pis.codigo_receita = LineTaxWithholding.CodOfiReceita;
                                     break;
                                 case "2":
                                     input.NFServico.Rps.Servico.Valores.Cofins.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Cofins.Valor += LineTaxWithholding.ValorImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Cofins.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
+                                    input.NFServico.Rps.Servico.Valores.Cofins.codigo_receita = LineTaxWithholding.CodOfiReceita;
                                     break;
                                 case "3":
                                     input.NFServico.Rps.Servico.Valores.Ir.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Ir.Valor = LineTaxWithholding.ValorImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Ir.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
+                                    input.NFServico.Rps.Servico.Valores.Ir.codigo_receita = LineTaxWithholding.CodOfiReceita;
                                     break;
                                 case "4":
                                     input.NFServico.Rps.Servico.Valores.Csll.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Csll.Valor = LineTaxWithholding.ValorImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Csll.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
+                                    input.NFServico.Rps.Servico.Valores.Csll.codigo_receita = LineTaxWithholding.CodOfiReceita;
                                     break;
                                 case "5":
                                     input.NFServico.Rps.Servico.Valores.Inss.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Inss.Valor = LineTaxWithholding.ValorImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Inss.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
+                                    input.NFServico.Rps.Servico.Valores.Inss.codigo_receita = LineTaxWithholding.CodOfiReceita;
                                     break;
                                 case "6":
                                     input.NFServico.Rps.Servico.Valores.Iss.ExigibilidadeIss = "2";
@@ -174,9 +181,29 @@ namespace OrbitService.InboundNFSe.mappers
                                     input.NFServico.Rps.Servico.Valores.Iss.Retido = true;
                                     input.NFServico.Rps.Servico.Valores.Iss.Aliquota = LineTaxWithholding.PorcentagemImpostoRetido;
                                     input.NFServico.Rps.Servico.Valores.Iss.ValorRetido += LineTaxWithholding.ValorImpostoRetido;
+                                    input.NFServico.Rps.Servico.Valores.Iss.codigo_receita = LineTaxWithholding.CodOfiReceita;
                                     break;
                             }
                             input.NFServico.Rps.Servico.Valores.OutrasRetencoes = 0.00;
+                        }
+
+
+                        if (LineTaxWithholding.TipoImpostoOWHT == "7")
+                        {
+                            input.NFServico.Rps.Servico.Valores.Pis.Aliquota = 0.65;
+                            input.NFServico.Rps.Servico.Valores.Pis.Valor += Convert.ToDouble(util.ToOrbitString(LineTaxWithholding.TaxbleAmnt * (0.65 / 100)));
+                            input.NFServico.Rps.Servico.Valores.Pis.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
+                            input.NFServico.Rps.Servico.Valores.Pis.codigo_receita = LineTaxWithholding.CodOfiReceita;
+
+                            input.NFServico.Rps.Servico.Valores.Cofins.Aliquota = 3.00;
+                            input.NFServico.Rps.Servico.Valores.Cofins.Valor += Convert.ToDouble(util.ToOrbitString(LineTaxWithholding.TaxbleAmnt * (3.00 / 100)));
+                            input.NFServico.Rps.Servico.Valores.Cofins.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
+                            input.NFServico.Rps.Servico.Valores.Cofins.codigo_receita = LineTaxWithholding.CodOfiReceita;
+
+                            input.NFServico.Rps.Servico.Valores.Csll.Aliquota = 1.00;
+                            input.NFServico.Rps.Servico.Valores.Csll.Valor = Convert.ToDouble(util.ToOrbitString(LineTaxWithholding.TaxbleAmnt * (1.00 / 100)));
+                            input.NFServico.Rps.Servico.Valores.Csll.baseCalculo = util.ToOrbitString(LineTaxWithholding.TaxbleAmnt);
+                            input.NFServico.Rps.Servico.Valores.Csll.codigo_receita = LineTaxWithholding.CodOfiReceita;
                         }
                     }
                     #endregion SERVIÇO - VALORES - IMPOSTO RETIDO

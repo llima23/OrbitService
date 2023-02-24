@@ -10,11 +10,15 @@ namespace OrbitService_NFSe.Envia_NFSe.Application
     {
         public void ValidaObjeto(EmitRequestInput input, NFSeB1Object nfse)
         {
-            if(string.IsNullOrEmpty(input.rps.identificacao.naturezaOperacao) && string.IsNullOrEmpty(input.rps.identificacao.regimeEspecialTributacao))
+            if(input.rps.identificacao.naturezaOperacao == "0")
+            {
+                throw new Exception("Campo Natureza Operação NFS-e não preenchido.");
+            }
+            if (string.IsNullOrEmpty(input.rps.identificacao.regimeEspecialTributacao) && input.rps.identificacao.naturezaOperacao == "0")
             {
                 throw new Exception("Campo Tributação nfs-e não preenchido.");
             }
-            if(string.IsNullOrEmpty(input.rps.tomador.cnpj) && string.IsNullOrEmpty(input.rps.tomador.cpf) && string.IsNullOrEmpty(input.rps.tomador.inscricaoMunicipal) && input.rps.tomador.endereco != null)
+            if (string.IsNullOrEmpty(input.rps.tomador.cnpj) && string.IsNullOrEmpty(input.rps.tomador.cpf) && string.IsNullOrEmpty(input.rps.tomador.inscricaoMunicipal) && input.rps.tomador.endereco != null)
             {
                 throw new Exception("Ident.fiscais - CNPJ, CPF ou Inscrição municipal do tomador não preenchido");
             }

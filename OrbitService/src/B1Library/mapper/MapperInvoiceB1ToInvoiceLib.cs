@@ -28,8 +28,10 @@ namespace B1Library.mapper
         {
             DataSet queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnCommandHeader());
             dynamic result = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0]));
+            messageAux += "\r" + "HEADER PREENCHIDO";
             foreach (var header in result)
             {
+                messageAux = "";
                 try
                 {
                     Invoice invoice = new Invoice();
@@ -169,9 +171,31 @@ namespace B1Library.mapper
             {
                 Invoice invoice = new Invoice();
                 invoice = JsonConvert.DeserializeObject<Invoice>(JsonConvert.SerializeObject(header));
+
+
+                queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnCommandParceiroHANA1(invoice));
+                jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0]))).Replace("[", "").Replace("]", "");
+                invoice.Parceiro = JsonConvert.DeserializeObject<Parceiro>(jsonConvert);
+
+                #region LISTEMAILS
+                queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnCommandListEmails(invoice));
+                jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0])));
+                invoice.Emails = JsonConvert.DeserializeObject<List<Emails>>(jsonConvert);
+
+
                 listInvoice.Add(invoice);
+                #endregion LISTEMAILS
             }
             return listInvoice;
+        }
+        public ConfigEmailAutomatico ReturnConfigEmail()
+        {
+            ConfigEmailAutomatico configEmailAutomatico = new ConfigEmailAutomatico();
+
+            DataSet queryResult = dbRepo.wrapper.ExecuteQuery(setupQueryB1.ReturnConfigEmailSMTP());
+            jsonConvert = Convert.ToString(JsonConvert.DeserializeObject(JsonConvert.SerializeObject(queryResult.Tables[0]))).Replace("[", "").Replace("]", "");
+            configEmailAutomatico = JsonConvert.DeserializeObject<ConfigEmailAutomatico>(jsonConvert);
+            return configEmailAutomatico;
         }
     }
 }

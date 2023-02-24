@@ -12,7 +12,7 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.infrastructure.re
     public class DBLancamentoContabilRepository : IDBLancamentoContabilRepository
     {
         private IWrapper wrapper;
-        public string queryHeaderLCM = @"SELECT TOP 10 DISTINCT
+        public string queryHeaderLCM = @"SELECT TOP 200 DISTINCT
                                                 T0.""TransId"",
 		                                        T0.""TaxDate"" as ""PostDate"",
 		                                        ""Memo"" as ""Description"",
@@ -25,7 +25,7 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.infrastructure.re
                                                 JOIN ""@TAX4_LCONFIGADDON"" T2 ON T1.""BPLId"" = T2.""U_TAX4_Empresa""
                                                 WHERE T0.""U_TAX4_CodInt"" = '0'";
 
-        public string queryUpdateLCM = @"SELECT TOP 10 DISTINCT
+        public string queryUpdateLCM = @"SELECT TOP 1 DISTINCT
                                                 T0.""TransId"",
 		                                        T0.""TaxDate"" as ""PostDate"",
 		                                        ""Memo"" as ""Description"",
@@ -38,6 +38,7 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.infrastructure.re
                                                 JOIN ""@TAX4_LCONFIGADDON"" T2 ON T1.""BPLId"" = T2.""U_TAX4_Empresa""
                                                 WHERE T0.""U_TAX4_CodInt"" = '1' AND T0.""U_TAX4_Stat"" is null or T0.""U_TAX4_Stat"" like '' "; 
         public string queryLineLCM = @"SELECT
+                                        T0.""Line_ID"",
 	                                    T0.""TransId"",
 	                                    CT.""U_TAX4_IdRet"" as ""AccountId"",
 	                                    T0.""Debit"" as ""Debit"",

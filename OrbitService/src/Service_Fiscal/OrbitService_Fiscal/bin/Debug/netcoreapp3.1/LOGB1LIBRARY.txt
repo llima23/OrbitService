@@ -1,0 +1,5 @@
+17/02/2023 10:56:31 - {"data":{"message":"The document was sent to the queue!","document_id":"63ef878f8136e10012dc58d6"}}
+17/02/2023 10:58:15 - {"data":{"message":"The document was sent to the queue!","document_id":"63ef87a88136e10012dc58d8"}}
+17/02/2023 11:20:43 - {"data":{"message":"The document was sent to the queue!","document_id":"63ef8b578136e10012dc58da"}}
+23/02/2023 13:15:17 - mapper preenchido
+23/02/2023 13:15:33 - {"data":{"message":"The document was sent to the queue!","document_id":"63f7911b8136e10012dc58e4"}}

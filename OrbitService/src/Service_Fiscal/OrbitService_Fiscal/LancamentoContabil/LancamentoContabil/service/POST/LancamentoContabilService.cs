@@ -7,8 +7,8 @@ namespace AccountService_LancamentoContabil.LancamentoContabil.service
 {
     public class LancamentoContabilService : BaseService<LancamentoContabilOutput, LancamentoContabilError>
     {
-        public const string ENDPOINT = "/supplieraccountservice/api/accountingBalances";
-        public const string ENDPOINTGET = "/taxservice/api/establishment/branch/{id}";
+        public const string ENDPOINT = "/supplieraccountservice/api/accounting-balances";
+        public const string ENDPOINTGET = "/supplieraccountservice/api/accounting-balances/{id}";
         public LancamentoContabilService(ServiceConfiguration sConfig, CommunicationProvider communicationClient) : base(sConfig, communicationClient)
         {
 

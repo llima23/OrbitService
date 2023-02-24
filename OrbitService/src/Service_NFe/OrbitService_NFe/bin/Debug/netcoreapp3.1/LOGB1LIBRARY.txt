@@ -20,3 +20,6 @@
 30/01/2023 11:00:39 - ContentResponse: {"nfeId":"63d40c80fbfe1927aceff56e","message":"NFe inserida na fila de emissão"}
 30/01/2023 11:03:07 - ContentResponse: {"nfeId":"63d40c80fbfe1927aceff56e","message":"NFe inserida na fila de emissão"}
 31/01/2023 09:29:10 - ContentResponse: {"nfeId":"63d821c4fbfe1927ac7576da","message":"NFe inserida na fila de emissão"}
+23/02/2023 16:09:22 - ContentResponse: {"nfeId":"63f382efb329f3001244c090","message":"NFe inserida na fila de emissão"}
+23/02/2023 16:13:59 - ContentResponse: {"nfeId":"63f382efb329f3001244c090","message":"NFe inserida na fila de emissão"}
+23/02/2023 16:16:26 - ContentResponse: {"nfeId":"63f382efb329f3001244c090","message":"NFe inserida na fila de emissão"}

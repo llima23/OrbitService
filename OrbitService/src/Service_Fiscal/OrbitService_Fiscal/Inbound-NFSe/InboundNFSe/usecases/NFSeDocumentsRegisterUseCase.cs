@@ -1,8 +1,8 @@
-﻿using B1Library.Applications;
-using B1Library.Documents;
+﻿using B1Library.Documents;
 using OrbitLibrary.Common;
 using OrbitService.InboundNFSe.mappers;
 using OrbitService.InboundNFSe.services.NFSeDocumentRegister;
+using OrbitService_Fiscal.Application;
 using System;
 using System.Collections.Generic;
 
@@ -33,8 +33,9 @@ namespace OrbitService.InboundNFSe.usecases
                 {
                     this.invoice = invoice;
                     NFSeDocumentRegisterInput input = mapper.ToNFSeDocumentRegisterInput(invoice);
+                    LogsFiscalBR.InsertLog($"mapper preenchido - {invoice.DocEntry}");
                     OperationResponse<NFSeDocumentRegisterOutput, NFSeDocumentRegisterError> response = NFSeDocumentRegister.Execute(input);
-                    Logs.InsertLog($"{response.Content}");
+                    LogsFiscalBR.InsertLog($"{response.Content}");
 
                     if (response.isSuccessful)
                     {
@@ -53,6 +54,7 @@ namespace OrbitService.InboundNFSe.usecases
             }
             catch(Exception ex)
             {
+                LogsFiscalBR.InsertLog($"{ex.Message}");
                 DocumentStatus newStatusData = new DocumentStatus("", "", ex.Message, invoice.ObjetoB1, invoice.DocEntry, StatusCode.Erro);
                 documentsRepository.UpdateDocumentStatus(newStatusData, invoice.ObjetoB1);
             }

@@ -221,7 +221,8 @@ namespace _4TAX_Service.Application
 	 T0.""Address"" AS EnderecoT,
 	 T0.""CardName"",
 	 COALESCE(T0.""DiscPrcnt"",0) AS DiscPrcnt,
-	 CAST(T0.""Header"" AS VARCHAR) AS Comments,
+	 CAST(T0.""Header"" AS VARCHAR) AS ObsAbertura,
+    CAST(T0.""Comments"" AS VARCHAR) AS ObsDocumento,
 	 T0.""GroupNum"",
 	 T0.""PeyMethod"",
 	 T0.""BPChCode"",
@@ -297,7 +298,8 @@ THEN T19.""U_TAX4_EstabID""
 ELSE T18.""U_TAX4_EstabID"" 
 END AS ""BranchId"",
 COALESCE(T6.""U_TAX4_EnvEm"",'')			   AS ""EnviaEmail"",
-COALESCE(T6.""U_TAX4_NumLote"",0)             AS ""NumeroLote""
+COALESCE(T6.""U_TAX4_NumLote"",0)             AS ""NumeroLote"",
+COALESCE(T6.""U_TAX4_TpObs"",0)			   AS ""TipoObservacao""
 FROM ""OINV"" T0 
 LEFT JOIN ""INV1"" T1 ON T0.""DocEntry"" = T1.""DocEntry"" 
 LEFT JOIN ""INV12"" T2 ON T0.""DocEntry"" = T2.""DocEntry"" 
@@ -313,7 +315,7 @@ AND T9.""LineNum"" = T10.""LineNum""
 and T9.""ExpnsCode"" = T10.""ExpnsCode"" 
 INNER JOIN ""OSTT"" T11 ON T9.""staType"" = T11.""AbsId"" 
 INNER JOIN ""OCRY"" T12 ON T2.""CountryB"" = T12.""Code"" 
-LEFT JOIN ""OCNT"" T13 ON CAST(T2.""CountyB"" AS VARCHAR) = CAST(T13.""AbsId"" AS VARCHAR) 
+LEFT JOIN ""OCNT"" T13 ON CAST(T2.""County"" AS VARCHAR) = CAST(T13.""AbsId"" AS VARCHAR) 
 LEFT JOIN ""OUSG"" T14 ON T1.""Usage"" = T14.""ID"" 
 INNER JOIN ""OCTG"" T15 ON T3.""GroupNum"" = T15.""GroupNum"" 
 LEFT JOIN ""OPYM"" T16 ON T0.""PeyMethod"" = T16.""PayMethCod"" 

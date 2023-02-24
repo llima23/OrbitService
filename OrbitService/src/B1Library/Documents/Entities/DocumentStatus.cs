@@ -25,17 +25,20 @@
         public string IdOrbit { get; set; }
         public string StatusOrbit { get; set; } = "";
         public string Descricao { get; set; } = "";
-
+        public string ModeloDocumento { get; set; }
         public string ChaveDeAcessoNFe { get; set; }
         public string ProtocoloNFe { get; set; }
         public string CommunicationId { get; set; }
+        public string CodVerificadorNFSe { get; set; }
+        public string NumeroRPSNFSe { get; set; }
+        public string NumeroNFSe { get; set; }
         public int ObjetoB1 { get; set; }
         public int DocEntry { get; set; }
         public int BaseEntry { get; set; }
         public int CodigoStatusOrbitB1 { get; set; }
         public StatusCode Status { get; set; }
 
-        public DocumentStatus(string OutputIdOrbit, string OutputStatusOrbit, string OutputDescricao, int InvoiceObjetoB1, int InvoiceDocEntry, StatusCode status, string chaveDeAcesso = null, string protocoloNFe = null, int baseEntry = 0, string communicationId = null)
+        public DocumentStatus(string OutputIdOrbit, string OutputStatusOrbit, string OutputDescricao, int InvoiceObjetoB1, int InvoiceDocEntry, StatusCode status, string chaveDeAcesso = null, string protocoloNFe = null, int baseEntry = 0, string communicationId = null, string modeloDocumento = null, string codVerificadorNFSe = null, string numeroRPSNFSe = null, string numeroNFSe = null)
         {
             CodigoStatusOrbitB1 = (int)status;
             IdOrbit = OutputIdOrbit;
@@ -48,8 +51,11 @@
             ProtocoloNFe = protocoloNFe;
             CommunicationId = communicationId;
             BaseEntry = baseEntry;
+            ModeloDocumento = modeloDocumento;
+            CodVerificadorNFSe = codVerificadorNFSe;
+            NumeroRPSNFSe = numeroRPSNFSe;
+            NumeroNFSe = numeroNFSe;
         }
-
         public string GetStatusMessage()
         {
             return Status switch

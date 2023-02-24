@@ -1,15 +1,13 @@
 using _4TAX_Service.Application;
 using _4TAX_Service.Application.Client;
 using _4TAX_Service.Services.Document.NFSe;
-using _4TAX_Service_Atualiza.Application;
-using _4TAX_Service_Atualiza.Application.Client;
-using _4TAX_Service_Atualiza.Services.Document.NFSe;
 using B1Library.Implementations.Repositories;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OrbitLibrary.Utils;
 using OrbitService.OutboundDFe.usecases;
 using OrbitService_Cancel_NFSe.OutboundDFe.usecases;
+using OrbitService_NFSe.New_Atualiza_NFSe.OutboundDFe.usecases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,11 +83,10 @@ namespace OrbitService_NFSe
         {
             try
             {
-                NFSeProcessAtualiza nFSeProcess = new NFSeProcessAtualiza(serviceDependencies.sConfig, serviceDependencies.DbWrapper);
-                NFSeFetchAtualiza nFSeFetch = new NFSeFetchAtualiza(serviceDependencies.DbWrapper);
-                nFSeProcess.IntegrateNFSe(nFSeFetch.GetListNFSe(), new Consulta(serviceDependencies.sConfig, Defaults.GetCommunicationProvider()));
+                UseCaseAtualizaNFSe useCase = new UseCaseAtualizaNFSe(new DBDocumentsRepository(serviceDependencies.DbWrapper), serviceDependencies.sConfig, serviceDependencies.communicationProvider);
+                useCase.Execute();
             }
-            catch
+            catch(Exception ex)
             {
 
             }

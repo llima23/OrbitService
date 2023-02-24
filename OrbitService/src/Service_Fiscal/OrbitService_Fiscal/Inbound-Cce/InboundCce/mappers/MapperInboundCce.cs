@@ -18,12 +18,12 @@ namespace OrbitService.InboundCce.mappers
         public InboundCceInput ToInboundCceRegisterInput(Invoice invoice)
         {
             InboundCceInput input = new InboundCceInput();
-            input.data.branchId = invoice.BranchId;
+            input.data.branchId = invoice.Identificacao.BranchId;
             #region IDENTIFICACAO
             input.data.identificacao.modeloDoc = invoice.ModeloDocumento;
             input.data.identificacao.serie = invoice.Identificacao.SerieDocumento;
             input.data.identificacao.numeroDoc = invoice.Identificacao.NumeroDocumento;
-            input.data.identificacao.dataEmissao = invoice.Identificacao.DataDeEnvio.ToString("yyyy-MM-dd");
+            input.data.identificacao.dataEmissao = invoice.Identificacao.DataEmissao.ToString("yyyy-MM-dd");
             input.data.identificacao.chvAcesso = Convert.ToInt64(invoice.ChaveDeAcessoNFe);
             #endregion IDENTIFICACAO
             #region EMITENTE
@@ -85,23 +85,23 @@ namespace OrbitService.InboundCce.mappers
                     switch (imposto.TipoImpostoOrbit)
                     {
                         case "-6":
-                            itemOrbit.Impostos.cstICMS = itemB1.CSTICMSLinha;
-                            itemOrbit.Impostos.vbcICMS = util.GetTaxTypeB1VBcSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
-                            itemOrbit.Impostos.vRedBcICMS = imposto.pRedBc > 0 ? itemOrbit.Impostos.vbcICMS * imposto.pRedBc : 0;
-                            itemOrbit.Impostos.aliqICMS = imposto.PorcentagemImposto;
-                            itemOrbit.Impostos.valorICMS = util.GetTaxTypeB1VImpSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
+                            itemOrbit.impostos.cstICMS = itemB1.CSTICMSLinha;
+                            itemOrbit.impostos.vbcICMS = util.GetTaxTypeB1VBcSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
+                            itemOrbit.impostos.vRedBcICMS = imposto.pRedBc > 0 ? itemOrbit.impostos.vbcICMS * imposto.pRedBc : 0;
+                            itemOrbit.impostos.aliqICMS = imposto.PorcentagemImposto;
+                            itemOrbit.impostos.valorICMS = util.GetTaxTypeB1VImpSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
                             break;
                         case "-8":
-                            itemOrbit.Impostos.cstPIS = itemB1.CSTPisLinha;
-                            itemOrbit.Impostos.vbcPIS = util.GetTaxTypeB1VBcSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
-                            itemOrbit.Impostos.aliqPIS = imposto.PorcentagemImposto;
-                            itemOrbit.Impostos.valorPIS = util.GetTaxTypeB1VImpSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
+                            itemOrbit.impostos.cstPIS = itemB1.CSTPisLinha;
+                            itemOrbit.impostos.vbcPIS = util.GetTaxTypeB1VBcSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
+                            itemOrbit.impostos.aliqPIS = imposto.PorcentagemImposto;
+                            itemOrbit.impostos.valorPIS = util.GetTaxTypeB1VImpSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
                             break;
                         case "-10":
-                            itemOrbit.Impostos.cstCOFINS = itemB1.CSTCofinsLinha;
-                            itemOrbit.Impostos.vbcCOFINS = util.GetTaxTypeB1VBcSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
-                            itemOrbit.Impostos.aliqCOFINS = imposto.PorcentagemImposto;
-                            itemOrbit.Impostos.valorCOFINS = util.GetTaxTypeB1VImpSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
+                            itemOrbit.impostos.cstCOFINS = itemB1.CSTCofinsLinha;
+                            itemOrbit.impostos.vbcCOFINS = util.GetTaxTypeB1VBcSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
+                            itemOrbit.impostos.aliqCOFINS = imposto.PorcentagemImposto;
+                            itemOrbit.impostos.valorCOFINS = util.GetTaxTypeB1VImpSumForItem(itemB1.ImpostoLinha, imposto.TipoImpostoOrbit);
                             break;
                     }
                 }
@@ -121,9 +121,9 @@ namespace OrbitService.InboundCce.mappers
             input.data.valores.valorCOFINS = util.GetTaxTypeB1Sum("-10", invoice);
             #endregion VALORES
             #region STATUS
-            input.data.StatusDoc.cStat = 0;
-            input.data.StatusDoc.mStat = "CCE EMITIDA";
-            input.data.StatusDoc.dataLancamento = invoice.Identificacao.DataLancamento.ToString("yyyy-MM-dd");
+            input.data.statusDoc.cStat = 0;
+            input.data.statusDoc.mStat = "CCE EMITIDA";
+            input.data.statusDoc.dataLancamento = invoice.Identificacao.DataLancamento.ToString("yyyy-MM-dd");
             #endregion STATUS
 
             return input;

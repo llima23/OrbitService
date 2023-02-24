@@ -157,7 +157,7 @@ namespace B1Library.Implementations.Repositories
             foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFSe)
             {
                 SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.OutboundNFSe));
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1SendDocumentToOrbit()));
+                //util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1SendDocumentToOrbit()));
             }
             return invoices;
         }
@@ -181,13 +181,14 @@ namespace B1Library.Implementations.Repositories
 
         public List<Invoice> GetConsultOutboundNFSe()
         {
-            List<Invoice> invoices = new List<Invoice>();
+            List<Invoice> listInvoices = new List<Invoice>();
             foreach (TableName tableName in dBTableNameRepository.tableNamesOutboundNFSe)
             {
                 SetupQueryB1 setupQueryB1 = new SetupQueryB1(this, tableName, new UseCasesB1Library(UseCase.ConsultaNFSe));
-                util.addInvoiceEntriesToList(invoices, wrapper.ExecuteQuery(setupQueryB1.SetupQueryB1SendDocumentToOrbit()));
+                MapperInvoiceB1ToInvoiceLib mapper = new MapperInvoiceB1ToInvoiceLib(this, setupQueryB1);
+                listInvoices = mapper.ReturnInvoiceB1ToUpdate(listInvoices);
             }
-            return invoices;
+            return listInvoices;
         }
 
 
@@ -201,6 +202,14 @@ namespace B1Library.Implementations.Repositories
             }
 
             return wrapper.ExecuteNonQuery(updateCommandToDocument);
+        }
+
+        public ConfigEmailAutomatico GetConfigEmail()
+        {
+            SetupQueryB1 setupQueryB1 = new SetupQueryB1(this);
+            MapperInvoiceB1ToInvoiceLib mapper = new MapperInvoiceB1ToInvoiceLib(this,setupQueryB1);
+            ConfigEmailAutomatico configEmailAutomatico = mapper.ReturnConfigEmail();
+            return configEmailAutomatico;
         }
     }
 }

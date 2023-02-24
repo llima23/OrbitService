@@ -42,14 +42,13 @@ namespace OrbitService_Fiscal
                     List<Thread> threads = new List<Thread>();
                     await Task.Delay(1000, stoppingToken);
                     List<ServiceDependencies> ListserviceDependencies = Defaults.GetListServiceDependencies();
-                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies.Where(x => x.DbWrapper.DataBaseName == "SBO_ORBITDEV"))
+                    foreach (ServiceDependencies serviceDependencies in ListserviceDependencies)
                     {
-                       
-                        this.service = serviceDependencies;
+                        //ExecuteInboundCce(serviceDependencies);
                         if (serviceDependencies.sConfig.Ativo && serviceDependencies.sConfig.IntegraDocFiscal)
                         {
 
-                            Thread t = new Thread(() => ExecuteAll());
+                            Thread t = new Thread(() => ExecuteAll(serviceDependencies));
                             threads.Add(t);
                         }
                     }
@@ -69,36 +68,36 @@ namespace OrbitService_Fiscal
 
             }
         }
-        private void ExecuteAll()
+        private void ExecuteAll(ServiceDependencies service)
         {
-            Thread t = new Thread(() => ExecuteCentroDeCusto(this.service));
-            t.Start();
-            Thread t2 = new Thread(() => ExecuteContasContabeis(this.service));
-            t2.Start();
-            Thread t3 = new Thread(() => ExecuteInboundCce(this.service));
-            t3.Start();
-            Thread t4 = new Thread(() => ExecuteInboundNFe(this.service));
-            t4.Start();
-            Thread t5 = new Thread(() => ExecuteInboundNFSe(this.service));
+            //Thread t = new Thread(() => ExecuteCentroDeCusto(service));
+            //t.Start();
+            //Thread t2 = new Thread(() => ExecuteContasContabeis(service));
+            //t2.Start();
+            //Thread t3 = new Thread(() => ExecuteInboundCce(service));
+            //t3.Start();
+            //Thread t4 = new Thread(() => ExecuteInboundNFe(service));
+            //t4.Start();
+            Thread t5 = new Thread(() => ExecuteInboundNFSe(service));
             t5.Start();
-            Thread t6 = new Thread(() => ExecuteInboundOtherDocuments(this.service));
-            t6.Start();
-            //Thread t7 = new Thread(() => ExecuteLCM(this.service));
-            //t7.Start();
-            Thread t8 = new Thread(() => ExecutePlanoDeContas(this.service));
-            t8.Start();
-            Thread t9 = new Thread(() => ExecutePayments(this.service));
-            t9.Start();
+            //Thread t6 = new Thread(() => ExecuteInboundOtherDocuments(service));
+            //t6.Start();
+            //Thread t7 = new Thread(() => ExecuteLCM(service));
+            ////t7.Start();
+            //Thread t8 = new Thread(() => ExecutePlanoDeContas(service));
+            //t8.Start();
+            //Thread t9 = new Thread(() => ExecutePayments(service));
+            //t9.Start();
 
-            t.Join();
-            t2.Join();
-            t3.Join();
-            t4.Join();
+            //t.Join();
+            //t2.Join();
+            //t3.Join();
+            //t4.Join();
             t5.Join();
-            t6.Join();
-            //t7.Join();
-            t8.Join();
-            t9.Join();
+            //t6.Join();
+            ////t7.Join();
+            //t8.Join();
+            //t9.Join();
         }
         private void ExecutePayments(ServiceDependencies serviceDependencies)
         {
